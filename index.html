@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timbn Mods</title>
+<style>
+  :root {
+    --page: #17120d;
+    --muted: #9c8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); }
+  body {
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  .note { text-align: center; color: var(--muted); margin: 0; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="menu" tabindex="0" aria-label="Timbn Mods menu"></canvas>
+<p class="note">Graveyard Keeper 2 Demo 1.002.4</p>
+<nav class="sr-only"><a href="folio/">Alchemy Folio</a></nav>
+<script src="menu/menu-data.js"></script>
+<script>
+(() => {
+  const D = window.MENU;
+  const ITEMS = [
+    { label: 'Alchemy Folio', href: 'folio/' },
+  ];
+  const PAD = 6;
+  const W = 234;
+  const BTN = { w: 162, h: 26, top: 48, gap: 2 };
+  const H = BTN.top + ITEMS.length * BTN.h + (ITEMS.length - 1) * BTN.gap + 30;
+  const TITLE = 'Timbn Mods';
+  const COLORS = { title: '#f6e3bd', titleOutline: '#4c301c', label: '#ffa955', labelOutline: '#300800' };
+
+  const images = {};
+  const load = (key, src) => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { images[key] = im; res(); };
+    im.onerror = () => res();
+    im.src = src;
+  });
+
+  const tints = new Map();
+  function tinted(font, color) {
+    const key = font + color;
+    if (tints.has(key)) return tints.get(key);
+    const src = images['font:' + font];
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    tints.set(key, c);
+    return c;
+  }
+
+  const glyph = (font, ch) => D.fonts[font].chars[ch.codePointAt(0)] || D.fonts[font].chars[63];
+
+  function measure(font, str) {
+    let w = 0;
+    for (const ch of str) w += glyph(font, ch)[6];
+    return w;
+  }
+
+  function text(ctx, font, str, x, baseline, color) {
+    const atlas = tinted(font, color);
+    let pen = Math.round(x);
+    for (const ch of str) {
+      const [gx, gy, gw, gh, bx, by, adv] = glyph(font, ch);
+      if (gw > 0 && gh > 0 && ch !== ' ') ctx.drawImage(atlas, gx, gy, gw, gh, pen + bx, Math.round(baseline - by), gw, gh);
+      pen += adv;
+    }
+    return pen - x;
+  }
+
+  function outlined(ctx, font, str, x, baseline, color, outline) {
+    for (const [dx, dy] of [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]) {
+      text(ctx, font, str, x + dx, baseline + dy, outline);
+    }
+    text(ctx, font, str, x, baseline, color);
+  }
+
+  function sprite(ctx, name, x, y) {
+    const im = images[name];
+    if (im) ctx.drawImage(im, Math.round(x), Math.round(y));
+  }
+
+  function slice(ctx, name, x, y, w, h) {
+    const im = images[name];
+    if (!im) return;
+    const [l, b, r, t] = (D.sprites[name] && D.sprites[name].border) || [0, 0, 0, 0];
+    const sw = im.width, sh = im.height;
+    const cw = sw - l - r, ch = sh - t - b;
+    const dw = w - l - r, dh = h - t - b;
+    const cols = [[0, l, 0, l], [l, cw, l, dw], [sw - r, r, w - r, r]];
+    const rows = [[0, t, 0, t], [t, ch, t, dh], [sh - b, b, h - b, b]];
+    for (const [sx, sww, dx, dww] of cols) {
+      for (const [sy, shh, dy, dhh] of rows) {
+        if (sww > 0 && shh > 0 && dww > 0 && dhh > 0) ctx.drawImage(im, sx, sy, sww, shh, x + dx, y + dy, dww, dhh);
+      }
+    }
+  }
+
+  const canvas = document.getElementById('menu');
+  const ctx = canvas.getContext('2d');
+  canvas.width = W + PAD * 2; canvas.height = H + PAD * 2;
+  const state = { hover: -1, pressed: -1, focus: -1 };
+
+  const btnRect = i => ({ x: (W - BTN.w) / 2, y: BTN.top + i * (BTN.h + BTN.gap), w: BTN.w, h: BTN.h });
+
+  function drawSide(x, y, w, h, mirror) {
+    ctx.save();
+    if (mirror) { ctx.translate(x + w, y); ctx.scale(-1, 1); } else ctx.translate(x, y);
+    slice(ctx, 'comm-content_bg_dark-side-small', 0, 0, w, h);
+    sprite(ctx, 'comm-content_bg_dark-side_top', 0, 0);
+    sprite(ctx, 'comm-content_bg_dark-side_bot', 0, h - 60);
+    ctx.restore();
+  }
+
+  function draw() {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.translate(PAD, PAD);
+
+    const mx = 13, my = 37, mw = W - 26, mh = H - 37 - 12;
+    const half = Math.floor(mw / 2);
+    ctx.save();
+    ctx.beginPath(); ctx.rect(mx, my, mw, mh); ctx.clip();
+    drawSide(mx, my, half, mh, false);
+    drawSide(mx + half, my, mw - half, mh, true);
+    ctx.restore();
+
+    slice(ctx, 'comm-frame_1-border', 0, 0, W, H);
+
+    const hx = 11, hy = 11, hw = W - 22;
+    slice(ctx, 'main_window-header_1', hx, hy, hw, 26);
+    sprite(ctx, 'main_window-header_1-dec_side_3', hx, hy);
+    sprite(ctx, 'main_window-header_1-dec_side_3', hx + hw - 28, hy);
+    sprite(ctx, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
+    sprite(ctx, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
+    const cap = glyph('small_font_bold', 'H')[5];
+    const tw = measure('small_font_bold', TITLE);
+    outlined(ctx, 'small_font_bold', TITLE, hx + (hw - 34 - tw) / 2, hy + Math.round((26 + cap) / 2) - 1, COLORS.title, COLORS.titleOutline);
+
+    ITEMS.forEach((item, i) => {
+      const r = btnRect(i);
+      const st = state.pressed === i ? 'press' : (state.hover === i || state.focus === i) ? 'over' : 'active';
+      slice(ctx, `comm-btn-simple_red-${st}`, r.x, r.y, r.w, r.h);
+      const lw = measure('small_font_bold', item.label);
+      const down = state.pressed === i ? 1 : 0;
+      outlined(ctx, 'small_font_bold', item.label, r.x + (r.w - lw) / 2, r.y + Math.round((r.h + cap) / 2) + down, COLORS.label, COLORS.labelOutline);
+    });
+  }
+
+  function fit() {
+    const avail = Math.min(window.innerWidth - 32, 1200);
+    const s = Math.max(1, Math.min(3, Math.floor(Math.min(avail / canvas.width, (window.innerHeight - 120) / canvas.height))));
+    canvas.style.width = Math.min(canvas.width * s, avail) + 'px';
+  }
+
+  function toNative(e) {
+    const r = canvas.getBoundingClientRect();
+    return { x: (e.clientX - r.left) * canvas.width / r.width - PAD, y: (e.clientY - r.top) * canvas.height / r.height - PAD };
+  }
+
+  function hit(p) {
+    for (let i = 0; i < ITEMS.length; i++) {
+      const r = btnRect(i);
+      if (p.x >= r.x && p.x < r.x + r.w && p.y >= r.y && p.y < r.y + r.h) return i;
+    }
+    return -1;
+  }
+
+  canvas.addEventListener('mousemove', e => {
+    const h = hit(toNative(e));
+    canvas.style.cursor = h >= 0 ? 'pointer' : 'default';
+    if (h !== state.hover) { state.hover = h; draw(); }
+  });
+  canvas.addEventListener('mouseleave', () => { state.hover = -1; state.pressed = -1; draw(); });
+  canvas.addEventListener('pointerdown', e => {
+    state.pressed = hit(toNative(e));
+    draw();
+  });
+  canvas.addEventListener('pointerup', e => {
+    const h = hit(toNative(e));
+    const go = h >= 0 && h === state.pressed;
+    state.pressed = -1;
+    draw();
+    if (go) window.location.href = ITEMS[h].href;
+  });
+  canvas.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      const d = e.key === 'ArrowDown' ? 1 : -1;
+      state.focus = (Math.max(0, state.focus) + d + ITEMS.length) % ITEMS.length;
+      draw();
+      e.preventDefault();
+    } else if ((e.key === 'Enter' || e.key === ' ') && state.focus >= 0) {
+      window.location.href = ITEMS[state.focus].href;
+    }
+  });
+  canvas.addEventListener('focus', () => { if (state.focus < 0) { state.focus = 0; draw(); } });
+  canvas.addEventListener('blur', () => { state.focus = -1; draw(); });
+  window.addEventListener('resize', fit);
+
+  const jobs = Object.keys(D.sprites).map(n => load(n, `menu/ui/${n}.png`));
+  for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, 'menu/' + f.atlas));
+  Promise.all(jobs).then(() => { draw(); fit(); });
+})();
+</script>
+</body>
+</html>

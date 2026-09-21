@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alchemy Folio</title>
+<style>
+  :root {
+    --page: #17120d;
+    --ink: #d9c3a0;
+    --muted: #9c8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--ink); }
+  body {
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+  canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  #folio { max-width: 100%; height: auto; touch-action: none; }
+  #tip { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 10; }
+  .note { max-width: 720px; text-align: center; color: var(--muted); margin: 0; }
+  .note kbd {
+    font: inherit;
+    border: 1px solid #4a3a28;
+    border-radius: 3px;
+    padding: 0 4px;
+    color: var(--ink);
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="folio" tabindex="0" aria-label="Alchemy Folio, every formula grouped by bookmark tab"></canvas>
+<canvas id="tip" aria-hidden="true"></canvas>
+<p class="note">Hover a formula for its tooltip · Scroll the book · <kbd>←</kbd> <kbd>→</kbd> switch tabs · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 Demo 1.002.4</p>
+<ul id="sr" class="sr-only"></ul>
+<script src="folio-data.js"></script>
+<script>
+(() => {
+  const D = window.FOLIO;
+  const TABS = ['Simple', 'Medium', 'Hard', 'Epic', 'Heroic'];
+  const PAD = 6;
+  const W = 382, H = 349;
+  const BOOK = { x: 13, y: 71, w: 356, h: 264 };
+  const LIST = { top: BOOK.y + 22, bottom: BOOK.y + BOOK.h - 12, pitch: 42, cols: [BOOK.x + 18, BOOK.x + 186] };
+  const TAB_X0 = 90, TAB_GAP = 2;
+  const TIP = { pad: 14, spacing: 2, maxText: 160, minW: 124, lineH: 12 };
+  const COLORS = { title: '#f6e3bd', titleOutline: '#4c301c', name: '#7a5837', runes: '#4e3012' };
+  const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
+
+  const images = {};
+  const load = (key, src) => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { images[key] = im; res(); };
+    im.onerror = () => res();
+    im.src = src;
+  });
+
+  const tints = new Map();
+  function tinted(font, color) {
+    const key = font + color;
+    if (tints.has(key)) return tints.get(key);
+    const src = images['font:' + font];
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    tints.set(key, c);
+    return c;
+  }
+
+  const glyph = (font, ch) => D.fonts[font].chars[ch.codePointAt(0)] || D.fonts[font].chars[63];
+
+  function measure(font, str) {
+    let w = 0;
+    for (const ch of str) w += glyph(font, ch)[6];
+    return w;
+  }
+
+  function text(ctx, font, str, x, baseline, color, shadow) {
+    if (shadow) text(ctx, font, str, x, baseline + 1, shadow);
+    const atlas = tinted(font, color);
+    let pen = Math.round(x);
+    for (const ch of str) {
+      const [gx, gy, gw, gh, bx, by, adv] = glyph(font, ch);
+      if (gw > 0 && gh > 0 && ch !== ' ') ctx.drawImage(atlas, gx, gy, gw, gh, pen + bx, Math.round(baseline - by), gw, gh);
+      pen += adv;
+    }
+    return pen - x;
+  }
+
+  function wrap(font, str, maxW) {
+    const lines = [];
+    let line = '';
+    for (const word of str.split(' ')) {
+      const next = line ? line + ' ' + word : word;
+      if (line && measure(font, next) > maxW) { lines.push(line); line = word; }
+      else line = next;
+    }
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  function sprite(ctx, name, x, y, alpha) {
+    const im = images[name];
+    if (!im) return;
+    if (alpha !== undefined) ctx.globalAlpha = alpha;
+    ctx.drawImage(im, Math.round(x), Math.round(y));
+    ctx.globalAlpha = 1;
+  }
+
+  function slice(ctx, name, x, y, w, h, alpha) {
+    const im = images[name];
+    if (!im) return;
+    const [l, b, r, t] = (D.sprites[name] && D.sprites[name].border) || [0, 0, 0, 0];
+    const sw = im.width, sh = im.height;
+    const cw = sw - l - r, ch = sh - t - b;
+    const dw = w - l - r, dh = h - t - b;
+    if (alpha !== undefined) ctx.globalAlpha = alpha;
+    const cols = [[0, l, 0, l], [l, cw, l, dw], [sw - r, r, w - r, r]];
+    const rows = [[0, t, 0, t], [t, ch, t, dh], [sh - b, b, h - b, b]];
+    for (const [sx, sww, dx, dww] of cols) {
+      for (const [sy, shh, dy, dhh] of rows) {
+        if (sww > 0 && shh > 0 && dww > 0 && dhh > 0) ctx.drawImage(im, sx, sy, sww, shh, x + dx, y + dy, dww, dhh);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function runes(ctx, counts, x, baseline, color) {
+    const names = ['rune_r', 'rune_g', 'rune_b'];
+    let pen = x, first = true;
+    counts.forEach((n, i) => {
+      if (!n) return;
+      if (!first) pen += measure('small_font', ' ');
+      first = false;
+      sprite(ctx, names[i], pen, baseline - 12);
+      pen += 15;
+      pen += text(ctx, 'small_font', String(n), pen, baseline, color);
+    });
+    return pen - x;
+  }
+
+  function cell(ctx, x, y, size, iconName, hl) {
+    slice(ctx, 'widget_items_cell-folio_item_cell', x, y, size, size);
+    const im = images[hl ? iconName + '_hl' : iconName] || images[iconName];
+    if (im) ctx.drawImage(im, Math.round(x + (size - im.width) / 2), Math.round(y + (size - im.height) / 2));
+  }
+
+  const iconAdv = name => (D.fontIcons[name] ? D.fontIcons[name].adv : 12);
+
+  function wordWidth(font, word) {
+    let w = 0;
+    for (const p of word) w += p.icon ? iconAdv(p.icon) : measure(font, p.text);
+    return w;
+  }
+
+  function layoutText(segs, font, color, maxW) {
+    const words = [];
+    let cur = [];
+    const flush = () => { if (cur.length) { words.push(cur); cur = []; } };
+    for (const s of segs) {
+      if (s.icon) { cur.push({ icon: s.icon }); continue; }
+      for (const p of s.text.split(/(\s)/)) {
+        if (p === '\n') { flush(); words.push('\n'); }
+        else if (/^\s$/.test(p)) flush();
+        else if (p) cur.push({ text: p, color: s.color || color });
+      }
+    }
+    flush();
+    const space = measure(font, ' ');
+    const lines = [];
+    let line = [], lw = 0;
+    for (const word of words) {
+      if (word === '\n') { lines.push({ words: line, w: lw }); line = []; lw = 0; continue; }
+      const ww = wordWidth(font, word);
+      if (line.length && lw + space + ww > maxW) { lines.push({ words: line, w: lw }); line = []; lw = 0; }
+      lw += (line.length ? space : 0) + ww;
+      line.push(word);
+    }
+    lines.push({ words: line, w: lw });
+    return lines;
+  }
+
+  function drawLine(ctx, font, line, x, baseline) {
+    const space = measure(font, ' ');
+    let pen = x;
+    line.words.forEach((word, i) => {
+      if (i) pen += space;
+      for (const p of word) {
+        if (p.icon) {
+          const fi = D.fontIcons[p.icon] || { bx: 0, by: 12 };
+          sprite(ctx, 'fi_' + p.icon, pen + fi.bx, baseline - fi.by + 2);
+          pen += iconAdv(p.icon);
+        } else {
+          pen += text(ctx, font, p.text, pen, baseline, p.color);
+        }
+      }
+    });
+  }
+
+  function buildTip(f) {
+    const blocks = [];
+    let width = TIP.minW - TIP.pad * 2;
+    for (const w of D.tooltips[f.id]) {
+      if (w.sep) { blocks.push({ sep: true, h: 10 }); continue; }
+      const [font, color] = D.tooltipStyles[w.style];
+      const lines = layoutText(w.segs, font, color, TIP.maxText);
+      for (const l of lines) width = Math.max(width, l.w);
+      blocks.push({ font, lines, h: lines.length * TIP.lineH + 1 });
+    }
+    const h = TIP.pad * 2 + blocks.reduce((a, b) => a + b.h, 0) + TIP.spacing * (blocks.length - 1);
+    return { blocks, w: Math.ceil(width + TIP.pad * 2), h };
+  }
+
+  function paintTip(ctx, tip, x, y) {
+    slice(ctx, 'hint-frame', x, y, tip.w, tip.h);
+    let cy = y + TIP.pad;
+    for (const b of tip.blocks) {
+      if (b.sep) {
+        sprite(ctx, 'hint-text_separator', x + Math.round((tip.w - 96) / 2), cy + 1);
+      } else {
+        b.lines.forEach((l, i) => drawLine(ctx, b.font, l, x + Math.round((tip.w - l.w) / 2), cy + (i + 1) * TIP.lineH - 3));
+      }
+      cy += b.h + TIP.spacing;
+    }
+  }
+
+  const state = {
+    tab: 0,
+    scroll: [0, 0, 0, 0, 0],
+    target: [0, 0, 0, 0, 0],
+    hoverTab: -1,
+    hoverItem: null,
+    mouse: null,
+  };
+  const byTab = TABS.map((_, t) => D.formulas.filter(f => f.tab === t));
+
+  const main = document.getElementById('folio');
+  const tipCanvas = document.getElementById('tip');
+  const mctx = main.getContext('2d');
+  const tctx = tipCanvas.getContext('2d');
+  main.width = W + PAD * 2; main.height = H + PAD * 2;
+
+  function tabRect(i) {
+    const x = TAB_X0 + i * (39 + TAB_GAP);
+    const active = i === state.tab;
+    return { x, y: active ? 44 : 45, w: 40, h: active ? 38 : 28 };
+  }
+
+  function itemRect(i) {
+    const y = LIST.top + Math.floor(i / 2) * LIST.pitch - Math.round(state.scroll[state.tab]);
+    return { x: LIST.cols[i % 2], y, w: 152, h: 41 };
+  }
+
+  function maxScroll(t) {
+    const rows = Math.ceil(byTab[t].length / 2);
+    return Math.max(0, rows * LIST.pitch - (LIST.bottom - LIST.top) + 2);
+  }
+
+  const visible = r => r.y + r.h > LIST.top - 2 && r.y < LIST.bottom;
+
+  function drawMain() {
+    const c = mctx;
+    c.setTransform(1, 0, 0, 1, 0, 0);
+    c.clearRect(0, 0, main.width, main.height);
+    c.translate(PAD, PAD);
+
+    c.save();
+    c.beginPath(); c.rect(13, 37, W - 26, H - 50); c.clip();
+    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, 37);
+    c.restore();
+
+    for (let i = 0; i < 5; i++) {
+      if (i === state.tab) continue;
+      const r = tabRect(i);
+      sprite(c, `folio-bookmark_${i + 1}-${i === state.hoverTab ? 'target' : 'inact'}`, r.x, r.y);
+    }
+
+    sprite(c, 'folio-book_bg', BOOK.x, BOOK.y);
+    const at = tabRect(state.tab);
+    sprite(c, `folio-bookmark_${state.tab + 1}-act`, at.x, at.y);
+
+    c.save();
+    c.beginPath(); c.rect(BOOK.x, LIST.top - 3, BOOK.w, LIST.bottom - LIST.top + 3); c.clip();
+    byTab[state.tab].forEach((f, i) => {
+      const r = itemRect(i);
+      if (!visible(r)) return;
+      const hover = f === state.hoverItem;
+      cell(c, r.x + 1, r.y - 1, 40, f.icon, hover);
+      if (hover) slice(c, 'selection', r.x, r.y - 2, 42, 42);
+      const nameLines = wrap('tiny_font', f.name, 104);
+      if (nameLines.length > 1) {
+        text(c, 'tiny_font', nameLines[0], r.x + 46, r.y + 9, COLORS.name);
+        text(c, 'tiny_font', nameLines.slice(1).join(' '), r.x + 46, r.y + 19, COLORS.name);
+      } else {
+        text(c, 'tiny_font', f.name, r.x + 46, r.y + 14, COLORS.name);
+      }
+      runes(c, f.runes, r.x + 46, r.y + 34, COLORS.runes);
+      slice(c, 'folio-separator_2', r.x - 1, r.y + 38, 154, 6, 0.5);
+    });
+    c.restore();
+
+    const ms = maxScroll(state.tab);
+    if (ms > 0) {
+      const trackY = LIST.top, trackH = LIST.bottom - LIST.top - 4;
+      const viewH = LIST.bottom - LIST.top;
+      const thumbH = Math.max(12, Math.round(trackH * viewH / (viewH + ms)));
+      const thumbY = trackY + Math.round((trackH - thumbH) * state.scroll[state.tab] / ms);
+      c.fillStyle = 'rgba(78,48,18,0.18)';
+      c.fillRect(BOOK.x + BOOK.w - 10, trackY, 2, trackH);
+      c.fillStyle = 'rgba(78,48,18,0.55)';
+      c.fillRect(BOOK.x + BOOK.w - 10, thumbY, 2, thumbH);
+    }
+
+    slice(c, 'comm-frame_1-border', 0, 0, W, H);
+
+    const hx = 11, hy = 11, hw = W - 22;
+    slice(c, 'main_window-header_1', hx, hy, hw, 26);
+    sprite(c, 'main_window-header_1-dec_side_3', hx, hy);
+    sprite(c, 'main_window-header_1-dec_side_3', hx + hw - 28, hy);
+    sprite(c, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
+    sprite(c, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
+    const title = 'Folio';
+    const tw = measure('small_font_bold', title);
+    const tb = hy + Math.round((26 + glyph('small_font_bold', 'H')[5]) / 2) - 1;
+    const tx = hx + (hw - 34 - tw) / 2;
+    for (const [dx, dy] of [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]) text(c, 'small_font_bold', title, tx + dx, tb + dy, COLORS.titleOutline);
+    text(c, 'small_font_bold', title, tx, tb, COLORS.title);
+  }
+
+  function scale() {
+    return main.getBoundingClientRect().width / main.width;
+  }
+
+  function drawTip() {
+    const s = scale();
+    const vw = Math.ceil(window.innerWidth / s), vh = Math.ceil(window.innerHeight / s);
+    if (tipCanvas.width !== vw || tipCanvas.height !== vh) {
+      tipCanvas.width = vw; tipCanvas.height = vh;
+      tipCanvas.style.width = vw * s + 'px';
+      tipCanvas.style.height = vh * s + 'px';
+    }
+    tctx.clearRect(0, 0, vw, vh);
+    const f = state.hoverItem;
+    if (!f) return;
+    const i = byTab[state.tab].indexOf(f);
+    const r = itemRect(i);
+    const mr = main.getBoundingClientRect();
+    const ox = mr.left / s + PAD, oy = mr.top / s + PAD;
+    const cellX = ox + r.x + 1, cellTop = oy + r.y - 1, cellBottom = cellTop + 40;
+    const tip = buildTip(f);
+    const tail = images['hint-frame_tail'];
+
+    let below = false;
+    let tipY = cellTop - tip.h;
+    if (tipY < 2) { below = true; tipY = cellBottom; }
+    let mirror = false;
+    let tipX = cellX + 20 - 17;
+    if (tipX + tip.w > vw - 2) { mirror = true; tipX = cellX + 20 + 17 - tip.w; }
+    tipX = Math.max(2, Math.round(tipX));
+    tipY = Math.round(tipY);
+
+    paintTip(tctx, tip, tipX, tipY);
+    if (tail) {
+      const cx = mirror ? tipX + tip.w - 17 : tipX + 17;
+      tctx.save();
+      tctx.translate(cx, below ? tipY + 5 : tipY + tip.h - 4);
+      tctx.scale(mirror ? -1 : 1, below ? -1 : 1);
+      tctx.drawImage(tail, -5, -5);
+      tctx.restore();
+    }
+  }
+
+  function redraw() { drawMain(); drawTip(); }
+
+  function fit() {
+    const avail = Math.min(window.innerWidth - 32, 1400);
+    const availH = window.innerHeight - 120;
+    const s = Math.max(1, Math.min(3, Math.floor(Math.min(avail / main.width, availH / main.height))));
+    main.style.width = Math.min(main.width * s, avail) + 'px';
+    drawTip();
+  }
+
+  function toNative(clientX, clientY) {
+    const r = main.getBoundingClientRect();
+    return { x: (clientX - r.left) * main.width / r.width - PAD, y: (clientY - r.top) * main.height / r.height - PAD };
+  }
+
+  const inside = (p, r) => p.x >= r.x && p.x < r.x + r.w && p.y >= r.y && p.y < r.y + r.h;
+
+  function hit(p) {
+    if (inside(p, CLOSE)) return { close: true };
+    for (let i = 0; i < 5; i++) if (inside(p, tabRect(i))) return { tab: i };
+    if (p.y >= LIST.top - 2 && p.y < LIST.bottom) {
+      const list = byTab[state.tab];
+      for (let i = 0; i < list.length; i++) {
+        const r = itemRect(i);
+        if (inside(p, { x: r.x, y: r.y - 2, w: r.w, h: r.h + 2 })) return { item: list[i] };
+      }
+    }
+    return {};
+  }
+
+  function updateHover() {
+    const h = state.mouse ? hit(toNative(state.mouse.x, state.mouse.y)) : {};
+    const ht = h.tab ?? -1, hi = h.item ?? null;
+    main.style.cursor = (h.close || (h.tab !== undefined && h.tab !== state.tab)) ? 'pointer' : 'default';
+    if (ht !== state.hoverTab || hi !== state.hoverItem) {
+      state.hoverTab = ht; state.hoverItem = hi;
+      return true;
+    }
+    return false;
+  }
+
+  function setTab(t) {
+    state.tab = (t + 5) % 5;
+    updateHover();
+    redraw();
+  }
+
+  let animating = false;
+  function animate() {
+    const t = state.tab;
+    const d = state.target[t] - state.scroll[t];
+    if (Math.abs(d) < 0.5) { state.scroll[t] = state.target[t]; animating = false; }
+    else state.scroll[t] += d * 0.22;
+    updateHover();
+    redraw();
+    if (animating) requestAnimationFrame(animate);
+  }
+
+  function scrollBy(dy) {
+    const t = state.tab;
+    const ms = maxScroll(t);
+    if (!ms) return false;
+    state.target[t] = Math.max(0, Math.min(ms, state.target[t] + dy));
+    if (!animating) { animating = true; requestAnimationFrame(animate); }
+    return true;
+  }
+
+  main.addEventListener('mousemove', e => {
+    state.mouse = { x: e.clientX, y: e.clientY };
+    if (updateHover()) redraw();
+  });
+  main.addEventListener('mouseleave', () => {
+    state.mouse = null;
+    if (updateHover()) redraw();
+  });
+  main.addEventListener('click', e => {
+    state.mouse = { x: e.clientX, y: e.clientY };
+    const h = hit(toNative(e.clientX, e.clientY));
+    if (h.close) { window.location.href = '../'; return; }
+    if (h.tab !== undefined && h.tab !== state.tab) setTab(h.tab);
+    else if (updateHover()) redraw();
+  });
+  main.addEventListener('wheel', e => {
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 200 : 1;
+    if (scrollBy(e.deltaY * unit / (scale() * 2))) e.preventDefault();
+  }, { passive: false });
+
+  let drag = null;
+  main.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse') drag = { y: e.clientY };
+  });
+  main.addEventListener('pointermove', e => {
+    if (!drag) return;
+    scrollBy((drag.y - e.clientY) / scale());
+    drag.y = e.clientY;
+  });
+  const endDrag = () => { drag = null; };
+  main.addEventListener('pointerup', endDrag);
+  main.addEventListener('pointercancel', endDrag);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') setTab(state.tab + 1);
+    else if (e.key === 'ArrowLeft') setTab(state.tab - 1);
+    else if (e.key === 'ArrowDown' && scrollBy(LIST.pitch)) e.preventDefault();
+    else if (e.key === 'ArrowUp' && scrollBy(-LIST.pitch)) e.preventDefault();
+    else if (e.key === 'Escape') window.location.href = '../';
+  });
+  window.addEventListener('resize', fit);
+  window.addEventListener('scroll', drawTip, { passive: true });
+
+  const sr = document.getElementById('sr');
+  byTab.forEach((list, t) => list.forEach(f => {
+    const li = document.createElement('li');
+    const r = ['red', 'green', 'blue'].map((c, i) => f.runes[i] ? `${f.runes[i]} ${c}` : '').filter(Boolean).join(', ');
+    li.textContent = `${TABS[t]} tab: ${f.name}, runes ${r}. ${f.description || ''}`;
+    sr.appendChild(li);
+  }));
+
+  const jobs = [];
+  for (const name of Object.keys(D.sprites)) {
+    const dir = name.startsWith('i_') ? 'icons' : 'ui';
+    jobs.push(load(name, `${dir}/${name}.png`));
+    if (dir === 'icons') jobs.push(load(name + '_hl', `icons/${name}_hl.png`));
+  }
+  for (const r of ['rune_r', 'rune_g', 'rune_b']) jobs.push(load(r, `ui/${r}.png`));
+  for (const n of Object.keys(D.fontIcons)) jobs.push(load('fi_' + n, `ui/fi_${n}.png`));
+  for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
+  Promise.all(jobs).then(() => { drawMain(); fit(); });
+})();
+</script>
+</body>
+</html>
