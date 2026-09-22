@@ -44,20 +44,23 @@
 </style>
 </head>
 <body>
-<canvas id="folio" tabindex="0" aria-label="Alchemy Folio, every formula grouped by bookmark tab"></canvas>
+<canvas id="folio" tabindex="0" aria-label="Alchemy Folio, every formula grouped by bookmark tab, plus every alchemy ingredient by rune"></canvas>
 <canvas id="tip" aria-hidden="true"></canvas>
-<p class="note">Hover a formula for its tooltip · Scroll the book · <kbd>←</kbd> <kbd>→</kbd> switch tabs · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 Demo 1.002.4</p>
+<p class="note">Hover an entry for its tooltip · Scroll the book · <kbd>←</kbd> <kbd>→</kbd> switch tabs, the last three list every ingredient by rune · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
 <ul id="sr" class="sr-only"></ul>
 <script src="folio-data.js"></script>
 <script>
 (() => {
   const D = window.FOLIO;
-  const TABS = ['Simple', 'Medium', 'Hard', 'Epic', 'Heroic'];
+  const TABS = ['Simple', 'Medium', 'Hard', 'Epic', 'Heroic', 'Red rune', 'Green rune', 'Blue rune'];
+  const RUNE_TAB0 = 5;
   const PAD = 6;
-  const W = 382, H = 349;
-  const BOOK = { x: 13, y: 71, w: 356, h: 264 };
-  const LIST = { top: BOOK.y + 22, bottom: BOOK.y + BOOK.h - 12, pitch: 42, cols: [BOOK.x + 18, BOOK.x + 186] };
-  const TAB_X0 = 90, TAB_GAP = 2;
+  const W = 370, H = 324;
+  const BOOK = { x: 7, y: 54, w: 356, h: 264 };
+  const VIEW = { x: 20, y: 78, w: 330, h: 219 };
+  const LIST = { top: VIEW.y, bottom: VIEW.y + VIEW.h, pitch: 41, cols: [VIEW.x + 5, VIEW.x + 173] };
+  const TABS_Y = 38, TAB_W = 39, TAB_GAP = 2, TAB_X0 = 40.5;
+  const RUNE_W = 25, RUNE_X0 = 271;
   const TIP = { pad: 14, spacing: 2, maxText: 160, minW: 124, lineH: 12 };
   const COLORS = { title: '#f6e3bd', titleOutline: '#4c301c', name: '#7a5837', runes: '#4e3012' };
   const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
@@ -124,6 +127,46 @@
     if (alpha !== undefined) ctx.globalAlpha = alpha;
     ctx.drawImage(im, Math.round(x), Math.round(y));
     ctx.globalAlpha = 1;
+  }
+
+  function stretch(ctx, name, x, y, w, h) {
+    const im = images[name];
+    if (im) ctx.drawImage(im, Math.round(x), Math.round(y), Math.round(w), Math.round(h));
+  }
+
+  const RUNE_ICON_W = 15;
+
+  function nameTokens(str) {
+    return str.split(' ').map(word => word.split(/(\{[rgb]\})/).filter(Boolean)
+      .map(p => /^\{[rgb]\}$/.test(p) ? { icon: 'rune_' + p[1] } : { text: p }));
+  }
+
+  const tokenWidth = word => word.reduce((w, p) => w + (p.icon ? RUNE_ICON_W : measure('tiny_font', p.text)), 0);
+
+  function wrapName(str, maxW) {
+    const space = measure('tiny_font', ' ');
+    const lines = [];
+    let line = [], lw = 0;
+    for (const word of nameTokens(str)) {
+      const ww = tokenWidth(word);
+      if (line.length && lw + space + ww > maxW) { lines.push(line); line = []; lw = 0; }
+      lw += (line.length ? space : 0) + ww;
+      line.push(...word, { text: ' ' });
+    }
+    if (line.length) lines.push(line);
+    return lines.length ? lines : [[]];
+  }
+
+  function drawName(ctx, parts, x, baseline) {
+    let pen = x;
+    for (const p of parts) {
+      if (p.icon) {
+        sprite(ctx, p.icon, pen, baseline - 11);
+        pen += RUNE_ICON_W;
+      } else {
+        pen += text(ctx, 'tiny_font', p.text, pen, baseline, COLORS.name);
+      }
+    }
   }
 
   function slice(ctx, name, x, y, w, h, alpha) {
@@ -245,13 +288,14 @@
 
   const state = {
     tab: 0,
-    scroll: [0, 0, 0, 0, 0],
-    target: [0, 0, 0, 0, 0],
+    scroll: TABS.map(() => 0),
+    target: TABS.map(() => 0),
     hoverTab: -1,
     hoverItem: null,
     mouse: null,
   };
-  const byTab = TABS.map((_, t) => D.formulas.filter(f => f.tab === t));
+  const runeTabs = D.runeTabs || [];
+  const byTab = TABS.map((_, t) => t < RUNE_TAB0 ? D.formulas.filter(f => f.tab === t) : (runeTabs[t - RUNE_TAB0] || { items: [] }).items);
 
   const main = document.getElementById('folio');
   const tipCanvas = document.getElementById('tip');
@@ -260,9 +304,26 @@
   main.width = W + PAD * 2; main.height = H + PAD * 2;
 
   function tabRect(i) {
-    const x = TAB_X0 + i * (39 + TAB_GAP);
-    const active = i === state.tab;
-    return { x, y: active ? 44 : 45, w: 40, h: active ? 38 : 28 };
+    if (i < RUNE_TAB0) return { x: TAB_X0 + i * (TAB_W + TAB_GAP), y: TABS_Y, w: TAB_W, h: 28 };
+    return { x: RUNE_X0 + (i - RUNE_TAB0) * (RUNE_W + TAB_GAP), y: TABS_Y, w: RUNE_W, h: 28 };
+  }
+
+  function bookmarkRect(i, st) {
+    const r = tabRect(i);
+    const cx = r.x + r.w / 2;
+    if (i < RUNE_TAB0) return st === 'act' ? { x: cx - 20, y: 36, w: 40, h: 38 } : { x: cx - 20, y: 37, w: 40, h: 28 };
+    if (st === 'act') return { x: cx - 13.5, y: 38.5, w: 27, h: 34 };
+    if (st === 'target') return { x: cx - 13.5, y: 42.5, w: 27, h: 23 };
+    return { x: cx - 13.5, y: 45.5, w: 27, h: 20 };
+  }
+
+  const bookmarkSprite = (i, st) => i < RUNE_TAB0
+    ? `folio-bookmark_${i + 1}-${st}`
+    : `folio-bookmark_${runeTabs[i - RUNE_TAB0].color}_rune-${st}`;
+
+  function drawBookmark(c, i, st) {
+    const r = bookmarkRect(i, st);
+    stretch(c, bookmarkSprite(i, st), r.x, r.y, r.w, r.h);
   }
 
   function itemRect(i) {
@@ -272,7 +333,7 @@
 
   function maxScroll(t) {
     const rows = Math.ceil(byTab[t].length / 2);
-    return Math.max(0, rows * LIST.pitch - (LIST.bottom - LIST.top) + 2);
+    return Math.max(0, rows * LIST.pitch - (LIST.bottom - LIST.top));
   }
 
   const visible = r => r.y + r.h > LIST.top - 2 && r.y < LIST.bottom;
@@ -284,34 +345,32 @@
     c.translate(PAD, PAD);
 
     c.save();
-    c.beginPath(); c.rect(13, 37, W - 26, H - 50); c.clip();
-    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, 37);
+    c.beginPath(); c.rect(13, 36, W - 26, H - 49); c.clip();
+    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, 109 - 203);
     c.restore();
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < TABS.length; i++) {
       if (i === state.tab) continue;
-      const r = tabRect(i);
-      sprite(c, `folio-bookmark_${i + 1}-${i === state.hoverTab ? 'target' : 'inact'}`, r.x, r.y);
+      drawBookmark(c, i, i === state.hoverTab && i >= RUNE_TAB0 ? 'target' : 'inact');
     }
 
     sprite(c, 'folio-book_bg', BOOK.x, BOOK.y);
-    const at = tabRect(state.tab);
-    sprite(c, `folio-bookmark_${state.tab + 1}-act`, at.x, at.y);
+    drawBookmark(c, state.tab, 'act');
 
     c.save();
-    c.beginPath(); c.rect(BOOK.x, LIST.top - 3, BOOK.w, LIST.bottom - LIST.top + 3); c.clip();
+    c.beginPath(); c.rect(BOOK.x, LIST.top, BOOK.w, LIST.bottom - LIST.top); c.clip();
     byTab[state.tab].forEach((f, i) => {
       const r = itemRect(i);
       if (!visible(r)) return;
       const hover = f === state.hoverItem;
       cell(c, r.x + 1, r.y - 1, 40, f.icon, hover);
       if (hover) slice(c, 'selection', r.x, r.y - 2, 42, 42);
-      const nameLines = wrap('tiny_font', f.name, 104);
+      const nameLines = wrapName(f.name, 104);
       if (nameLines.length > 1) {
-        text(c, 'tiny_font', nameLines[0], r.x + 46, r.y + 9, COLORS.name);
-        text(c, 'tiny_font', nameLines.slice(1).join(' '), r.x + 46, r.y + 19, COLORS.name);
+        drawName(c, nameLines[0], r.x + 46, r.y + 9);
+        drawName(c, nameLines.slice(1).flat(), r.x + 46, r.y + 19);
       } else {
-        text(c, 'tiny_font', f.name, r.x + 46, r.y + 14, COLORS.name);
+        drawName(c, nameLines[0], r.x + 46, r.y + 14);
       }
       runes(c, f.runes, r.x + 46, r.y + 34, COLORS.runes);
       slice(c, 'folio-separator_2', r.x - 1, r.y + 38, 154, 6, 0.5);
@@ -325,9 +384,9 @@
       const thumbH = Math.max(12, Math.round(trackH * viewH / (viewH + ms)));
       const thumbY = trackY + Math.round((trackH - thumbH) * state.scroll[state.tab] / ms);
       c.fillStyle = 'rgba(78,48,18,0.18)';
-      c.fillRect(BOOK.x + BOOK.w - 10, trackY, 2, trackH);
+      c.fillRect(VIEW.x + VIEW.w - 2, trackY, 2, trackH);
       c.fillStyle = 'rgba(78,48,18,0.55)';
-      c.fillRect(BOOK.x + BOOK.w - 10, thumbY, 2, thumbH);
+      c.fillRect(VIEW.x + VIEW.w - 2, thumbY, 2, thumbH);
     }
 
     slice(c, 'comm-frame_1-border', 0, 0, W, H);
@@ -408,7 +467,7 @@
 
   function hit(p) {
     if (inside(p, CLOSE)) return { close: true };
-    for (let i = 0; i < 5; i++) if (inside(p, tabRect(i))) return { tab: i };
+    for (let i = 0; i < TABS.length; i++) if (inside(p, tabRect(i))) return { tab: i };
     if (p.y >= LIST.top - 2 && p.y < LIST.bottom) {
       const list = byTab[state.tab];
       for (let i = 0; i < list.length; i++) {
@@ -431,7 +490,7 @@
   }
 
   function setTab(t) {
-    state.tab = (t + 5) % 5;
+    state.tab = (t + TABS.length) % TABS.length;
     updateHover();
     redraw();
   }
@@ -503,7 +562,7 @@
   byTab.forEach((list, t) => list.forEach(f => {
     const li = document.createElement('li');
     const r = ['red', 'green', 'blue'].map((c, i) => f.runes[i] ? `${f.runes[i]} ${c}` : '').filter(Boolean).join(', ');
-    li.textContent = `${TABS[t]} tab: ${f.name}, runes ${r}. ${f.description || ''}`;
+    li.textContent = `${TABS[t]} tab: ${f.name.replace(/\{([rgb])\}/g, ' $1 rune')}, runes ${r}. ${f.description || ''}`;
     sr.appendChild(li);
   }));
 

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Tree</title>
+<style>
+  :root {
+    --page: #17120d;
+    --ink: #d9c3a0;
+    --muted: #9c8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--ink); }
+  body {
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+  canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  #tree { max-width: 100%; height: auto; touch-action: pan-y; }
+  #tip { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 10; }
+  .note { max-width: 760px; text-align: center; color: var(--muted); margin: 0; }
+  .note kbd {
+    font: inherit;
+    border: 1px solid #4a3a28;
+    border-radius: 3px;
+    padding: 0 4px;
+    color: var(--ink);
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="tree" tabindex="0" aria-label="Tech tree, every technology grouped by tab"></canvas>
+<canvas id="tip" aria-hidden="true"></canvas>
+<p class="note">Click a tech to mark it learned, the spheres count what you spent · Hover an icon for its tooltip · Scroll or drag to pan · <kbd>Q</kbd> <kbd>E</kbd> switch tabs · <kbd>R</kbd> forget all · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
+<ul id="sr" class="sr-only"></ul>
+<script src="techtree-data.js"></script>
+<script>
+(() => {
+  const D = window.TECH;
+  const LAY = D.layout;
+  const PAD = 6;
+  const W = 662, H = 432;
+  const PAGE = { x: 11, y: 37, w: 640, h: 384 };
+  const VIEW = { x: PAGE.x + 2, y: PAGE.y + 45, w: PAGE.w - 4, h: PAGE.h - 45 };
+  const CONTENT_X = VIEW.x + VIEW.w / 2 - 322;
+  const TAB_Y = PAGE.y + 24 - 22;
+  const TIP = { pad: 14, spacing: 2, maxText: 170, minW: 124, lineH: 12, cell: 42, cellPitch: 36 };
+  const COLORS = { title: '#f6e3bd', titleOutline: '#4c301c' };
+  const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
+  const STORE = 'timbn-gk2-techtree-learned';
+
+  const images = {};
+  const load = (key, src) => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { images[key] = im; res(); };
+    im.onerror = () => res();
+    im.src = src;
+  });
+
+  const tints = new Map();
+  function tinted(key, src, color) {
+    const id = key + color;
+    if (tints.has(id)) return tints.get(id);
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    tints.set(id, c);
+    return c;
+  }
+
+  function multiplied(name, color) {
+    const id = 'mul:' + name + color;
+    if (tints.has(id)) return tints.get(id);
+    const src = images[name];
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'multiply';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    x.globalCompositeOperation = 'destination-in';
+    x.drawImage(src, 0, 0);
+    tints.set(id, c);
+    return c;
+  }
+
+  const fontAtlas = (font, color) => tinted('font:' + font, images['font:' + font], color);
+  const glyph = (font, ch) => D.fonts[font].chars[ch.codePointAt(0)] || D.fonts[font].chars[63];
+
+  function measure(font, str) {
+    let w = 0;
+    for (const ch of str) w += glyph(font, ch)[6];
+    return w;
+  }
+
+  function text(ctx, font, str, x, baseline, color) {
+    const atlas = fontAtlas(font, color);
+    let pen = Math.round(x);
+    for (const ch of str) {
+      const [gx, gy, gw, gh, bx, by, adv] = glyph(font, ch);
+      if (gw > 0 && gh > 0 && ch !== ' ') ctx.drawImage(atlas, gx, gy, gw, gh, pen + bx, Math.round(baseline - by), gw, gh);
+      pen += adv;
+    }
+    return pen - Math.round(x);
+  }
+
+  const SIDES4 = [[0, -1], [-1, 0], [1, 0], [0, 1]];
+  const SIDES8 = [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]];
+
+  function styled(ctx, font, str, x, baseline, st) {
+    if (st.outline) for (const [dx, dy] of st.eight ? SIDES8 : SIDES4) text(ctx, font, str, x + dx, baseline + dy, st.outline);
+    return text(ctx, font, str, x, baseline, st.color);
+  }
+
+  function sprite(ctx, name, x, y, w, h, alpha) {
+    const im = images[name];
+    if (!im) return;
+    if (alpha !== undefined) ctx.globalAlpha = alpha;
+    ctx.drawImage(im, Math.round(x), Math.round(y), w ?? im.width, h ?? im.height);
+    ctx.globalAlpha = 1;
+  }
+
+  function centered(ctx, name, cx, cy, alpha) {
+    const im = images[name];
+    if (im) sprite(ctx, name, cx - im.width / 2, cy - im.height / 2, undefined, undefined, alpha);
+  }
+
+  function slice(ctx, name, x, y, w, h, opts = {}) {
+    const im = opts.image || images[name];
+    if (!im) return;
+    const [l, b, r, t] = (D.sprites[name] && D.sprites[name].border) || [0, 0, 0, 0];
+    const sw = im.width, sh = im.height;
+    const cw = sw - l - r, ch = sh - t - b;
+    const dw = w - l - r, dh = h - t - b;
+    x = Math.round(x); y = Math.round(y); w = Math.round(w); h = Math.round(h);
+    if (opts.alpha !== undefined) ctx.globalAlpha = opts.alpha;
+    const cols = [[0, l, 0, l], [l, cw, l, dw], [sw - r, r, w - r, r]];
+    const rows = [[0, t, 0, t], [t, ch, t, dh], [sh - b, b, h - b, b]];
+    cols.forEach(([sx, sww, dx, dww], ci) => {
+      rows.forEach(([sy, shh, dy, dhh]) => {
+        if (sww <= 0 || shh <= 0 || dww <= 0 || dhh <= 0) return;
+        if (opts.tile && ci === 1) {
+          for (let ox = 0; ox < dww; ox += sww) {
+            const pw = Math.min(sww, dww - ox);
+            ctx.drawImage(im, sx, sy, pw, shh, x + dx + ox, y + dy, pw, dhh);
+          }
+        } else {
+          ctx.drawImage(im, sx, sy, sww, shh, x + dx, y + dy, dww, dhh);
+        }
+      });
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  const iconAdv = name => (D.fontIcons[name] ? D.fontIcons[name].adv : 12);
+
+  function fontIcon(ctx, name, pen, baseline) {
+    const fi = D.fontIcons[name] || { bx: 0, by: 12 };
+    sprite(ctx, 'fi_' + name, pen + fi.bx, baseline - fi.by + 2);
+    return iconAdv(name);
+  }
+
+  function wordWidth(font, word) {
+    let w = 0;
+    for (const p of word) w += p.icon ? iconAdv(p.icon) : measure(font, p.text);
+    return w;
+  }
+
+  function layoutText(segs, font, color, maxW) {
+    const words = [];
+    let cur = [];
+    const flush = () => { if (cur.length) { words.push(cur); cur = []; } };
+    for (const s of segs) {
+      if (s.icon) { cur.push({ icon: s.icon }); continue; }
+      for (const p of s.text.split(/(\s)/)) {
+        if (p === '\n') { flush(); words.push('\n'); }
+        else if (/^\s$/.test(p)) flush();
+        else if (p) cur.push({ text: p, color: s.color || color });
+      }
+    }
+    flush();
+    const space = measure(font, ' ');
+    const lines = [];
+    let line = [], lw = 0;
+    for (const word of words) {
+      if (word === '\n') { lines.push({ words: line, w: lw }); line = []; lw = 0; continue; }
+      const ww = wordWidth(font, word);
+      if (line.length && lw + space + ww > maxW) { lines.push({ words: line, w: lw }); line = []; lw = 0; }
+      lw += (line.length ? space : 0) + ww;
+      line.push(word);
+    }
+    lines.push({ words: line, w: lw });
+    return lines;
+  }
+
+  function drawLine(ctx, font, line, x, baseline) {
+    const space = measure(font, ' ');
+    let pen = x;
+    line.words.forEach((word, i) => {
+      if (i) pen += space;
+      for (const p of word) pen += p.icon ? fontIcon(ctx, p.icon, pen, baseline) : text(ctx, font, p.text, pen, baseline, p.color);
+    });
+  }
+
+  const tabs = D.tabs;
+  const byId = Object.fromEntries(D.techs.map(t => [t.id, t]));
+  const byTab = tabs.map((_, i) => D.techs.filter(t => t.tab === i));
+  const children = {};
+  for (const t of D.techs) for (const p of t.parents) (children[p] ||= []).push(t);
+
+  let learned = new Set(D.techs.filter(t => t.start).map(t => t.id));
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
+    if (Array.isArray(saved)) learned = new Set(saved.filter(id => byId[id]));
+  } catch (e) {}
+  function save() {
+    try { localStorage.setItem(STORE, JSON.stringify([...learned])); } catch (e) {}
+  }
+
+  function parentsOk(t) {
+    if (t.any) return t.parents.some(p => learned.has(p));
+    return t.parents.every(p => learned.has(p));
+  }
+  const stateOf = t => learned.has(t.id) ? 'unlocked' : parentsOk(t) ? 'available' : 'visible';
+
+  const isRep = t => !!t.rep;
+  function center(t) {
+    const off = isRep(t) ? LAY.repOffset : [0, 0];
+    return [t.x * LAY.offset[0] + LAY.edge[0] + off[0], Math.ceil(t.y * LAY.offset[1] + LAY.edge[1] + off[1])];
+  }
+  const port = (t, side) => {
+    const [x, y] = center(t);
+    const p = (isRep(t) ? LAY.repPorts : LAY.ports)[side];
+    return [x + p[0], y + p[1]];
+  };
+
+  function contentWidth(tab) {
+    const maxX = Math.max(0, ...byTab[tab].map(t => t.x));
+    return maxX * LAY.offset[0] + LAY.edge[0] * 2 - 24 + LAY.size[0];
+  }
+
+  const state = { tab: 0, scroll: [0, 0, 0, 0, 0, 0], target: [0, 0, 0, 0, 0, 0], hover: null, mouse: null };
+  const hashTab = tabs.findIndex(t => t.id.toLowerCase() === location.hash.slice(1).toLowerCase());
+  if (hashTab >= 0) state.tab = hashTab;
+
+  const maxScroll = tab => Math.max(0, CONTENT_X + contentWidth(tab) - (VIEW.x + VIEW.w) + 6);
+  const toCanvas = (x, y) => [CONTENT_X - Math.round(state.scroll[state.tab]) + x, VIEW.y + VIEW.h - y];
+
+  function techRect(t) {
+    const [cx, cy] = toCanvas(...center(t));
+    const [w, h] = isRep(t) ? LAY.repSize : LAY.size;
+    return { x: cx - w / 2, y: cy - h / 2, w, h, cx, cy };
+  }
+
+  function unlockRects(t, r) {
+    const n = t.unlocks.length;
+    const total = n * 32 + (n - 1);
+    const x0 = Math.round(r.cx - total / 2);
+    return t.unlocks.map((u, i) => ({ x: x0 + i * 33, y: Math.round(r.cy + 1 - 16), w: 32, h: 32, unlock: u }));
+  }
+
+  function connectorRects(parent, child) {
+    const C = D.connector;
+    let a = port(parent, 'right'), b = port(child, 'left');
+    let el, size, anchor = a;
+    if (a[0] === b[0]) {
+      if (a[1] < b[1]) {
+        a = port(parent, 'up'); b = port(child, 'down');
+        el = C.VerticalUp; size = [el.size[0], b[1] - a[1]];
+      } else {
+        a = port(parent, 'down'); b = port(child, 'up');
+        el = C.VerticalDown; size = [el.size[0], a[1] - b[1]];
+      }
+      anchor = a;
+    } else if (a[1] === b[1]) {
+      el = C.Horizontal; size = [b[0] - a[0], el.size[1]];
+    } else if (a[1] < b[1]) {
+      el = C.DownUp; size = [b[0] - a[0], Math.abs(b[1] - a[1])];
+    } else {
+      el = C.UpDown; size = [b[0] - a[0], Math.abs(b[1] - a[1])];
+    }
+    if (el !== C.Horizontal) size = [size[0] + el.extra[0], size[1] + el.extra[1]];
+    const left = anchor[0] + el.pos[0] - el.pivot[0] * size[0];
+    const bottom = anchor[1] + el.pos[1] - el.pivot[1] * size[1];
+    const [x, y] = toCanvas(left, bottom + size[1]);
+    const rep = isRep(parent);
+    return { x, y, w: size[0], h: size[1], back: (rep && el.backRep) || el.back, front: (rep && el.frontRep) || el.front, el };
+  }
+
+  function tabLayout() {
+    const labelW = i => Math.max(...tabs[i].name.split('\n').map(l => measure('small_font_bold', l)));
+    const widths = tabs.map((_, i) => i === state.tab ? Math.max(126, 42 + labelW(i) + 8) - 4 : 44);
+    const total = widths.reduce((a, b) => a + b, 0) - 2 * (tabs.length - 1);
+    let x = Math.round(PAGE.x + PAGE.w / 2 - total / 2);
+    return widths.map((w, i) => { const r = { x, y: TAB_Y, w, h: 44, i }; x += w - 2; return r; });
+  }
+
+  const main = document.getElementById('tree');
+  const tipCanvas = document.getElementById('tip');
+  const mctx = main.getContext('2d');
+  const tctx = tipCanvas.getContext('2d');
+  main.width = W + PAD * 2; main.height = H + PAD * 2;
+
+  function drawTabs(c) {
+    slice(c, 'tech_tree-tabs_bg_top', PAGE.x - 1, PAGE.y + 3, PAGE.w + 2, 46, { tile: true });
+    for (const r of tabLayout()) {
+      const t = tabs[r.i];
+      if (r.i === state.tab) {
+        const fx = r.x - 2, fw = r.w + 4;
+        slice(c, 'tech_tree-tab_top-active', fx, r.y, fw, 44);
+        centered(c, t.icon, fx + 23, r.y + 21);
+        centered(c, 'tech_tree-tab_top-icon_border-active', fx + 24, r.y + 22);
+        const lines = t.name.split('\n');
+        const lw = Math.max(...lines.map(l => measure('small_font_bold', l)));
+        const lx = fx + 42, lcx = lx + lw / 2;
+        c.save();
+        c.translate(Math.round(lcx), r.y + 5);
+        c.scale(1, -1);
+        centered(c, 'tech_tree-tab_top-active-decor_bot', 0, 0);
+        c.restore();
+        centered(c, 'tech_tree-tab_top-active-decor_bot', lcx, r.y + 38);
+        const cap = glyph('small_font_bold', 'H')[5];
+        const lh = D.fonts.small_font_bold.lineHeight;
+        lines.forEach((l, k) => {
+          const baseline = r.y + 21 + Math.round(cap / 2) + Math.round((k - (lines.length - 1) / 2) * lh);
+          styled(c, 'small_font_bold', l, Math.round(lcx - measure('small_font_bold', l) / 2), baseline, D.styles.tab);
+        });
+      } else {
+        const hover = state.hover && state.hover.tab === r.i;
+        const cx = r.x + 22, cy = r.y + 22 - 1;
+        centered(c, hover ? 'tech_tree-tab_top-inactive-over' : 'tech_tree-tab_top-inactive', cx, cy);
+        if (!hover) c.filter = 'brightness(0.55) saturate(0.7)';
+        centered(c, t.icon, cx - 1, cy - 2);
+        c.filter = 'none';
+        centered(c, hover ? 'tech_tree-tab_top-icon_border-over' : 'tech_tree-tab_top-icon_border-inactive', cx, cy - 1);
+      }
+    }
+  }
+
+  function drawSpheres(c) {
+    const spent = [0, 0, 0];
+    for (const id of learned) byId[id].price.forEach((v, i) => { spent[i] += v; });
+    const names = ['tech_red', 'tech_green', 'tech_blue'];
+    const x = PAGE.x + PAGE.w - 607 - 24;
+    names.forEach((n, i) => {
+      const baseline = PAGE.y + 5 + 8 + i * 10 + 4;
+      const w = fontIcon(c, n, x, baseline);
+      styled(c, 'tiny_font', String(spent[i]), x + w, baseline, D.styles.spheres);
+    });
+  }
+
+  function drawConnector(c, parent, child, layer) {
+    const r = connectorRects(parent, child);
+    const active = learned.has(parent.id);
+    if (layer === 'back') {
+      slice(c, r.back, r.x, r.y, r.w, r.h);
+    } else if ((layer === 'active') === active) {
+      const img = multiplied(r.front, active ? r.el.active : r.el.inactive);
+      slice(c, r.front, r.x, r.y, r.w, r.h, { image: img });
+    }
+  }
+
+  function drawPrice(c, t, r, st) {
+    const style = st === 'available' ? D.styles.priceNormal : D.styles.priceDisabled;
+    const icons = ['techpoint_icon-red-s', 'techpoint_icon-green-s', 'techpoint_icon-blue-s'];
+    const parts = t.price.map((v, i) => [icons[i], String(v)]).filter((_, i) => t.price[i] > 0);
+    if (!parts.length) return;
+    const space = measure('tiny_font', ' ');
+    const total = parts.reduce((a, [ic, n]) => a + iconAdv(ic) + measure('tiny_font', n), 0) + space * (parts.length - 1);
+    let pen = Math.round(r.cx - total / 2);
+    const baseline = Math.round(r.y + r.h - 7 + 4);
+    parts.forEach(([ic, n], i) => {
+      if (i) pen += space;
+      pen += fontIcon(c, ic, pen, baseline);
+      pen += styled(c, 'tiny_font', n, pen, baseline, style);
+    });
+  }
+
+  function fitName(name) {
+    if (measure('tiny_font', name) <= 124) return name;
+    const words = name.split(' ');
+    let out = '';
+    for (const w of words) {
+      const next = out ? out + ' ' + w : w;
+      if (measure('tiny_font', next) > 124) break;
+      out = next;
+    }
+    return out || name;
+  }
+
+  function drawCommon(c, t) {
+    const r = techRect(t);
+    const st = stateOf(t);
+    const plate = { unlocked: 'tech_tree-tech_plate-opened', available: 'tech_tree-tech_plate-available', visible: 'tech_tree-tech_plate-unavailable' }[st];
+    sprite(c, plate, r.x, r.y, r.w, r.h);
+    const style = { unlocked: D.styles.opened, available: D.styles.available, visible: D.styles.unavailable }[st];
+    const name = fitName(t.name);
+    const cap = glyph('tiny_font', 'H')[5];
+    styled(c, 'tiny_font', name, Math.round(r.cx - measure('tiny_font', name) / 2), Math.round(r.y + 8 + cap / 2), style);
+    for (const u of unlockRects(t, r)) {
+      sprite(c, 'tech_tree-tech_plate-item_cell', u.x, u.y, 32, 32, 0.298);
+      const im = images['icon:' + u.unlock.icon];
+      if (im) c.drawImage(im, Math.round(u.x + 16 - im.width / 2), Math.round(u.y + 16 - im.height / 2));
+    }
+    if (st === 'unlocked') centered(c, 'icon_checkmark', r.cx, r.cy + 23);
+    else drawPrice(c, t, r, st);
+    if (state.hover && state.hover.tech === t) slice(c, 'tech_frame_selection', r.cx - 65, r.cy - 33.5 - 0.5, 130, 67);
+  }
+
+  const masked = new Map();
+  function portrait(name) {
+    if (masked.has(name)) return masked.get(name);
+    const mask = images['notification-portrait-mask'], pic = images[name];
+    const c = document.createElement('canvas');
+    c.width = 30; c.height = 30;
+    const x = c.getContext('2d');
+    if (pic) x.drawImage(pic, Math.round(15 - pic.width / 2), Math.round(15 + 13 - pic.height / 2));
+    x.globalCompositeOperation = 'destination-in';
+    if (mask) x.drawImage(mask, 0, 0);
+    masked.set(name, c);
+    return c;
+  }
+
+  function drawRep(c, t) {
+    const r = techRect(t);
+    const st = stateOf(t);
+    const bx = r.x, by = r.y - 2, bcx = r.cx, bcy = r.cy - 2;
+    sprite(c, 'tech_tree-character_frame-bg', bx, by, 46, 50);
+    sprite(c, st === 'unlocked' ? 'tech_tree-character_frame-border_yellow' : 'tech_tree-character_frame-border_grey', bx, by, 46, 50);
+    c.drawImage(portrait(t.rep.portrait), Math.round(bcx - 15), Math.round(bcy - 15));
+    if (st === 'unlocked') {
+      centered(c, 'icon_checkmark', bcx + 2, by + 50 - 7);
+    } else {
+      const label = String(t.rep.value);
+      const lw = measure('small_font_bold', label);
+      const cw = Math.max(20, lw + 6);
+      slice(c, 'tech_tree-character_frame-value_cell', Math.round(bcx - cw / 2), by + 50 - 3 - 7, cw, 14);
+      const cap = glyph('small_font_bold', 'H')[5];
+      styled(c, 'small_font_bold', label, Math.round(bcx - lw / 2), by + 50 - 3 + Math.round(cap / 2) + 1, D.styles.rep);
+    }
+    if (state.hover && state.hover.tech === t) {
+      sprite(c, 'tech_tree-character_frame-over_border', bx, by, 46, 50);
+      sprite(c, 'tech_tree-character_frame-over_glow', bx + 1, by + 1, 44, 48, 0.102);
+    }
+  }
+
+  function drawFades(c) {
+    const im = images['comm-content_fade_1'];
+    if (!im) return;
+    const cy = VIEW.y + VIEW.h / 2 - 1;
+    for (const [x, rot] of [[VIEW.x + 5, Math.PI / 2], [VIEW.x + VIEW.w - 5, -Math.PI / 2]]) {
+      c.save();
+      c.translate(x, cy);
+      c.rotate(rot);
+      slice(c, 'comm-content_fade_1', -169, -5, 338, 10);
+      c.restore();
+    }
+  }
+
+  function drawMain() {
+    const c = mctx;
+    c.setTransform(1, 0, 0, 1, 0, 0);
+    c.clearRect(0, 0, main.width, main.height);
+    c.translate(PAD, PAD);
+
+    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, (H - 406) / 2);
+    drawTabs(c);
+    drawSpheres(c);
+
+    const list = byTab[state.tab];
+    const inTab = new Set(list.map(t => t.id));
+    const links = [];
+    for (const t of list) for (const ch of children[t.id] || []) if (inTab.has(ch.id)) links.push([t, ch]);
+
+    c.save();
+    c.beginPath(); c.rect(VIEW.x, VIEW.y, VIEW.w, VIEW.h); c.clip();
+    for (const t of list) {
+      if (isRep(t)) continue;
+      const r = techRect(t);
+      if (r.x > VIEW.x + VIEW.w || r.x + r.w < VIEW.x) continue;
+      centered(c, 'tech_tree-tech_plate-slot', r.cx, r.cy);
+    }
+    for (const layer of ['back', 'inactive', 'active']) for (const [p, ch] of links) drawConnector(c, p, ch, layer);
+    for (const t of list) {
+      const r = techRect(t);
+      if (r.x > VIEW.x + VIEW.w + 4 || r.x + r.w < VIEW.x - 4) continue;
+      if (isRep(t)) drawRep(c, t); else drawCommon(c, t);
+    }
+    drawFades(c);
+    c.restore();
+
+    slice(c, 'comm-frame_1-border', 0, 0, W, H);
+    const hx = 11, hy = 11, hw = W - 22;
+    slice(c, 'main_window-header_1', hx, hy, hw, 26);
+    sprite(c, 'main_window-header_1-dec_side_3', hx, hy);
+    c.save();
+    c.translate(hx + hw, hy);
+    c.scale(-1, 1);
+    sprite(c, 'main_window-header_1-dec_side_3', 0, 0);
+    c.restore();
+    sprite(c, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
+    sprite(c, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
+    const title = 'Tech Tree';
+    const tw = measure('small_font_bold', title);
+    styled(c, 'small_font_bold', title, hx + Math.round((hw - 34 - tw) / 2), hy + Math.round((26 + glyph('small_font_bold', 'H')[5]) / 2) - 1,
+      { color: COLORS.title, outline: COLORS.titleOutline, eight: true });
+  }
+
+  function buildTip(key) {
+    const blocks = [];
+    let width = TIP.minW - TIP.pad * 2;
+    for (const w of key) {
+      if (w.sep) { blocks.push({ sep: true, h: 10 }); continue; }
+      if (w.cells) {
+        const cw = TIP.cell + (w.cells.length - 1) * TIP.cellPitch;
+        width = Math.max(width, cw);
+        blocks.push({ cells: w.cells, w: cw, h: TIP.cell - 4 });
+        continue;
+      }
+      const [font, color] = D.tooltipStyles[w.style];
+      const lines = layoutText(w.segs, font, color, TIP.maxText);
+      for (const l of lines) width = Math.max(width, l.w);
+      blocks.push({ font, lines, h: lines.length * TIP.lineH + 1 });
+    }
+    const h = TIP.pad * 2 + blocks.reduce((a, b) => a + b.h, 0) + TIP.spacing * (blocks.length - 1);
+    return { blocks, w: Math.ceil(width + TIP.pad * 2), h };
+  }
+
+  function paintTip(ctx, tip, x, y) {
+    slice(ctx, 'hint-frame', x, y, tip.w, tip.h);
+    let cy = y + TIP.pad;
+    for (const b of tip.blocks) {
+      if (b.sep) {
+        sprite(ctx, 'hint-text_separator', x + Math.round((tip.w - 96) / 2), cy + 1);
+      } else if (b.cells) {
+        let cx = x + Math.round((tip.w - b.w) / 2);
+        const top = cy - 2;
+        for (const cell of b.cells) {
+          slice(ctx, 'widget_items_cell-folio_item_cell', cx + 1, top + 1, 40, 40);
+          const im = images['tt:' + cell.icon];
+          if (im) ctx.drawImage(im, Math.round(cx + 21 - im.width / 2), Math.round(top + 21 - im.height / 2));
+          const cw = measure('tiny_font', cell.count);
+          styled(ctx, 'tiny_font', cell.count, cx + 42 - 5 - cw, top + 42 - 7, D.styles.quantity);
+          cx += TIP.cellPitch;
+        }
+      } else {
+        b.lines.forEach((l, i) => drawLine(ctx, b.font, l, x + Math.round((tip.w - l.w) / 2), cy + (i + 1) * TIP.lineH - 3));
+      }
+      cy += b.h + TIP.spacing;
+    }
+  }
+
+  function repTip(t) {
+    return [
+      { style: 'header', segs: [{ text: t.rep.name }] },
+      { sep: true },
+      { style: 'small', segs: [{ text: 'Reputation needed: ', color: D.tooltipStyles.selected[1] }, { text: String(t.rep.value) }] },
+    ];
+  }
+
+  function scale() {
+    return main.getBoundingClientRect().width / main.width;
+  }
+
+  function drawTip() {
+    const s = scale();
+    const vw = Math.ceil(window.innerWidth / s), vh = Math.ceil(window.innerHeight / s);
+    if (tipCanvas.width !== vw || tipCanvas.height !== vh) {
+      tipCanvas.width = vw; tipCanvas.height = vh;
+      tipCanvas.style.width = vw * s + 'px';
+      tipCanvas.style.height = vh * s + 'px';
+    }
+    tctx.clearRect(0, 0, vw, vh);
+    const h = state.hover;
+    if (!h || !(h.unlock || (h.tech && isRep(h.tech)))) return;
+    const target = h.unlock ? h.rect : techRect(h.tech);
+    const widgets = h.unlock ? D.tooltips[h.unlock.tip] : repTip(h.tech);
+    if (!widgets) return;
+    const mr = main.getBoundingClientRect();
+    const ox = mr.left / s + PAD, oy = mr.top / s + PAD;
+    const cellX = ox + target.x, cellTop = oy + target.y, cellBottom = cellTop + target.h;
+    const half = target.w / 2;
+    const tip = buildTip(widgets);
+    const tail = images['hint-frame_tail'];
+
+    let below = false;
+    let tipY = cellTop - tip.h;
+    if (tipY < 2) { below = true; tipY = cellBottom; }
+    let mirror = false;
+    let tipX = cellX + half - 17;
+    if (tipX + tip.w > vw - 2) { mirror = true; tipX = cellX + half + 17 - tip.w; }
+    tipX = Math.max(2, Math.round(tipX));
+    tipY = Math.round(tipY);
+
+    paintTip(tctx, tip, tipX, tipY);
+    if (tail) {
+      const cx = mirror ? tipX + tip.w - 17 : tipX + 17;
+      tctx.save();
+      tctx.translate(cx, below ? tipY + 5 : tipY + tip.h - 4);
+      tctx.scale(mirror ? -1 : 1, below ? -1 : 1);
+      tctx.drawImage(tail, -5, -5);
+      tctx.restore();
+    }
+  }
+
+  function redraw() { drawMain(); drawTip(); }
+
+  function fit() {
+    const avail = Math.min(window.innerWidth - 32, 2100);
+    const availH = window.innerHeight - 64;
+    const s = Math.max(1, Math.min(3, Math.floor(Math.min(avail / main.width, availH / main.height))));
+    main.style.width = Math.min(main.width * s, avail) + 'px';
+    drawTip();
+  }
+
+  function toNative(clientX, clientY) {
+    const r = main.getBoundingClientRect();
+    return { x: (clientX - r.left) * main.width / r.width - PAD, y: (clientY - r.top) * main.height / r.height - PAD };
+  }
+
+  const inside = (p, r) => p.x >= r.x && p.x < r.x + r.w && p.y >= r.y && p.y < r.y + r.h;
+
+  function hit(p) {
+    if (inside(p, CLOSE)) return { close: true };
+    for (const r of tabLayout()) if (inside(p, r)) return { tab: r.i };
+    if (!inside(p, VIEW)) return {};
+    for (const t of byTab[state.tab]) {
+      const r = techRect(t);
+      if (!inside(p, r)) continue;
+      if (!isRep(t)) for (const u of unlockRects(t, r)) if (inside(p, u)) return { tech: t, unlock: u.unlock, rect: u };
+      return { tech: t };
+    }
+    return {};
+  }
+
+  function same(a, b) {
+    if (!a || !b) return a === b;
+    return a.tab === b.tab && a.tech === b.tech && a.unlock === b.unlock && a.close === b.close;
+  }
+
+  function updateHover() {
+    const h = state.mouse ? hit(toNative(state.mouse.x, state.mouse.y)) : null;
+    const next = h && (h.tab !== undefined || h.tech || h.close) ? h : null;
+    main.style.cursor = next && (next.close || next.tech || (next.tab !== undefined && next.tab !== state.tab)) ? 'pointer' : 'default';
+    if (same(next, state.hover)) {
+      if (next && next.rect) state.hover.rect = next.rect;
+      return false;
+    }
+    state.hover = next;
+    return true;
+  }
+
+  function setTab(t) {
+    state.tab = (t + tabs.length) % tabs.length;
+    try { history.replaceState(null, '', '#' + tabs[state.tab].id); } catch (e) {}
+    updateHover();
+    redraw();
+  }
+
+  let animating = false;
+  function animate() {
+    const t = state.tab;
+    const d = state.target[t] - state.scroll[t];
+    if (Math.abs(d) < 0.5) { state.scroll[t] = state.target[t]; animating = false; }
+    else state.scroll[t] += d * 0.22;
+    updateHover();
+    redraw();
+    if (animating) requestAnimationFrame(animate);
+  }
+
+  function scrollBy(dx, instant) {
+    const t = state.tab;
+    const ms = maxScroll(t);
+    if (!ms) return false;
+    const before = state.target[t];
+    state.target[t] = Math.max(0, Math.min(ms, state.target[t] + dx));
+    if (instant) {
+      state.scroll[t] = state.target[t];
+      updateHover();
+      redraw();
+    } else if (!animating) { animating = true; requestAnimationFrame(animate); }
+    return state.target[t] !== before || (dx > 0 ? before < ms : before > 0);
+  }
+
+  function toggle(t) {
+    if (learned.has(t.id)) learned.delete(t.id); else learned.add(t.id);
+    save();
+    renderSr();
+    redraw();
+  }
+
+  main.addEventListener('mousemove', e => {
+    state.mouse = { x: e.clientX, y: e.clientY };
+    if (updateHover()) redraw();
+  });
+  main.addEventListener('mouseleave', () => {
+    state.mouse = null;
+    if (updateHover()) redraw();
+  });
+
+  let drag = null;
+  main.addEventListener('pointerdown', e => {
+    drag = { x: e.clientX, y: e.clientY, moved: false, touch: e.pointerType !== 'mouse' };
+    if (drag.touch) {
+      state.mouse = { x: e.clientX, y: e.clientY };
+      if (updateHover()) redraw();
+    }
+  });
+  window.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x;
+    if (!drag.moved && Math.abs(dx) + Math.abs(e.clientY - drag.y) > 5) drag.moved = true;
+    if (drag.moved && Math.abs(dx) > 0) {
+      scrollBy(-dx / scale(), true);
+      drag.x = e.clientX;
+      drag.y = e.clientY;
+      if (drag.touch) { state.hover = null; drawTip(); }
+    }
+  });
+  window.addEventListener('pointerup', e => {
+    if (!drag) return;
+    const d = drag;
+    drag = null;
+    if (d.moved || e.target !== main) return;
+    state.mouse = { x: e.clientX, y: e.clientY };
+    const h = hit(toNative(e.clientX, e.clientY));
+    if (h.close) { window.location.href = '../'; return; }
+    if (h.tab !== undefined) { if (h.tab !== state.tab) setTab(h.tab); return; }
+    if (h.tech && !(d.touch && h.unlock)) { toggle(h.tech); updateHover(); redraw(); return; }
+    if (updateHover()) redraw();
+  });
+  window.addEventListener('pointercancel', () => { drag = null; });
+
+  main.addEventListener('wheel', e => {
+    if (!maxScroll(state.tab)) return;
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 200 : 1;
+    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    scrollBy(delta * unit / (scale() * 1.5));
+    e.preventDefault();
+  }, { passive: false });
+
+  document.addEventListener('keydown', e => {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    const k = e.key.toLowerCase();
+    if (k === 'e') setTab(state.tab + 1);
+    else if (k === 'q') setTab(state.tab - 1);
+    else if (k >= '1' && k <= String(tabs.length)) setTab(+k - 1);
+    else if (e.key === 'ArrowRight' && scrollBy(LAY.offset[0])) e.preventDefault();
+    else if (e.key === 'ArrowLeft' && scrollBy(-LAY.offset[0])) e.preventDefault();
+    else if (k === 'r') { learned.clear(); save(); renderSr(); redraw(); }
+    else if (e.key === 'Escape') window.location.href = '../';
+  });
+  window.addEventListener('resize', fit);
+  window.addEventListener('scroll', drawTip, { passive: true });
+
+  const sr = document.getElementById('sr');
+  function renderSr() {
+    sr.textContent = '';
+    byTab.forEach((list, i) => list.forEach(t => {
+      const li = document.createElement('li');
+      const parents = t.parents.map(p => byId[p] ? byId[p].name : p).join(t.any ? ' or ' : ' and ');
+      const cost = ['red', 'green', 'blue'].map((c, k) => t.price[k] ? `${t.price[k]} ${c}` : '').filter(Boolean).join(', ');
+      const what = t.rep ? `needs ${t.rep.value} reputation with ${t.rep.name}` : `costs ${cost || 'nothing'}, unlocks ${t.unlocks.map(u => D.tooltips[u.tip][0].segs.map(s => s.text || '').join('')).join('; ')}`;
+      li.textContent = `${tabs[i].name} tab: ${t.rep ? 'Reputation lock' : t.name}, ${what}${parents ? `, after ${parents}` : ''}${learned.has(t.id) ? ', marked learned' : ''}.`;
+      sr.appendChild(li);
+    }));
+  }
+  renderSr();
+
+  const jobs = [];
+  for (const name of Object.keys(D.sprites)) jobs.push(load(name, `ui/${name}.png`));
+  for (const name of Object.keys(D.icons)) {
+    jobs.push(load('icon:' + name, `icons/${name}.png`));
+    jobs.push(load('tt:' + name, `icons/${name}_tt.png`));
+  }
+  for (const n of Object.keys(D.fontIcons)) jobs.push(load('fi_' + n, `ui/fi_${n}.png`));
+  for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
+  Promise.all(jobs).then(() => { drawMain(); fit(); });
+})();
+</script>
+</body>
+</html>

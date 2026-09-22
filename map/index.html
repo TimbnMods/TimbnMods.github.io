@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Map</title>
+<style>
+  :root {
+    --page: #17120d;
+    --ink: #d9c3a0;
+    --muted: #9c8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--ink); }
+  body {
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    touch-action: none;
+  }
+  .note { text-align: center; color: var(--muted); margin: 0; }
+  .note kbd {
+    font: inherit;
+    border: 1px solid #4a3a28;
+    border-radius: 3px;
+    padding: 0 4px;
+    color: var(--ink);
+  }
+</style>
+</head>
+<body>
+<canvas id="map" tabindex="0" aria-label="Graveyard Keeper 2 world map with every zone revealed"></canvas>
+<p class="note">Drag to pan · Scroll to zoom · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
+<script src="map-data.js"></script>
+<script>
+(() => {
+  const D = window.MAP;
+  const PAD = 6;
+  const W = 662, H = 426;
+  const VIEW = { x: 13, y: 37, w: 636, h: 377 };
+  const ZOOMS = [0.5, 1, 2];
+  const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
+  const COLORS = { title: '#f6e3bd', titleOutline: '#4c301c' };
+  const LABEL = { color: D.labelStyle.color, outline: D.labelStyle.outline, lineH: 12 };
+
+  const images = {};
+  const load = (key, src) => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { images[key] = im; res(); };
+    im.onerror = () => res();
+    im.src = src;
+  });
+
+  const tints = new Map();
+  function tinted(font, color) {
+    const key = font + color;
+    if (tints.has(key)) return tints.get(key);
+    const src = images['font:' + font];
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    tints.set(key, c);
+    return c;
+  }
+
+  const glyph = (font, ch) => D.fonts[font].chars[ch.codePointAt(0)] || D.fonts[font].chars[63];
+
+  function measure(font, str) {
+    let w = 0;
+    for (const ch of str) w += glyph(font, ch)[6];
+    return w;
+  }
+
+  function text(ctx, font, str, x, baseline, color) {
+    const atlas = tinted(font, color);
+    let pen = Math.round(x);
+    for (const ch of str) {
+      const [gx, gy, gw, gh, bx, by, adv] = glyph(font, ch);
+      if (gw > 0 && gh > 0 && ch !== ' ') ctx.drawImage(atlas, gx, gy, gw, gh, pen + bx, Math.round(baseline - by), gw, gh);
+      pen += adv;
+    }
+  }
+
+  function outlined(ctx, font, str, x, baseline, color, outline) {
+    if (outline) {
+      for (const [dx, dy] of [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]) {
+        text(ctx, font, str, x + dx, baseline + dy, outline);
+      }
+    }
+    text(ctx, font, str, x, baseline, color);
+  }
+
+  function sprite(ctx, name, x, y) {
+    const im = images[name];
+    if (im) ctx.drawImage(im, Math.round(x), Math.round(y));
+  }
+
+  function slice(ctx, name, x, y, w, h) {
+    const im = images[name];
+    if (!im) return;
+    const [l, b, r, t] = (D.sprites[name] && D.sprites[name].border) || [0, 0, 0, 0];
+    const sw = im.width, sh = im.height;
+    const cw = sw - l - r, ch = sh - t - b;
+    const dw = w - l - r, dh = h - t - b;
+    const cols = [[0, l, 0, l], [l, cw, l, dw], [sw - r, r, w - r, r]];
+    const rows = [[0, t, 0, t], [t, ch, t, dh], [sh - b, b, h - b, b]];
+    for (const [sx, sww, dx, dww] of cols) {
+      for (const [sy, shh, dy, dhh] of rows) {
+        if (sww > 0 && shh > 0 && dww > 0 && dhh > 0) ctx.drawImage(im, sx, sy, sww, shh, x + dx, y + dy, dww, dhh);
+      }
+    }
+  }
+
+  function fade(ctx, x, y, w, h, rotation) {
+    const im = images['comm-content_fade_2'];
+    if (!im) return;
+    ctx.save();
+    ctx.translate(x + w / 2, y + h / 2);
+    ctx.rotate(rotation);
+    const vertical = Math.abs(Math.sin(rotation)) > 0.5;
+    const lw = vertical ? h : w, lh = vertical ? w : h;
+    ctx.drawImage(im, -lw / 2, -lh / 2, lw, lh);
+    ctx.restore();
+  }
+
+  const canvas = document.getElementById('map');
+  const ctx = canvas.getContext('2d');
+  canvas.width = W + PAD * 2; canvas.height = H + PAD * 2;
+  ctx.imageSmoothingEnabled = false;
+
+  const state = { zoom: 1, cx: 520, cy: 560 };
+
+  function clampView() {
+    const vw = VIEW.w / state.zoom, vh = VIEW.h / state.zoom;
+    const mw = D.map.w, mh = D.map.h;
+    state.cx = vw >= mw ? mw / 2 : Math.max(vw / 2, Math.min(mw - vw / 2, state.cx));
+    state.cy = vh >= mh ? mh / 2 : Math.max(vh / 2, Math.min(mh - vh / 2, state.cy));
+  }
+
+  function viewOrigin() {
+    const z = state.zoom;
+    let sx = state.cx - VIEW.w / (2 * z), sy = state.cy - VIEW.h / (2 * z);
+    sx = Math.round(sx * Math.max(1, z)) / Math.max(1, z);
+    sy = Math.round(sy * Math.max(1, z)) / Math.max(1, z);
+    return { sx, sy };
+  }
+
+  function draw() {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.imageSmoothingEnabled = false;
+    ctx.translate(PAD, PAD);
+
+    ctx.fillStyle = '#c9a36f';
+    ctx.fillRect(VIEW.x, VIEW.y, VIEW.w, VIEW.h);
+    const z = state.zoom;
+    const { sx, sy } = viewOrigin();
+    const map = images.map;
+    ctx.save();
+    ctx.beginPath(); ctx.rect(VIEW.x, VIEW.y, VIEW.w, VIEW.h); ctx.clip();
+    if (map) ctx.drawImage(map, Math.round(VIEW.x - sx * z), Math.round(VIEW.y - sy * z), D.map.w * z, D.map.h * z);
+
+    for (const l of D.labels) {
+      const lines = l.text.split('\n');
+      const cx = VIEW.x + (l.x + l.w / 2 - sx) * z;
+      const cy = VIEW.y + (l.y + l.h / 2 - sy) * z;
+      const cap = glyph('small_font_bold', 'H')[5];
+      const top = cy - (lines.length * LABEL.lineH) / 2;
+      lines.forEach((line, i) => {
+        const lw = measure('small_font_bold', line);
+        outlined(ctx, 'small_font_bold', line, Math.round(cx - lw / 2), Math.round(top + i * LABEL.lineH + (LABEL.lineH + cap) / 2), LABEL.color, LABEL.outline);
+      });
+    }
+
+    fade(ctx, VIEW.x, VIEW.y + VIEW.h - 10, VIEW.w, 10, 0);
+    fade(ctx, VIEW.x, VIEW.y, VIEW.w, 10, Math.PI);
+    fade(ctx, VIEW.x, VIEW.y, 10, VIEW.h, Math.PI / 2);
+    fade(ctx, VIEW.x + VIEW.w - 10, VIEW.y, 10, VIEW.h, -Math.PI / 2);
+    ctx.restore();
+
+    slice(ctx, 'comm-frame_1-border', 0, 0, W, H);
+    const hx = 11, hy = 11, hw = W - 22;
+    slice(ctx, 'main_window-header_1', hx, hy, hw, 26);
+    sprite(ctx, 'main_window-header_1-dec_side_3', hx, hy);
+    sprite(ctx, 'main_window-header_1-dec_side_3', hx + hw - 28, hy);
+    sprite(ctx, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
+    sprite(ctx, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
+    const title = 'Map';
+    const cap = glyph('small_font_bold', 'H')[5];
+    outlined(ctx, 'small_font_bold', title, hx + (hw - 34 - measure('small_font_bold', title)) / 2, hy + Math.round((26 + cap) / 2) - 1, COLORS.title, COLORS.titleOutline);
+  }
+
+  function fit() {
+    const avail = Math.min(window.innerWidth - 32, 2000);
+    const s = Math.max(1, Math.min(3, Math.floor(Math.min(avail / canvas.width, (window.innerHeight - 100) / canvas.height))));
+    canvas.style.width = Math.min(canvas.width * s, avail) + 'px';
+  }
+
+  const scale = () => canvas.getBoundingClientRect().width / canvas.width;
+
+  function toNative(e) {
+    const r = canvas.getBoundingClientRect();
+    return { x: (e.clientX - r.left) * canvas.width / r.width - PAD, y: (e.clientY - r.top) * canvas.height / r.height - PAD };
+  }
+
+  const inside = (p, r) => p.x >= r.x && p.x < r.x + r.w && p.y >= r.y && p.y < r.y + r.h;
+
+  let drag = null;
+  canvas.addEventListener('pointerdown', e => {
+    const p = toNative(e);
+    if (inside(p, CLOSE)) { window.location.href = '../'; return; }
+    if (!inside(p, VIEW)) return;
+    drag = { x: e.clientX, y: e.clientY };
+    canvas.setPointerCapture(e.pointerId);
+    canvas.style.cursor = 'grabbing';
+  });
+  canvas.addEventListener('pointermove', e => {
+    const p = toNative(e);
+    if (!drag) {
+      canvas.style.cursor = inside(p, CLOSE) ? 'pointer' : inside(p, VIEW) ? 'grab' : 'default';
+      return;
+    }
+    const k = scale() * state.zoom;
+    state.cx -= (e.clientX - drag.x) / k;
+    state.cy -= (e.clientY - drag.y) / k;
+    drag = { x: e.clientX, y: e.clientY };
+    clampView();
+    draw();
+  });
+  const endDrag = () => { drag = null; canvas.style.cursor = 'grab'; };
+  canvas.addEventListener('pointerup', endDrag);
+  canvas.addEventListener('pointercancel', endDrag);
+
+  canvas.addEventListener('wheel', e => {
+    e.preventDefault();
+    const i = ZOOMS.indexOf(state.zoom) + (e.deltaY < 0 ? 1 : -1);
+    if (i < 0 || i >= ZOOMS.length) return;
+    const p = toNative(e);
+    const { sx, sy } = viewOrigin();
+    const mx = sx + (p.x - VIEW.x) / state.zoom, my = sy + (p.y - VIEW.y) / state.zoom;
+    const nz = ZOOMS[i];
+    state.cx = mx - (p.x - VIEW.x) / nz + VIEW.w / (2 * nz);
+    state.cy = my - (p.y - VIEW.y) / nz + VIEW.h / (2 * nz);
+    state.zoom = nz;
+    clampView();
+    draw();
+  }, { passive: false });
+
+  const held = new Set();
+  let last = 0;
+  function tick(t) {
+    const dt = last ? Math.min(0.05, (t - last) / 1000) : 0;
+    last = t;
+    let dx = 0, dy = 0;
+    if (held.has('ArrowLeft') || held.has('a')) dx -= 1;
+    if (held.has('ArrowRight') || held.has('d')) dx += 1;
+    if (held.has('ArrowUp') || held.has('w')) dy -= 1;
+    if (held.has('ArrowDown') || held.has('s')) dy += 1;
+    if (dx || dy) {
+      state.cx += dx * 350 * dt / state.zoom;
+      state.cy += dy * 350 * dt / state.zoom;
+      clampView();
+      draw();
+      requestAnimationFrame(tick);
+    } else {
+      last = 0;
+    }
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { window.location.href = '../'; return; }
+    const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'w', 'a', 's', 'd'].includes(k)) return;
+    e.preventDefault();
+    const idle = held.size === 0;
+    held.add(k);
+    if (idle) requestAnimationFrame(tick);
+  });
+  document.addEventListener('keyup', e => held.delete(e.key.length === 1 ? e.key.toLowerCase() : e.key));
+  window.addEventListener('blur', () => held.clear());
+  window.addEventListener('resize', fit);
+
+  const jobs = Object.keys(D.sprites).map(n => load(n, `ui/${n}.png`));
+  jobs.push(load('map', D.map.src));
+  for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
+  Promise.all(jobs).then(() => { clampView(); draw(); fit(); });
+})();
+</script>
+</body>
+</html>

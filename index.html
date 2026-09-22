@@ -37,14 +37,16 @@
 </head>
 <body>
 <canvas id="menu" tabindex="0" aria-label="Timbn Mods menu"></canvas>
-<p class="note">Graveyard Keeper 2 Demo 1.002.4</p>
-<nav class="sr-only"><a href="folio/">Alchemy Folio</a></nav>
+<p class="note">Graveyard Keeper 2 1.004.2</p>
+<nav class="sr-only"><a href="folio/">Alchemy Folio</a> <a href="map/">World Map</a> <a href="techtree/">Tech Tree</a></nav>
 <script src="menu/menu-data.js"></script>
 <script>
 (() => {
   const D = window.MENU;
   const ITEMS = [
     { label: 'Alchemy Folio', href: 'folio/' },
+    { label: 'World Map', href: 'map/' },
+    { label: 'Tech Tree', href: 'techtree/' },
   ];
   const PAD = 6;
   const W = 234;
