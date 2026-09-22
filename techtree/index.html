@@ -140,6 +140,13 @@
     ctx.globalAlpha = 1;
   }
 
+  function icon(ctx, name, cx, cy, tooltip) {
+    const atlas = images.atlas;
+    const f = D.atlas.frames[tooltip ? name + '#tt' : name];
+    if (!atlas || !f) return;
+    ctx.drawImage(atlas, f[0], f[1], f[2], f[3], Math.round(cx - f[2] / 2), Math.round(cy - f[3] / 2), f[2], f[3]);
+  }
+
   function centered(ctx, name, cx, cy, alpha) {
     const im = images[name];
     if (im) sprite(ctx, name, cx - im.width / 2, cy - im.height / 2, undefined, undefined, alpha);
@@ -419,8 +426,7 @@
     styled(c, 'tiny_font', name, Math.round(r.cx - measure('tiny_font', name) / 2), Math.round(r.y + 8 + cap / 2), style);
     for (const u of unlockRects(t, r)) {
       sprite(c, 'tech_tree-tech_plate-item_cell', u.x, u.y, 32, 32, 0.298);
-      const im = images['icon:' + u.unlock.icon];
-      if (im) c.drawImage(im, Math.round(u.x + 16 - im.width / 2), Math.round(u.y + 16 - im.height / 2));
+      icon(c, u.unlock.icon, u.x + 16, u.y + 16);
     }
     if (st === 'unlocked') centered(c, 'icon_checkmark', r.cx, r.cy + 23);
     else drawPrice(c, t, r, st);
@@ -557,8 +563,7 @@
         const top = cy - 2;
         for (const cell of b.cells) {
           slice(ctx, 'widget_items_cell-folio_item_cell', cx + 1, top + 1, 40, 40);
-          const im = images['tt:' + cell.icon];
-          if (im) ctx.drawImage(im, Math.round(cx + 21 - im.width / 2), Math.round(top + 21 - im.height / 2));
+          icon(ctx, cell.icon, cx + 21, top + 21, true);
           const cw = measure('tiny_font', cell.count);
           styled(ctx, 'tiny_font', cell.count, cx + 42 - 5 - cw, top + 42 - 7, D.styles.quantity);
           cx += TIP.cellPitch;
@@ -789,10 +794,7 @@
 
   const jobs = [];
   for (const name of Object.keys(D.sprites)) jobs.push(load(name, `ui/${name}.png`));
-  for (const name of Object.keys(D.icons)) {
-    jobs.push(load('icon:' + name, `icons/${name}.png`));
-    jobs.push(load('tt:' + name, `icons/${name}_tt.png`));
-  }
+  jobs.push(load('atlas', D.atlas.src));
   for (const n of Object.keys(D.fontIcons)) jobs.push(load('fi_' + n, `ui/fi_${n}.png`));
   for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
   Promise.all(jobs).then(() => { drawMain(); fit(); });

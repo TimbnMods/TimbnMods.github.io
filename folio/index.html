@@ -203,8 +203,9 @@
 
   function cell(ctx, x, y, size, iconName, hl) {
     slice(ctx, 'widget_items_cell-folio_item_cell', x, y, size, size);
-    const im = images[hl ? iconName + '_hl' : iconName] || images[iconName];
-    if (im) ctx.drawImage(im, Math.round(x + (size - im.width) / 2), Math.round(y + (size - im.height) / 2));
+    const atlas = images.atlas;
+    const f = D.atlas.frames[hl ? iconName + '#hl' : iconName] || D.atlas.frames[iconName];
+    if (atlas && f) ctx.drawImage(atlas, f[0], f[1], f[2], f[3], Math.round(x + (size - f[2]) / 2), Math.round(y + (size - f[3]) / 2), f[2], f[3]);
   }
 
   const iconAdv = name => (D.fontIcons[name] ? D.fontIcons[name].adv : 12);
@@ -567,11 +568,8 @@
   }));
 
   const jobs = [];
-  for (const name of Object.keys(D.sprites)) {
-    const dir = name.startsWith('i_') ? 'icons' : 'ui';
-    jobs.push(load(name, `${dir}/${name}.png`));
-    if (dir === 'icons') jobs.push(load(name + '_hl', `icons/${name}_hl.png`));
-  }
+  for (const name of Object.keys(D.sprites)) jobs.push(load(name, `ui/${name}.png`));
+  jobs.push(load('atlas', D.atlas.src));
   for (const r of ['rune_r', 'rune_g', 'rune_b']) jobs.push(load(r, `ui/${r}.png`));
   for (const n of Object.keys(D.fontIcons)) jobs.push(load('fi_' + n, `ui/fi_${n}.png`));
   for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
