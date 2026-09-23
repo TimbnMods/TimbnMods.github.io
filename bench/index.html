@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulation Bench</title>
+<style>
+  :root {
+    --page: #17120d;
+    --ink: #d9c3a0;
+    --muted: #9c8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--page); color: var(--ink); }
+  body {
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px 40px;
+    gap: 16px;
+  }
+  canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+  #bench { max-width: 100%; height: auto; touch-action: pan-x; }
+  #tip { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 10; }
+  .note { max-width: 760px; text-align: center; color: var(--muted); margin: 0; }
+  .note kbd {
+    font: inherit;
+    border: 1px solid #4a3a28;
+    border-radius: 3px;
+    padding: 0 4px;
+    color: var(--ink);
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="bench" tabindex="0" aria-label="Formulation Bench, every recipe with its ingredients"></canvas>
+<canvas id="tip" aria-hidden="true"></canvas>
+<p class="note">Hover an item for its tooltip · Scroll or drag the list · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
+<ul id="sr" class="sr-only"></ul>
+<script src="bench-data.js"></script>
+<script>
+(() => {
+  const D = window.BENCH;
+  const PAD = 6;
+  const W = 470, H = 430;
+  const LIST = { x: 13, y: 45, w: 444, h: 372, pitch: 48 };
+  const CELL = 42;
+  const TIP = { pad: 14, spacing: 2, maxText: 170, minW: 124, lineH: 12 };
+  const COLORS = { titleOutline: '#4c301c' };
+  const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
+
+  const images = {};
+  const load = (key, src) => new Promise(res => {
+    const im = new Image();
+    im.onload = () => { images[key] = im; res(); };
+    im.onerror = () => res();
+    im.src = src;
+  });
+
+  const tints = new Map();
+  function tinted(key, src, color) {
+    const id = key + color;
+    if (tints.has(id)) return tints.get(id);
+    const c = document.createElement('canvas');
+    c.width = src.width; c.height = src.height;
+    const x = c.getContext('2d');
+    x.drawImage(src, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, c.width, c.height);
+    tints.set(id, c);
+    return c;
+  }
+
+  const fontAtlas = (font, color) => tinted('font:' + font, images['font:' + font], color);
+  const glyph = (font, ch) => D.fonts[font].chars[ch.codePointAt(0)] || D.fonts[font].chars[63];
+
+  function measure(font, str) {
+    let w = 0;
+    for (const ch of str) w += glyph(font, ch)[6];
+    return w;
+  }
+
+  function text(ctx, font, str, x, baseline, color) {
+    const atlas = fontAtlas(font, color);
+    let pen = Math.round(x);
+    for (const ch of str) {
+      const [gx, gy, gw, gh, bx, by, adv] = glyph(font, ch);
+      if (gw > 0 && gh > 0 && ch !== ' ') ctx.drawImage(atlas, gx, gy, gw, gh, pen + bx, Math.round(baseline - by), gw, gh);
+      pen += adv;
+    }
+    return pen - Math.round(x);
+  }
+
+  const SIDES4 = [[0, -1], [-1, 0], [1, 0], [0, 1]];
+  const SIDES8 = [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]];
+
+  function styled(ctx, font, str, x, baseline, st) {
+    if (st.outline) for (const [dx, dy] of st.eight ? SIDES8 : SIDES4) text(ctx, font, str, x + dx, baseline + dy, st.outline);
+    return text(ctx, font, str, x, baseline, st.color);
+  }
+
+  function sprite(ctx, name, x, y, w, h, alpha) {
+    const im = images[name];
+    if (!im) return;
+    if (alpha !== undefined) ctx.globalAlpha = alpha;
+    ctx.drawImage(im, Math.round(x), Math.round(y), w ?? im.width, h ?? im.height);
+    ctx.globalAlpha = 1;
+  }
+
+  function slice(ctx, name, x, y, w, h, alpha) {
+    const im = images[name];
+    if (!im) return;
+    const [l, b, r, t] = (D.sprites[name] && D.sprites[name].border) || [0, 0, 0, 0];
+    const sw = im.width, sh = im.height;
+    const cw = sw - l - r, ch = sh - t - b;
+    const dw = w - l - r, dh = h - t - b;
+    x = Math.round(x); y = Math.round(y);
+    if (alpha !== undefined) ctx.globalAlpha = alpha;
+    for (const [sx, sww, dx, dww] of [[0, l, 0, l], [l, cw, l, dw], [sw - r, r, w - r, r]]) {
+      for (const [sy, shh, dy, dhh] of [[0, t, 0, t], [t, ch, t, dh], [sh - b, b, h - b, b]]) {
+        if (sww > 0 && shh > 0 && dww > 0 && dhh > 0) ctx.drawImage(im, sx, sy, sww, shh, x + dx, y + dy, dww, dhh);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function icon(ctx, name, cx, cy, hover) {
+    const atlas = images.atlas;
+    const f = D.atlas.frames[hover ? name + '#hl' : name] || D.atlas.frames[name];
+    if (!atlas || !f) return;
+    ctx.drawImage(atlas, f[0], f[1], f[2], f[3], Math.round(cx - f[2] / 2), Math.round(cy - f[3] / 2), f[2], f[3]);
+  }
+
+  const iconAdv = name => (D.fontIcons[name] ? D.fontIcons[name].adv : 12);
+
+  function fontIcon(ctx, name, pen, baseline) {
+    const fi = D.fontIcons[name] || { bx: 0, by: 12 };
+    sprite(ctx, 'fi_' + name, pen + fi.bx, baseline - fi.by + 2);
+    return iconAdv(name);
+  }
+
+  function layoutText(segs, font, color, maxW) {
+    const words = [];
+    let cur = [];
+    const flush = () => { if (cur.length) { words.push(cur); cur = []; } };
+    for (const s of segs) {
+      if (s.icon) { cur.push({ icon: s.icon }); continue; }
+      for (const p of s.text.split(/(\s)/)) {
+        if (p === '\n') { flush(); words.push('\n'); }
+        else if (/^\s$/.test(p)) flush();
+        else if (p) cur.push({ text: p, color: s.color || color });
+      }
+    }
+    flush();
+    const space = measure(font, ' ');
+    const lines = [];
+    let line = [], lw = 0;
+    for (const word of words) {
+      if (word === '\n') { lines.push({ words: line, w: lw }); line = []; lw = 0; continue; }
+      const ww = word.reduce((w, p) => w + (p.icon ? iconAdv(p.icon) : measure(font, p.text)), 0);
+      if (line.length && lw + space + ww > maxW) { lines.push({ words: line, w: lw }); line = []; lw = 0; }
+      lw += (line.length ? space : 0) + ww;
+      line.push(word);
+    }
+    lines.push({ words: line, w: lw });
+    return lines;
+  }
+
+  function drawLine(ctx, font, line, x, baseline) {
+    const space = measure(font, ' ');
+    let pen = x;
+    line.words.forEach((word, i) => {
+      if (i) pen += space;
+      for (const p of word) pen += p.icon ? fontIcon(ctx, p.icon, pen, baseline) : text(ctx, font, p.text, pen, baseline, p.color);
+    });
+  }
+
+  const recipes = D.recipes;
+  const state = { scroll: 0, target: 0, hover: null, mouse: null };
+  const maxScroll = () => Math.max(0, recipes.length * LIST.pitch - LIST.h);
+
+  const main = document.getElementById('bench');
+  const tipCanvas = document.getElementById('tip');
+  const mctx = main.getContext('2d');
+  const tctx = tipCanvas.getContext('2d');
+  main.width = W + PAD * 2; main.height = H + PAD * 2;
+
+  const rowTop = i => LIST.y + i * LIST.pitch - Math.round(state.scroll);
+
+  function cellRects(r, i) {
+    const top = rowTop(i);
+    const out = { x: LIST.x + 8, y: top + 3, w: CELL, h: CELL, item: r.out };
+    const needs = r.needs.map((n, k) => ({
+      x: LIST.x + LIST.w - 10 - (r.needs.length - k) * (CELL + 2), y: top + 3, w: CELL, h: CELL, item: n,
+    }));
+    return [out, ...needs];
+  }
+
+  function drawCell(c, rect) {
+    const hover = state.hover && state.hover.item === rect.item;
+    slice(c, 'widget_items_cell-folio_item_cell', rect.x + 1, rect.y + 1, CELL - 2, CELL - 2);
+    icon(c, rect.item.icon, rect.x + CELL / 2, rect.y + CELL / 2, hover);
+    if (hover) slice(c, 'selection', rect.x, rect.y, CELL, CELL);
+    const count = String(rect.item.count);
+    if (count !== '1') {
+      const w = measure('tiny_font', count);
+      styled(c, 'tiny_font', count, rect.x + CELL - 5 - w, rect.y + CELL - 6, D.styles.quantity);
+    }
+  }
+
+  function drawRow(c, r, i) {
+    const top = rowTop(i);
+    if (top > LIST.y + LIST.h || top + LIST.pitch < LIST.y) return;
+    for (const rect of cellRects(r, i)) drawCell(c, rect);
+    styled(c, 'small_font', r.out.name, LIST.x + 60, top + 22, D.styles.name);
+    const detail = [r.tech, r.duration ? r.duration + 's' : ''].filter(Boolean).join(' · ');
+    if (detail) styled(c, 'tiny_font', detail, LIST.x + 60, top + 36, D.styles.detail);
+    slice(c, 'folio-separator_2', LIST.x + 8, top + LIST.pitch - 4, LIST.w - 16, 6, 0.4);
+  }
+
+  function drawMain() {
+    const c = mctx;
+    c.setTransform(1, 0, 0, 1, 0, 0);
+    c.clearRect(0, 0, main.width, main.height);
+    c.translate(PAD, PAD);
+
+    c.save();
+    c.beginPath(); c.rect(13, 13, W - 26, H - 26); c.clip();
+    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, (H - 406) / 2);
+    c.restore();
+
+    c.save();
+    c.beginPath(); c.rect(LIST.x, LIST.y, LIST.w, LIST.h); c.clip();
+    recipes.forEach((r, i) => drawRow(c, r, i));
+    c.restore();
+
+    const ms = maxScroll();
+    if (ms > 0) {
+      const trackH = LIST.h - 8;
+      const thumbH = Math.max(14, Math.round(trackH * LIST.h / (LIST.h + ms)));
+      const thumbY = LIST.y + 4 + Math.round((trackH - thumbH) * state.scroll / ms);
+      c.fillStyle = 'rgba(224,170,108,0.14)';
+      c.fillRect(LIST.x + LIST.w - 4, LIST.y + 4, 2, trackH);
+      c.fillStyle = 'rgba(224,170,108,0.45)';
+      c.fillRect(LIST.x + LIST.w - 4, thumbY, 2, thumbH);
+    }
+
+    slice(c, 'comm-frame_1-border', 0, 0, W, H);
+    const hx = 11, hy = 11, hw = W - 22;
+    slice(c, 'main_window-header_1', hx, hy, hw, 26);
+    sprite(c, 'main_window-header_1-dec_side_3', hx, hy);
+    c.save();
+    c.translate(hx + hw, hy);
+    c.scale(-1, 1);
+    sprite(c, 'main_window-header_1-dec_side_3', 0, 0);
+    c.restore();
+    sprite(c, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
+    sprite(c, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
+    const title = D.bench.name;
+    const tw = measure('small_font_bold', title);
+    styled(c, 'small_font_bold', title, hx + Math.round((hw - 34 - tw) / 2),
+      hy + Math.round((26 + glyph('small_font_bold', 'H')[5]) / 2) - 1, D.styles.title);
+  }
+
+  function buildTip(widgets) {
+    const blocks = [];
+    let width = TIP.minW - TIP.pad * 2;
+    for (const w of widgets) {
+      if (w.sep) { blocks.push({ sep: true, h: 10 }); continue; }
+      const [font, color] = D.tooltipStyles[w.style];
+      const lines = layoutText(w.segs, font, color, TIP.maxText);
+      for (const l of lines) width = Math.max(width, l.w);
+      blocks.push({ font, lines, h: lines.length * TIP.lineH + 1 });
+    }
+    const h = TIP.pad * 2 + blocks.reduce((a, b) => a + b.h, 0) + TIP.spacing * (blocks.length - 1);
+    return { blocks, w: Math.ceil(width + TIP.pad * 2), h };
+  }
+
+  function paintTip(ctx, tip, x, y) {
+    slice(ctx, 'hint-frame', x, y, tip.w, tip.h);
+    let cy = y + TIP.pad;
+    for (const b of tip.blocks) {
+      if (b.sep) sprite(ctx, 'hint-text_separator', x + Math.round((tip.w - 96) / 2), cy + 1);
+      else b.lines.forEach((l, i) => drawLine(ctx, b.font, l, x + Math.round((tip.w - l.w) / 2), cy + (i + 1) * TIP.lineH - 3));
+      cy += b.h + TIP.spacing;
+    }
+  }
+
+  const scale = () => main.getBoundingClientRect().width / main.width;
+
+  function drawTip() {
+    const s = scale();
+    const vw = Math.ceil(window.innerWidth / s), vh = Math.ceil(window.innerHeight / s);
+    if (tipCanvas.width !== vw || tipCanvas.height !== vh) {
+      tipCanvas.width = vw; tipCanvas.height = vh;
+      tipCanvas.style.width = vw * s + 'px';
+      tipCanvas.style.height = vh * s + 'px';
+    }
+    tctx.clearRect(0, 0, vw, vh);
+    const h = state.hover;
+    const widgets = h && D.tooltips[h.item.id];
+    if (!widgets) return;
+    const mr = main.getBoundingClientRect();
+    const ox = mr.left / s + PAD, oy = mr.top / s + PAD;
+    const tip = buildTip(widgets);
+    const tail = images['hint-frame_tail'];
+
+    let below = false;
+    let tipY = oy + h.y - tip.h;
+    if (tipY < 2) { below = true; tipY = oy + h.y + h.h; }
+    let mirror = false;
+    let tipX = ox + h.x + h.w / 2 - 17;
+    if (tipX + tip.w > vw - 2) { mirror = true; tipX = ox + h.x + h.w / 2 + 17 - tip.w; }
+    tipX = Math.max(2, Math.round(tipX));
+    tipY = Math.round(tipY);
+
+    paintTip(tctx, tip, tipX, tipY);
+    if (tail) {
+      const cx = mirror ? tipX + tip.w - 17 : tipX + 17;
+      tctx.save();
+      tctx.translate(cx, below ? tipY + 5 : tipY + tip.h - 4);
+      tctx.scale(mirror ? -1 : 1, below ? -1 : 1);
+      tctx.drawImage(tail, -5, -5);
+      tctx.restore();
+    }
+  }
+
+  function redraw() { drawMain(); drawTip(); }
+
+  function fit() {
+    const avail = Math.min(window.innerWidth - 32, 1400);
+    const availH = window.innerHeight - 64;
+    const s = Math.max(1, Math.min(3, Math.floor(Math.min(avail / main.width, availH / main.height))));
+    main.style.width = Math.min(main.width * s, avail) + 'px';
+    drawTip();
+  }
+
+  function toNative(clientX, clientY) {
+    const r = main.getBoundingClientRect();
+    return { x: (clientX - r.left) * main.width / r.width - PAD, y: (clientY - r.top) * main.height / r.height - PAD };
+  }
+
+  const inside = (p, r) => p.x >= r.x && p.x < r.x + r.w && p.y >= r.y && p.y < r.y + r.h;
+
+  function hit(p) {
+    if (inside(p, CLOSE)) return { close: true };
+    if (!inside(p, LIST)) return null;
+    for (let i = 0; i < recipes.length; i++) {
+      const top = rowTop(i);
+      if (top > LIST.y + LIST.h || top + LIST.pitch < LIST.y) continue;
+      for (const rect of cellRects(recipes[i], i)) if (inside(p, rect)) return rect;
+    }
+    return null;
+  }
+
+  function updateHover() {
+    const h = state.mouse ? hit(toNative(state.mouse.x, state.mouse.y)) : null;
+    const next = h && h.item ? h : null;
+    main.style.cursor = h && h.close ? 'pointer' : 'default';
+    if ((next && next.item) === (state.hover && state.hover.item)) {
+      if (next) state.hover = next;
+      return false;
+    }
+    state.hover = next;
+    return true;
+  }
+
+  let animating = false;
+  function animate() {
+    const d = state.target - state.scroll;
+    if (Math.abs(d) < 0.5) { state.scroll = state.target; animating = false; }
+    else state.scroll += d * 0.25;
+    updateHover();
+    redraw();
+    if (animating) requestAnimationFrame(animate);
+  }
+
+  function scrollBy(dy, instant) {
+    const ms = maxScroll();
+    if (!ms) return;
+    state.target = Math.max(0, Math.min(ms, state.target + dy));
+    if (instant) { state.scroll = state.target; updateHover(); redraw(); }
+    else if (!animating) { animating = true; requestAnimationFrame(animate); }
+  }
+
+  main.addEventListener('mousemove', e => {
+    state.mouse = { x: e.clientX, y: e.clientY };
+    if (updateHover()) redraw();
+  });
+  main.addEventListener('mouseleave', () => {
+    state.mouse = null;
+    if (updateHover()) redraw();
+  });
+  main.addEventListener('wheel', e => {
+    if (!maxScroll()) return;
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 200 : 1;
+    scrollBy(e.deltaY * unit / (scale() * 1.5));
+    e.preventDefault();
+  }, { passive: false });
+
+  let drag = null;
+  main.addEventListener('pointerdown', e => {
+    drag = { y: e.clientY, moved: false, touch: e.pointerType !== 'mouse' };
+    if (drag.touch) {
+      state.mouse = { x: e.clientX, y: e.clientY };
+      if (updateHover()) redraw();
+    }
+  });
+  window.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dy = e.clientY - drag.y;
+    if (!drag.moved && Math.abs(dy) > 5) drag.moved = true;
+    if (drag.moved) {
+      scrollBy(-dy / scale(), true);
+      drag.y = e.clientY;
+      if (drag.touch) { state.hover = null; drawTip(); }
+    }
+  });
+  window.addEventListener('pointerup', e => {
+    const d = drag;
+    drag = null;
+    if (!d || d.moved || e.target !== main) return;
+    const h = hit(toNative(e.clientX, e.clientY));
+    if (h && h.close) window.location.href = '../';
+  });
+  window.addEventListener('pointercancel', () => { drag = null; });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { scrollBy(LIST.pitch); e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { scrollBy(-LIST.pitch); e.preventDefault(); }
+    else if (e.key === 'PageDown') { scrollBy(LIST.h); e.preventDefault(); }
+    else if (e.key === 'PageUp') { scrollBy(-LIST.h); e.preventDefault(); }
+    else if (e.key === 'Escape') window.location.href = '../';
+  });
+  window.addEventListener('resize', fit);
+  window.addEventListener('scroll', drawTip, { passive: true });
+
+  const sr = document.getElementById('sr');
+  for (const r of recipes) {
+    const li = document.createElement('li');
+    const needs = r.needs.map(n => `${n.count} ${n.name}`).join(', ') || 'nothing';
+    li.textContent = `${r.out.name} x${r.out.count} from ${needs}, ${r.duration}s${r.tech ? ', unlocked by ' + r.tech : ''}.`;
+    sr.appendChild(li);
+  }
+
+  const jobs = [load('atlas', D.atlas.src)];
+  for (const name of Object.keys(D.sprites)) jobs.push(load(name, `ui/${name}.png`));
+  for (const n of Object.keys(D.fontIcons)) jobs.push(load('fi_' + n, `ui/fi_${n}.png`));
+  for (const [name, f] of Object.entries(D.fonts)) jobs.push(load('font:' + name, f.atlas));
+  Promise.all(jobs).then(() => { drawMain(); fit(); });
+})();
+</script>
+</body>
+</html>
