@@ -46,17 +46,16 @@
 <body>
 <canvas id="bench" tabindex="0" aria-label="Formulation Bench, every recipe with its ingredients"></canvas>
 <canvas id="tip" aria-hidden="true"></canvas>
-<p class="note">Hover a recipe for its ingredients · Scroll the grid · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
+<p class="note">Hover a recipe for its ingredients · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
 <ul id="sr" class="sr-only"></ul>
 <script src="bench-data.js"></script>
 <script>
 (() => {
   const D = window.BENCH;
   const PAD = 6;
-  const W = 330, H = 409;
+  const W = 330, H = 330;
   const HEADER = { x: 11, y: 11, w: 308, h: 42 };
-  const GRID = { x: 13, y: 59, w: 304, h: 207, cell: 42, cols: 7 };
-  const QUEUE = { x: 13, y: 272, w: 304, h: 124 };
+  const GRID = { x: 13, y: 59, w: 304, h: 258, cell: 42, cols: 7 };
   const TIP = { pad: 14, spacing: 2, maxText: 170, minW: 124, lineH: 12, cell: 42, cellPitch: 36 };
   const CLOSE = { x: 294, y: 10, w: 26, h: 26 };
 
@@ -246,35 +245,10 @@
     centered(c, 'craft_window-header_1-overlap_el1', HEADER.x + 52, HEADER.y + 21);
     sprite(c, 'craft_window-bp_header_icon_cell', HEADER.x + 21 - 18, HEADER.y + 21 - 18, 36, 36);
     icon(c, D.bench.icon, HEADER.x + 21, HEADER.y + 21);
-    sprite(c, 'craft_window-header_1-overlap_el2', HEADER.x + 261 - 34, HEADER.y + 21 - 21, 68, 42);
     sprite(c, 'comm-btn-close_bg', CLOSE.x - 24 + 1, CLOSE.y);
     sprite(c, 'comm-btn_close-active', CLOSE.x, CLOSE.y);
     const cap = glyph('small_font_bold', 'H')[5];
-    styled(c, 'small_font_bold', D.bench.name, HEADER.x + 46, HEADER.y + 25 + Math.round(cap / 2), D.styles.title);
-    const sub = `${recipes.length} recipes`;
-    styled(c, 'small_font', sub, HEADER.x + 46, HEADER.y + 40 + Math.round(glyph('small_font', 'H')[5] / 2), D.styles.subtitle);
-  }
-
-  function drawQueue(c) {
-    slice(c, 'comm-header_frame_splitter_3', 1, 248, W - 2, 71);
-    slice(c, 'comm-header_2', QUEUE.x - 2, QUEUE.y, QUEUE.w + 4, 26);
-    centered(c, 'comm-header_2-dec_side_1', QUEUE.x + 9, QUEUE.y + 13);
-    c.save();
-    c.translate(QUEUE.x + QUEUE.w - 9, QUEUE.y + 13);
-    c.scale(-1, 1);
-    centered(c, 'comm-header_2-dec_side_1', 0, 0);
-    c.restore();
-    const qw = measure('small_font_bold', D.bench.queue);
-    styled(c, 'small_font_bold', D.bench.queue, QUEUE.x + (QUEUE.w - qw) / 2,
-      QUEUE.y + 13 + Math.round(glyph('small_font_bold', 'H')[5] / 2), D.styles.queue);
-
-    c.save();
-    c.beginPath(); c.rect(QUEUE.x, QUEUE.y + 31, QUEUE.w, QUEUE.h - 31); c.clip();
-    sprite(c, 'comm-frame_bg_1', QUEUE.x + QUEUE.w / 2 - 318, QUEUE.y + 31 - 120);
-    c.restore();
-    const ew = measure('tiny_font', D.bench.empty);
-    styled(c, 'tiny_font', '« ' + D.bench.empty + ' »', QUEUE.x + (QUEUE.w - ew) / 2 - 10,
-      QUEUE.y + 31 + Math.round((QUEUE.h - 31) / 2), D.styles.empty);
+    styled(c, 'small_font_bold', D.bench.name, HEADER.x + 46, HEADER.y + 21 + Math.round(cap / 2), D.styles.title);
   }
 
   function drawMain() {
@@ -284,13 +258,12 @@
     c.translate(PAD, PAD);
 
     c.save();
-    c.beginPath(); c.rect(13, 13, 304, 253); c.clip();
+    c.beginPath(); c.rect(13, 13, 304, H - 26); c.clip();
     sprite(c, 'comm-frame_bg_2', -168, -131);
     c.restore();
 
     drawGrid(c);
     slice(c, 'comm-header_frame_splitter_2', 0, 33, W, 41);
-    drawQueue(c);
     slice(c, 'comm-frame_1-border', 0, 0, W, H);
     drawHeader(c);
   }
