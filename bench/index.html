@@ -46,19 +46,19 @@
 <body>
 <canvas id="bench" tabindex="0" aria-label="Formulation Bench, every recipe with its ingredients"></canvas>
 <canvas id="tip" aria-hidden="true"></canvas>
-<p class="note">Hover an item for its tooltip · Scroll or drag the list · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
+<p class="note">Hover a recipe for its ingredients · Scroll the grid · <kbd>Esc</kbd> back to menu · Graveyard Keeper 2 1.004.2</p>
 <ul id="sr" class="sr-only"></ul>
 <script src="bench-data.js"></script>
 <script>
 (() => {
   const D = window.BENCH;
   const PAD = 6;
-  const W = 470, H = 430;
-  const LIST = { x: 13, y: 45, w: 444, h: 372, pitch: 48 };
-  const CELL = 42;
-  const TIP = { pad: 14, spacing: 2, maxText: 170, minW: 124, lineH: 12 };
-  const COLORS = { titleOutline: '#4c301c' };
-  const CLOSE = { x: W - 11 - 26 + 1, y: 10, w: 26, h: 26 };
+  const W = 330, H = 409;
+  const HEADER = { x: 11, y: 11, w: 308, h: 42 };
+  const GRID = { x: 13, y: 59, w: 304, h: 207, cell: 42, cols: 7 };
+  const QUEUE = { x: 13, y: 272, w: 304, h: 124 };
+  const TIP = { pad: 14, spacing: 2, maxText: 170, minW: 124, lineH: 12, cell: 42, cellPitch: 36 };
+  const CLOSE = { x: 294, y: 10, w: 26, h: 26 };
 
   const images = {};
   const load = (key, src) => new Promise(res => {
@@ -118,6 +118,11 @@
     ctx.drawImage(im, Math.round(x), Math.round(y), w ?? im.width, h ?? im.height);
     ctx.globalAlpha = 1;
   }
+
+  const centered = (ctx, name, cx, cy) => {
+    const im = images[name];
+    if (im) sprite(ctx, name, cx - im.width / 2, cy - im.height / 2);
+  };
 
   function slice(ctx, name, x, y, w, h, alpha) {
     const im = images[name];
@@ -188,8 +193,9 @@
   }
 
   const recipes = D.recipes;
+  const rows = Math.ceil(recipes.length / GRID.cols);
   const state = { scroll: 0, target: 0, hover: null, mouse: null };
-  const maxScroll = () => Math.max(0, recipes.length * LIST.pitch - LIST.h);
+  const maxScroll = () => Math.max(0, rows * GRID.cell + 6 - GRID.h);
 
   const main = document.getElementById('bench');
   const tipCanvas = document.getElementById('tip');
@@ -197,37 +203,78 @@
   const tctx = tipCanvas.getContext('2d');
   main.width = W + PAD * 2; main.height = H + PAD * 2;
 
-  const rowTop = i => LIST.y + i * LIST.pitch - Math.round(state.scroll);
+  const gridLeft = GRID.x + Math.round((GRID.w - GRID.cols * GRID.cell) / 2);
 
-  function cellRects(r, i) {
-    const top = rowTop(i);
-    const out = { x: LIST.x + 8, y: top + 3, w: CELL, h: CELL, item: r.out };
-    const needs = r.needs.map((n, k) => ({
-      x: LIST.x + LIST.w - 10 - (r.needs.length - k) * (CELL + 2), y: top + 3, w: CELL, h: CELL, item: n,
-    }));
-    return [out, ...needs];
+  function cellRect(i) {
+    return {
+      x: gridLeft + (i % GRID.cols) * GRID.cell,
+      y: GRID.y + 3 + Math.floor(i / GRID.cols) * GRID.cell - Math.round(state.scroll),
+      w: GRID.cell, h: GRID.cell, recipe: recipes[i],
+    };
   }
 
-  function drawCell(c, rect) {
-    const hover = state.hover && state.hover.item === rect.item;
-    slice(c, 'widget_items_cell-folio_item_cell', rect.x + 1, rect.y + 1, CELL - 2, CELL - 2);
-    icon(c, rect.item.icon, rect.x + CELL / 2, rect.y + CELL / 2, hover);
-    if (hover) slice(c, 'selection', rect.x, rect.y, CELL, CELL);
-    const count = String(rect.item.count);
-    if (count !== '1') {
-      const w = measure('tiny_font', count);
-      styled(c, 'tiny_font', count, rect.x + CELL - 5 - w, rect.y + CELL - 6, D.styles.quantity);
+  function drawGrid(c) {
+    c.save();
+    c.beginPath(); c.rect(GRID.x, GRID.y, GRID.w, GRID.h); c.clip();
+    for (let i = 0; i < recipes.length; i++) {
+      const r = cellRect(i);
+      if (r.y > GRID.y + GRID.h || r.y + r.h < GRID.y) continue;
+      const hover = state.hover && state.hover.recipe === r.recipe;
+      slice(c, 'comm-craft_item_cell', r.x + 2, r.y + 2, GRID.cell - 4, GRID.cell - 4);
+      icon(c, r.recipe.out.icon, r.x + GRID.cell / 2, r.y + GRID.cell / 2, hover);
+      const count = String(r.recipe.out.count);
+      if (count !== '1') {
+        const w = measure('tiny_font', count);
+        styled(c, 'tiny_font', count, r.x + GRID.cell - 6 - w, r.y + GRID.cell - 7, D.styles.quantity);
+      }
+      if (hover) slice(c, 'selection', r.x + 2, r.y + 2, GRID.cell - 4, GRID.cell - 4);
     }
+    const fade = images['comm-content_fade_1'];
+    if (fade) {
+      c.save();
+      c.translate(GRID.x + GRID.w / 2, GRID.y + 5);
+      c.scale(1, -1);
+      slice(c, 'comm-content_fade_1', -GRID.w / 2, -5, GRID.w, 10);
+      c.restore();
+      slice(c, 'comm-content_fade_1', GRID.x, GRID.y + GRID.h - 10, GRID.w, 10);
+    }
+    c.restore();
   }
 
-  function drawRow(c, r, i) {
-    const top = rowTop(i);
-    if (top > LIST.y + LIST.h || top + LIST.pitch < LIST.y) return;
-    for (const rect of cellRects(r, i)) drawCell(c, rect);
-    styled(c, 'small_font', r.out.name, LIST.x + 60, top + 22, D.styles.name);
-    const detail = [r.tech, r.duration ? r.duration + 's' : ''].filter(Boolean).join(' · ');
-    if (detail) styled(c, 'tiny_font', detail, LIST.x + 60, top + 36, D.styles.detail);
-    slice(c, 'folio-separator_2', LIST.x + 8, top + LIST.pitch - 4, LIST.w - 16, 6, 0.4);
+  function drawHeader(c) {
+    slice(c, 'craft_window-header_1', HEADER.x, HEADER.y, HEADER.w, HEADER.h);
+    centered(c, 'craft_window-header_1-overlap_el1', HEADER.x + 52, HEADER.y + 21);
+    sprite(c, 'craft_window-bp_header_icon_cell', HEADER.x + 21 - 18, HEADER.y + 21 - 18, 36, 36);
+    icon(c, D.bench.icon, HEADER.x + 21, HEADER.y + 21);
+    sprite(c, 'craft_window-header_1-overlap_el2', HEADER.x + 261 - 34, HEADER.y + 21 - 21, 68, 42);
+    sprite(c, 'comm-btn-close_bg', CLOSE.x - 24 + 1, CLOSE.y);
+    sprite(c, 'comm-btn_close-active', CLOSE.x, CLOSE.y);
+    const cap = glyph('small_font_bold', 'H')[5];
+    styled(c, 'small_font_bold', D.bench.name, HEADER.x + 46, HEADER.y + 25 + Math.round(cap / 2), D.styles.title);
+    const sub = `${recipes.length} recipes`;
+    styled(c, 'small_font', sub, HEADER.x + 46, HEADER.y + 40 + Math.round(glyph('small_font', 'H')[5] / 2), D.styles.subtitle);
+  }
+
+  function drawQueue(c) {
+    slice(c, 'comm-header_frame_splitter_3', 1, 248, W - 2, 71);
+    slice(c, 'comm-header_2', QUEUE.x - 2, QUEUE.y, QUEUE.w + 4, 26);
+    centered(c, 'comm-header_2-dec_side_1', QUEUE.x + 9, QUEUE.y + 13);
+    c.save();
+    c.translate(QUEUE.x + QUEUE.w - 9, QUEUE.y + 13);
+    c.scale(-1, 1);
+    centered(c, 'comm-header_2-dec_side_1', 0, 0);
+    c.restore();
+    const qw = measure('small_font_bold', D.bench.queue);
+    styled(c, 'small_font_bold', D.bench.queue, QUEUE.x + (QUEUE.w - qw) / 2,
+      QUEUE.y + 13 + Math.round(glyph('small_font_bold', 'H')[5] / 2), D.styles.queue);
+
+    c.save();
+    c.beginPath(); c.rect(QUEUE.x, QUEUE.y + 31, QUEUE.w, QUEUE.h - 31); c.clip();
+    sprite(c, 'comm-frame_bg_1', QUEUE.x + QUEUE.w / 2 - 318, QUEUE.y + 31 - 120);
+    c.restore();
+    const ew = measure('tiny_font', D.bench.empty);
+    styled(c, 'tiny_font', '« ' + D.bench.empty + ' »', QUEUE.x + (QUEUE.w - ew) / 2 - 10,
+      QUEUE.y + 31 + Math.round((QUEUE.h - 31) / 2), D.styles.empty);
   }
 
   function drawMain() {
@@ -237,41 +284,15 @@
     c.translate(PAD, PAD);
 
     c.save();
-    c.beginPath(); c.rect(13, 13, W - 26, H - 26); c.clip();
-    sprite(c, 'comm-frame_bg_1', (W - 636) / 2, (H - 406) / 2);
+    c.beginPath(); c.rect(13, 13, 304, 253); c.clip();
+    sprite(c, 'comm-frame_bg_2', -168, -131);
     c.restore();
 
-    c.save();
-    c.beginPath(); c.rect(LIST.x, LIST.y, LIST.w, LIST.h); c.clip();
-    recipes.forEach((r, i) => drawRow(c, r, i));
-    c.restore();
-
-    const ms = maxScroll();
-    if (ms > 0) {
-      const trackH = LIST.h - 8;
-      const thumbH = Math.max(14, Math.round(trackH * LIST.h / (LIST.h + ms)));
-      const thumbY = LIST.y + 4 + Math.round((trackH - thumbH) * state.scroll / ms);
-      c.fillStyle = 'rgba(224,170,108,0.14)';
-      c.fillRect(LIST.x + LIST.w - 4, LIST.y + 4, 2, trackH);
-      c.fillStyle = 'rgba(224,170,108,0.45)';
-      c.fillRect(LIST.x + LIST.w - 4, thumbY, 2, thumbH);
-    }
-
+    drawGrid(c);
+    slice(c, 'comm-header_frame_splitter_2', 0, 33, W, 41);
+    drawQueue(c);
     slice(c, 'comm-frame_1-border', 0, 0, W, H);
-    const hx = 11, hy = 11, hw = W - 22;
-    slice(c, 'main_window-header_1', hx, hy, hw, 26);
-    sprite(c, 'main_window-header_1-dec_side_3', hx, hy);
-    c.save();
-    c.translate(hx + hw, hy);
-    c.scale(-1, 1);
-    sprite(c, 'main_window-header_1-dec_side_3', 0, 0);
-    c.restore();
-    sprite(c, 'comm-btn-close_bg', hx + hw - 50 + 1, hy - 1);
-    sprite(c, 'comm-btn_close-active', hx + hw - 26 + 1, hy - 1);
-    const title = D.bench.name;
-    const tw = measure('small_font_bold', title);
-    styled(c, 'small_font_bold', title, hx + Math.round((hw - 34 - tw) / 2),
-      hy + Math.round((26 + glyph('small_font_bold', 'H')[5]) / 2) - 1, D.styles.title);
+    drawHeader(c);
   }
 
   function buildTip(widgets) {
@@ -279,6 +300,12 @@
     let width = TIP.minW - TIP.pad * 2;
     for (const w of widgets) {
       if (w.sep) { blocks.push({ sep: true, h: 10 }); continue; }
+      if (w.cells) {
+        const cw = TIP.cell + (w.cells.length - 1) * TIP.cellPitch;
+        width = Math.max(width, cw);
+        blocks.push({ cells: w.cells, w: cw, h: TIP.cell - 4 });
+        continue;
+      }
       const [font, color] = D.tooltipStyles[w.style];
       const lines = layoutText(w.segs, font, color, TIP.maxText);
       for (const l of lines) width = Math.max(width, l.w);
@@ -292,8 +319,21 @@
     slice(ctx, 'hint-frame', x, y, tip.w, tip.h);
     let cy = y + TIP.pad;
     for (const b of tip.blocks) {
-      if (b.sep) sprite(ctx, 'hint-text_separator', x + Math.round((tip.w - 96) / 2), cy + 1);
-      else b.lines.forEach((l, i) => drawLine(ctx, b.font, l, x + Math.round((tip.w - l.w) / 2), cy + (i + 1) * TIP.lineH - 3));
+      if (b.sep) {
+        sprite(ctx, 'hint-text_separator', x + Math.round((tip.w - 96) / 2), cy + 1);
+      } else if (b.cells) {
+        let cx = x + Math.round((tip.w - b.w) / 2);
+        const top = cy - 2;
+        for (const cell of b.cells) {
+          slice(ctx, 'widget_items_cell-folio_item_cell', cx + 1, top + 1, 40, 40);
+          icon(ctx, cell.icon, cx + 21, top + 21, true);
+          const cw = measure('tiny_font', cell.count);
+          styled(ctx, 'tiny_font', cell.count, cx + 42 - 5 - cw, top + 42 - 7, D.styles.quantity);
+          cx += TIP.cellPitch;
+        }
+      } else {
+        b.lines.forEach((l, i) => drawLine(ctx, b.font, l, x + Math.round((tip.w - l.w) / 2), cy + (i + 1) * TIP.lineH - 3));
+      }
       cy += b.h + TIP.spacing;
     }
   }
@@ -310,7 +350,7 @@
     }
     tctx.clearRect(0, 0, vw, vh);
     const h = state.hover;
-    const widgets = h && D.tooltips[h.item.id];
+    const widgets = h && D.tooltips[h.recipe.id];
     if (!widgets) return;
     const mr = main.getBoundingClientRect();
     const ox = mr.left / s + PAD, oy = mr.top / s + PAD;
@@ -356,20 +396,19 @@
 
   function hit(p) {
     if (inside(p, CLOSE)) return { close: true };
-    if (!inside(p, LIST)) return null;
+    if (!inside(p, GRID)) return null;
     for (let i = 0; i < recipes.length; i++) {
-      const top = rowTop(i);
-      if (top > LIST.y + LIST.h || top + LIST.pitch < LIST.y) continue;
-      for (const rect of cellRects(recipes[i], i)) if (inside(p, rect)) return rect;
+      const r = cellRect(i);
+      if (inside(p, r)) return r;
     }
     return null;
   }
 
   function updateHover() {
     const h = state.mouse ? hit(toNative(state.mouse.x, state.mouse.y)) : null;
-    const next = h && h.item ? h : null;
+    const next = h && h.recipe ? h : null;
     main.style.cursor = h && h.close ? 'pointer' : 'default';
-    if ((next && next.item) === (state.hover && state.hover.item)) {
+    if ((next && next.recipe) === (state.hover && state.hover.recipe)) {
       if (next) state.hover = next;
       return false;
     }
@@ -438,10 +477,8 @@
   window.addEventListener('pointercancel', () => { drag = null; });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowDown') { scrollBy(LIST.pitch); e.preventDefault(); }
-    else if (e.key === 'ArrowUp') { scrollBy(-LIST.pitch); e.preventDefault(); }
-    else if (e.key === 'PageDown') { scrollBy(LIST.h); e.preventDefault(); }
-    else if (e.key === 'PageUp') { scrollBy(-LIST.h); e.preventDefault(); }
+    if (e.key === 'ArrowDown') { scrollBy(GRID.cell); e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { scrollBy(-GRID.cell); e.preventDefault(); }
     else if (e.key === 'Escape') window.location.href = '../';
   });
   window.addEventListener('resize', fit);
@@ -451,7 +488,7 @@
   for (const r of recipes) {
     const li = document.createElement('li');
     const needs = r.needs.map(n => `${n.count} ${n.name}`).join(', ') || 'nothing';
-    li.textContent = `${r.out.name} x${r.out.count} from ${needs}, ${r.duration}s${r.tech ? ', unlocked by ' + r.tech : ''}.`;
+    li.textContent = `${r.out.name} x${r.out.count} from ${needs}, mastery ${r.talent}, ${r.duration}s${r.tech ? ', unlocked by ' + r.tech : ''}.`;
     sr.appendChild(li);
   }
 
