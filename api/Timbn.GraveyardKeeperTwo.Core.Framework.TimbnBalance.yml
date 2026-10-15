@@ -1,0 +1,716 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  id: TimbnBalance
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon(ItemDef)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnBalance
+  nameWithType: TimbnBalance
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnBalance
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Helpers for the game's balance tables. A plugin adds and edits definitions through its Balance property, and
+
+    this class holds the static pieces around that, like checking whether the balance has loaded and swapping item icons.
+  example: []
+  syntax:
+    content: public static class TimbnBalance
+    content.vb: Public Module TimbnBalance
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+  id: Loaded
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: Loaded
+  nameWithType: TimbnBalance.Loaded
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Loaded
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 43
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The balance if the game has loaded it, or null. Unlike GameBalance.Me it never forces a load.
+  example: []
+  syntax:
+    content: public static GameBalance? Loaded { get; }
+    parameters: []
+    return:
+      type: GameBalance
+    content.vb: Public Shared ReadOnly Property Loaded As GameBalance
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(System.String)
+  id: TextExpression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: TextExpression(string)
+  nameWithType: TimbnBalance.TextExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TextExpression
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 136
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Builds a game expression that holds a plain text value, for a field that names an id but is typed as an
+
+    expression, such as WGODef.replaceToWgoOnDie, WGODef.customAssetId or CraftDef.customCraftResultIcon. The game
+
+    stores those as pure string values, and <code>new LazyExpression("grave_top_stn_1")</code> would try to evaluate the id
+
+    as a formula and come out empty.
+  example: []
+  syntax:
+    content: public static LazyExpression TextExpression(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The text, usually an id.
+    return:
+      type: LazyExpression
+      description: An expression that evaluates to the text.
+    content.vb: Public Shared Function TextExpression(value As String) As LazyExpression
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression*
+  nameWithType.vb: TimbnBalance.TextExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(String)
+  name.vb: TextExpression(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(System.String)
+  id: Expression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: Expression(string)
+  nameWithType: TimbnBalance.Expression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Expression
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 147
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Builds a game expression from a formula the way the balance parses its own, for an expression field such as
+
+    ItemDef.onUseExpressions, ExpressionGameRes.expression or CraftDef.onCraftEndExpressions. Unlike
+
+    <code>new LazyExpression(formula)</code>, a #perk or $resource reference in it works, so
+
+    <code>TimbnBalance.Expression("20+2*$food_eng_buff")</code> reads the player's food buff.
+  example: []
+  syntax:
+    content: public static LazyExpression Expression(string formula)
+    parameters:
+    - id: formula
+      type: System.String
+      description: The formula, for example <code>AddPerk("buff_talent_blue_1")</code> or <code>3+2*#perk_cook_2</code>.
+    return:
+      type: LazyExpression
+      description: The expression.
+    content.vb: Public Shared Function Expression(formula As String) As LazyExpression
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The formula is empty.
+  nameWithType.vb: TimbnBalance.Expression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(String)
+  name.vb: Expression(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
+  id: RefreshCraftCaches
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: RefreshCraftCaches()
+  nameWithType: TimbnBalance.RefreshCraftCaches()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RefreshCraftCaches
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 198
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Rebuilds the game's lookups of which station makes what and which items belong to which group, after a mod
+
+    changed crafts or item groups in place, and has every station in the loaded save pick up the new crafts.
+
+    Adding a CraftDef or ItemDef with the plugin's Balance.Add already does this.
+  example: []
+  syntax:
+    content: public static void RefreshCraftCaches()
+    content.vb: Public Shared Sub RefreshCraftCaches()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+  id: SetIcon(ItemDef,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: SetIcon(ItemDef, string)
+  nameWithType: TimbnBalance.SetIcon(ItemDef, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetIcon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 229
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Changes an item's icon to any sprite the game has, or one added with the plugin's Sprites.AddPng. It sets the
+
+    item's iconId and also its custom icon, so the two always match.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var original = "";
+
+    Balance.Edit&lt;ItemDef&gt;(
+        "fish_roach",
+        fish =&gt; { original = TimbnBalance.GetIcon(fish); TimbnBalance.SetIcon(fish, "timbn_roach"); },
+        fish =&gt; TimbnBalance.SetIcon(fish, original));</code></pre>
+  syntax:
+    content: public static void SetIcon(ItemDef item, string iconId)
+    parameters:
+    - id: item
+      type: ItemDef
+      description: The item to change.
+    - id: iconId
+      type: System.String
+      description: The sprite name.
+    content.vb: Public Shared Sub SetIcon(item As ItemDef, iconId As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon*
+  nameWithType.vb: TimbnBalance.SetIcon(ItemDef, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef, String)
+  name.vb: SetIcon(ItemDef, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon(ItemDef)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon(ItemDef)
+  id: GetIcon(ItemDef)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: GetIcon(ItemDef)
+  nameWithType: TimbnBalance.GetIcon(ItemDef)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon(ItemDef)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GetIcon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 241
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reads an item's custom icon, or its iconId when it has none. Save it before <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef%2cSystem.String)" data-throw-if-not-resolved="false"></xref> to put the
+
+    icon back later.
+  example: []
+  syntax:
+    content: public static string GetIcon(ItemDef item)
+    parameters:
+    - id: item
+      type: ItemDef
+      description: The item.
+    return:
+      type: System.String
+      description: The sprite name the item is drawn with.
+    content.vb: Public Shared Function GetIcon(item As ItemDef) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
+  id: RefreshUseEffects(ItemDef)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
+  langs:
+  - csharp
+  - vb
+  name: RefreshUseEffects(ItemDef)
+  nameWithType: TimbnBalance.RefreshUseEffects(ItemDef)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RefreshUseEffects
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
+    startLine: 249
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Makes the game read an item's use effects again. The game remembers which buffs an item gives the first
+
+    time it looks, so a change to onUseExpressions is not seen until this is called. The plugin's Balance.Edit
+
+    on an ItemDef calls it for you after apply and revert, and Balance.AddCopy and Balance.AddItem after edit.
+  example: []
+  syntax:
+    content: public static void RefreshUseEffects(ItemDef item)
+    parameters:
+    - id: item
+      type: ItemDef
+      description: The item whose use effects changed.
+    content.vb: Public Shared Sub RefreshUseEffects(item As ItemDef)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_Loaded
+  name: Loaded
+  nameWithType: TimbnBalance.Loaded
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
+- uid: GameBalance
+  commentId: T:GameBalance
+  isExternal: true
+  name: GameBalance
+  nameWithType: GameBalance
+  fullName: GameBalance
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_TextExpression_System_String_
+  name: TextExpression
+  nameWithType: TimbnBalance.TextExpression
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LazyExpression
+  commentId: T:LazyExpression
+  isExternal: true
+  name: LazyExpression
+  nameWithType: LazyExpression
+  fullName: LazyExpression
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_Expression_System_String_
+  name: Expression
+  nameWithType: TimbnBalance.Expression
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_RefreshCraftCaches
+  name: RefreshCraftCaches
+  nameWithType: TimbnBalance.RefreshCraftCaches
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_SetIcon_ItemDef_System_String_
+  name: SetIcon
+  nameWithType: TimbnBalance.SetIcon
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon
+- uid: ItemDef
+  commentId: T:ItemDef
+  isExternal: true
+  name: ItemDef
+  nameWithType: ItemDef
+  fullName: ItemDef
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_SetIcon_ItemDef_System_String_
+  name: SetIcon(ItemDef, string)
+  nameWithType: TimbnBalance.SetIcon(ItemDef, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef, string)
+  nameWithType.vb: TimbnBalance.SetIcon(ItemDef, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef, String)
+  name.vb: SetIcon(ItemDef, String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+    name: SetIcon
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_SetIcon_ItemDef_System_String_
+  - name: (
+  - uid: ItemDef
+    name: ItemDef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
+    name: SetIcon
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_SetIcon_ItemDef_System_String_
+  - name: (
+  - uid: ItemDef
+    name: ItemDef
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_GetIcon_ItemDef_
+  name: GetIcon
+  nameWithType: TimbnBalance.GetIcon
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_RefreshUseEffects_ItemDef_
+  name: RefreshUseEffects
+  nameWithType: TimbnBalance.RefreshUseEffects
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects

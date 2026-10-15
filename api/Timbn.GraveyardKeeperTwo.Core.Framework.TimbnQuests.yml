@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  id: TimbnQuests
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnQuests
+  nameWithType: TimbnQuests
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnQuests
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Registers the quests plugins add as real QuestDefs, so the game's own quest system starts, finishes, saves and
+
+    lists them. It also reads the status of any quest, the game's own included.
+  example: []
+  syntax:
+    content: public static class TimbnQuests
+    content.vb: Public Module TimbnQuests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf(System.String)
+  id: StatusOf(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  langs:
+  - csharp
+  - vb
+  name: StatusOf(string)
+  nameWithType: TimbnQuests.StatusOf(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StatusOf
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+    startLine: 160
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    A quest's status in the loaded save, the game's own quests included, such as 6_intro_guards_burial. Null when
+
+    no save is loaded or it has no such quest.
+  example:
+  - <pre><code class="lang-csharp">.OfferWhen(() =&gt; TimbnQuests.StatusOf("6_intro_guards_burial") is QuestStatus.InProgress or QuestStatus.Completed)</code></pre>
+  syntax:
+    content: public static QuestStatus? StatusOf(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The quest id.
+    return:
+      type: System.Nullable{QuestStatus}
+      description: The status, or null.
+    content.vb: Public Shared Function StatusOf(id As String) As QuestStatus?
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf*
+  nameWithType.vb: TimbnQuests.StatusOf(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf(String)
+  name.vb: StatusOf(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type,System.String)
+  id: FireStoryTrigger(GlobalEventsSystem.Event.Type,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  langs:
+  - csharp
+  - vb
+  name: FireStoryTrigger(Type, string)
+  nameWithType: TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FireStoryTrigger
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+    startLine: 176
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Fires one of the game's story triggers, the signals its quests and cutscenes wait on, as if the player had
+
+    just built the building or won the fight. Use it to finish a game quest whose step was done before the quest
+
+    started. Events.StoryTrigger hears it like any other. Nothing happens at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HasBuilt("zmb_choir_unlock_s"))
+        TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type.BuildBuilding, "zmb_choir_unlock");</code></pre>
+  syntax:
+    content: public static void FireStoryTrigger(GlobalEventsSystem.Event.Type type, string id = "")
+    parameters:
+    - id: type
+      type: GlobalEventsSystem.Event.Type
+      description: The kind of trigger.
+    - id: id
+      type: System.String
+      description: The trigger's id, such as the building or the answer. Leave it out for a kind that has none.
+    content.vb: Public Shared Sub FireStoryTrigger(type As GlobalEventsSystem.Event.Type, id As String = "")
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger*
+  nameWithType.vb: TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type, String)
+  name.vb: FireStoryTrigger(Type, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun(System.String)
+  id: HasQuestRun(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests
+  langs:
+  - csharp
+  - vb
+  name: HasQuestRun(string)
+  nameWithType: TimbnQuests.HasQuestRun(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasQuestRun
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuests.cs
+    startLine: 240
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the current run of any mod's quest names this NPC, such as the villager who asked for a dish. A quest's
+
+    Setup can skip them, so one person never has two quests going at once.
+  example:
+  - <pre><code class="lang-csharp">var villagers = TimbnNpcs.GroupMemberIds(TimbnGameIds.Groups.VillagersDayAll).Where(npc =&gt; !TimbnQuests.HasQuestRun(npc)).ToList();</code></pre>
+  syntax:
+    content: public static bool HasQuestRun(string npcId)
+    parameters:
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: True while a run names them. False at the main menu.
+    content.vb: Public Shared Function HasQuestRun(npcId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun*
+  nameWithType.vb: TimbnQuests.HasQuestRun(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun(String)
+  name.vb: HasQuestRun(String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuests_StatusOf_System_String_
+  name: StatusOf
+  nameWithType: TimbnQuests.StatusOf
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.StatusOf
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{QuestStatus}
+  commentId: T:System.Nullable{QuestStatus}
+  parent: System
+  definition: System.Nullable`1
+  name: QuestStatus?
+  nameWithType: QuestStatus?
+  fullName: QuestStatus?
+  spec.csharp:
+  - uid: QuestStatus
+    name: QuestStatus
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: QuestStatus
+    name: QuestStatus
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuests_FireStoryTrigger_GlobalEventsSystem_Event_Type_System_String_
+  name: FireStoryTrigger
+  nameWithType: TimbnQuests.FireStoryTrigger
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.FireStoryTrigger
+- uid: GlobalEventsSystem.Event.Type
+  commentId: T:GlobalEventsSystem.Event.Type
+  isExternal: true
+  name: GlobalEventsSystem.Event.Type
+  nameWithType: GlobalEventsSystem.Event.Type
+  fullName: GlobalEventsSystem.Event.Type
+  spec.csharp:
+  - uid: GlobalEventsSystem
+    name: GlobalEventsSystem
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event
+    name: Event
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event.Type
+    name: Type
+    isExternal: true
+  spec.vb:
+  - uid: GlobalEventsSystem
+    name: GlobalEventsSystem
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event
+    name: Event
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event.Type
+    name: Type
+    isExternal: true
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuests_HasQuestRun_System_String_
+  name: HasQuestRun
+  nameWithType: TimbnQuests.HasQuestRun
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuests.HasQuestRun
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

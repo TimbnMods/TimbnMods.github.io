@@ -1,0 +1,965 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  id: TimbnPluginDialog
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer(System.String,System.String,System.Func{System.Boolean},System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Nullable{UnityEngine.Color})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginDialog
+  nameWithType: TimbnPluginDialog
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginDialog
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives NPCs conversations on behalf of a plugin, using the game's own speech bubbles and answer choices.
+
+    Talks are removed when the plugin unloads. Reach it through the plugin's Dialog property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginDialog
+    content.vb: Public NotInheritable Class TimbnPluginDialog
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+  id: BubbleColor
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: BubbleColor
+  nameWithType: TimbnPluginDialog.BubbleColor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BubbleColor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 29
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The color tinted onto the game's speech bubble over an NPC that has one of this plugin's talks or quests on
+
+    offer, so players can tell a mod's bubble from the game's. The quest tree also draws the line into each of this
+
+    plugin's quests in it once the quest above is done, where the game draws gold. Every plugin has its own, and
+
+    the default is a warm gold close to the game's. Set it once in OnAwake. A change shows the next time a bubble
+
+    or the quest tree is drawn.
+  example:
+  - <pre><code class="lang-csharp">Dialog.BubbleColor = new Color(0.6f, 0.8f, 1f);</code></pre>
+  syntax:
+    content: public Color BubbleColor { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Property BubbleColor As Color
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  id: AddTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: AddTalk(string, string, Func<bool>, Action<TimbnLines>, TimbnTalkOptions?)
+  nameWithType: TimbnPluginDialog.AddTalk(string, string, Func<bool>, Action<TimbnLines>, TimbnTalkOptions?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk(string, string, System.Func<bool>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddTalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 60
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives an NPC a conversation of your own. While isOffered returns true the NPC shows a speech icon, and when
+
+    the player interacts, the conversation plays in place of the NPC's own. The player's control is taken while it
+
+    plays and given back when it ends. isOffered is checked about once a second. Each line is the text itself, and
+
+    Core names its localization key after the talk id (talkId_1, talkId_2 and so on, in the order the lines are
+
+    written), so a lang file can translate it. Add new lines at the end of a talk that has shipped, since a line put
+
+    in the middle moves every key after it and a translation would show the wrong lines. The lines are recorded
+
+    once, here, so pick between lines with When and fill in changing values with a <code>Func&lt;object&gt;</code>.
+  example:
+  - >-
+    Larry asks for wine while the player is carrying some, and a tip he gives once per save in a bubble color of
+
+    its own.
+
+
+    <pre><code class="lang-csharp">Dialog.AddTalk(TimbnGameIds.Npcs.Larry, "my_larry_wine", () =&gt; TimbnItems.CountOnPlayer("grape_wine:1") &gt; 0, lines =&gt; lines
+        .Say("Is that wine you're carrying?")
+        .Ask(ask =&gt; ask
+            .Answer("Have a bottle.", then =&gt; then.Say("Lovely."), cost: cost =&gt; cost.Item("grape_wine:1"))
+            .Answer("It's not for you.")));
+
+    Dialog.AddTalk(TimbnGameIds.Npcs.Larry, "my_larry_tip", () =&gt; true, lines =&gt; lines.Say("Herm sells nails."),
+        new TimbnTalkOptions { Once = true, BubbleColor = new Color(0.6f, 0.8f, 1f) });</code></pre>
+  syntax:
+    content: public IDisposable AddTalk(string npcId, string talkId, Func<bool> isOffered, Action<TimbnLines> lines, TimbnTalkOptions? options = null)
+    parameters:
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>, such as TimbnGameIds.Npcs.Larry.
+    - id: talkId
+      type: System.String
+      description: A unique id for this talk. It becomes the NPC's interaction event and the start of its text keys, and reusing an id on another NPC throws.
+    - id: isOffered
+      type: System.Func{System.Boolean}
+      description: Whether the talk is available right now. A throw counts as false and is logged.
+    - id: lines
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: Writes the conversation's lines.
+    - id: options
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions
+      description: Optional settings, such as making the talk a one-shot or giving it its own bubble color.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the talk early when disposed. You don't need to keep it.
+    content.vb: Public Function AddTalk(npcId As String, talkId As String, isOffered As Func(Of Boolean), lines As Action(Of TimbnLines), options As TimbnTalkOptions = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk*
+  nameWithType.vb: TimbnPluginDialog.AddTalk(String, String, Func(Of Boolean), Action(Of TimbnLines), TimbnTalkOptions)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk(String, String, System.Func(Of Boolean), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  name.vb: AddTalk(String, String, Func(Of Boolean), Action(Of TimbnLines), TimbnTalkOptions)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  id: AddDynamicTalk(System.String,System.String,System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: AddDynamicTalk(string, string, Func<bool>, Action<TimbnLines>, TimbnTalkOptions?)
+  nameWithType: TimbnPluginDialog.AddDynamicTalk(string, string, Func<bool>, Action<TimbnLines>, TimbnTalkOptions?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk(string, string, System.Func<bool>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddDynamicTalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 98
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives an NPC a conversation that is written each time the player talks, so plain C# can pick and fill the lines
+
+    from the game's state, such as what the player carries. Everything else works the same as AddTalk. A numbered
+
+    key can belong to a different line from one talk to the next, so give a Key to any line a lang file translates.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Dialog.AddDynamicTalk(TimbnGameIds.Npcs.Larry, "my_larry_boards", () =&gt; true, lines =&gt;
+
+    {
+        var boards = TimbnItems.CountOnPlayer("flitch");
+        if (boards == 0)
+            lines.Say("No boards? Go chop some trees.").Named("none");
+        else
+            lines.Say("You have %1 boards.", boards).Named("some");
+    });</code></pre>
+  syntax:
+    content: public IDisposable AddDynamicTalk(string npcId, string talkId, Func<bool> isOffered, Action<TimbnLines> lines, TimbnTalkOptions? options = null)
+    parameters:
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>, such as TimbnGameIds.Npcs.Larry.
+    - id: talkId
+      type: System.String
+      description: A unique id for this talk. It becomes the NPC's interaction event and the start of its text keys, and reusing an id on another NPC throws.
+    - id: isOffered
+      type: System.Func{System.Boolean}
+      description: Whether the talk is available right now. A throw counts as false and is logged.
+    - id: lines
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: Writes the conversation's lines, each time the player talks. A throw is logged and ends the talk.
+    - id: options
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions
+      description: Optional settings, such as making the talk a one-shot or giving it its own bubble color.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the talk early when disposed. You don't need to keep it.
+    content.vb: Public Function AddDynamicTalk(npcId As String, talkId As String, isOffered As Func(Of Boolean), lines As Action(Of TimbnLines), options As TimbnTalkOptions = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk*
+  nameWithType.vb: TimbnPluginDialog.AddDynamicTalk(String, String, Func(Of Boolean), Action(Of TimbnLines), TimbnTalkOptions)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk(String, String, System.Func(Of Boolean), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions)
+  name.vb: AddDynamicTalk(String, String, Func(Of Boolean), Action(Of TimbnLines), TimbnTalkOptions)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer(System.String,System.String,System.Func{System.Boolean},System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Nullable{UnityEngine.Color})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer(System.String,System.String,System.Func{System.Boolean},System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Nullable{UnityEngine.Color})
+  id: AddMenuAnswer(System.String,System.String,System.Func{System.Boolean},System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Nullable{UnityEngine.Color})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: AddMenuAnswer(string, string, Func<bool>, string, Action<TimbnLines>?, Action<TimbnNeeds>?, Action<TimbnCost>?, Color?)
+  nameWithType: TimbnPluginDialog.AddMenuAnswer(string, string, Func<bool>, string, Action<TimbnLines>?, Action<TimbnNeeds>?, Action<TimbnCost>?, Color?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer(string, string, System.Func<bool>, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>?, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>?, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>?, UnityEngine.Color?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddMenuAnswer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 145
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds an answer of your own to the menu an NPC or an object opens when the player interacts, next to the game's
+
+    own answers and above Leave, the way a quest adds its turn in. Picking it takes its cost, plays the lines that
+
+    follow, and shows the menu again. isOffered, needs and cost are read each time the menu opens, so a price can
+
+    follow a setting. The text can color any part of itself, with the game's highlight in square brackets or any
+
+    color in a color tag, and buttonColor gives the answer's button a color of its own.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Dialog.AddMenuAnswer(TimbnGameIds.Npcs.TavernOwner, "my_mod_hire", () =&gt; !_booked, "Play at my [tavern] tonight.",
+        then =&gt; then.Say("I'll bring my violin.").RunCode(() =&gt; _booked = true),
+        cost: cost =&gt; cost.Money(500));
+
+    Dialog.AddMenuAnswer("royal_mailbox", "my_mod_burn", () =&gt; true, "&lt;color=#ff6050&gt;Burn the letters&lt;/color&gt;",
+        buttonColor: new Color(0.45f, 0.12f, 0.1f));</code></pre>
+  syntax:
+    content: public IDisposable AddMenuAnswer(string targetId, string answerId, Func<bool> isOffered, string text, Action<TimbnLines>? then = null, Action<TimbnNeeds>? needs = null, Action<TimbnCost>? cost = null, Color? buttonColor = null)
+    parameters:
+    - id: targetId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>, or the id of an object with a menu, such as royal_mailbox.
+    - id: answerId
+      type: System.String
+      description: A unique id for the answer. It is the answer's localization key, and the lines that follow are answerId_1, answerId_2 and so on.
+    - id: isOffered
+      type: System.Func{System.Boolean}
+      description: Whether the answer shows right now. A throw counts as false and is logged.
+    - id: text
+      type: System.String
+      description: The answer as the player sees it.
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What follows it, such as the NPC's reply and code with RunCode. Leave it out to go straight back to the menu.
+    - id: needs
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+      description: What has to be true to pick it, shown as a lock. The answer is grayed out until it is met.
+    - id: cost
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+      description: What the player pays when they pick it, shown as a price. The answer is grayed out until they can pay.
+    - id: buttonColor
+      type: System.Nullable{UnityEngine.Color}
+      description: The color of the answer's button, shaded on hover like the game's own. Leave it out for the game's own.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the answer early when disposed. You don't need to keep it.
+    content.vb: Public Function AddMenuAnswer(targetId As String, answerId As String, isOffered As Func(Of Boolean), text As String, [then] As Action(Of TimbnLines) = Nothing, needs As Action(Of TimbnNeeds) = Nothing, cost As Action(Of TimbnCost) = Nothing, buttonColor As Color? = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer*
+  nameWithType.vb: TimbnPluginDialog.AddMenuAnswer(String, String, Func(Of Boolean), String, Action(Of TimbnLines), Action(Of TimbnNeeds), Action(Of TimbnCost), Color?)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer(String, String, System.Func(Of Boolean), String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost), UnityEngine.Color?)
+  name.vb: AddMenuAnswer(String, String, Func(Of Boolean), String, Action(Of TimbnLines), Action(Of TimbnNeeds), Action(Of TimbnCost), Color?)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk(System.String)
+  id: HasSeenTalk(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: HasSeenTalk(string)
+  nameWithType: TimbnPluginDialog.HasSeenTalk(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasSeenTalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 206
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player has already started a one-shot talk in the loaded save.
+  example: []
+  syntax:
+    content: public bool HasSeenTalk(string talkId)
+    parameters:
+    - id: talkId
+      type: System.String
+      description: The talk's id, as passed to AddTalk.
+    return:
+      type: System.Boolean
+      description: True once the talk has been started, until it is reset.
+    content.vb: Public Function HasSeenTalk(talkId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk*
+  nameWithType.vb: TimbnPluginDialog.HasSeenTalk(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk(String)
+  name.vb: HasSeenTalk(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk(System.String)
+  id: ResetTalk(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog
+  langs:
+  - csharp
+  - vb
+  name: ResetTalk(string)
+  nameWithType: TimbnPluginDialog.ResetTalk(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ResetTalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnPluginDialog.cs
+    startLine: 210
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Makes a one-shot talk offered again in the loaded save, as if the player had never started it.
+  example: []
+  syntax:
+    content: public void ResetTalk(string talkId)
+    parameters:
+    - id: talkId
+      type: System.String
+      description: The talk's id, as passed to AddTalk.
+    content.vb: Public Sub ResetTalk(talkId As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk*
+  nameWithType.vb: TimbnPluginDialog.ResetTalk(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk(String)
+  name.vb: ResetTalk(String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_BubbleColor
+  name: BubbleColor
+  nameWithType: TimbnPluginDialog.BubbleColor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.BubbleColor
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_AddTalk_System_String_System_String_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalkOptions_
+  name: AddTalk
+  nameWithType: TimbnPluginDialog.AddTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddTalk
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Func{System.Boolean}
+  commentId: T:System.Func{System.Boolean}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<bool>
+  nameWithType: Func<bool>
+  fullName: System.Func<bool>
+  nameWithType.vb: Func(Of Boolean)
+  fullName.vb: System.Func(Of Boolean)
+  name.vb: Func(Of Boolean)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnLines>
+  nameWithType: Action<TimbnLines>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>
+  nameWithType.vb: Action(Of TimbnLines)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines)
+  name.vb: Action(Of TimbnLines)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions.html
+  name: TimbnTalkOptions
+  nameWithType: TimbnTalkOptions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalkOptions
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_AddDynamicTalk_System_String_System_String_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalkOptions_
+  name: AddDynamicTalk
+  nameWithType: TimbnPluginDialog.AddDynamicTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddDynamicTalk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_AddMenuAnswer_System_String_System_String_System_Func_System_Boolean__System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNeeds__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__System_Nullable_UnityEngine_Color__
+  name: AddMenuAnswer
+  nameWithType: TimbnPluginDialog.AddMenuAnswer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.AddMenuAnswer
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnNeeds>
+  nameWithType: Action<TimbnNeeds>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>
+  nameWithType.vb: Action(Of TimbnNeeds)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds)
+  name.vb: Action(Of TimbnNeeds)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnCost>
+  nameWithType: Action<TimbnCost>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>
+  nameWithType.vb: Action(Of TimbnCost)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost)
+  name.vb: Action(Of TimbnCost)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: )
+- uid: System.Nullable{UnityEngine.Color}
+  commentId: T:System.Nullable{UnityEngine.Color}
+  parent: System
+  definition: System.Nullable`1
+  name: Color?
+  nameWithType: Color?
+  fullName: UnityEngine.Color?
+  spec.csharp:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: UnityEngine.Color
+    name: Color
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_HasSeenTalk_System_String_
+  name: HasSeenTalk
+  nameWithType: TimbnPluginDialog.HasSeenTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.HasSeenTalk
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginDialog_ResetTalk_System_String_
+  name: ResetTalk
+  nameWithType: TimbnPluginDialog.ResetTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginDialog.ResetTalk

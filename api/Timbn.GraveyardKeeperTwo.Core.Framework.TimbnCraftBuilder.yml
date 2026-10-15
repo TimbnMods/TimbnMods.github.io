@@ -1,0 +1,1695 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  id: TimbnCraftBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit(System.Action{CraftDef})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.ValueTuple{System.String,System.Int32}[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires(System.Func{WgoData,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnCraftBuilder
+  nameWithType: TimbnCraftBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnCraftBuilder
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 25
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Describes a craft for the plugin's Crafts.Add, with where it runs, what it takes in and what it makes. The craft is
+
+    copied from one of the game's own, the woodworking bench's wooden plank unless <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)" data-throw-if-not-resolved="false"></xref> names another, so it
+
+    starts with everything the game expects and the builder changes only what differs. What is not set stays the
+
+    template's, so a craft that only calls <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref> keeps the template's
+
+    station, work time and energy. The one exception is the unlock, since a craft is open from the start whatever the
+
+    template did unless <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock" data-throw-if-not-resolved="false"></xref> or <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)" data-throw-if-not-resolved="false"></xref> is called.
+  example:
+  - >-
+    Four sticks from a board at the Stick Box, and a plank from sticks that needs the pillar next to it.
+
+
+    <pre><code class="lang-csharp">Crafts.Add("timbn_stick_box_sticks", "Sticks from a Board", "Split one board into 4 sticks.", craft =&gt; craft
+        .In(box)
+        .Needs("flitch")
+        .Makes("stick", 4));
+
+    Crafts.Add("timbn_stick_box_magic_plank", "Plank from Sticks", "The red pillar binds 4 sticks back into a plank.", craft =&gt; craft
+        .In(box)
+        .NeedsExtension("timbn_red_magic")
+        .Needs("stick", 4)
+        .Makes("wooden_plank"));</code></pre>
+  syntax:
+    content: public sealed class TimbnCraftBuilder
+    content.vb: Public NotInheritable Class TimbnCraftBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+  id: In(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: In(string)
+  nameWithType: TimbnCraftBuilder.In(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: In
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 79
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    A station the craft runs at, the game's own such as "kitchen_oven" or "woodworking_workbench_1", or one added
+
+    with Stations.Add. Call it once per station. The first call replaces the template's stations. Whether the craft
+
+    runs on its own follows the station, so a craft at the kitchen oven cooks by itself and one at a bench is worked
+
+    by hand.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder In(string stationId)
+    parameters:
+    - id: stationId
+      type: System.String
+      description: The station's world object id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function [In](stationId As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In*
+  nameWithType.vb: TimbnCraftBuilder.In(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(String)
+  name.vb: In(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation)
+  id: In(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: In(TimbnStation)
+  nameWithType: TimbnCraftBuilder.In(TimbnStation)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: In
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 88
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: A station added with Stations.Add that the craft runs at. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder In(TimbnStation station)
+    parameters:
+    - id: station
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+      description: The station.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function [In](station As TimbnStation) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+  id: BasedOn(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: BasedOn(string)
+  nameWithType: TimbnCraftBuilder.BasedOn(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BasedOn
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 96
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game craft the new one is copied from, "wooden_plank" by default. Pick a craft from the station the new one
+
+    runs at to inherit its work time, energy and tab, for example "cook_baked_fish" for a smoked fish at an oven like
+
+    station.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder BasedOn(string craftId)
+    parameters:
+    - id: craftId
+      type: System.String
+      description: The game craft's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function BasedOn(craftId As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn*
+  nameWithType.vb: TimbnCraftBuilder.BasedOn(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(String)
+  name.vb: BasedOn(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+  id: Needs(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Needs(string, int)
+  nameWithType: TimbnCraftBuilder.Needs(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Needs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 105
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: An item the craft takes in. Call it once per item. The first call replaces the template's items.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Needs(string itemId, int count = 1)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item's id, for example "flitch".
+    - id: count
+      type: System.Int32
+      description: How many, 1 by default.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Needs(itemId As String, count As Integer = 1) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs*
+  nameWithType.vb: TimbnCraftBuilder.Needs(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(String, Integer)
+  name.vb: Needs(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.String)
+  id: Needs(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Needs(string, string)
+  nameWithType: TimbnCraftBuilder.Needs(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Needs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 113
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    An item the craft takes in, with its count as one of the game's expressions, for example "10-5*#perk_heat_saver"
+
+    for firewood that a perk saves on. A count that doesn't parse fails here, when the plugin loads.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Needs(string itemId, string count)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item's id.
+    - id: count
+      type: System.String
+      description: The game expression for how many.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Needs(itemId As String, count As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs*
+  nameWithType.vb: TimbnCraftBuilder.Needs(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(String, String)
+  name.vb: Needs(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.ValueTuple{System.String,System.Int32}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.ValueTuple{System.String,System.Int32}[])
+  id: Needs(System.ValueTuple{System.String,System.Int32}[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Needs(params (string Item, int Count)[])
+  nameWithType: TimbnCraftBuilder.Needs(params (string Item, int Count)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(params (string Item, int Count)[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Needs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 122
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Several items the craft takes in at once, for example ("fillet_fish_river", 1), ("firewood", 1).
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Needs(params (string Item, int Count)[] items)
+    parameters:
+    - id: items
+      type: System.ValueTuple{System.String,System.Int32}[]
+      description: Item ids with counts.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Needs(ParamArray items As (Item As String, Count As Integer)()) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs*
+  nameWithType.vb: TimbnCraftBuilder.Needs(ParamArray (Item As String, Count As Integer)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(ParamArray (Item As String, Count As Integer)())
+  name.vb: Needs(ParamArray (Item As String, Count As Integer)())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+  id: Makes(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Makes(string, int)
+  nameWithType: TimbnCraftBuilder.Makes(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Makes
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 133
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: What the craft makes. Call it once per item. The first call replaces the template's output.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Makes(string itemId, int count = 1)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item's id, for example "stick".
+    - id: count
+      type: System.Int32
+      description: How many, 1 by default.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Makes(itemId As String, count As Integer = 1) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes*
+  nameWithType.vb: TimbnCraftBuilder.Makes(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(String, Integer)
+  name.vb: Makes(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.String)
+  id: Makes(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Makes(string, string)
+  nameWithType: TimbnCraftBuilder.Makes(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Makes
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 138
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: What the craft makes, with its count as one of the game's expressions, for example "3+2*#perk_cook_2" for a perk that adds two.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Makes(string itemId, string count)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item's id.
+    - id: count
+      type: System.String
+      description: The game expression for how many.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Makes(itemId As String, count As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes*
+  nameWithType.vb: TimbnCraftBuilder.Makes(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(String, String)
+  name.vb: Makes(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  id: NeedsUnlock
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: NeedsUnlock()
+  nameWithType: TimbnCraftBuilder.NeedsUnlock()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NeedsUnlock
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 149
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Keeps the craft hidden until the save unlocks it, by a tech that lists it in craftsAfterUnlock or by
+
+    TimbnPlayer.UnlockCraft. A craft is open from the start otherwise.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder NeedsUnlock()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function NeedsUnlock() As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  id: UnlockedBy(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: UnlockedBy(string)
+  nameWithType: TimbnCraftBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: UnlockedBy
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 162
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Has a technology grant the craft, the way "cooking_pastries" grants the muffin and the croissant. The tech's
+
+    tooltip lists the craft, researching the tech unlocks it, and a save that already has the tech gets it as soon
+
+    as it loads. The craft stays hidden until then, so this includes <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock" data-throw-if-not-resolved="false"></xref>. The tech is put
+
+    back when the plugin unloads, and a tech the game doesn't have is logged.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder UnlockedBy(string techId)
+    parameters:
+    - id: techId
+      type: System.String
+      description: The technology's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function UnlockedBy(techId As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy*
+  nameWithType.vb: TimbnCraftBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery(System.Int32)
+  id: Mastery(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Mastery(int)
+  nameWithType: TimbnCraftBuilder.Mastery(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Mastery
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 174
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The mastery level the player or zombie needs in the station's talent to work the craft, which the player gets
+
+    from the tool on their belt. The template's otherwise, 2 for the wooden plank, so Mastery(1) lets any tool work it.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Mastery(int level)
+    parameters:
+    - id: level
+      type: System.Int32
+      description: The level, 1 or more.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Mastery(level As Integer) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery*
+  nameWithType.vb: TimbnCraftBuilder.Mastery(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery(Integer)
+  name.vb: Mastery(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension(System.String)
+  id: NeedsExtension(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: NeedsExtension(string)
+  nameWithType: TimbnCraftBuilder.NeedsExtension(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NeedsExtension
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 182
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Makes the craft run only while this bench extension is attached to the station, the game's "tool_rack" or one added with Stations.AddExtension. The craft window shows it in that extension's row.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder NeedsExtension(string extensionId)
+    parameters:
+    - id: extensionId
+      type: System.String
+      description: The extension's world object id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function NeedsExtension(extensionId As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension*
+  nameWithType.vb: TimbnCraftBuilder.NeedsExtension(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension(String)
+  name.vb: NeedsExtension(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon(System.String)
+  id: Icon(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Icon(string)
+  nameWithType: TimbnCraftBuilder.Icon(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Icon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 190
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The icon the craft window shows for the craft, instead of the icon of what it makes. Any sprite the game has, or one added with the plugin's Sprites.AddEmbeddedPng.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Icon(string spriteId)
+    parameters:
+    - id: spriteId
+      type: System.String
+      description: The sprite name.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Icon(spriteId As String) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon*
+  nameWithType.vb: TimbnCraftBuilder.Icon(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon(String)
+  name.vb: Icon(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks(System.Int32)
+  id: DurationTicks(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: DurationTicks(int)
+  nameWithType: TimbnCraftBuilder.DurationTicks(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DurationTicks
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 198
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How long the craft takes in work ticks, swings of the tool at a bench worked by hand or the station's own tick at one that runs itself (10 seconds each at the kitchen oven). The template's otherwise, 4 for the wooden plank.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder DurationTicks(int ticks)
+    parameters:
+    - id: ticks
+      type: System.Int32
+      description: The number of ticks.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function DurationTicks(ticks As Integer) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks*
+  nameWithType.vb: TimbnCraftBuilder.DurationTicks(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks(Integer)
+  name.vb: DurationTicks(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick(System.Int32)
+  id: EnergyPerTick(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: EnergyPerTick(int)
+  nameWithType: TimbnCraftBuilder.EnergyPerTick(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: EnergyPerTick
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 206
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How much energy each work tick costs the player. The template's otherwise, 2 for the wooden plank.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder EnergyPerTick(int energy)
+    parameters:
+    - id: energy
+      type: System.Int32
+      description: Energy per tick.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function EnergyPerTick(energy As Integer) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick*
+  nameWithType.vb: TimbnCraftBuilder.EnergyPerTick(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick(Integer)
+  name.vb: EnergyPerTick(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish
+  id: AutoFinish
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: AutoFinish()
+  nameWithType: TimbnCraftBuilder.AutoFinish()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AutoFinish
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 217
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lets a craft at a station that runs itself finish on its own, dropping what it made next to the station and
+
+    starting the next craft in the queue. Without it the station waits for the player to take the result, the way
+
+    the kitchen oven does.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder AutoFinish()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function AutoFinish() As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  id: OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnStarted(Action<TimbnCraftEvent>)
+  nameWithType: TimbnCraftBuilder.OnStarted(Action<TimbnCraftEvent>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 229
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs the handler each time the craft starts at a station, which is when its ingredients are taken, for a timed
+
+    craft as well as an instant one. A craft with a count above one starts once per unit. The handler is undone when
+
+    the plugin unloads, and one that throws is logged without stopping the craft.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder OnStarted(Action<TimbnCraftEvent> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent}
+      description: Told the station and the craft's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function OnStarted(handler As Action(Of TimbnCraftEvent)) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted*
+  nameWithType.vb: TimbnCraftBuilder.OnStarted(Action(Of TimbnCraftEvent))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent))
+  name.vb: OnStarted(Action(Of TimbnCraftEvent))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  id: OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnFinished(Action<TimbnCraftEvent>)
+  nameWithType: TimbnCraftBuilder.OnFinished(Action<TimbnCraftEvent>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnFinished
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 249
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs the handler each time the craft finishes at a station, as the game finishes it, once per unit of a craft with
+
+    a count above one. A craft that fails while finishing doesn't raise it. The handler is undone when the plugin
+
+    unloads, and one that throws is logged without stopping the craft.
+  example:
+  - >-
+    Pay a tech point to every seated zombie when the teaching craft ends.
+
+
+    <pre><code class="lang-csharp">Crafts.Add("timbn_teach", "Teach", "Teaches every seated zombie.", craft =&gt; craft
+        .In(machine)
+        .OnFinished(done =&gt; PayZombies(done.Station)));</code></pre>
+  syntax:
+    content: public TimbnCraftBuilder OnFinished(Action<TimbnCraftEvent> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent}
+      description: Told the station and the craft's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function OnFinished(handler As Action(Of TimbnCraftEvent)) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished*
+  nameWithType.vb: TimbnCraftBuilder.OnFinished(Action(Of TimbnCraftEvent))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent))
+  name.vb: OnFinished(Action(Of TimbnCraftEvent))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires(System.Func{WgoData,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires(System.Func{WgoData,System.Boolean})
+  id: Requires(System.Func{WgoData,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Requires(Func<WgoData, bool>)
+  nameWithType: TimbnCraftBuilder.Requires(Func<WgoData, bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires(System.Func<WgoData, bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Requires
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 272
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lets the craft start at a station only while the check passes for that station, for a condition the game has no
+
+    field for. Until it passes the craft window's Start button stays gray and a queued craft waits, the way they do
+
+    for a missing ingredient, and a craft already running carries on. The game asks again whenever it looks at the
+
+    craft, so keep the check quick. A second call adds another check that must pass too. A check that throws is
+
+    logged once and counts as passing. The check is undone when the plugin unloads.
+  example:
+  - >-
+    A lesson that only starts while a stand in the machine's slots holds a zombie.
+
+
+    <pre><code class="lang-csharp">Crafts.Add("timbn_lesson", "Lesson", "Teaches the zombies on the stands.", craft =&gt; craft
+        .In(machine)
+        .Requires(station =&gt; TimbnWorld.Extensions(station).Any(stand =&gt; TimbnZombies.AtStation(stand) != null)));</code></pre>
+  syntax:
+    content: public TimbnCraftBuilder Requires(Func<WgoData, bool> check)
+    parameters:
+    - id: check
+      type: System.Func{WgoData,System.Boolean}
+      description: Told the station the craft would start at, and returns whether it may.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Requires(check As Func(Of WgoData, Boolean)) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: The check is null.
+  nameWithType.vb: TimbnCraftBuilder.Requires(Func(Of WgoData, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires(System.Func(Of WgoData, Boolean))
+  name.vb: Requires(Func(Of WgoData, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit(System.Action{CraftDef})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit(System.Action{CraftDef})
+  id: Edit(System.Action{CraftDef})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  langs:
+  - csharp
+  - vb
+  name: Edit(Action<CraftDef>)
+  nameWithType: TimbnCraftBuilder.Edit(Action<CraftDef>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit(System.Action<CraftDef>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Edit
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftBuilder.cs
+    startLine: 280
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Changes anything else on the craft's definition after Core has filled it in, for example its tabId.
+  example: []
+  syntax:
+    content: public TimbnCraftBuilder Edit(Action<CraftDef> edit)
+    parameters:
+    - id: edit
+      type: System.Action{CraftDef}
+      description: Runs on the copy each time the balance loads.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+    content.vb: Public Function Edit(edit As Action(Of CraftDef)) As TimbnCraftBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit*
+  nameWithType.vb: TimbnCraftBuilder.Edit(Action(Of CraftDef))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit(System.Action(Of CraftDef))
+  name.vb: Edit(Action(Of CraftDef))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_BasedOn_System_String_
+  name: BasedOn(string)
+  nameWithType: TimbnCraftBuilder.BasedOn(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(string)
+  nameWithType.vb: TimbnCraftBuilder.BasedOn(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(String)
+  name.vb: BasedOn(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+    name: BasedOn
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_BasedOn_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn(System.String)
+    name: BasedOn
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_BasedOn_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Needs_System_String_System_Int32_
+  name: Needs(string, int)
+  nameWithType: TimbnCraftBuilder.Needs(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(string, int)
+  nameWithType.vb: TimbnCraftBuilder.Needs(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(String, Integer)
+  name.vb: Needs(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+    name: Needs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Needs_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs(System.String,System.Int32)
+    name: Needs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Needs_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Makes_System_String_System_Int32_
+  name: Makes(string, int)
+  nameWithType: TimbnCraftBuilder.Makes(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(string, int)
+  nameWithType.vb: TimbnCraftBuilder.Makes(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(String, Integer)
+  name.vb: Makes(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+    name: Makes
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Makes_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes(System.String,System.Int32)
+    name: Makes
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Makes_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_NeedsUnlock
+  name: NeedsUnlock()
+  nameWithType: TimbnCraftBuilder.NeedsUnlock()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+    name: NeedsUnlock
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_NeedsUnlock
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+    name: NeedsUnlock
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_NeedsUnlock
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  name: UnlockedBy(string)
+  nameWithType: TimbnCraftBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(string)
+  nameWithType.vb: TimbnCraftBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_In_System_String_
+  name: In
+  nameWithType: TimbnCraftBuilder.In
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html
+  name: TimbnCraftBuilder
+  nameWithType: TimbnCraftBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_In_System_String_
+  name: In(string)
+  nameWithType: TimbnCraftBuilder.In(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(string)
+  nameWithType.vb: TimbnCraftBuilder.In(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(String)
+  name.vb: In(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+    name: In
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_In_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.In(System.String)
+    name: In
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_In_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation.html
+  name: TimbnStation
+  nameWithType: TimbnStation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_BasedOn_System_String_
+  name: BasedOn
+  nameWithType: TimbnCraftBuilder.BasedOn
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.BasedOn
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Needs_System_String_System_Int32_
+  name: Needs
+  nameWithType: TimbnCraftBuilder.Needs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Needs
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueTuple{System.String,System.Int32}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string Item, int Count)[]
+  nameWithType: (string Item, int Count)[]
+  fullName: (string Item, int Count)[]
+  nameWithType.vb: (Item As String, Count As Integer)()
+  fullName.vb: (Item As String, Count As Integer)()
+  name.vb: (Item As String, Count As Integer)()
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Makes_System_String_System_Int32_
+  name: Makes
+  nameWithType: TimbnCraftBuilder.Makes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Makes
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_NeedsUnlock
+  name: NeedsUnlock
+  nameWithType: TimbnCraftBuilder.NeedsUnlock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsUnlock
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  name: UnlockedBy
+  nameWithType: TimbnCraftBuilder.UnlockedBy
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Mastery_System_Int32_
+  name: Mastery
+  nameWithType: TimbnCraftBuilder.Mastery
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Mastery
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_NeedsExtension_System_String_
+  name: NeedsExtension
+  nameWithType: TimbnCraftBuilder.NeedsExtension
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.NeedsExtension
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Icon_System_String_
+  name: Icon
+  nameWithType: TimbnCraftBuilder.Icon
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Icon
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_DurationTicks_System_Int32_
+  name: DurationTicks
+  nameWithType: TimbnCraftBuilder.DurationTicks
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.DurationTicks
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_EnergyPerTick_System_Int32_
+  name: EnergyPerTick
+  nameWithType: TimbnCraftBuilder.EnergyPerTick
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.EnergyPerTick
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_AutoFinish
+  name: AutoFinish
+  nameWithType: TimbnCraftBuilder.AutoFinish
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.AutoFinish
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnStarted_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  name: OnStarted
+  nameWithType: TimbnCraftBuilder.OnStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnCraftEvent>
+  nameWithType: Action<TimbnCraftEvent>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent>
+  nameWithType.vb: Action(Of TimbnCraftEvent)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent)
+  name.vb: Action(Of TimbnCraftEvent)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnFinished_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  name: OnFinished
+  nameWithType: TimbnCraftBuilder.OnFinished
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Requires_System_Func_WgoData_System_Boolean__
+  name: Requires
+  nameWithType: TimbnCraftBuilder.Requires
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Requires
+- uid: System.Func{WgoData,System.Boolean}
+  commentId: T:System.Func{WgoData,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<WgoData, bool>
+  nameWithType: Func<WgoData, bool>
+  fullName: System.Func<WgoData, bool>
+  nameWithType.vb: Func(Of WgoData, Boolean)
+  fullName.vb: System.Func(Of WgoData, Boolean)
+  name.vb: Func(Of WgoData, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_Edit_System_Action_CraftDef__
+  name: Edit
+  nameWithType: TimbnCraftBuilder.Edit
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.Edit
+- uid: System.Action{CraftDef}
+  commentId: T:System.Action{CraftDef}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<CraftDef>
+  nameWithType: Action<CraftDef>
+  fullName: System.Action<CraftDef>
+  nameWithType.vb: Action(Of CraftDef)
+  fullName.vb: System.Action(Of CraftDef)
+  name.vb: Action(Of CraftDef)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: CraftDef
+    name: CraftDef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CraftDef
+    name: CraftDef
+    isExternal: true
+  - name: )

@@ -1,0 +1,833 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  id: TimbnQuestRun
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnQuestRun
+  nameWithType: TimbnQuestRun
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnQuestRun
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 24
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    One play of a quest whose details change each time, such as which villager asks and for what. A quest's Setup fills
+
+    it when the mod calls NewRun, Core keeps it with the save until the play ends, and every part of the quest that takes
+
+    a run reads it. Each value has a name, and text anywhere in the quest shows it with that name in braces, such as
+
+    {dish}. An NPC shows as their name, an item as its name, a text value as its line (all in the player's language,
+
+    looked up as the text shows), and a number as itself.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.Setup(run =&gt;
+
+    {
+        run.Npc("villager", TimbnGameIds.Npcs.Larry).Item("dish", "cook_muffin").Number("count", 2);
+        return true;
+    })
+
+    .Description("Bring {villager} {count} {dish}.")
+
+    .Cost((cost, run) =&gt; cost.Item(run.Item("dish"), run.Number("count")))</code></pre>
+  syntax:
+    content: public sealed class TimbnQuestRun
+    content.vb: Public NotInheritable Class TimbnQuestRun
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+  id: Day
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Day
+  nameWithType: TimbnQuestRun.Day
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Day
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The game day the run was rolled on, as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day" data-throw-if-not-resolved="false"></xref> counts them.
+  example: []
+  syntax:
+    content: public int Day { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Day As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String,System.String)
+  id: Npc(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Npc(string, string)
+  nameWithType: TimbnQuestRun.Npc(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Npc
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 42
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Sets an NPC value, shown in text as the NPC's name.
+  example: []
+  syntax:
+    content: public TimbnQuestRun Npc(string name, string npcId)
+    parameters:
+    - id: name
+      type: System.String
+      description: A short name of lowercase letters, digits and underscores, starting with a letter.
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+      description: This run, for chaining.
+    content.vb: Public Function Npc(name As String, npcId As String) As TimbnQuestRun
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc*
+  nameWithType.vb: TimbnQuestRun.Npc(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(String, String)
+  name.vb: Npc(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String,System.String)
+  id: Item(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Item(string, string)
+  nameWithType: TimbnQuestRun.Item(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Item
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 48
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Sets an item value, shown in text as the item's name.
+  example: []
+  syntax:
+    content: public TimbnQuestRun Item(string name, string itemId)
+    parameters:
+    - id: name
+      type: System.String
+      description: A short name of lowercase letters, digits and underscores, starting with a letter.
+    - id: itemId
+      type: System.String
+      description: The item id, with its quality suffix where it has one, such as grape_wine:2.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+      description: This run, for chaining.
+    content.vb: Public Function Item(name As String, itemId As String) As TimbnQuestRun
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item*
+  nameWithType.vb: TimbnQuestRun.Item(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(String, String)
+  name.vb: Item(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String,System.Int32)
+  id: Number(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Number(string, int)
+  nameWithType: TimbnQuestRun.Number(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Number
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 54
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Sets a number value, shown in text as the number.
+  example: []
+  syntax:
+    content: public TimbnQuestRun Number(string name, int value)
+    parameters:
+    - id: name
+      type: System.String
+      description: A short name of lowercase letters, digits and underscores, starting with a letter.
+    - id: value
+      type: System.Int32
+      description: The number.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+      description: This run, for chaining.
+    content.vb: Public Function Number(name As String, value As Integer) As TimbnQuestRun
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number*
+  nameWithType.vb: TimbnQuestRun.Number(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(String, Integer)
+  name.vb: Number(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String,System.String)
+  id: Text(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Text(string, string)
+  nameWithType: TimbnQuestRun.Text(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Text
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 72
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Sets a text value, the localization key of a line that shows in place of {name}, so one quest can say a
+
+    different thing on each run, such as an answer that names what the player brings. Add the line with Text.Add or
+
+    a lang file, and a translation of it shows in its place.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Text.Add("my_errand_potion", "I have some medication for you.");
+
+    ...
+
+    .Setup(run =&gt; { run.Text("delivering", "my_errand_potion"); return true; })
+
+    .Talk(talk =&gt; talk.Accept("{delivering}"))</code></pre>
+  syntax:
+    content: public TimbnQuestRun Text(string name, string key)
+    parameters:
+    - id: name
+      type: System.String
+      description: A short name of lowercase letters, digits and underscores, starting with a letter.
+    - id: key
+      type: System.String
+      description: The line's localization key.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+      description: This run, for chaining.
+    content.vb: Public Function Text(name As String, key As String) As TimbnQuestRun
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text*
+  nameWithType.vb: TimbnQuestRun.Text(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(String, String)
+  name.vb: Text(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(System.String)
+  id: Text(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Text(string)
+  nameWithType: TimbnQuestRun.Text(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Text
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 77
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reads a text value set in Setup.
+  example: []
+  syntax:
+    content: public string Text(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The value's name.
+    return:
+      type: System.String
+      description: The line's localization key.
+    content.vb: Public Function Text(name As String) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text*
+  nameWithType.vb: TimbnQuestRun.Text(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text(String)
+  name.vb: Text(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+  id: NpcId(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: NpcId(string)
+  nameWithType: TimbnQuestRun.NpcId(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NpcId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reads an NPC value set in Setup.
+  example: []
+  syntax:
+    content: public string NpcId(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The value's name.
+    return:
+      type: System.String
+      description: The NPC id.
+    content.vb: Public Function NpcId(name As String) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId*
+  nameWithType.vb: TimbnQuestRun.NpcId(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(String)
+  name.vb: NpcId(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(System.String)
+  id: Npc(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Npc(string)
+  nameWithType: TimbnQuestRun.Npc(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Npc
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 87
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reads an NPC value set in Setup, the same as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public string Npc(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The value's name.
+    return:
+      type: System.String
+      description: The NPC id.
+    content.vb: Public Function Npc(name As String) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc*
+  nameWithType.vb: TimbnQuestRun.Npc(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc(String)
+  name.vb: Npc(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(System.String)
+  id: Item(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Item(string)
+  nameWithType: TimbnQuestRun.Item(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Item
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 92
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reads an item value set in Setup.
+  example: []
+  syntax:
+    content: public string Item(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The value's name.
+    return:
+      type: System.String
+      description: The item id.
+    content.vb: Public Function Item(name As String) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item*
+  nameWithType.vb: TimbnQuestRun.Item(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item(String)
+  name.vb: Item(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(System.String)
+  id: Number(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  langs:
+  - csharp
+  - vb
+  name: Number(string)
+  nameWithType: TimbnQuestRun.Number(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Number
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestRun.cs
+    startLine: 97
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reads a number value set in Setup.
+  example: []
+  syntax:
+    content: public int Number(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The value's name.
+    return:
+      type: System.Int32
+      description: The number.
+    content.vb: Public Function Number(name As String) As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number*
+  nameWithType.vb: TimbnQuestRun.Number(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number(String)
+  name.vb: Number(String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_Day
+  name: Day
+  nameWithType: TimbnClock.Day
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_Day
+  name: Day
+  nameWithType: TimbnQuestRun.Day
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Day
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_Npc_System_String_System_String_
+  name: Npc
+  nameWithType: TimbnQuestRun.Npc
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Npc
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  name: TimbnQuestRun
+  nameWithType: TimbnQuestRun
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_Item_System_String_System_String_
+  name: Item
+  nameWithType: TimbnQuestRun.Item
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Item
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_Number_System_String_System_Int32_
+  name: Number
+  nameWithType: TimbnQuestRun.Number
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Number
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_Text_System_String_System_String_
+  name: Text
+  nameWithType: TimbnQuestRun.Text
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.Text
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_NpcId_System_String_
+  name: NpcId
+  nameWithType: TimbnQuestRun.NpcId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_NpcId_System_String_
+  name: NpcId(string)
+  nameWithType: TimbnQuestRun.NpcId(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(string)
+  nameWithType.vb: TimbnQuestRun.NpcId(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(String)
+  name.vb: NpcId(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+    name: NpcId
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_NpcId_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.NpcId(System.String)
+    name: NpcId
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_NpcId_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

@@ -1,0 +1,690 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  id: TimbnUI
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen``1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnUI
+  nameWithType: TimbnUI
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnUI
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reads and drives the game's own screens, such as which window is open and the fade to black. See the plugin's
+
+    UI property for things a plugin shows that have to be taken down again.
+  example: []
+  syntax:
+    content: public static class TimbnUI
+    content.vb: Public Module TimbnUI
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+  id: ActiveWindow
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: ActiveWindow
+  nameWithType: TimbnUI.ActiveWindow
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ActiveWindow
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game window on top, such as the inventory, a chest, or the pause menu, or null when the player is in the
+
+    world with nothing open.
+  example: []
+  syntax:
+    content: public static LazyWidgetBase? ActiveWindow { get; }
+    parameters: []
+    return:
+      type: LazyBearTechnology.LazyWidgetBase
+    content.vb: Public Shared ReadOnly Property ActiveWindow As LazyWidgetBase
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+  id: IsScreenFading
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: IsScreenFading
+  nameWithType: TimbnUI.IsScreenFading
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsScreenFading
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: True while the screen is fading to or from black. A hotkey or a scripted change should wait until it ends.
+  example: []
+  syntax:
+    content: public static bool IsScreenFading { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsScreenFading As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen``1
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen``1
+  id: IsWindowOpen``1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: IsWindowOpen<TWindow>()
+  nameWithType: TimbnUI.IsWindowOpen<TWindow>()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen<TWindow>()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsWindowOpen
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 35
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the game window on top is of the given type, such as the building window.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnUI.IsWindowOpen&lt;UIBuildingWindow&gt;())
+        BuildPins.Draw();</code></pre>
+  syntax:
+    content: 'public static bool IsWindowOpen<TWindow>() where TWindow : LazyWidgetBase'
+    typeParameters:
+    - id: TWindow
+      description: The window's type.
+    return:
+      type: System.Boolean
+      description: True when that window is open and on top.
+    content.vb: Public Shared Function IsWindowOpen(Of TWindow As LazyWidgetBase)() As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen*
+  nameWithType.vb: TimbnUI.IsWindowOpen(Of TWindow)()
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen(Of TWindow)()
+  name.vb: IsWindowOpen(Of TWindow)()
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+  id: Notify(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: Notify(string)
+  nameWithType: TimbnUI.Notify(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Notify
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 48
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Shows a line of text in the game's own notification popup, the one it uses for things like a closed shop. The
+
+    text is looked up by its localization key, so add it with Text.Add or a lang file. It can name an item or an
+
+    NPC with the game's #(id) markup.
+  example:
+  - <pre><code class="lang-csharp">TimbnUI.Notify("my_mod_parcel_lost");</code></pre>
+  syntax:
+    content: public static void Notify(string key)
+    parameters:
+    - id: key
+      type: System.String
+      description: The text's localization key.
+    content.vb: Public Shared Sub Notify(key As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify*
+  nameWithType.vb: TimbnUI.Notify(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(String)
+  name.vb: Notify(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String,System.String)
+  id: Notify(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: Notify(string, string)
+  nameWithType: TimbnUI.Notify(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Notify
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 65
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Shows a line of text in the game's notification popup like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)" data-throw-if-not-resolved="false"></xref>, with an icon beside it.
+  example:
+  - <pre><code class="lang-csharp">TimbnUI.Notify("my_mod_bar_open", "i_cup_beer");</code></pre>
+  syntax:
+    content: public static void Notify(string key, string iconId)
+    parameters:
+    - id: key
+      type: System.String
+      description: The text's localization key.
+    - id: iconId
+      type: System.String
+      description: An icon shown beside the text, such as an item's i_cup_beer or one added with Sprites.AddPng.
+    content.vb: Public Shared Sub Notify(key As String, iconId As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify*
+  nameWithType.vb: TimbnUI.Notify(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(String, String)
+  name.vb: Notify(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(System.String)
+  id: NotifyOnce(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: NotifyOnce(string)
+  nameWithType: TimbnUI.NotifyOnce(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NotifyOnce
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 84
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Shows a line of text in the game's notification popup like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)" data-throw-if-not-resolved="false"></xref>, unless the same text is
+
+    on screen already, for a warning that would otherwise stack up every frame.
+  example:
+  - <pre><code class="lang-csharp">TimbnUI.NotifyOnce("my_mod_conveyor_loop");</code></pre>
+  syntax:
+    content: public static void NotifyOnce(string key)
+    parameters:
+    - id: key
+      type: System.String
+      description: The text's localization key.
+    content.vb: Public Shared Sub NotifyOnce(key As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce*
+  nameWithType.vb: TimbnUI.NotifyOnce(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(String)
+  name.vb: NotifyOnce(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
+  id: FadeThrough(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
+  langs:
+  - csharp
+  - vb
+  name: FadeThrough(Action)
+  nameWithType: TimbnUI.FadeThrough(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FadeThrough
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
+    startLine: 105
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Fades the screen to black, runs your code while it is black, and fades back in, the way the game hides a
+
+    change such as the player sitting down or a teleport. When the game has no fade to show, or one is already
+
+    showing, the code runs straight away. Nothing owns the code, so it still runs after the plugin unloads mid
+
+    fade. Use the plugin's UI.FadeThrough for code that must not outlive the plugin or can be called off.
+  example:
+  - <pre><code class="lang-csharp">TimbnUI.FadeThrough(() =&gt; TimbnPlayer.TeleportTo(campfire));</code></pre>
+  syntax:
+    content: public static void FadeThrough(Action whileBlack)
+    parameters:
+    - id: whileBlack
+      type: System.Action
+      description: The code to run once the screen is black.
+    content.vb: Public Shared Sub FadeThrough(whileBlack As Action)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_ActiveWindow
+  name: ActiveWindow
+  nameWithType: TimbnUI.ActiveWindow
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
+- uid: LazyBearTechnology.LazyWidgetBase
+  commentId: T:LazyBearTechnology.LazyWidgetBase
+  parent: LazyBearTechnology
+  isExternal: true
+  name: LazyWidgetBase
+  nameWithType: LazyWidgetBase
+  fullName: LazyBearTechnology.LazyWidgetBase
+- uid: LazyBearTechnology
+  commentId: N:LazyBearTechnology
+  isExternal: true
+  name: LazyBearTechnology
+  nameWithType: LazyBearTechnology
+  fullName: LazyBearTechnology
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_IsScreenFading
+  name: IsScreenFading
+  nameWithType: TimbnUI.IsScreenFading
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_IsWindowOpen__1
+  name: IsWindowOpen
+  nameWithType: TimbnUI.IsWindowOpen
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_Notify_System_String_
+  name: Notify
+  nameWithType: TimbnUI.Notify
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_Notify_System_String_
+  name: Notify(string)
+  nameWithType: TimbnUI.Notify(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(string)
+  nameWithType.vb: TimbnUI.Notify(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(String)
+  name.vb: Notify(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+    name: Notify
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_Notify_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
+    name: Notify
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_Notify_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_NotifyOnce_System_String_
+  name: NotifyOnce
+  nameWithType: TimbnUI.NotifyOnce
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_FadeThrough_System_Action_
+  name: FadeThrough
+  nameWithType: TimbnUI.FadeThrough
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action

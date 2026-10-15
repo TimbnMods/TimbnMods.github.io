@@ -1,0 +1,1888 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  id: TimbnPlayer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource(System.String,System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem(Item)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource(System.String,System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo(UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+  langs:
+  - csharp
+  - vb
+  name: TimbnPlayer
+  nameWithType: TimbnPlayer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPlayer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reads where the player is in the loaded save and what they know, and makes the one shot changes that need no
+
+    undo, such as giving money, changing a resource, unlocking a craft or moving them. See the plugin's Player
+
+    property for changes that have to be undone, such as holding the player still.
+  example: []
+  syntax:
+    content: public static class TimbnPlayer
+    content.vb: Public Module TimbnPlayer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+  id: GameHasControl(TakenControlType[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: GameHasControl(params TakenControlType[])
+  nameWithType: TimbnPlayer.GameHasControl(params TakenControlType[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(params TakenControlType[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameHasControl
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 27
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the game itself has taken the player's control, such as for a cutscene, sleep, or a teleport.
+
+    Control taken by mods with the plugin's Player.TakeControl does not count, so a mod holding the player can
+
+    use it to notice the game stepping in.
+  example:
+  - >-
+    Stop meditating when the game takes control for anything but an open window.
+
+
+    <pre><code class="lang-csharp">if (TimbnPlayer.GameHasControl(TakenControlType.ByUI))
+        meditation.Stop();</code></pre>
+  syntax:
+    content: public static bool GameHasControl(params TakenControlType[] ignored)
+    parameters:
+    - id: ignored
+      type: TakenControlType[]
+      description: The game's reasons that should not count, such as TakenControlType.ByUI for open windows.
+    return:
+      type: System.Boolean
+      description: True when the game has taken control for any other reason. False at the main menu.
+    content.vb: Public Shared Function GameHasControl(ParamArray ignored As TakenControlType()) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl*
+  nameWithType.vb: TimbnPlayer.GameHasControl(ParamArray TakenControlType())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(ParamArray TakenControlType())
+  name.vb: GameHasControl(ParamArray TakenControlType())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  id: Money
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Money
+  nameWithType: TimbnPlayer.Money
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Money
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player's money in the game's raw units, where 100 is one silver coin. 0 at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.Money &gt;= 500)
+        Logger.LogInfo("The player has 5 silver.");</code></pre>
+  syntax:
+    content: public static int Money { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Money As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+  id: TakeMoney(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: TakeMoney(int)
+  nameWithType: TimbnPlayer.TakeMoney(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TakeMoney
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 49
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Takes money from the player, as much as they have up to the amount, such as a fine. The game shows the loss the
+
+    way it shows any change to the player's money.
+  example:
+  - <pre><code class="lang-csharp">var paid = TimbnPlayer.TakeMoney(250);</code></pre>
+  syntax:
+    content: public static int TakeMoney(int amount)
+    parameters:
+    - id: amount
+      type: System.Int32
+      description: How much to take, in the game's raw units.
+    return:
+      type: System.Int32
+      description: How much was taken, less than the amount when the player had less. 0 at the main menu.
+    content.vb: Public Shared Function TakeMoney(amount As Integer) As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney*
+  nameWithType.vb: TimbnPlayer.TakeMoney(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(Integer)
+  name.vb: TakeMoney(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+  id: GiveMoney(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: GiveMoney(int)
+  nameWithType: TimbnPlayer.GiveMoney(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GiveMoney
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 68
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives the player money, such as a customer paying, with the game's coin sound and the notice it shows for any
+
+    money the player gets.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.GiveMoney(45);</code></pre>
+  syntax:
+    content: public static void GiveMoney(int amount)
+    parameters:
+    - id: amount
+      type: System.Int32
+      description: How much to give, in the game's raw units. Nothing happens for 0 or less.
+    content.vb: Public Shared Sub GiveMoney(amount As Integer)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney*
+  nameWithType.vb: TimbnPlayer.GiveMoney(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(Integer)
+  name.vb: GiveMoney(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+  id: Carried
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Carried
+  nameWithType: TimbnPlayer.Carried
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Carried
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 88
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The item the player carries over their head, such as a log, or null when they carry nothing or at the main
+
+    menu. A player with extra carry slots can carry several, and this is the one on top, the one the
+
+    interaction key puts down first. See the plugin's Player.Carry to hand them one.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.Carried?.id == "wood")
+        Logger.LogInfo("The player carries a log.");</code></pre>
+  syntax:
+    content: public static Item? Carried { get; }
+    parameters: []
+    return:
+      type: Item
+    content.vb: Public Shared ReadOnly Property Carried As Item
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+  id: HandsFree
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HandsFree
+  nameWithType: TimbnPlayer.HandsFree
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HandsFree
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 100
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the player's hands are free, with nothing over their head in any carry slot and nothing held out in
+
+    front of them the way they hold seeds. False at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HandsFree)
+        _mug = Player.Carry(new Item("my_mod_mug"));</code></pre>
+  syntax:
+    content: public static bool HandsFree { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property HandsFree As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+  id: GetResource(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: GetResource(string)
+  nameWithType: TimbnPlayer.GetResource(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GetResource
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 123
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    One of the player's resources, the string keyed numbers the game keeps on them, such as energy, insanity, a
+
+    reputation (see <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(System.String)" data-throw-if-not-resolved="false"></xref>) or money. 0 for a resource they do not have and at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.GetResource("insanity") &gt; 50f)
+        Logger.LogInfo("The keeper is losing it.");</code></pre>
+  syntax:
+    content: public static float GetResource(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The resource's id, such as insanity.
+    return:
+      type: System.Single
+      description: Its value, or 0.
+    content.vb: Public Shared Function GetResource(id As String) As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource*
+  nameWithType.vb: TimbnPlayer.GetResource(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(String)
+  name.vb: GetResource(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource(System.String,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource(System.String,System.Single)
+  id: AddResource(System.String,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: AddResource(string, float)
+  nameWithType: TimbnPlayer.AddResource(string, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddResource
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 138
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds to one of the player's resources, or takes from it with a negative amount, the way a quest reward or
+
+    a buff does. The game's own limits apply, so energy never goes past its maximum. For money prefer
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)" data-throw-if-not-resolved="false"></xref>, which show the game's coin toast.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.AddResource("insanity", -10f);</code></pre>
+  syntax:
+    content: public static bool AddResource(string id, float amount)
+    parameters:
+    - id: id
+      type: System.String
+      description: The resource's id, such as insanity.
+    - id: amount
+      type: System.Single
+      description: How much to add. Negative takes.
+    return:
+      type: System.Boolean
+      description: False at the main menu, when there is no player.
+    content.vb: Public Shared Function AddResource(id As String, amount As Single) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource*
+  nameWithType.vb: TimbnPlayer.AddResource(String, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource(String, Single)
+  name.vb: AddResource(String, Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource(System.String,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource(System.String,System.Single)
+  id: SetResource(System.String,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetResource(string, float)
+  nameWithType: TimbnPlayer.SetResource(string, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetResource
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 156
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Sets one of the player's resources to a value, such as filling their energy. The game's own limits apply.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.SetResource("insanity", 0f);</code></pre>
+  syntax:
+    content: public static bool SetResource(string id, float value)
+    parameters:
+    - id: id
+      type: System.String
+      description: The resource's id, such as insanity.
+    - id: value
+      type: System.Single
+      description: The new value.
+    return:
+      type: System.Boolean
+      description: False at the main menu, when there is no player.
+    content.vb: Public Shared Function SetResource(id As String, value As Single) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource*
+  nameWithType.vb: TimbnPlayer.SetResource(String, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource(String, Single)
+  name.vb: SetResource(String, Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+  id: Energy
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Energy
+  nameWithType: TimbnPlayer.Energy
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Energy
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 172
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player's energy, which the game caps at its maximum. 0 at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.Energy &lt; 20f)
+        return;</code></pre>
+  syntax:
+    content: public static float Energy { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property Energy As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem(System.String)
+  id: CountItem(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: CountItem(string)
+  nameWithType: TimbnPlayer.CountItem(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CountItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 176
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How many of an item the player carries in their inventory and bags. Storage in the world does not count.
+  example: []
+  syntax:
+    content: public static int CountItem(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The item id.
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function CountItem(id As String) As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem*
+  nameWithType.vb: TimbnPlayer.CountItem(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem(String)
+  name.vb: CountItem(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem(System.String,System.Int32)
+  id: HasItem(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasItem(string, int)
+  nameWithType: TimbnPlayer.HasItem(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 181
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player carries at least some of an item in their inventory and bags.
+  example: []
+  syntax:
+    content: public static bool HasItem(string id, int count = 1)
+    parameters:
+    - id: id
+      type: System.String
+      description: The item id.
+    - id: count
+      type: System.Int32
+      description: How many they need. 1 by default.
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function HasItem(id As String, count As Integer = 1) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem*
+  nameWithType.vb: TimbnPlayer.HasItem(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem(String, Integer)
+  name.vb: HasItem(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem(Item)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem(Item)
+  id: GiveItem(Item)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: GiveItem(Item)
+  nameWithType: TimbnPlayer.GiveItem(Item)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem(Item)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GiveItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 186
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Puts an item in the player's inventory, dropping whatever does not fit in front of them.
+  example: []
+  syntax:
+    content: public static int GiveItem(Item item)
+    parameters:
+    - id: item
+      type: Item
+      description: The item and how many.
+    return:
+      type: System.Int32
+      description: How many went into the inventory.
+    content.vb: Public Shared Function GiveItem(item As Item) As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem(System.String,System.Int32)
+  id: TakeItem(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: TakeItem(string, int)
+  nameWithType: TimbnPlayer.TakeItem(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TakeItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 192
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Removes an item from the player's inventory and bags, up to the count asked for.
+  example: []
+  syntax:
+    content: public static int TakeItem(string id, int count)
+    parameters:
+    - id: id
+      type: System.String
+      description: The item id.
+    - id: count
+      type: System.Int32
+      description: How many to take.
+    return:
+      type: System.Int32
+      description: How many were taken.
+    content.vb: Public Shared Function TakeItem(id As String, count As Integer) As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem*
+  nameWithType.vb: TimbnPlayer.TakeItem(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem(String, Integer)
+  name.vb: TakeItem(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  id: IsTired
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: IsTired
+  nameWithType: TimbnPlayer.IsTired
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsTired
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 201
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player has the game's tired debuff. False at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.IsTired)
+        return;</code></pre>
+  syntax:
+    content: public static bool IsTired { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsTired As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration(System.String)
+  id: HasInspiration(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasInspiration(string)
+  nameWithType: TimbnPlayer.HasInspiration(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasInspiration
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 212
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player has bought a level of an inspiration, such as the second graveyard expansion.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HasInspiration("cemetery_expander_2"))
+        Logger.LogInfo("The graveyard has grown twice.");</code></pre>
+  syntax:
+    content: public static bool HasInspiration(string inspirationId)
+    parameters:
+    - id: inspirationId
+      type: System.String
+      description: The level's id, such as cemetery_expander_2.
+    return:
+      type: System.Boolean
+      description: False when it is not bought, the inspiration is missing, or at the main menu.
+    content.vb: Public Shared Function HasInspiration(inspirationId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration*
+  nameWithType.vb: TimbnPlayer.HasInspiration(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration(String)
+  name.vb: HasInspiration(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(System.String)
+  id: HasPerk(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasPerk(string)
+  nameWithType: TimbnPlayer.HasPerk(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasPerk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 231
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player has a perk.
+  example:
+  - <pre><code class="lang-csharp">var greenThumb = TimbnPlayer.HasPerk("perk_green_thumb");</code></pre>
+  syntax:
+    content: public static bool HasPerk(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The perk's id, such as perk_green_thumb.
+    return:
+      type: System.Boolean
+      description: True when the player has it. False at the main menu.
+    content.vb: Public Shared Function HasPerk(id As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk*
+  nameWithType.vb: TimbnPlayer.HasPerk(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(String)
+  name.vb: HasPerk(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk(System.String)
+  id: AddPerk(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: AddPerk(string)
+  nameWithType: TimbnPlayer.AddPerk(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddPerk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 246
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives the player a perk, such as the tired debuff or a food buff, the way an item or a script does. A perk the
+
+    player already has is refreshed by its own add rule. The perk is saved with the game, so use it for the game's
+
+    own perks and for effects that should stay, and use Potions for a buff of your own that must end with the mod.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.AddPerk(TimbnGameIds.Buffs.LackOfSleepDebuff);</code></pre>
+  syntax:
+    content: public static bool AddPerk(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The perk's id from the balance, such as lack_of_sleep_debuff.
+    return:
+      type: System.Boolean
+      description: False at the main menu or when no perk has that id.
+    content.vb: Public Shared Function AddPerk(id As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk*
+  nameWithType.vb: TimbnPlayer.AddPerk(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk(String)
+  name.vb: AddPerk(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(System.String)
+  id: RemovePerk(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: RemovePerk(string)
+  nameWithType: TimbnPlayer.RemovePerk(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RemovePerk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 266
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Takes a perk away from the player and runs what the perk does when it ends, such as giving back a resource. A
+
+    perk the player does not have is left alone.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.RemovePerk(TimbnGameIds.Buffs.LackOfSleepDebuff);</code></pre>
+  syntax:
+    content: public static bool RemovePerk(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The perk's id from the balance.
+    return:
+      type: System.Boolean
+      description: True when the player had the perk. False at the main menu or when they did not.
+    content.vb: Public Shared Function RemovePerk(id As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk*
+  nameWithType.vb: TimbnPlayer.RemovePerk(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(String)
+  name.vb: RemovePerk(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(System.String)
+  id: HasTech(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasTech(string)
+  nameWithType: TimbnPlayer.HasTech(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasTech
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 286
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player has researched a technology.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HasTech("wood_basic"))
+        Logger.LogInfo("Wood basics are researched.");</code></pre>
+  syntax:
+    content: public static bool HasTech(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The technology's id, such as wood_basic.
+    return:
+      type: System.Boolean
+      description: True when it is researched. False at the main menu.
+    content.vb: Public Shared Function HasTech(id As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech*
+  nameWithType.vb: TimbnPlayer.HasTech(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(String)
+  name.vb: HasTech(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+  id: HasCraft(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasCraft(string)
+  nameWithType: TimbnPlayer.HasCraft(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasCraft
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 302
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the player can make a recipe, either one the game gives from the start or one they have unlocked, such
+
+    as a dish learned from a cookbook or a tech. It reads the craft's isNeedsUnlock and the save's unlocked crafts,
+
+    the way a station does before it offers the recipe.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HasCraft(craft.id))
+        dishes.Add(craft.id);</code></pre>
+  syntax:
+    content: public static bool HasCraft(string craftId)
+    parameters:
+    - id: craftId
+      type: System.String
+      description: The recipe's id from the balance.
+    return:
+      type: System.Boolean
+      description: True when it needs no unlock or is unlocked. False at the main menu.
+    content.vb: Public Shared Function HasCraft(craftId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft*
+  nameWithType.vb: TimbnPlayer.HasCraft(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(String)
+  name.vb: HasCraft(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(System.String)
+  id: UnlockCraft(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: UnlockCraft(string)
+  nameWithType: TimbnPlayer.UnlockCraft(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: UnlockCraft
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 324
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Unlocks a recipe for the player the way a cookbook or a study does, so its station offers it from now on. A
+
+    recipe already unlocked stays as it is.
+  example:
+  - <pre><code class="lang-csharp">TimbnPlayer.UnlockCraft("my_mod_fish_pie");</code></pre>
+  syntax:
+    content: public static bool UnlockCraft(string craftId)
+    parameters:
+    - id: craftId
+      type: System.String
+      description: The recipe's id from the balance.
+    return:
+      type: System.Boolean
+      description: False at the main menu, when there is no player to teach.
+    content.vb: Public Shared Function UnlockCraft(craftId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft*
+  nameWithType.vb: TimbnPlayer.UnlockCraft(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(String)
+  name.vb: UnlockCraft(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt(System.String)
+  id: HasBuilt(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: HasBuilt(string)
+  nameWithType: TimbnPlayer.HasBuilt(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HasBuilt
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 345
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the player has built one of the buildings the game only allows once, such as the choir or the
+
+    organ. The game marks such a building as locked once it is built, so this reads that list.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnPlayer.HasBuilt("zmb_choir_unlock_s"))
+        TimbnQuests.FireStoryTrigger(GlobalEventsSystem.Event.Type.BuildBuilding, "zmb_choir_unlock");</code></pre>
+  syntax:
+    content: public static bool HasBuilt(string buildingId)
+    parameters:
+    - id: buildingId
+      type: System.String
+      description: The building's id from the balance, such as zmb_choir_unlock_s.
+    return:
+      type: System.Boolean
+      description: True when it has been built. False at the main menu.
+    content.vb: Public Shared Function HasBuilt(buildingId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt*
+  nameWithType.vb: TimbnPlayer.HasBuilt(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt(String)
+  name.vb: HasBuilt(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+  id: Position
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: TimbnPlayer.Position
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Position
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 349
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player's position in their current scene, or zero at the main menu.
+  example: []
+  syntax:
+    content: public static Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Shared ReadOnly Property Position As Vector3
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+  id: SceneId
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: SceneId
+  nameWithType: TimbnPlayer.SceneId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SceneId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 352
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The id of the scene the player is in, such as the graveyard or an interior, or null at the main menu.
+  example: []
+  syntax:
+    content: public static string? SceneId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SceneId As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+  id: Scene
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: TimbnPlayer.Scene
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Scene
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 358
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The scene the player is in, holding its world objects and the items dropped on its ground, or null at the
+
+    main menu.
+  example: []
+  syntax:
+    content: public static GameSceneData? Scene { get; }
+    parameters: []
+    return:
+      type: GameSceneData
+    content.vb: Public Shared ReadOnly Property Scene As GameSceneData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+  id: Zone
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: Zone
+  nameWithType: TimbnPlayer.Zone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Zone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 365
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The zone the player stands in, such as the garden or the morgue, or null at the main menu and in the open
+
+    between zones. Zones are the game's named areas, each with its own build area and workers.
+  example: []
+  syntax:
+    content: public static WorldZoneData? Zone { get; }
+    parameters: []
+    return:
+      type: WorldZoneData
+    content.vb: Public Shared ReadOnly Property Zone As WorldZoneData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+  id: ZoneId
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: ZoneId
+  nameWithType: TimbnPlayer.ZoneId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ZoneId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 373
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The id of the zone the player stands in, such as garden, or null when they stand in none.
+  example:
+  - <pre><code class="lang-csharp">var atHome = TimbnPlayer.ZoneId is "garden" or "inquisitions_base";</code></pre>
+  syntax:
+    content: public static string? ZoneId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ZoneId As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo(UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo(UnityEngine.Vector3)
+  id: TeleportTo(UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: TeleportTo(Vector3)
+  nameWithType: TimbnPlayer.TeleportTo(Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TeleportTo
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 387
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Moves the player to a spot in their current scene, the way the game moves them. Pair it with
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3%2cSystem.Single%2cUnityEngine.Vector3%40)" data-throw-if-not-resolved="false"></xref> so they land on open ground.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnWorld.TryFindWalkable(TimbnPlayer.Position, 5f, out var ground))
+        TimbnPlayer.TeleportTo(ground);</code></pre>
+  syntax:
+    content: public static bool TeleportTo(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where to put the player.
+    return:
+      type: System.Boolean
+      description: False at the main menu, when there is no player to move.
+    content.vb: Public Shared Function TeleportTo(position As Vector3) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GameHasControl_TakenControlType___
+  name: GameHasControl
+  nameWithType: TimbnPlayer.GameHasControl
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl
+- uid: TakenControlType[]
+  isExternal: true
+  name: TakenControlType[]
+  nameWithType: TakenControlType[]
+  fullName: TakenControlType[]
+  nameWithType.vb: TakenControlType()
+  fullName.vb: TakenControlType()
+  name.vb: TakenControlType()
+  spec.csharp:
+  - uid: TakenControlType
+    name: TakenControlType
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TakenControlType
+    name: TakenControlType
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Money
+  name: Money
+  nameWithType: TimbnPlayer.Money
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TakeMoney_System_Int32_
+  name: TakeMoney
+  nameWithType: TimbnPlayer.TakeMoney
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GiveMoney_System_Int32_
+  name: GiveMoney
+  nameWithType: TimbnPlayer.GiveMoney
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Carried
+  name: Carried
+  nameWithType: TimbnPlayer.Carried
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Carried
+- uid: Item
+  commentId: T:Item
+  isExternal: true
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HandsFree
+  name: HandsFree
+  nameWithType: TimbnPlayer.HandsFree
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HandsFree
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcs_ReputationOf_System_String_
+  name: ReputationOf(string)
+  nameWithType: TimbnNpcs.ReputationOf(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(string)
+  nameWithType.vb: TimbnNpcs.ReputationOf(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(String)
+  name.vb: ReputationOf(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(System.String)
+    name: ReputationOf
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcs_ReputationOf_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.ReputationOf(System.String)
+    name: ReputationOf
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcs_ReputationOf_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GetResource_System_String_
+  name: GetResource
+  nameWithType: TimbnPlayer.GetResource
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GiveMoney_System_Int32_
+  name: GiveMoney(int)
+  nameWithType: TimbnPlayer.GiveMoney(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(int)
+  nameWithType.vb: TimbnPlayer.GiveMoney(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(Integer)
+  name.vb: GiveMoney(Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+    name: GiveMoney
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GiveMoney_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveMoney(System.Int32)
+    name: GiveMoney
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GiveMoney_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TakeMoney_System_Int32_
+  name: TakeMoney(int)
+  nameWithType: TimbnPlayer.TakeMoney(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(int)
+  nameWithType.vb: TimbnPlayer.TakeMoney(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(Integer)
+  name.vb: TakeMoney(Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+    name: TakeMoney
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TakeMoney_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeMoney(System.Int32)
+    name: TakeMoney
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TakeMoney_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_AddResource_System_String_System_Single_
+  name: AddResource
+  nameWithType: TimbnPlayer.AddResource
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddResource
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_SetResource_System_String_System_Single_
+  name: SetResource
+  nameWithType: TimbnPlayer.SetResource
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SetResource
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Energy
+  name: Energy
+  nameWithType: TimbnPlayer.Energy
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Energy
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_CountItem_System_String_
+  name: CountItem
+  nameWithType: TimbnPlayer.CountItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.CountItem
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasItem_System_String_System_Int32_
+  name: HasItem
+  nameWithType: TimbnPlayer.HasItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasItem
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GiveItem_Item_
+  name: GiveItem
+  nameWithType: TimbnPlayer.GiveItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GiveItem
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TakeItem_System_String_System_Int32_
+  name: TakeItem
+  nameWithType: TimbnPlayer.TakeItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TakeItem
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_IsTired
+  name: IsTired
+  nameWithType: TimbnPlayer.IsTired
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasInspiration_System_String_
+  name: HasInspiration
+  nameWithType: TimbnPlayer.HasInspiration
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasInspiration
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasPerk_System_String_
+  name: HasPerk
+  nameWithType: TimbnPlayer.HasPerk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_AddPerk_System_String_
+  name: AddPerk
+  nameWithType: TimbnPlayer.AddPerk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.AddPerk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_RemovePerk_System_String_
+  name: RemovePerk
+  nameWithType: TimbnPlayer.RemovePerk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasTech_System_String_
+  name: HasTech
+  nameWithType: TimbnPlayer.HasTech
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasCraft_System_String_
+  name: HasCraft
+  nameWithType: TimbnPlayer.HasCraft
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_UnlockCraft_System_String_
+  name: UnlockCraft
+  nameWithType: TimbnPlayer.UnlockCraft
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasBuilt_System_String_
+  name: HasBuilt
+  nameWithType: TimbnPlayer.HasBuilt
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasBuilt
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Position
+  name: Position
+  nameWithType: TimbnPlayer.Position
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_SceneId
+  name: SceneId
+  nameWithType: TimbnPlayer.SceneId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.SceneId
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Scene
+  name: Scene
+  nameWithType: TimbnPlayer.Scene
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Scene
+- uid: GameSceneData
+  commentId: T:GameSceneData
+  isExternal: true
+  name: GameSceneData
+  nameWithType: GameSceneData
+  fullName: GameSceneData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Zone
+  name: Zone
+  nameWithType: TimbnPlayer.Zone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Zone
+- uid: WorldZoneData
+  commentId: T:WorldZoneData
+  isExternal: true
+  name: WorldZoneData
+  nameWithType: WorldZoneData
+  fullName: WorldZoneData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_ZoneId
+  name: ZoneId
+  nameWithType: TimbnPlayer.ZoneId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.ZoneId
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TryFindWalkable_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__
+  name: TryFindWalkable(Vector3, float, out Vector3)
+  nameWithType: TimbnWorld.TryFindWalkable(Vector3, float, out Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3, float, out UnityEngine.Vector3)
+  nameWithType.vb: TimbnWorld.TryFindWalkable(Vector3, Single, Vector3)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3, Single, UnityEngine.Vector3)
+  name.vb: TryFindWalkable(Vector3, Single, Vector3)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+    name: TryFindWalkable
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TryFindWalkable_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+    name: TryFindWalkable
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TryFindWalkable_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__
+  - name: (
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_TeleportTo_UnityEngine_Vector3_
+  name: TeleportTo
+  nameWithType: TimbnPlayer.TeleportTo
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.TeleportTo

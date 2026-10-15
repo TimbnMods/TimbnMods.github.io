@@ -1,0 +1,51 @@
+article {
+  line-height: 1.7;
+  font-size: 1.0rem;
+}
+
+article p,
+article ul,
+article ol {
+  margin-bottom: 1.1rem;
+}
+
+article h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+article h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+article h3 code {
+  font-size: 1em;
+  color: var(--bs-emphasis-color);
+  background: transparent;
+  padding: 0;
+}
+
+article pre {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+article table {
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+article table td,
+article table th {
+  padding: 0.6rem 0.9rem;
+  vertical-align: top;
+}
+
+article .alert {
+  margin: 1.5rem 0;
+}

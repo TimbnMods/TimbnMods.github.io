@@ -1,0 +1,570 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  id: TimbnNpcEvents.HeadOfTheGuards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionDown
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionLeft
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetInteractable
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracks
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracksAndSetInteractable
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHome
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHomeAndSetInteractive
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpot
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpotWithoutPuff
+  langs:
+  - csharp
+  - vb
+  name: TimbnNpcEvents.HeadOfTheGuards
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HeadOfTheGuards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 90
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Script npc_head_of_the_guards, run by npc_head_of_the_guards.
+  example: []
+  syntax:
+    content: public static class TimbnNpcEvents.HeadOfTheGuards
+    content.vb: Public Module TimbnNpcEvents.HeadOfTheGuards
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionDown
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionDown
+  id: SetDirectionDown
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: SetDirectionDown
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.SetDirectionDown
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionDown
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetDirectionDown
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 92
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SetDirectionDown = "set_direction_down"
+    return:
+      type: System.String
+    content.vb: Public Const SetDirectionDown As String = "set_direction_down"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionLeft
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionLeft
+  id: SetDirectionLeft
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: SetDirectionLeft
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.SetDirectionLeft
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetDirectionLeft
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetDirectionLeft
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 93
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SetDirectionLeft = "set_direction_left"
+    return:
+      type: System.String
+    content.vb: Public Const SetDirectionLeft As String = "set_direction_left"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetInteractable
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetInteractable
+  id: SetInteractable
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: SetInteractable
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.SetInteractable
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.SetInteractable
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetInteractable
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 94
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SetInteractable = "set_interactable"
+    return:
+      type: System.String
+    content.vb: Public Const SetInteractable As String = "set_interactable"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracks
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracks
+  id: TpToBarracks
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToBarracks
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToBarracks
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracks
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToBarracks
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 95
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToBarracks = "tp_to_barracks"
+    return:
+      type: System.String
+    content.vb: Public Const TpToBarracks As String = "tp_to_barracks"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracksAndSetInteractable
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracksAndSetInteractable
+  id: TpToBarracksAndSetInteractable
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToBarracksAndSetInteractable
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToBarracksAndSetInteractable
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToBarracksAndSetInteractable
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToBarracksAndSetInteractable
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 96
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToBarracksAndSetInteractable = "tp_to_barracks_and_set_interactable"
+    return:
+      type: System.String
+    content.vb: Public Const TpToBarracksAndSetInteractable As String = "tp_to_barracks_and_set_interactable"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHome
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHome
+  id: TpToNunHome
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToNunHome
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToNunHome
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHome
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToNunHome
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 97
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToNunHome = "tp_to_nun_home"
+    return:
+      type: System.String
+    content.vb: Public Const TpToNunHome As String = "tp_to_nun_home"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHomeAndSetInteractive
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHomeAndSetInteractive
+  id: TpToNunHomeAndSetInteractive
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToNunHomeAndSetInteractive
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToNunHomeAndSetInteractive
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToNunHomeAndSetInteractive
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToNunHomeAndSetInteractive
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 98
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToNunHomeAndSetInteractive = "tp_to_nun_home_and_set_interactive"
+    return:
+      type: System.String
+    content.vb: Public Const TpToNunHomeAndSetInteractive As String = "tp_to_nun_home_and_set_interactive"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpot
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpot
+  id: TpToSpot
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToSpot
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToSpot
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpot
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToSpot
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 99
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToSpot = "tp_to_spot"
+    return:
+      type: System.String
+    content.vb: Public Const TpToSpot As String = "tp_to_spot"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpotWithoutPuff
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpotWithoutPuff
+  id: TpToSpotWithoutPuff
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards
+  langs:
+  - csharp
+  - vb
+  name: TpToSpotWithoutPuff
+  nameWithType: TimbnNpcEvents.HeadOfTheGuards.TpToSpotWithoutPuff
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcEvents.HeadOfTheGuards.TpToSpotWithoutPuff
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TpToSpotWithoutPuff
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnNpcEvents.cs
+    startLine: 100
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TpToSpotWithoutPuff = "tp_to_spot_without_puff"
+    return:
+      type: System.String
+    content.vb: Public Const TpToSpotWithoutPuff As String = "tp_to_spot_without_puff"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

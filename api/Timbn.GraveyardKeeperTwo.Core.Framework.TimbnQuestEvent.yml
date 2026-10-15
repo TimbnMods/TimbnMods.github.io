@@ -1,0 +1,643 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  id: TimbnQuestEvent
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnQuestEvent
+  nameWithType: TimbnQuestEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnQuestEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 11
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Something the player does in the game that moves a quest along, for a quest's ReadyOn or StartsOn. Each one
+
+    matches the game's own event for it by id.
+  example:
+  - <pre><code class="lang-csharp">.Description("Sleep on it.").ReadyOn(TimbnQuestEvent.Slept())</code></pre>
+  syntax:
+    content: public sealed class TimbnQuestEvent
+    content.vb: Public NotInheritable Class TimbnQuestEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted(System.String)
+  id: Crafted(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: Crafted(string)
+  nameWithType: TimbnQuestEvent.Crafted(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Crafted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 24
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player finishes a craft at a station.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent Crafted(string craftId)
+    parameters:
+    - id: craftId
+      type: System.String
+      description: The craft's id from the balance.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function Crafted(craftId As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted*
+  nameWithType.vb: TimbnQuestEvent.Crafted(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted(String)
+  name.vb: Crafted(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built(System.String)
+  id: Built(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: Built(string)
+  nameWithType: TimbnQuestEvent.Built(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Built
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player finishes building something.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent Built(string objectId)
+    parameters:
+    - id: objectId
+      type: System.String
+      description: The built object's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function Built(objectId As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built*
+  nameWithType.vb: TimbnQuestEvent.Built(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built(String)
+  name.vb: Built(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone(System.String)
+  id: EnteredZone(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: EnteredZone(string)
+  nameWithType: TimbnQuestEvent.EnteredZone(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: EnteredZone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 32
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player walks into one of the game's marked areas.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent EnteredZone(string zoneTag)
+    parameters:
+    - id: zoneTag
+      type: System.String
+      description: The area's tag.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function EnteredZone(zoneTag As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone*
+  nameWithType.vb: TimbnQuestEvent.EnteredZone(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone(String)
+  name.vb: EnteredZone(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone(System.String)
+  id: EnteredWorldZone(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: EnteredWorldZone(string)
+  nameWithType: TimbnQuestEvent.EnteredWorldZone(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: EnteredWorldZone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player walks into a world zone, such as the graveyard or the church.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent EnteredWorldZone(string worldZoneId)
+    parameters:
+    - id: worldZoneId
+      type: System.String
+      description: The world zone id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function EnteredWorldZone(worldZoneId As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone*
+  nameWithType.vb: TimbnQuestEvent.EnteredWorldZone(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone(String)
+  name.vb: EnteredWorldZone(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight(System.String)
+  id: WonFight(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: WonFight(string)
+  nameWithType: TimbnQuestEvent.WonFight(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WonFight
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 40
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player wins a fight.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent WonFight(string fightId)
+    parameters:
+    - id: fightId
+      type: System.String
+      description: The fight level id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function WonFight(fightId As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight*
+  nameWithType.vb: TimbnQuestEvent.WonFight(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight(String)
+  name.vb: WonFight(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept
+  id: Slept
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: Slept()
+  nameWithType: TimbnQuestEvent.Slept()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Slept
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 43
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player wakes up after sleeping.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent Slept()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function Slept() As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem(System.String)
+  id: UsedItem(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: UsedItem(string)
+  nameWithType: TimbnQuestEvent.UsedItem(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: UsedItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 47
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The player uses an item.
+  example: []
+  syntax:
+    content: public static TimbnQuestEvent UsedItem(string itemId)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+    content.vb: Public Shared Function UsedItem(itemId As String) As TimbnQuestEvent
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem*
+  nameWithType.vb: TimbnQuestEvent.UsedItem(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem(String)
+  name.vb: UsedItem(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString
+  id: ToString
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimbnQuestEvent.ToString()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ToString
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestEvent.cs
+    startLine: 52
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_Crafted_System_String_
+  name: Crafted
+  nameWithType: TimbnQuestEvent.Crafted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Crafted
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html
+  name: TimbnQuestEvent
+  nameWithType: TimbnQuestEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_Built_System_String_
+  name: Built
+  nameWithType: TimbnQuestEvent.Built
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Built
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_EnteredZone_System_String_
+  name: EnteredZone
+  nameWithType: TimbnQuestEvent.EnteredZone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredZone
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_EnteredWorldZone_System_String_
+  name: EnteredWorldZone
+  nameWithType: TimbnQuestEvent.EnteredWorldZone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.EnteredWorldZone
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_WonFight_System_String_
+  name: WonFight
+  nameWithType: TimbnQuestEvent.WonFight
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.WonFight
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_Slept
+  name: Slept
+  nameWithType: TimbnQuestEvent.Slept
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.Slept
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_UsedItem_System_String_
+  name: UsedItem
+  nameWithType: TimbnQuestEvent.UsedItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.UsedItem
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_ToString
+  name: ToString
+  nameWithType: TimbnQuestEvent.ToString
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.ToString

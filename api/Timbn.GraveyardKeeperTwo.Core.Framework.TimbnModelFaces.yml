@@ -1,0 +1,792 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  id: TimbnModelFaces
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.String,System.Int32,System.Int32,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.String,System.Int32,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: TimbnModelFaces
+  nameWithType: TimbnModelFaces
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnModelFaces
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Describes a model made from pictures instead of an asset bundle, for <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces%7d)" data-throw-if-not-resolved="false"></xref>. Every
+
+    picture is exactly what the player sees, so its own size is the size of the face and you only say where it stands.
+
+    The game's camera tilts forward and down and never sideways, so only two kinds of face are ever seen, one standing
+
+    up toward the camera (<code>Front</code>) and one lying face up (<code>Top</code>), and a solid box is just
+
+    both of them (<code>Block</code>). Sides, backs and undersides are never built.
+  remarks: >-
+    Positions are in pixels from the model's front, bottom, left corner as the player sees it, standing in front, with x
+
+    running right, y running up and z running away from the player. They can't be negative. One world unit is 50 pixels
+
+    across, 30 up and 40 deep, so a point further back sits higher on screen. Two faces on the same plane can't cover the
+
+    same spot, since they would flicker, but faces on different planes may touch. Transparent pixels are see through,
+
+    and pixels that are only half see through may not draw right.
+  example:
+  - >-
+    A still with a 60x36 shadow lying on the floor, a 44 wide block for its base (20 front rows under 32 top rows) and
+
+    a 24x26 pot standing up.
+
+
+    <pre><code class="lang-csharp">var still = Models.Build("SpiritStill", model =&gt; model
+        .Top("still_shadow", x: 0, y: 1, z: 0)
+        .Block("still_base", x: 0, y: 0, z: 4, depth: 32)
+        .Front("still_pot", x: 4, y: 20, z: 16));</code></pre>
+  syntax:
+    content: public sealed class TimbnModelFaces
+    content.vb: Public NotInheritable Class TimbnModelFaces
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.String,System.Int32,System.Int32,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.String,System.Int32,System.Int32,System.Int32)
+  id: Front(System.String,System.Int32,System.Int32,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Front(string, int, int, int)
+  nameWithType: TimbnModelFaces.Front(string, int, int, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(string, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Front
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 51
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Stands a picture up facing the camera, such as a monitor screen or a sign. Its width and height are the PNG's.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Front(string pngName, int x, int y, int z)
+    parameters:
+    - id: pngName
+      type: System.String
+      description: >-
+        A PNG embedded in the plugin's DLL, named without ".png", for example "still_pot". Embed it with
+
+        <code>LogicalName="%(Filename)%(Extension)"</code>.
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the picture's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the picture's bottom.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the picture.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Front(pngName As String, x As Integer, y As Integer, z As Integer) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The plugin has no such embedded resource.
+  nameWithType.vb: TimbnModelFaces.Front(String, Integer, Integer, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(String, Integer, Integer, Integer)
+  name.vb: Front(String, Integer, Integer, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  id: Front(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Front(byte[], int, int, int, string?)
+  nameWithType: TimbnModelFaces.Front(byte[], int, int, int, string?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(byte[], int, int, int, string?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Front
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 60
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Stands a picture made in code up facing the camera.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Front(byte[] png, int x, int y, int z, string? name = null)
+    parameters:
+    - id: png
+      type: System.Byte[]
+      description: The PNG file's bytes.
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the picture's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the picture's bottom.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the picture.
+    - id: name
+      type: System.String
+      description: What error messages call this face. It defaults to its place in the model.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Front(png As Byte(), x As Integer, y As Integer, z As Integer, name As String = Nothing) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero.
+  nameWithType.vb: TimbnModelFaces.Front(Byte(), Integer, Integer, Integer, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front(Byte(), Integer, Integer, Integer, String)
+  name.vb: Front(Byte(), Integer, Integer, Integer, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.String,System.Int32,System.Int32,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.String,System.Int32,System.Int32,System.Int32)
+  id: Top(System.String,System.Int32,System.Int32,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Top(string, int, int, int)
+  nameWithType: TimbnModelFaces.Top(string, int, int, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(string, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Top
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 73
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lays a picture flat facing up, such as a shadow on the floor or a keyboard on a desk. The picture's bottom row
+
+    is its front edge and its top row is its back edge, so it reaches from z to z plus the PNG's height. Put it 1
+
+    pixel above any surface under it so the two don't flicker.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Top(string pngName, int x, int y, int z)
+    parameters:
+    - id: pngName
+      type: System.String
+      description: A PNG embedded in the plugin's DLL, named without ".png".
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the picture's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the picture.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the picture's front edge.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Top(pngName As String, x As Integer, y As Integer, z As Integer) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The plugin has no such embedded resource.
+  nameWithType.vb: TimbnModelFaces.Top(String, Integer, Integer, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(String, Integer, Integer, Integer)
+  name.vb: Top(String, Integer, Integer, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  id: Top(System.Byte[],System.Int32,System.Int32,System.Int32,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Top(byte[], int, int, int, string?)
+  nameWithType: TimbnModelFaces.Top(byte[], int, int, int, string?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(byte[], int, int, int, string?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Top
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Lays a picture made in code flat facing up.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Top(byte[] png, int x, int y, int z, string? name = null)
+    parameters:
+    - id: png
+      type: System.Byte[]
+      description: The PNG file's bytes.
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the picture's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the picture.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the picture's front edge.
+    - id: name
+      type: System.String
+      description: What error messages call this face. It defaults to its place in the model.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Top(png As Byte(), x As Integer, y As Integer, z As Integer, name As String = Nothing) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero.
+  nameWithType.vb: TimbnModelFaces.Top(Byte(), Integer, Integer, Integer, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top(Byte(), Integer, Integer, Integer, String)
+  name.vb: Top(Byte(), Integer, Integer, Integer, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Block(System.String,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Block(string, int, int, int, int)
+  nameWithType: TimbnModelFaces.Block(string, int, int, int, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(string, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Block
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 96
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a solid block from one picture of it as the player sees it, with the top face stacked above the front face.
+
+    The upper <code class="paramref">depth</code> rows are the top and the rest are the front, so the front is the PNG's height
+
+    minus the depth. Both share the block's x and width.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Block(string pngName, int x, int y, int z, int depth)
+    parameters:
+    - id: pngName
+      type: System.String
+      description: A PNG embedded in the plugin's DLL, named without ".png".
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the block's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the block's bottom.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the block's front.
+    - id: depth
+      type: System.Int32
+      description: Front to back, in pixels, which is also how many rows of the picture are the top.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Block(pngName As String, x As Integer, y As Integer, z As Integer, depth As Integer) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero or the depth is below 1.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The plugin has no such embedded resource.
+  nameWithType.vb: TimbnModelFaces.Block(String, Integer, Integer, Integer, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(String, Integer, Integer, Integer, Integer)
+  name.vb: Block(String, Integer, Integer, Integer, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.String)
+  id: Block(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  langs:
+  - csharp
+  - vb
+  name: Block(byte[], int, int, int, int, string?)
+  nameWithType: TimbnModelFaces.Block(byte[], int, int, int, int, string?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(byte[], int, int, int, int, string?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Block
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModelFaces.cs
+    startLine: 106
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Adds a solid block from one picture made in code.
+  example: []
+  syntax:
+    content: public TimbnModelFaces Block(byte[] png, int x, int y, int z, int depth, string? name = null)
+    parameters:
+    - id: png
+      type: System.Byte[]
+      description: The PNG file's bytes.
+    - id: x
+      type: System.Int32
+      description: Pixels from the model's left edge to the block's left edge.
+    - id: y
+      type: System.Int32
+      description: Pixels up from the floor to the block's bottom.
+    - id: z
+      type: System.Int32
+      description: Pixels back from the model's front to the block's front.
+    - id: depth
+      type: System.Int32
+      description: Front to back, in pixels, which is also how many rows of the picture are the top.
+    - id: name
+      type: System.String
+      description: What error messages call this block. It defaults to its place in the model.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    content.vb: Public Function Block(png As Byte(), x As Integer, y As Integer, z As Integer, depth As Integer, name As String = Nothing) As TimbnModelFaces
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: A position is below zero or the depth is below 1.
+  nameWithType.vb: TimbnModelFaces.Block(Byte(), Integer, Integer, Integer, Integer, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block(Byte(), Integer, Integer, Integer, Integer, String)
+  name.vb: Block(Byte(), Integer, Integer, Integer, Integer, String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  name: Build(string, Action<TimbnModelFaces>)
+  nameWithType: TimbnPluginModels.Build(string, Action<TimbnModelFaces>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces>)
+  nameWithType.vb: TimbnPluginModels.Build(String, Action(Of TimbnModelFaces))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces))
+  name.vb: Build(String, Action(Of TimbnModelFaces))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+    name: Build
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    name: TimbnModelFaces
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+    name: Build
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    name: TimbnModelFaces
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces_Front_System_String_System_Int32_System_Int32_System_Int32_
+  name: Front
+  nameWithType: TimbnModelFaces.Front
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Front
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html
+  name: TimbnModelFaces
+  nameWithType: TimbnModelFaces
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces_Top_System_String_System_Int32_System_Int32_System_Int32_
+  name: Top
+  nameWithType: TimbnModelFaces.Top
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Top
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces_Block_System_String_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: Block
+  nameWithType: TimbnModelFaces.Block
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.Block

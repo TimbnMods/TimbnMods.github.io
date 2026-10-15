@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  id: TimbnAsk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards},System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnAsk
+  nameWithType: TimbnAsk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnAsk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnTalk.cs
+    startLine: 258
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The answers of one Ask, each with the lines that follow it.
+  example: []
+  syntax:
+    content: public sealed class TimbnAsk
+    content.vb: Public NotInheritable Class TimbnAsk
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards},System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards},System.String)
+  id: Answer(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards},System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  langs:
+  - csharp
+  - vb
+  name: Answer(string, Action<TimbnLines>?, Action<TimbnNeeds>?, Action<TimbnCost>?, Action<TimbnRewards>?, string?)
+  nameWithType: TimbnAsk.Answer(string, Action<TimbnLines>?, Action<TimbnNeeds>?, Action<TimbnCost>?, Action<TimbnRewards>?, string?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>?, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>?, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>?, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards>?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Answer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnTalk.cs
+    startLine: 286
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: One answer the player can pick.
+  example: []
+  syntax:
+    content: public TimbnAsk Answer(string text, Action<TimbnLines>? then = null, Action<TimbnNeeds>? needs = null, Action<TimbnCost>? cost = null, Action<TimbnRewards>? reward = null, string? key = null)
+    parameters:
+    - id: text
+      type: System.String
+      description: The answer.
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What follows it. Leave it out to carry straight on.
+    - id: needs
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+      description: >-
+        What has to be true to pick it, checked but not taken, such as reputation with the NPC the player is talking to.
+
+        The answer shows a lock for each and is grayed out until they are all met.
+    - id: cost
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+      description: What the player pays when they pick it. The answer shows the price and is grayed out until they can pay.
+    - id: reward
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+      description: >-
+        What the player gets for picking it. The game pays money, items and resources when it is picked, and Core
+
+        pays reputation with the NPC the player is talking to.
+    - id: key
+      type: System.String
+      description: A name for the answer's localization key, such as accept, in place of a number. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk%601.Named(System.String)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+      description: These answers, for chaining.
+    content.vb: Public Function Answer(text As String, [then] As Action(Of TimbnLines) = Nothing, needs As Action(Of TimbnNeeds) = Nothing, cost As Action(Of TimbnCost) = Nothing, reward As Action(Of TimbnRewards) = Nothing, key As String = Nothing) As TimbnAsk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer*
+  nameWithType.vb: TimbnAsk.Answer(String, Action(Of TimbnLines), Action(Of TimbnNeeds), Action(Of TimbnCost), Action(Of TimbnRewards), String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards), String)
+  name.vb: Answer(String, Action(Of TimbnLines), Action(Of TimbnNeeds), Action(Of TimbnCost), Action(Of TimbnRewards), String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  name: Named(string)
+  nameWithType: TimbnTalk<TSelf>.Named(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Named(string)
+  nameWithType.vb: TimbnTalk(Of TSelf).Named(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk_Answer_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNeeds__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards__System_String_
+  name: Answer
+  nameWithType: TimbnAsk.Answer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.Answer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnLines>
+  nameWithType: Action<TimbnLines>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>
+  nameWithType.vb: Action(Of TimbnLines)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines)
+  name.vb: Action(Of TimbnLines)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnNeeds>
+  nameWithType: Action<TimbnNeeds>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>
+  nameWithType.vb: Action(Of TimbnNeeds)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds)
+  name.vb: Action(Of TimbnNeeds)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnCost>
+  nameWithType: Action<TimbnCost>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>
+  nameWithType.vb: Action(Of TimbnCost)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost)
+  name.vb: Action(Of TimbnCost)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnRewards>
+  nameWithType: Action<TimbnRewards>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards>
+  nameWithType.vb: Action(Of TimbnRewards)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards)
+  name.vb: Action(Of TimbnRewards)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html
+  name: TimbnAsk
+  nameWithType: TimbnAsk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

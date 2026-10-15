@@ -1,0 +1,766 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  id: TimbnGroups
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DayAll
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DaySweep
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1Guards
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DayAll
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DaySweep
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2Guards
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DayAll
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DaySweep
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3Guards
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DayAll
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DaySweep
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4Guards
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayAll
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayChopping
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightGuard
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightToilet
+  langs:
+  - csharp
+  - vb
+  name: TimbnGroups
+  nameWithType: TimbnGroups
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnGroups
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 3
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The game's life simulator groups, the sets of places it sends villagers and guards to.
+  example: []
+  syntax:
+    content: public static class TimbnGroups
+    content.vb: Public Module TimbnGroups
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DayAll
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DayAll
+  id: TownA1DayAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA1DayAll
+  nameWithType: TimbnGroups.TownA1DayAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DayAll
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA1DayAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 5
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA1DayAll = "town_A1_day_all"
+    return:
+      type: System.String
+    content.vb: Public Const TownA1DayAll As String = "town_A1_day_all"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DaySweep
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DaySweep
+  id: TownA1DaySweep
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA1DaySweep
+  nameWithType: TimbnGroups.TownA1DaySweep
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1DaySweep
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA1DaySweep
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA1DaySweep = "town_A1_day_sweep"
+    return:
+      type: System.String
+    content.vb: Public Const TownA1DaySweep As String = "town_A1_day_sweep"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1Guards
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1Guards
+  id: TownA1Guards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA1Guards
+  nameWithType: TimbnGroups.TownA1Guards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA1Guards
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA1Guards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA1Guards = "town_A1_guards"
+    return:
+      type: System.String
+    content.vb: Public Const TownA1Guards As String = "town_A1_guards"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DayAll
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DayAll
+  id: TownA2DayAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA2DayAll
+  nameWithType: TimbnGroups.TownA2DayAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DayAll
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA2DayAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA2DayAll = "town_A2_day_all"
+    return:
+      type: System.String
+    content.vb: Public Const TownA2DayAll As String = "town_A2_day_all"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DaySweep
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DaySweep
+  id: TownA2DaySweep
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA2DaySweep
+  nameWithType: TimbnGroups.TownA2DaySweep
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2DaySweep
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA2DaySweep
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA2DaySweep = "town_A2_day_sweep"
+    return:
+      type: System.String
+    content.vb: Public Const TownA2DaySweep As String = "town_A2_day_sweep"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2Guards
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2Guards
+  id: TownA2Guards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA2Guards
+  nameWithType: TimbnGroups.TownA2Guards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA2Guards
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA2Guards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA2Guards = "town_A2_guards"
+    return:
+      type: System.String
+    content.vb: Public Const TownA2Guards As String = "town_A2_guards"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DayAll
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DayAll
+  id: TownA3DayAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA3DayAll
+  nameWithType: TimbnGroups.TownA3DayAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DayAll
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA3DayAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 11
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA3DayAll = "town_A3_day_all"
+    return:
+      type: System.String
+    content.vb: Public Const TownA3DayAll As String = "town_A3_day_all"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DaySweep
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DaySweep
+  id: TownA3DaySweep
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA3DaySweep
+  nameWithType: TimbnGroups.TownA3DaySweep
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3DaySweep
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA3DaySweep
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA3DaySweep = "town_A3_day_sweep"
+    return:
+      type: System.String
+    content.vb: Public Const TownA3DaySweep As String = "town_A3_day_sweep"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3Guards
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3Guards
+  id: TownA3Guards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA3Guards
+  nameWithType: TimbnGroups.TownA3Guards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA3Guards
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA3Guards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 13
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA3Guards = "town_A3_guards"
+    return:
+      type: System.String
+    content.vb: Public Const TownA3Guards As String = "town_A3_guards"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DayAll
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DayAll
+  id: TownA4DayAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA4DayAll
+  nameWithType: TimbnGroups.TownA4DayAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DayAll
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA4DayAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA4DayAll = "town_A4_day_all"
+    return:
+      type: System.String
+    content.vb: Public Const TownA4DayAll As String = "town_A4_day_all"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DaySweep
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DaySweep
+  id: TownA4DaySweep
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA4DaySweep
+  nameWithType: TimbnGroups.TownA4DaySweep
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4DaySweep
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA4DaySweep
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA4DaySweep = "town_A4_day_sweep"
+    return:
+      type: System.String
+    content.vb: Public Const TownA4DaySweep As String = "town_A4_day_sweep"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4Guards
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4Guards
+  id: TownA4Guards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: TownA4Guards
+  nameWithType: TimbnGroups.TownA4Guards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.TownA4Guards
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownA4Guards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 16
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownA4Guards = "town_A4_guards"
+    return:
+      type: System.String
+    content.vb: Public Const TownA4Guards As String = "town_A4_guards"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayAll
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayAll
+  id: VillagersDayAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: VillagersDayAll
+  nameWithType: TimbnGroups.VillagersDayAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayAll
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: VillagersDayAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string VillagersDayAll = "villagers_day_all"
+    return:
+      type: System.String
+    content.vb: Public Const VillagersDayAll As String = "villagers_day_all"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayChopping
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayChopping
+  id: VillagersDayChopping
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: VillagersDayChopping
+  nameWithType: TimbnGroups.VillagersDayChopping
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersDayChopping
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: VillagersDayChopping
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 18
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string VillagersDayChopping = "villagers_day_chopping"
+    return:
+      type: System.String
+    content.vb: Public Const VillagersDayChopping As String = "villagers_day_chopping"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightGuard
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightGuard
+  id: VillagersNightGuard
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: VillagersNightGuard
+  nameWithType: TimbnGroups.VillagersNightGuard
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightGuard
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: VillagersNightGuard
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 19
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string VillagersNightGuard = "villagers_night_guard"
+    return:
+      type: System.String
+    content.vb: Public Const VillagersNightGuard As String = "villagers_night_guard"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightToilet
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightToilet
+  id: VillagersNightToilet
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups
+  langs:
+  - csharp
+  - vb
+  name: VillagersNightToilet
+  nameWithType: TimbnGroups.VillagersNightToilet
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGroups.VillagersNightToilet
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: VillagersNightToilet
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/Ids/TimbnGroups.cs
+    startLine: 20
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string VillagersNightToilet = "villagers_night_toilet"
+    return:
+      type: System.String
+    content.vb: Public Const VillagersNightToilet As String = "villagers_night_toilet"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

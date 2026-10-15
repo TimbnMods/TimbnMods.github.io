@@ -1,0 +1,63 @@
+- name: Guides
+  items:
+  - name: Getting Started
+    href: getting-started.md
+  - name: Your First Mod
+    href: first-mod.md
+  - name: Game Events
+    href: events.md
+  - name: Settings
+    href: settings.md
+  - name: Game Versions
+    href: game-versions.md
+  - name: Changing the Game
+    href: changing-the-game.md
+  - name: Helpers
+    href: helpers/index.md
+    items:
+    - name: TimbnConfig
+      href: helpers/timbn-config.md
+    - name: TimbnInput
+      href: helpers/timbn-input.md
+    - name: TimbnUI
+      href: helpers/timbn-ui.md
+    - name: TimbnItems
+      href: helpers/timbn-items.md
+    - name: TimbnPlayer
+      href: helpers/timbn-player.md
+    - name: TimbnClock
+      href: helpers/timbn-clock.md
+    - name: TimbnWorld
+      href: helpers/timbn-world.md
+    - name: TimbnZombies
+      href: helpers/timbn-zombies.md
+  - name: Main Menu
+    href: main-menu.md
+  - name: Save Data
+    href: saves.md
+  - name: Removing a Mod Safely
+    href: removing-a-mod.md
+  - name: Quests, Dialog, and Text
+    href: quests.md
+  - name: Quest Packs
+    href: quest-packs.md
+  - name: NPCs
+    href: npcs.md
+  - name: Potions
+    href: potions.md
+  - name: Stations and Crafts
+    href: stations-and-crafts.md
+  - name: Techs
+    href: techs.md
+  - name: Models
+    href: models.md
+  - name: Sprites, Text, and Audio
+    href: sprites-text-audio.md
+- name: Reference
+  items:
+  - name: Game Ids
+    href: game-ids.md
+  - name: Game Expressions
+    href: expressions.md
+  - name: More Game Expressions
+    href: expressions-more.md

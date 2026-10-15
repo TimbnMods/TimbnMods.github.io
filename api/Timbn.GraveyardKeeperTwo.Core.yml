@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core
+  commentId: N:Timbn.GraveyardKeeperTwo.Core
+  id: Timbn.GraveyardKeeperTwo.Core
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.MyPluginInfo
+  - Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin
+  langs:
+  - csharp
+  - vb
+  name: Timbn.GraveyardKeeperTwo.Core
+  nameWithType: Timbn.GraveyardKeeperTwo.Core
+  fullName: Timbn.GraveyardKeeperTwo.Core
+  type: Namespace
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin
+  href: Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin.html
+  name: TimbnCorePlugin
+  nameWithType: TimbnCorePlugin
+  fullName: Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin
+- uid: Timbn.GraveyardKeeperTwo.Core.MyPluginInfo
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.MyPluginInfo
+  href: Timbn.GraveyardKeeperTwo.Core.MyPluginInfo.html
+  name: MyPluginInfo
+  nameWithType: MyPluginInfo
+  fullName: Timbn.GraveyardKeeperTwo.Core.MyPluginInfo

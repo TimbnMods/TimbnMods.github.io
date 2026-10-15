@@ -1,0 +1,886 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  id: TimbnConfig
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String,``0,``0)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver(BepInEx.Configuration.ConfigFile,System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload(BepInEx.BaseUnityPlugin)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  langs:
+  - csharp
+  - vb
+  name: TimbnConfig
+  nameWithType: TimbnConfig
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnConfig
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Re-reads the config files of loaded plugins, so a setting edited by hand takes effect without a restart. Each
+
+    changed value goes through the entry's normal setter, which raises its SettingChanged event, so anything tied
+
+    to it with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry%7bSystem.Boolean%7d%2cSystem.Action%2cSystem.Action)" data-throw-if-not-resolved="false"></xref> applies or reverts on its
+
+    own. Call these on the main thread, since the change handlers touch the game.
+  example: []
+  syntax:
+    content: public static class TimbnConfig
+    content.vb: Public Module TimbnConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  id: ReloadAll
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  langs:
+  - csharp
+  - vb
+  name: ReloadAll()
+  nameWithType: TimbnConfig.ReloadAll()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ReloadAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reloads the config file of every loaded plugin, Timbn or not. A failure in one plugin is logged and does
+
+    not stop the rest. A key removed from a file keeps its current value instead of returning to its default.
+  example:
+  - <pre><code class="lang-csharp">var reloaded = TimbnConfig.ReloadAll();</code></pre>
+  syntax:
+    content: public static int ReloadAll()
+    return:
+      type: System.Int32
+      description: How many plugins were reloaded.
+    content.vb: Public Shared Function ReloadAll() As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver(BepInEx.Configuration.ConfigFile,System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver(BepInEx.Configuration.ConfigFile,System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[])
+  id: CarryOver(BepInEx.Configuration.ConfigFile,System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  langs:
+  - csharp
+  - vb
+  name: CarryOver(ConfigFile, params (ConfigEntryBase Entry, string Section, string Key)[])
+  nameWithType: TimbnConfig.CarryOver(ConfigFile, params (ConfigEntryBase Entry, string Section, string Key)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver(BepInEx.Configuration.ConfigFile, params (BepInEx.Configuration.ConfigEntryBase Entry, string Section, string Key)[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CarryOver
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 61
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Moves the values of config entries a plugin has renamed or moved into their new entries, so players keep
+
+    their settings across the change. Call it at the end of <code>BindConfig</code>, once every new entry is bound.
+
+    An old entry is only used while it is still in the file, and it is removed from the file afterwards.
+  example:
+  - >-
+    <pre><code class="lang-csharp">TimbnConfig.CarryOver(
+        config,
+        (StuckCarriers, "Carriers", "ShowWhenStuck"),
+        (UnstuckKey, "Unstuck", "Key"));</code></pre>
+  syntax:
+    content: public static void CarryOver(ConfigFile config, params (ConfigEntryBase Entry, string Section, string Key)[] moves)
+    parameters:
+    - id: config
+      type: BepInEx.Configuration.ConfigFile
+      description: The plugin's config file.
+    - id: moves
+      type: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[]
+      description: Each new entry with the section and key it used to have.
+    content.vb: Public Shared Sub CarryOver(config As ConfigFile, ParamArray moves As (Entry As ConfigEntryBase, Section As String, Key As String)())
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver*
+  nameWithType.vb: TimbnConfig.CarryOver(ConfigFile, ParamArray (Entry As ConfigEntryBase, Section As String, Key As String)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver(BepInEx.Configuration.ConfigFile, ParamArray (Entry As BepInEx.Configuration.ConfigEntryBase, Section As String, Key As String)())
+  name.vb: CarryOver(ConfigFile, ParamArray (Entry As ConfigEntryBase, Section As String, Key As String)())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String,``0,``0)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String,``0,``0)
+  id: BindRange``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String,``0,``0)
+  isExtensionMethod: true
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  langs:
+  - csharp
+  - vb
+  name: BindRange<T>(ConfigFile, string, string, T, string, T, T)
+  nameWithType: TimbnConfig.BindRange<T>(ConfigFile, string, string, T, string, T, T)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange<T>(BepInEx.Configuration.ConfigFile, string, string, T, string, T, T)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BindRange
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 99
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Binds a setting that only accepts values between a lowest and a highest, which a config manager shows as a
+
+    slider. It is the same as ConfigFile.Bind with an AcceptableValueRange, in one line.
+  example:
+  - <pre><code class="lang-csharp">TimeSpeed = config.BindRange("Meditation", "TimeSpeed", 7f, "How many times faster time runs while you meditate.", 1f, 50f);</code></pre>
+  syntax:
+    content: 'public static ConfigEntry<T> BindRange<T>(this ConfigFile config, string section, string key, T defaultValue, string description, T min, T max) where T : IComparable'
+    parameters:
+    - id: config
+      type: BepInEx.Configuration.ConfigFile
+      description: The plugin's config file.
+    - id: section
+      type: System.String
+      description: The section it goes under.
+    - id: key
+      type: System.String
+      description: The setting's name.
+    - id: defaultValue
+      type: '{T}'
+      description: The value until the player changes it.
+    - id: description
+      type: System.String
+      description: What the setting does, shown to players.
+    - id: min
+      type: '{T}'
+      description: The lowest value allowed.
+    - id: max
+      type: '{T}'
+      description: The highest value allowed.
+    typeParameters:
+    - id: T
+    return:
+      type: BepInEx.Configuration.ConfigEntry{{T}}
+      description: The bound setting.
+    content.vb: Public Shared Function BindRange(Of T As IComparable)(config As ConfigFile, section As String, key As String, defaultValue As T, description As String, min As T, max As T) As ConfigEntry(Of T)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange*
+  nameWithType.vb: TimbnConfig.BindRange(Of T)(ConfigFile, String, String, T, String, T, T)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange(Of T)(BepInEx.Configuration.ConfigFile, String, String, T, String, T, T)
+  name.vb: BindRange(Of T)(ConfigFile, String, String, T, String, T, T)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String)
+  id: BindHidden``1(BepInEx.Configuration.ConfigFile,System.String,System.String,``0,System.String)
+  isExtensionMethod: true
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  langs:
+  - csharp
+  - vb
+  name: BindHidden<T>(ConfigFile, string, string, T, string)
+  nameWithType: TimbnConfig.BindHidden<T>(ConfigFile, string, string, T, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden<T>(BepInEx.Configuration.ConfigFile, string, string, T, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BindHidden
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 118
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Binds a setting that stays out of the in game configuration manager, for a switch only a developer needs, such as
+
+    turning on a plugin's debug log. It is still written to the config file and read like any other entry.
+  example:
+  - <pre><code class="lang-csharp">WriteDebugLog = config.BindHidden("Debug", "WriteDebugLog", false, "Writes the debug log.");</code></pre>
+  syntax:
+    content: public static ConfigEntry<T> BindHidden<T>(this ConfigFile config, string section, string key, T defaultValue, string description)
+    parameters:
+    - id: config
+      type: BepInEx.Configuration.ConfigFile
+      description: The plugin's config file.
+    - id: section
+      type: System.String
+      description: The section it goes under.
+    - id: key
+      type: System.String
+      description: The setting's name.
+    - id: defaultValue
+      type: '{T}'
+      description: The value until it is changed.
+    - id: description
+      type: System.String
+      description: What the setting does.
+    typeParameters:
+    - id: T
+    return:
+      type: BepInEx.Configuration.ConfigEntry{{T}}
+      description: The bound setting.
+    content.vb: Public Shared Function BindHidden(Of T)(config As ConfigFile, section As String, key As String, defaultValue As T, description As String) As ConfigEntry(Of T)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden*
+  nameWithType.vb: TimbnConfig.BindHidden(Of T)(ConfigFile, String, String, T, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden(Of T)(BepInEx.Configuration.ConfigFile, String, String, T, String)
+  name.vb: BindHidden(Of T)(ConfigFile, String, String, T, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload(BepInEx.BaseUnityPlugin)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload(BepInEx.BaseUnityPlugin)
+  id: Reload(BepInEx.BaseUnityPlugin)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig
+  langs:
+  - csharp
+  - vb
+  name: Reload(BaseUnityPlugin)
+  nameWithType: TimbnConfig.Reload(BaseUnityPlugin)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload(BepInEx.BaseUnityPlugin)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Reload
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnConfig.cs
+    startLine: 124
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Reloads the config file of one plugin, as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll" data-throw-if-not-resolved="false"></xref> does for every plugin.
+  example: []
+  syntax:
+    content: public static bool Reload(BaseUnityPlugin plugin)
+    parameters:
+    - id: plugin
+      type: BepInEx.BaseUnityPlugin
+      description: The plugin whose config file to re-read.
+    return:
+      type: System.Boolean
+      description: True when the file was read, false when it does not exist yet or could not be read.
+    content.vb: Public Shared Function Reload(plugin As BaseUnityPlugin) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  name: Toggle(ConfigEntry<bool>, Action, Action)
+  nameWithType: TimbnPluginSettings.Toggle(ConfigEntry<bool>, Action, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry<bool>, System.Action, System.Action)
+  nameWithType.vb: TimbnPluginSettings.Toggle(ConfigEntry(Of Boolean), Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry(Of Boolean), System.Action, System.Action)
+  name.vb: Toggle(ConfigEntry(Of Boolean), Action, Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+    name: Toggle
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+    name: Toggle
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_ReloadAll
+  name: ReloadAll
+  nameWithType: TimbnConfig.ReloadAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_CarryOver_BepInEx_Configuration_ConfigFile_System_ValueTuple_BepInEx_Configuration_ConfigEntryBase_System_String_System_String____
+  name: CarryOver
+  nameWithType: TimbnConfig.CarryOver
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.CarryOver
+- uid: BepInEx.Configuration.ConfigFile
+  commentId: T:BepInEx.Configuration.ConfigFile
+  parent: BepInEx.Configuration
+  isExternal: true
+  name: ConfigFile
+  nameWithType: ConfigFile
+  fullName: BepInEx.Configuration.ConfigFile
+- uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.entry
+  name: (ConfigEntryBase Entry, string Section, string Key)[]
+  nameWithType: (ConfigEntryBase Entry, string Section, string Key)[]
+  fullName: (BepInEx.Configuration.ConfigEntryBase Entry, string Section, string Key)[]
+  nameWithType.vb: (Entry As ConfigEntryBase, Section As String, Key As String)()
+  fullName.vb: (Entry As BepInEx.Configuration.ConfigEntryBase, Section As String, Key As String)()
+  name.vb: (Entry As ConfigEntryBase, Section As String, Key As String)()
+  spec.csharp:
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntryBase
+    name: ConfigEntryBase
+    isExternal: true
+  - name: " "
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Entry
+    name: Entry
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.entry
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Section
+    name: Section
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.section
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Key
+    name: Key
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.key
+  - name: )
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Entry
+    name: Entry
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.entry
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: BepInEx.Configuration.ConfigEntryBase
+    name: ConfigEntryBase
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Section
+    name: Section
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.section
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{BepInEx.Configuration.ConfigEntryBase,System.String,System.String}.Key
+    name: Key
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-bepinex.configuration.configentrybase,system.string,system.string-.key
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: (
+  - name: )
+- uid: BepInEx.Configuration
+  commentId: N:BepInEx.Configuration
+  isExternal: true
+  name: BepInEx.Configuration
+  nameWithType: BepInEx.Configuration
+  fullName: BepInEx.Configuration
+  spec.csharp:
+  - uid: BepInEx
+    name: BepInEx
+    isExternal: true
+  - name: .
+  - uid: BepInEx.Configuration
+    name: Configuration
+    isExternal: true
+  spec.vb:
+  - uid: BepInEx
+    name: BepInEx
+    isExternal: true
+  - name: .
+  - uid: BepInEx.Configuration
+    name: Configuration
+    isExternal: true
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_BindRange__1_BepInEx_Configuration_ConfigFile_System_String_System_String___0_System_String___0___0_
+  name: BindRange
+  nameWithType: TimbnConfig.BindRange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindRange
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: BepInEx.Configuration.ConfigEntry{{T}}
+  commentId: T:BepInEx.Configuration.ConfigEntry{``0}
+  parent: BepInEx.Configuration
+  definition: BepInEx.Configuration.ConfigEntry`1
+  name: ConfigEntry<T>
+  nameWithType: ConfigEntry<T>
+  fullName: BepInEx.Configuration.ConfigEntry<T>
+  nameWithType.vb: ConfigEntry(Of T)
+  fullName.vb: BepInEx.Configuration.ConfigEntry(Of T)
+  name.vb: ConfigEntry(Of T)
+  spec.csharp:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: BepInEx.Configuration.ConfigEntry`1
+  commentId: T:BepInEx.Configuration.ConfigEntry`1
+  isExternal: true
+  name: ConfigEntry<T>
+  nameWithType: ConfigEntry<T>
+  fullName: BepInEx.Configuration.ConfigEntry<T>
+  nameWithType.vb: ConfigEntry(Of T)
+  fullName.vb: BepInEx.Configuration.ConfigEntry(Of T)
+  name.vb: ConfigEntry(Of T)
+  spec.csharp:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_BindHidden__1_BepInEx_Configuration_ConfigFile_System_String_System_String___0_System_String_
+  name: BindHidden
+  nameWithType: TimbnConfig.BindHidden
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.BindHidden
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_ReloadAll
+  name: ReloadAll()
+  nameWithType: TimbnConfig.ReloadAll()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+    name: ReloadAll
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_ReloadAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.ReloadAll
+    name: ReloadAll
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_ReloadAll
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnConfig_Reload_BepInEx_BaseUnityPlugin_
+  name: Reload
+  nameWithType: TimbnConfig.Reload
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnConfig.Reload
+- uid: BepInEx.BaseUnityPlugin
+  commentId: T:BepInEx.BaseUnityPlugin
+  parent: BepInEx
+  isExternal: true
+  name: BaseUnityPlugin
+  nameWithType: BaseUnityPlugin
+  fullName: BepInEx.BaseUnityPlugin
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: BepInEx
+  commentId: N:BepInEx
+  isExternal: true
+  name: BepInEx
+  nameWithType: BepInEx
+  fullName: BepInEx

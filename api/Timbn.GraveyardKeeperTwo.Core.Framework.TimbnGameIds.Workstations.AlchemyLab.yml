@@ -1,0 +1,648 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  id: TimbnGameIds.Workstations.AlchemyLab
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyFlask1Shed
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyWorkbench
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.DistillationCube
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FormulationBench
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolGrind
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolMix
+  langs:
+  - csharp
+  - vb
+  name: TimbnGameIds.Workstations.AlchemyLab
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyLab
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The stations and bench extensions built at the AlchemyLab build desk.
+  example: []
+  syntax:
+    content: public static class TimbnGameIds.Workstations.AlchemyLab
+    content.vb: Public Module TimbnGameIds.Workstations.AlchemyLab
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyFlask1Shed
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyFlask1Shed
+  id: AlchemyFlask1Shed
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: AlchemyFlask1Shed
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.AlchemyFlask1Shed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyFlask1Shed
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyFlask1Shed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 13
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Flask shelf
+  example: []
+  syntax:
+    content: public const string AlchemyFlask1Shed = "alchemy_flask_1_shed"
+    return:
+      type: System.String
+    content.vb: Public Const AlchemyFlask1Shed As String = "alchemy_flask_1_shed"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix
+  id: AlchemyMix
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: AlchemyMix
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.AlchemyMix
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyMix
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Laboratory I. Combine items, fill flasks, and create potions.
+  example: []
+  syntax:
+    content: public const string AlchemyMix = "alchemy_mix"
+    return:
+      type: System.String
+    content.vb: Public Const AlchemyMix As String = "alchemy_mix"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix2
+  id: AlchemyMix2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: AlchemyMix2
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.AlchemyMix2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyMix2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Laboratory II
+  example: []
+  syntax:
+    content: public const string AlchemyMix2 = "alchemy_mix_2"
+    return:
+      type: System.String
+    content.vb: Public Const AlchemyMix2 As String = "alchemy_mix_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix3
+  id: AlchemyMix3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: AlchemyMix3
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.AlchemyMix3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyMix3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyMix3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 19
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Laboratory III
+  example: []
+  syntax:
+    content: public const string AlchemyMix3 = "alchemy_mix_3"
+    return:
+      type: System.String
+    content.vb: Public Const AlchemyMix3 As String = "alchemy_mix_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyWorkbench
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyWorkbench
+  id: AlchemyWorkbench
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: AlchemyWorkbench
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.AlchemyWorkbench
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.AlchemyWorkbench
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AlchemyWorkbench
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 21
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Alchemy Workbench
+  example: []
+  syntax:
+    content: public const string AlchemyWorkbench = "alchemy_workbench"
+    return:
+      type: System.String
+    content.vb: Public Const AlchemyWorkbench As String = "alchemy_workbench"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.DistillationCube
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.DistillationCube
+  id: DistillationCube
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: DistillationCube
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.DistillationCube
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.DistillationCube
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DistillationCube
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Distillation Cube
+  example: []
+  syntax:
+    content: public const string DistillationCube = "distillation_cube"
+    return:
+      type: System.String
+    content.vb: Public Const DistillationCube As String = "distillation_cube"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen1
+  id: FirewoodShedKitchen1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: FirewoodShedKitchen1
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FirewoodShedKitchen1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 25
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Firewood shed I
+  example: []
+  syntax:
+    content: public const string FirewoodShedKitchen1 = "firewood_shed_kitchen_1"
+    return:
+      type: System.String
+    content.vb: Public Const FirewoodShedKitchen1 As String = "firewood_shed_kitchen_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen2
+  id: FirewoodShedKitchen2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: FirewoodShedKitchen2
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FirewoodShedKitchen2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FirewoodShedKitchen2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 27
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Firewood shed II
+  example: []
+  syntax:
+    content: public const string FirewoodShedKitchen2 = "firewood_shed_kitchen_2"
+    return:
+      type: System.String
+    content.vb: Public Const FirewoodShedKitchen2 As String = "firewood_shed_kitchen_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FormulationBench
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FormulationBench
+  id: FormulationBench
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: FormulationBench
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.FormulationBench
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.FormulationBench
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FormulationBench
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 29
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Formulation Bench
+  example: []
+  syntax:
+    content: public const string FormulationBench = "formulation_bench"
+    return:
+      type: System.String
+    content.vb: Public Const FormulationBench As String = "formulation_bench"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolGrind
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolGrind
+  id: ToolGrind
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: ToolGrind
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.ToolGrind
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolGrind
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ToolGrind
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 31
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Alchemy Tools II
+  example: []
+  syntax:
+    content: public const string ToolGrind = "tool_grind"
+    return:
+      type: System.String
+    content.vb: Public Const ToolGrind As String = "tool_grind"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolMix
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolMix
+  id: ToolMix
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab
+  langs:
+  - csharp
+  - vb
+  name: ToolMix
+  nameWithType: TimbnGameIds.Workstations.AlchemyLab.ToolMix
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.AlchemyLab.ToolMix
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ToolMix
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 33
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Alchemy Tools I
+  example: []
+  syntax:
+    content: public const string ToolMix = "tool_mix"
+    return:
+      type: System.String
+    content.vb: Public Const ToolMix As String = "tool_mix"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,1018 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  id: TimbnGameIds.Music
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeAstrologer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeDoctor
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeLinda
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeMaster
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeNun
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeOldGuard
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FindingYouHome
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Heartwelming
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTavern
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTown
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeVillage
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.MainMenu
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SadMusic
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonChoir
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonDefault
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonOrganChoir
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SuspensTrack
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TownMoodTrack1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track4
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TrackCalm
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Violin
+  langs:
+  - csharp
+  - vb
+  name: TimbnGameIds.Music
+  nameWithType: TimbnGameIds.Music
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Music
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The id of every music track the game defines, such as <code>Violin</code> for violin, for <code>Audio.PlayMusic</code>.
+  example: []
+  syntax:
+    content: public static class TimbnGameIds.Music
+    content.vb: Public Module TimbnGameIds.Music
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeAstrologer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeAstrologer
+  id: CharThemeAstrologer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeAstrologer
+  nameWithType: TimbnGameIds.Music.CharThemeAstrologer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeAstrologer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeAstrologer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeAstrologer = "char_theme_astrologer"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeAstrologer As String = "char_theme_astrologer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeDoctor
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeDoctor
+  id: CharThemeDoctor
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeDoctor
+  nameWithType: TimbnGameIds.Music.CharThemeDoctor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeDoctor
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeDoctor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeDoctor = "char_theme_doctor"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeDoctor As String = "char_theme_doctor"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeLinda
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeLinda
+  id: CharThemeLinda
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeLinda
+  nameWithType: TimbnGameIds.Music.CharThemeLinda
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeLinda
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeLinda
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 11
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeLinda = "char_theme_linda"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeLinda As String = "char_theme_linda"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeMaster
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeMaster
+  id: CharThemeMaster
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeMaster
+  nameWithType: TimbnGameIds.Music.CharThemeMaster
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeMaster
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeMaster
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeMaster = "char_theme_master"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeMaster As String = "char_theme_master"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeNun
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeNun
+  id: CharThemeNun
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeNun
+  nameWithType: TimbnGameIds.Music.CharThemeNun
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeNun
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeNun
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 13
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeNun = "char_theme_nun"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeNun As String = "char_theme_nun"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeOldGuard
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeOldGuard
+  id: CharThemeOldGuard
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: CharThemeOldGuard
+  nameWithType: TimbnGameIds.Music.CharThemeOldGuard
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.CharThemeOldGuard
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CharThemeOldGuard
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string CharThemeOldGuard = "char_theme_old_guard"
+    return:
+      type: System.String
+    content.vb: Public Const CharThemeOldGuard As String = "char_theme_old_guard"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack1
+  id: FightTrack1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: FightTrack1
+  nameWithType: TimbnGameIds.Music.FightTrack1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FightTrack1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string FightTrack1 = "fight_track_1"
+    return:
+      type: System.String
+    content.vb: Public Const FightTrack1 As String = "fight_track_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack2
+  id: FightTrack2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: FightTrack2
+  nameWithType: TimbnGameIds.Music.FightTrack2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FightTrack2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FightTrack2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 16
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string FightTrack2 = "fight_track_2"
+    return:
+      type: System.String
+    content.vb: Public Const FightTrack2 As String = "fight_track_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FindingYouHome
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FindingYouHome
+  id: FindingYouHome
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: FindingYouHome
+  nameWithType: TimbnGameIds.Music.FindingYouHome
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.FindingYouHome
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FindingYouHome
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string FindingYouHome = "finding_you_home"
+    return:
+      type: System.String
+    content.vb: Public Const FindingYouHome As String = "finding_you_home"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Heartwelming
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Heartwelming
+  id: Heartwelming
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: Heartwelming
+  nameWithType: TimbnGameIds.Music.Heartwelming
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Heartwelming
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Heartwelming
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 18
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Heartwelming = "heartwelming"
+    return:
+      type: System.String
+    content.vb: Public Const Heartwelming As String = "heartwelming"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTavern
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTavern
+  id: LocationThemeTavern
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: LocationThemeTavern
+  nameWithType: TimbnGameIds.Music.LocationThemeTavern
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTavern
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LocationThemeTavern
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 19
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string LocationThemeTavern = "location_theme_tavern"
+    return:
+      type: System.String
+    content.vb: Public Const LocationThemeTavern As String = "location_theme_tavern"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTown
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTown
+  id: LocationThemeTown
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: LocationThemeTown
+  nameWithType: TimbnGameIds.Music.LocationThemeTown
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeTown
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LocationThemeTown
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 20
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string LocationThemeTown = "location_theme_town"
+    return:
+      type: System.String
+    content.vb: Public Const LocationThemeTown As String = "location_theme_town"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeVillage
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeVillage
+  id: LocationThemeVillage
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: LocationThemeVillage
+  nameWithType: TimbnGameIds.Music.LocationThemeVillage
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.LocationThemeVillage
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LocationThemeVillage
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 21
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string LocationThemeVillage = "location_theme_village"
+    return:
+      type: System.String
+    content.vb: Public Const LocationThemeVillage As String = "location_theme_village"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.MainMenu
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.MainMenu
+  id: MainMenu
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: MainMenu
+  nameWithType: TimbnGameIds.Music.MainMenu
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.MainMenu
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MainMenu
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 22
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string MainMenu = "main_menu"
+    return:
+      type: System.String
+    content.vb: Public Const MainMenu As String = "main_menu"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SadMusic
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SadMusic
+  id: SadMusic
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: SadMusic
+  nameWithType: TimbnGameIds.Music.SadMusic
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SadMusic
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SadMusic
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SadMusic = "sad_music"
+    return:
+      type: System.String
+    content.vb: Public Const SadMusic As String = "sad_music"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonChoir
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonChoir
+  id: SermonChoir
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: SermonChoir
+  nameWithType: TimbnGameIds.Music.SermonChoir
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonChoir
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SermonChoir
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 24
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SermonChoir = "sermon_choir"
+    return:
+      type: System.String
+    content.vb: Public Const SermonChoir As String = "sermon_choir"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonDefault
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonDefault
+  id: SermonDefault
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: SermonDefault
+  nameWithType: TimbnGameIds.Music.SermonDefault
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonDefault
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SermonDefault
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 25
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SermonDefault = "sermon_default"
+    return:
+      type: System.String
+    content.vb: Public Const SermonDefault As String = "sermon_default"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonOrganChoir
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonOrganChoir
+  id: SermonOrganChoir
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: SermonOrganChoir
+  nameWithType: TimbnGameIds.Music.SermonOrganChoir
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SermonOrganChoir
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SermonOrganChoir
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 26
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SermonOrganChoir = "sermon_organ-choir"
+    return:
+      type: System.String
+    content.vb: Public Const SermonOrganChoir As String = "sermon_organ-choir"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SuspensTrack
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SuspensTrack
+  id: SuspensTrack
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: SuspensTrack
+  nameWithType: TimbnGameIds.Music.SuspensTrack
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.SuspensTrack
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SuspensTrack
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 27
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string SuspensTrack = "suspens_track"
+    return:
+      type: System.String
+    content.vb: Public Const SuspensTrack As String = "suspens_track"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TownMoodTrack1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TownMoodTrack1
+  id: TownMoodTrack1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: TownMoodTrack1
+  nameWithType: TimbnGameIds.Music.TownMoodTrack1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TownMoodTrack1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownMoodTrack1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TownMoodTrack1 = "town_mood_track_1"
+    return:
+      type: System.String
+    content.vb: Public Const TownMoodTrack1 As String = "town_mood_track_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track2
+  id: Track2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: Track2
+  nameWithType: TimbnGameIds.Music.Track2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Track2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 29
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Track2 = "track_2"
+    return:
+      type: System.String
+    content.vb: Public Const Track2 As String = "track_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track3
+  id: Track3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: Track3
+  nameWithType: TimbnGameIds.Music.Track3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Track3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 30
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Track3 = "track_3"
+    return:
+      type: System.String
+    content.vb: Public Const Track3 As String = "track_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track4
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track4
+  id: Track4
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: Track4
+  nameWithType: TimbnGameIds.Music.Track4
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Track4
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Track4
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 31
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Track4 = "track_4"
+    return:
+      type: System.String
+    content.vb: Public Const Track4 As String = "track_4"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TrackCalm
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TrackCalm
+  id: TrackCalm
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: TrackCalm
+  nameWithType: TimbnGameIds.Music.TrackCalm
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.TrackCalm
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TrackCalm
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 32
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string TrackCalm = "track_calm"
+    return:
+      type: System.String
+    content.vb: Public Const TrackCalm As String = "track_calm"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Violin
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Violin
+  id: Violin
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music
+  langs:
+  - csharp
+  - vb
+  name: Violin
+  nameWithType: TimbnGameIds.Music.Violin
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Music.Violin
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Violin
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Music.cs
+    startLine: 33
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Violin = "violin"
+    return:
+      type: System.String
+    content.vb: Public Const Violin As String = "violin"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

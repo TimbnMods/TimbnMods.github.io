@@ -1,0 +1,412 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu
+  id: TimbnPluginMainMenu
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginMainMenu
+  nameWithType: TimbnPluginMainMenu
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginMainMenu
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Puts a plugin's messages on the main menu using the game's own UI, either as a line of text above the
+
+    game's credits or as a popup in the game's dialog window. Lines are removed when the plugin unloads.
+
+    Every Timbn plugin that starts already gets a line with its name and version, so this is for anything
+
+    beyond that. Reach it through the plugin's MainMenu property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginMainMenu
+    content.vb: Public NotInheritable Class TimbnPluginMainMenu
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine(System.String,System.String)
+  id: AddLine(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu
+  langs:
+  - csharp
+  - vb
+  name: AddLine(string, string)
+  nameWithType: TimbnPluginMainMenu.AddLine(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddLine
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+    startLine: 25
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a line to the list of Timbn mods above the main menu's "game by" credit, drawn like the game's own
+
+    "published by: tinyBuild". Lines are listed in the order they were added, and show only on the main
+
+    menu, never in game.
+  example: []
+  syntax:
+    content: public IDisposable AddLine(string label, string value)
+    parameters:
+    - id: label
+      type: System.String
+      description: 'The plain part, for example "Vanilla Tweaks: ".'
+    - id: value
+      type: System.String
+      description: The highlighted part, for example "1.1.0".
+    return:
+      type: System.IDisposable
+      description: A handle that removes the line early when disposed. You don't need to keep it.
+    content.vb: Public Function AddLine(label As String, value As String) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine*
+  nameWithType.vb: TimbnPluginMainMenu.AddLine(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine(String, String)
+  name.vb: AddLine(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup(System.String,System.String)
+  id: AddPopup(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu
+  langs:
+  - csharp
+  - vb
+  name: AddPopup(string, string)
+  nameWithType: TimbnPluginMainMenu.AddPopup(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddPopup
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
+    startLine: 34
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Shows a popup with an OK button in the game's dialog window the next time the main menu is on screen, or
+
+    right away if it already is. Each popup shows once, and several queue up one after another.
+  example: []
+  syntax:
+    content: public IDisposable AddPopup(string header, string text)
+    parameters:
+    - id: header
+      type: System.String
+      description: The window title. The game logs an error when it is empty.
+    - id: text
+      type: System.String
+      description: The message.
+    return:
+      type: System.IDisposable
+      description: A handle that cancels the popup if it has not shown yet. You don't need to keep it.
+    content.vb: Public Function AddPopup(header As String, text As String) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup*
+  nameWithType.vb: TimbnPluginMainMenu.AddPopup(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup(String, String)
+  name.vb: AddPopup(String, String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginMainMenu_AddLine_System_String_System_String_
+  name: AddLine
+  nameWithType: TimbnPluginMainMenu.AddLine
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddLine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginMainMenu_AddPopup_System_String_System_String_
+  name: AddPopup
+  nameWithType: TimbnPluginMainMenu.AddPopup
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginMainMenu.AddPopup

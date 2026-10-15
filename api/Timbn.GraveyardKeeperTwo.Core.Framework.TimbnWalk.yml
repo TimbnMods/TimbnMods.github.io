@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  id: TimbnWalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Navmesh
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Paths
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Straight
+  langs:
+  - csharp
+  - vb
+  name: TimbnWalk
+  nameWithType: TimbnWalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  type: Enum
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnWalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+    startLine: 3
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How a person walks to a point.
+  example: []
+  syntax:
+    content: public enum TimbnWalk
+    content.vb: Public Enum TimbnWalk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Paths
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Paths
+  id: Paths
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  langs:
+  - csharp
+  - vb
+  name: Paths
+  nameWithType: TimbnWalk.Paths
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Paths
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Paths
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Along the game's paths, the way villagers walk, taking the shortest way along the roads and going through
+
+    doors. When the paths do not join where they stand to the point, the walk is skipped instead of cutting across
+
+    the map.
+  example: []
+  syntax:
+    content: Paths = 0
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Navmesh
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Navmesh
+  id: Navmesh
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  langs:
+  - csharp
+  - vb
+  name: Navmesh
+  nameWithType: TimbnWalk.Navmesh
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Navmesh
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Navmesh
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+    startLine: 16
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Straight over the walkable ground to the point, around obstacles but not along the paths, and never through
+
+    doors. Use it only to step onto the paths from a spot they do not reach, such as a vendor's stall.
+  example: []
+  syntax:
+    content: Navmesh = 1
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Straight
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Straight
+  id: Straight
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  langs:
+  - csharp
+  - vb
+  name: Straight
+  nameWithType: TimbnWalk.Straight
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.Straight
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Straight
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnWalk.cs
+    startLine: 22
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    In a straight line to the point, around nothing. Use it only for a short step neither the paths nor the navmesh
+
+    can make, such as from behind a counter to its opening.
+  example: []
+  syntax:
+    content: Straight = 2
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.html
+  name: TimbnWalk
+  nameWithType: TimbnWalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk

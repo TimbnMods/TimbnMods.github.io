@@ -1,0 +1,387 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  id: TimbnLookCondition
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not
+  langs:
+  - csharp
+  - vb
+  name: TimbnLookCondition
+  nameWithType: TimbnLookCondition
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnLookCondition
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 26
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    When one of a station's extra models shows, for <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.
+
+    Build one with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook" data-throw-if-not-resolved="false"></xref>. The game checks it again each time the station's items, resources, worker or
+
+    work change, so the model comes and goes by itself.
+  example: []
+  syntax:
+    content: public sealed class TimbnLookCondition
+    content.vb: Public NotInheritable Class TimbnLookCondition
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not
+  id: Not
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  langs:
+  - csharp
+  - vb
+  name: Not()
+  nameWithType: TimbnLookCondition.Not()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Not
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 48
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The opposite condition, true exactly when this one is false.
+  example: []
+  syntax:
+    content: public TimbnLookCondition Not()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+    content.vb: Public Function [Not]() As TimbnLookCondition
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  name: ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  nameWithType: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, bool)
+  nameWithType.vb: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Boolean)
+  name.vb: ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+    name: ShowWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+    name: TimbnLookCondition
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+    name: ShowWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+    name: TimbnLookCondition
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.html
+  name: TimbnLook
+  nameWithType: TimbnLook
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Not
+  name: Not
+  nameWithType: TimbnLookCondition.Not
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.Not
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  name: TimbnLookCondition
+  nameWithType: TimbnLookCondition
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition

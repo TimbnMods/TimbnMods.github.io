@@ -1,0 +1,634 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  id: TimbnZombies
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation(WgoData)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw(ZombieWgoData)
+  langs:
+  - csharp
+  - vb
+  name: TimbnZombies
+  nameWithType: TimbnZombies
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnZombies
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Finds the zombies in the loaded save and the looks the game can give them.
+  example: []
+  syntax:
+    content: public static class TimbnZombies
+    content.vb: Public Module TimbnZombies
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All
+  id: All
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  langs:
+  - csharp
+  - vb
+  name: All()
+  nameWithType: TimbnZombies.All()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: All
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The zombies standing in the world of the loaded save, whatever job they have. Zombies lying on the ground
+
+    as items are not included. Empty at the main menu.
+  example:
+  - <pre><code class="lang-csharp">var caretakers = TimbnZombies.All().Count(zombie =&gt; zombie.ZombieType == ZombieType.Caretaker);</code></pre>
+  syntax:
+    content: public static List<ZombieWgoData> All()
+    return:
+      type: System.Collections.Generic.List{ZombieWgoData}
+      description: Each zombie's world object.
+    content.vb: Public Shared Function All() As List(Of ZombieWgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation(WgoData)
+  id: AtStation(WgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  langs:
+  - csharp
+  - vb
+  name: AtStation(WgoData)
+  nameWithType: TimbnZombies.AtStation(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation(WgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AtStation
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+    startLine: 40
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The zombie a station holds, either lying in its slot as an item (a station made with HoldsZombie, or the game's
+
+    autopsy table) or working it. Use it to pay the zombie tech points when a craft there ends.
+  example: []
+  syntax:
+    content: public static ZombieWgoData? AtStation(WgoData station)
+    parameters:
+    - id: station
+      type: WgoData
+      description: The station.
+    return:
+      type: ZombieWgoData
+      description: The zombie, or null when the station holds none.
+    content.vb: Public Shared Function AtStation(station As WgoData) As ZombieWgoData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks(System.String)
+  id: Looks(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  langs:
+  - csharp
+  - vb
+  name: Looks(string)
+  nameWithType: TimbnZombies.Looks(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Looks
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+    startLine: 59
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The bodies, heads, and skin colors the game picks from when it rolls a zombie's looks, read once from the
+
+    game's zombie customization config. A mod that restyles zombies offers these so its zombies look like the
+
+    game's own.
+  example: []
+  syntax:
+    content: public static TimbnZombieSkins? Looks(string dataId = "zombie_worker")
+    parameters:
+    - id: dataId
+      type: System.String
+      description: Which kind of zombie, the worker zombie by default.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombieSkins
+      description: The looks, or null when the game has no such kind.
+    content.vb: Public Shared Function Looks(dataId As String = "zombie_worker") As TimbnZombieSkins
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks*
+  nameWithType.vb: TimbnZombies.Looks(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks(String)
+  name.vb: Looks(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw(ZombieWgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw(ZombieWgoData)
+  id: Redraw(ZombieWgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies
+  langs:
+  - csharp
+  - vb
+  name: Redraw(ZombieWgoData)
+  nameWithType: TimbnZombies.Redraw(ZombieWgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw(ZombieWgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Redraw
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
+    startLine: 84
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Redraws a zombie after its looks or gear changed in its data, the way the game does when it spawns. It
+
+    covers a zombie standing in the world, one lying on the ground as an item, and a fighter. Events.ZombieViewReady
+
+    runs again for a zombie standing in the world, except a fighter.
+  example:
+  - >-
+    <pre><code class="lang-csharp">ZombieSkinHelper.ApplySkinToZombieWgoData(zombie, body, head, bodyColor, headColor);
+
+    TimbnZombies.Redraw(zombie);</code></pre>
+  syntax:
+    content: public static bool Redraw(ZombieWgoData zombie)
+    parameters:
+    - id: zombie
+      type: ZombieWgoData
+      description: The zombie.
+    return:
+      type: System.Boolean
+      description: False when the zombie has no view to redraw right now, or at the main menu.
+    content.vb: Public Shared Function Redraw(zombie As ZombieWgoData) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnZombies_All
+  name: All
+  nameWithType: TimbnZombies.All
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.All
+- uid: System.Collections.Generic.List{ZombieWgoData}
+  commentId: T:System.Collections.Generic.List{ZombieWgoData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ZombieWgoData>
+  nameWithType: List<ZombieWgoData>
+  fullName: System.Collections.Generic.List<ZombieWgoData>
+  nameWithType.vb: List(Of ZombieWgoData)
+  fullName.vb: System.Collections.Generic.List(Of ZombieWgoData)
+  name.vb: List(Of ZombieWgoData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ZombieWgoData
+    name: ZombieWgoData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ZombieWgoData
+    name: ZombieWgoData
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnZombies_AtStation_WgoData_
+  name: AtStation
+  nameWithType: TimbnZombies.AtStation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.AtStation
+- uid: WgoData
+  commentId: T:WgoData
+  isExternal: true
+  name: WgoData
+  nameWithType: WgoData
+  fullName: WgoData
+- uid: ZombieWgoData
+  commentId: T:ZombieWgoData
+  isExternal: true
+  name: ZombieWgoData
+  nameWithType: ZombieWgoData
+  fullName: ZombieWgoData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnZombies_Looks_System_String_
+  name: Looks
+  nameWithType: TimbnZombies.Looks
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Looks
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombieSkins
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombieSkins
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombieSkins.html
+  name: TimbnZombieSkins
+  nameWithType: TimbnZombieSkins
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombieSkins
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnZombies_Redraw_ZombieWgoData_
+  name: Redraw
+  nameWithType: TimbnZombies.Redraw
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnZombies.Redraw
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

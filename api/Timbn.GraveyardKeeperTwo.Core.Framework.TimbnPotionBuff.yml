@@ -1,0 +1,996 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  id: TimbnPotionBuff
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+  langs:
+  - csharp
+  - vb
+  name: TimbnPotionBuff
+  nameWithType: TimbnPotionBuff
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPotionBuff
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 43
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The buff a potion applies, and what it does.
+  example: []
+  syntax:
+    content: public sealed class TimbnPotionBuff
+    content.vb: Public NotInheritable Class TimbnPotionBuff
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+  id: Name
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TimbnPotionBuff.Name
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Name
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 46
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The buff's name in the HUD and its tooltip, such as Swift.
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+  id: Description
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TimbnPotionBuff.Description
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Description
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 49
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The buff's description in its tooltip.
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+  id: DurationSeconds
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: DurationSeconds
+  nameWithType: TimbnPotionBuff.DurationSeconds
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DurationSeconds
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 55
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How long the buff lasts in real seconds, read each time the potion is drunk so it can follow a setting. 60 by
+
+    default.
+  example: []
+  syntax:
+    content: public Func<float> DurationSeconds { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.Single}
+    content.vb: Public Property DurationSeconds As Func(Of Single)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+  id: GlowColor
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: GlowColor
+  nameWithType: TimbnPotionBuff.GlowColor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GlowColor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 58
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: One of the game's buff colors, used for the start burst and the HUD frame. Read each time the potion is drunk so it can follow a setting.
+  example: []
+  syntax:
+    content: public Func<string> GlowColor { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.String}
+    content.vb: Public Property GlowColor As Func(Of String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+  id: IconId
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: IconId
+  nameWithType: TimbnPotionBuff.IconId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IconId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 61
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Buff icon sprite name. Any sprite the game has, or one added with the plugin's Sprites.AddPng.
+  example: []
+  syntax:
+    content: public string IconId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IconId As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  id: StartExpressions
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: StartExpressions
+  nameWithType: TimbnPotionBuff.StartExpressions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StartExpressions
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 68
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game's script expressions, run once by the game when the buff starts, such as DropItem("stick", 5). Use
+
+    these for changes the save keeps, like items or unlocks. Each is checked when the potion is registered, and a
+
+    potion with one that doesn't work is skipped with a warning.
+  example: []
+  syntax:
+    content: public List<string> StartExpressions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property StartExpressions As List(Of String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+  id: EndExpressions
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: EndExpressions
+  nameWithType: TimbnPotionBuff.EndExpressions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: EndExpressions
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 75
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game's script expressions, run once by the game when the buff ends, such as taking back what
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions" data-throw-if-not-resolved="false"></xref> gave. If the mod is removed while the buff lasts, Core ends the buff the next time the
+
+    save loads and runs these then.
+  example: []
+  syntax:
+    content: public List<string> EndExpressions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property EndExpressions As List(Of String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+  id: OnStart
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: OnStart
+  nameWithType: TimbnPotionBuff.OnStart
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnStart
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 81
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the buff starts, and again when a save loads with it active. Use it for effects the save doesn't
+
+    keep, like walk speed, and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange" data-throw-if-not-resolved="false"></xref> for C# changes the save would keep.
+  example: []
+  syntax:
+    content: public Action? OnStart { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnStart As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+  id: WhileActive
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: WhileActive
+  nameWithType: TimbnPotionBuff.WhileActive
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WhileActive
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 84
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs every frame while the buff lasts.
+  example: []
+  syntax:
+    content: public Action? WhileActive { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property WhileActive As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+  id: OnEnd
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: OnEnd
+  nameWithType: TimbnPotionBuff.OnEnd
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnEnd
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 87
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the buff ends, the player leaves the game, or the potion is unregistered.
+  example: []
+  syntax:
+    content: public Action? OnEnd { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnEnd As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  id: ApplyChange
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: ApplyChange
+  nameWithType: TimbnPotionBuff.ApplyChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ApplyChange
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 95
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Makes a C# change the save would keep, such as a vendor's money. Core runs it when the buff starts, and
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange" data-throw-if-not-resolved="false"></xref> takes it back just before every save and this puts it back right after, so the save
+
+    never holds the change and removing the mod mid buff leaves nothing behind. Both run on every save, so keep
+
+    them to setting state, with no sounds, toasts or drops.
+  example: []
+  syntax:
+    content: public Action? ApplyChange { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property ApplyChange As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  id: RevertChange
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff
+  langs:
+  - csharp
+  - vb
+  name: RevertChange
+  nameWithType: TimbnPotionBuff.RevertChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RevertChange
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Potions/TimbnPotion.cs
+    startLine: 98
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Takes back what <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange" data-throw-if-not-resolved="false"></xref> changed. Runs when the buff ends and just before every save.
+  example: []
+  syntax:
+    content: public Action? RevertChange { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property RevertChange As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_Name
+  name: Name
+  nameWithType: TimbnPotionBuff.Name
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_Description
+  name: Description
+  nameWithType: TimbnPotionBuff.Description
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.Description
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_DurationSeconds
+  name: DurationSeconds
+  nameWithType: TimbnPotionBuff.DurationSeconds
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.DurationSeconds
+- uid: System.Func{System.Single}
+  commentId: T:System.Func{System.Single}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<float>
+  nameWithType: Func<float>
+  fullName: System.Func<float>
+  nameWithType.vb: Func(Of Single)
+  fullName.vb: System.Func(Of Single)
+  name.vb: Func(Of Single)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_GlowColor
+  name: GlowColor
+  nameWithType: TimbnPotionBuff.GlowColor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.GlowColor
+- uid: System.Func{System.String}
+  commentId: T:System.Func{System.String}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<string>
+  nameWithType: Func<string>
+  fullName: System.Func<string>
+  nameWithType.vb: Func(Of String)
+  fullName.vb: System.Func(Of String)
+  name.vb: Func(Of String)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_IconId
+  name: IconId
+  nameWithType: TimbnPotionBuff.IconId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.IconId
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_StartExpressions
+  name: StartExpressions
+  nameWithType: TimbnPotionBuff.StartExpressions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_StartExpressions
+  name: StartExpressions
+  nameWithType: TimbnPotionBuff.StartExpressions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.StartExpressions
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_EndExpressions
+  name: EndExpressions
+  nameWithType: TimbnPotionBuff.EndExpressions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.EndExpressions
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_ApplyChange
+  name: ApplyChange
+  nameWithType: TimbnPotionBuff.ApplyChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_OnStart
+  name: OnStart
+  nameWithType: TimbnPotionBuff.OnStart
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnStart
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_WhileActive
+  name: WhileActive
+  nameWithType: TimbnPotionBuff.WhileActive
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.WhileActive
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_OnEnd
+  name: OnEnd
+  nameWithType: TimbnPotionBuff.OnEnd
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.OnEnd
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_RevertChange
+  name: RevertChange
+  nameWithType: TimbnPotionBuff.RevertChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_ApplyChange
+  name: ApplyChange
+  nameWithType: TimbnPotionBuff.ApplyChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.ApplyChange
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPotionBuff_RevertChange
+  name: RevertChange
+  nameWithType: TimbnPotionBuff.RevertChange
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPotionBuff.RevertChange

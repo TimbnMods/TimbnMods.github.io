@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  id: TimbnFacing
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Down
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Left
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Right
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Up
+  langs:
+  - csharp
+  - vb
+  name: TimbnFacing
+  nameWithType: TimbnFacing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  type: Enum
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnFacing
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The way one side of a station faces as the camera sees it. The facing is also the edge of the footprint its dock spot
+
+    is on, where the player or a zombie stands to work it and finished items drop. The values are the rotation indexes
+
+    the game saves, and R in build mode turns through the facings a station has in this order. Only Left and Right can be
+
+    mirrored, since a station facing down or up looks the same flipped.
+  example: []
+  syntax:
+    content: public enum TimbnFacing
+    content.vb: Public Enum TimbnFacing
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Down
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Down
+  id: Down
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: TimbnFacing.Down
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Down
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Down
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+    startLine: 11
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Facing the camera, with the dock spot on the front edge. The facing every station has.
+  example: []
+  syntax:
+    content: Down = 0
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Left
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Left
+  id: Left
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: TimbnFacing.Left
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Left
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Left
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Facing left, with the dock spot on the left edge.
+  example: []
+  syntax:
+    content: Left = 1
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Up
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Up
+  id: Up
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: TimbnFacing.Up
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Up
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Up
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Facing away from the camera, with the dock spot on the back edge.
+  example: []
+  syntax:
+    content: Up = 2
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Right
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Right
+  id: Right
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: TimbnFacing.Right
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.Right
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Right
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnFacing.cs
+    startLine: 20
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Facing right, with the dock spot on the right edge.
+  example: []
+  syntax:
+    content: Right = 3
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.html
+  name: TimbnFacing
+  nameWithType: TimbnFacing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing

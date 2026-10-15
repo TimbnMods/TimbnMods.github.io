@@ -1,0 +1,1097 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  id: TimbnPluginSettings
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed``1(BepInEx.Configuration.ConfigEntry{``0},System.Action{``0})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled(BepInEx.Configuration.ConfigEntry{System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Action,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Func{System.IDisposable})
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginSettings
+  nameWithType: TimbnPluginSettings
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginSettings
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Keeps a plugin's changes to the game in step with its config, so a setting changed in a config menu applies
+
+    straight away instead of on the next start. A setting whose feature is broken, because a game update broke
+
+    its patches (see <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFeatureAttribute" data-throw-if-not-resolved="false"></xref>), reads as off here whatever its value. Reach it through
+
+    the plugin's Settings property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginSettings
+    content.vb: Public NotInheritable Class TimbnPluginSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  id: Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: Toggle(ConfigEntry<bool>, Action, Action?)
+  nameWithType: TimbnPluginSettings.Toggle(ConfigEntry<bool>, Action, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry<bool>, System.Action, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Toggle
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Ties a toggle to the change it makes. While the toggle is on, apply runs on every save load and as soon as
+
+    the toggle turns on during play. Revert runs as soon as the toggle turns off and when the plugin unloads.
+
+    Both run straight away if a save is already loaded. At the main menu, revert only runs for a change that
+
+    was applied.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Settings.Toggle(PluginConfig.StuckCarriers, stuckCarriers.Reset, stuckCarriers.Revert);
+
+    Settings.Toggle(PluginConfig.StuckResourceWorkers, Repair);</code></pre>
+  syntax:
+    content: public IDisposable Toggle(ConfigEntry<bool> entry, Action apply, Action? revert = null)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{System.Boolean}
+      description: The toggle.
+    - id: apply
+      type: System.Action
+      description: Makes the change. It can run more than once, so it must skip work already done.
+    - id: revert
+      type: System.Action
+      description: >-
+        Undoes the change. It can run when nothing was applied, so it must cope with that. Leave it out for a fix
+
+        that runs once per save and has nothing to undo.
+    return:
+      type: System.IDisposable
+      description: A handle that stops following the toggle and reverts when disposed. You don't need to keep it.
+    content.vb: Public Function Toggle(entry As ConfigEntry(Of Boolean), apply As Action, revert As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle*
+  nameWithType.vb: TimbnPluginSettings.Toggle(ConfigEntry(Of Boolean), Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry(Of Boolean), System.Action, System.Action)
+  name.vb: Toggle(ConfigEntry(Of Boolean), Action, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Action,System.Action)
+  id: Toggle``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Action,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: Toggle<T>(ConfigEntry<T>, Func<T, bool>, Action, Action?)
+  nameWithType: TimbnPluginSettings.Toggle<T>(ConfigEntry<T>, Func<T, bool>, Action, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle<T>(BepInEx.Configuration.ConfigEntry<T>, System.Func<T, bool>, System.Action, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Toggle
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 56
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Ties a setting of any type to the change it makes, like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry%7bSystem.Boolean%7d%2cSystem.Action%2cSystem.Action)" data-throw-if-not-resolved="false"></xref>
+
+    with isOn deciding which values count as on. Any change to the value reverts first and then applies again if
+
+    the new value is on, so apply can read the new value.
+  example:
+  - <pre><code class="lang-csharp">Settings.Toggle(PluginConfig.TechPointCap, cap =&gt; cap &gt; 999, _techPointCap.Apply, _techPointCap.Revert);</code></pre>
+  syntax:
+    content: public IDisposable Toggle<T>(ConfigEntry<T> entry, Func<T, bool> isOn, Action apply, Action? revert = null)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{{T}}
+      description: The setting.
+    - id: isOn
+      type: System.Func{{T},System.Boolean}
+      description: Whether a value of the setting turns the change on.
+    - id: apply
+      type: System.Action
+      description: Makes the change. It can run more than once, so it must skip work already done.
+    - id: revert
+      type: System.Action
+      description: Undoes the change. It can run when nothing was applied, so it must cope with that. Can be null.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that stops following the setting and reverts when disposed. You don't need to keep it.
+    content.vb: Public Function Toggle(Of T)(entry As ConfigEntry(Of T), isOn As Func(Of T, Boolean), apply As Action, revert As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle*
+  nameWithType.vb: TimbnPluginSettings.Toggle(Of T)(ConfigEntry(Of T), Func(Of T, Boolean), Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(Of T)(BepInEx.Configuration.ConfigEntry(Of T), System.Func(Of T, Boolean), System.Action, System.Action)
+  name.vb: Toggle(Of T)(ConfigEntry(Of T), Func(Of T, Boolean), Action, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  id: While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: While(ConfigEntry<bool>, Func<IDisposable>)
+  nameWithType: TimbnPluginSettings.While(ConfigEntry<bool>, Func<IDisposable>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry<bool>, System.Func<System.IDisposable>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: While
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 73
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Keeps a registration alive only while a toggle is on. Subscribe runs straight away if the toggle is on and
+
+    again each time it turns on, and what it returns is disposed as soon as the toggle turns off. It suits any
+
+    Core registration, such as a timer, an event handler, or a balance edit, so a tweak that is switched off
+
+    costs nothing and its handlers need no check of the setting.
+  example:
+  - <pre><code class="lang-csharp">Settings.While(PluginConfig.StuckCarriers, () =&gt; Events.EveryRealSeconds(0.5f, stuckCarriers.Tick));</code></pre>
+  syntax:
+    content: public IDisposable While(ConfigEntry<bool> entry, Func<IDisposable> subscribe)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{System.Boolean}
+      description: The toggle.
+    - id: subscribe
+      type: System.Func{System.IDisposable}
+      description: Makes the registration and returns its handle.
+    return:
+      type: System.IDisposable
+      description: A handle that stops following the toggle and disposes the registration when disposed. You don't need to keep it.
+    content.vb: Public Function [While](entry As ConfigEntry(Of Boolean), subscribe As Func(Of IDisposable)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While*
+  nameWithType.vb: TimbnPluginSettings.While(ConfigEntry(Of Boolean), Func(Of IDisposable))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry(Of Boolean), System.Func(Of System.IDisposable))
+  name.vb: While(ConfigEntry(Of Boolean), Func(Of IDisposable))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Func{System.IDisposable})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Func{System.IDisposable})
+  id: While``1(BepInEx.Configuration.ConfigEntry{``0},System.Func{``0,System.Boolean},System.Func{System.IDisposable})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: While<T>(ConfigEntry<T>, Func<T, bool>, Func<IDisposable>)
+  nameWithType: TimbnPluginSettings.While<T>(ConfigEntry<T>, Func<T, bool>, Func<IDisposable>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While<T>(BepInEx.Configuration.ConfigEntry<T>, System.Func<T, bool>, System.Func<System.IDisposable>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: While
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 91
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Keeps a registration alive only while a setting of any type is on, like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry%7bSystem.Boolean%7d%2cSystem.Func%7bSystem.IDisposable%7d)" data-throw-if-not-resolved="false"></xref> with isOn deciding which values count as on. Any
+
+    change to the value disposes the registration and makes it again if the new value is on, so subscribe can
+
+    read the new value.
+  example:
+  - <pre><code class="lang-csharp">Settings.While(PluginConfig.TechPointCap, cap =&gt; cap &gt; 999, () =&gt; Balance.Edit&lt;GameResSystemDef&gt;("tech_red", Raise, Lower));</code></pre>
+  syntax:
+    content: public IDisposable While<T>(ConfigEntry<T> entry, Func<T, bool> isOn, Func<IDisposable> subscribe)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{{T}}
+      description: The setting.
+    - id: isOn
+      type: System.Func{{T},System.Boolean}
+      description: Whether a value of the setting keeps the registration alive.
+    - id: subscribe
+      type: System.Func{System.IDisposable}
+      description: Makes the registration and returns its handle.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that stops following the setting and disposes the registration when disposed. You don't need to keep it.
+    content.vb: Public Function [While](Of T)(entry As ConfigEntry(Of T), isOn As Func(Of T, Boolean), subscribe As Func(Of IDisposable)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While*
+  nameWithType.vb: TimbnPluginSettings.While(Of T)(ConfigEntry(Of T), Func(Of T, Boolean), Func(Of IDisposable))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(Of T)(BepInEx.Configuration.ConfigEntry(Of T), System.Func(Of T, Boolean), System.Func(Of System.IDisposable))
+  name.vb: While(Of T)(ConfigEntry(Of T), Func(Of T, Boolean), Func(Of IDisposable))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed``1(BepInEx.Configuration.ConfigEntry{``0},System.Action{``0})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed``1(BepInEx.Configuration.ConfigEntry{``0},System.Action{``0})
+  id: Changed``1(BepInEx.Configuration.ConfigEntry{``0},System.Action{``0})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: Changed<T>(ConfigEntry<T>, Action<T>)
+  nameWithType: TimbnPluginSettings.Changed<T>(ConfigEntry<T>, Action<T>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed<T>(BepInEx.Configuration.ConfigEntry<T>, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Changed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 107
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs your code whenever a setting's value changes, such as from a config manager or a reloaded config file.
+
+    The handler is removed when the plugin unloads, and a throw is logged. Prefer Toggle or While when the
+
+    setting switches a change on and off.
+  example:
+  - <pre><code class="lang-csharp">Settings.Changed(PluginConfig.TimeSpeed, speed =&gt; Logger.LogInfo($"Meditation time speed is now {speed}"));</code></pre>
+  syntax:
+    content: public IDisposable Changed<T>(ConfigEntry<T> entry, Action<T> handler)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{{T}}
+      description: The setting.
+    - id: handler
+      type: System.Action{{T}}
+      description: Gets the new value.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function Changed(Of T)(entry As ConfigEntry(Of T), handler As Action(Of T)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed*
+  nameWithType.vb: TimbnPluginSettings.Changed(Of T)(ConfigEntry(Of T), Action(Of T))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed(Of T)(BepInEx.Configuration.ConfigEntry(Of T), System.Action(Of T))
+  name.vb: Changed(Of T)(ConfigEntry(Of T), Action(Of T))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled(BepInEx.Configuration.ConfigEntry{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled(BepInEx.Configuration.ConfigEntry{System.Boolean})
+  id: IsEnabled(BepInEx.Configuration.ConfigEntry{System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled(ConfigEntry<bool>)
+  nameWithType: TimbnPluginSettings.IsEnabled(ConfigEntry<bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled(BepInEx.Configuration.ConfigEntry<bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsEnabled
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Settings/TimbnPluginSettings.cs
+    startLine: 118
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether a toggle is on and its feature is working, which is what <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry%7bSystem.Boolean%7d%2cSystem.Action%2cSystem.Action)" data-throw-if-not-resolved="false"></xref>
+
+    and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry%7bSystem.Boolean%7d%2cSystem.Func%7bSystem.IDisposable%7d)" data-throw-if-not-resolved="false"></xref> go by. Use it in place of the entry's Value in a
+
+    patch or a handler that reads the toggle directly. The plugin's static IsEnabled is the master switch instead,
+
+    the plugin's own Enabled toggle and Core's.
+  example: []
+  syntax:
+    content: public bool IsEnabled(ConfigEntry<bool> entry)
+    parameters:
+    - id: entry
+      type: BepInEx.Configuration.ConfigEntry{System.Boolean}
+      description: The toggle.
+    return:
+      type: System.Boolean
+      description: True when the toggle is on and no game update has broken the feature's patches.
+    content.vb: Public Function IsEnabled(entry As ConfigEntry(Of Boolean)) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled*
+  nameWithType.vb: TimbnPluginSettings.IsEnabled(ConfigEntry(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled(BepInEx.Configuration.ConfigEntry(Of Boolean))
+  name.vb: IsEnabled(ConfigEntry(Of Boolean))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFeatureAttribute
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFeatureAttribute
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFeatureAttribute.html
+  name: TimbnFeatureAttribute
+  nameWithType: TimbnFeatureAttribute
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFeatureAttribute
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  name: Toggle
+  nameWithType: TimbnPluginSettings.Toggle
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle
+- uid: BepInEx.Configuration.ConfigEntry{System.Boolean}
+  commentId: T:BepInEx.Configuration.ConfigEntry{System.Boolean}
+  parent: BepInEx.Configuration
+  definition: BepInEx.Configuration.ConfigEntry`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: ConfigEntry<bool>
+  nameWithType: ConfigEntry<bool>
+  fullName: BepInEx.Configuration.ConfigEntry<bool>
+  nameWithType.vb: ConfigEntry(Of Boolean)
+  fullName.vb: BepInEx.Configuration.ConfigEntry(Of Boolean)
+  name.vb: ConfigEntry(Of Boolean)
+  spec.csharp:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: BepInEx.Configuration.ConfigEntry`1
+  commentId: T:BepInEx.Configuration.ConfigEntry`1
+  isExternal: true
+  name: ConfigEntry<T>
+  nameWithType: ConfigEntry<T>
+  fullName: BepInEx.Configuration.ConfigEntry<T>
+  nameWithType.vb: ConfigEntry(Of T)
+  fullName.vb: BepInEx.Configuration.ConfigEntry(Of T)
+  name.vb: ConfigEntry(Of T)
+  spec.csharp:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BepInEx.Configuration
+  commentId: N:BepInEx.Configuration
+  isExternal: true
+  name: BepInEx.Configuration
+  nameWithType: BepInEx.Configuration
+  fullName: BepInEx.Configuration
+  spec.csharp:
+  - uid: BepInEx
+    name: BepInEx
+    isExternal: true
+  - name: .
+  - uid: BepInEx.Configuration
+    name: Configuration
+    isExternal: true
+  spec.vb:
+  - uid: BepInEx
+    name: BepInEx
+    isExternal: true
+  - name: .
+  - uid: BepInEx.Configuration
+    name: Configuration
+    isExternal: true
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  name: Toggle(ConfigEntry<bool>, Action, Action)
+  nameWithType: TimbnPluginSettings.Toggle(ConfigEntry<bool>, Action, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry<bool>, System.Action, System.Action)
+  nameWithType.vb: TimbnPluginSettings.Toggle(ConfigEntry(Of Boolean), Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry(Of Boolean), System.Action, System.Action)
+  name.vb: Toggle(ConfigEntry(Of Boolean), Action, Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+    name: Toggle
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Toggle(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Action,System.Action)
+    name: Toggle
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Toggle_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Action_System_Action_
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: BepInEx.Configuration.ConfigEntry{{T}}
+  commentId: T:BepInEx.Configuration.ConfigEntry{``0}
+  parent: BepInEx.Configuration
+  definition: BepInEx.Configuration.ConfigEntry`1
+  name: ConfigEntry<T>
+  nameWithType: ConfigEntry<T>
+  fullName: BepInEx.Configuration.ConfigEntry<T>
+  nameWithType.vb: ConfigEntry(Of T)
+  fullName.vb: BepInEx.Configuration.ConfigEntry(Of T)
+  name.vb: ConfigEntry(Of T)
+  spec.csharp:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{``0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_While_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Func_System_IDisposable__
+  name: While
+  nameWithType: TimbnPluginSettings.While
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While
+- uid: System.Func{System.IDisposable}
+  commentId: T:System.Func{System.IDisposable}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<IDisposable>
+  nameWithType: Func<IDisposable>
+  fullName: System.Func<System.IDisposable>
+  nameWithType.vb: Func(Of IDisposable)
+  fullName.vb: System.Func(Of System.IDisposable)
+  name.vb: Func(Of IDisposable)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_While_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Func_System_IDisposable__
+  name: While(ConfigEntry<bool>, Func<IDisposable>)
+  nameWithType: TimbnPluginSettings.While(ConfigEntry<bool>, Func<IDisposable>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry<bool>, System.Func<System.IDisposable>)
+  nameWithType.vb: TimbnPluginSettings.While(ConfigEntry(Of Boolean), Func(Of IDisposable))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry(Of Boolean), System.Func(Of System.IDisposable))
+  name.vb: While(ConfigEntry(Of Boolean), Func(Of IDisposable))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+    name: While
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_While_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Func_System_IDisposable__
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.While(BepInEx.Configuration.ConfigEntry{System.Boolean},System.Func{System.IDisposable})
+    name: While
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_While_BepInEx_Configuration_ConfigEntry_System_Boolean__System_Func_System_IDisposable__
+  - name: (
+  - uid: BepInEx.Configuration.ConfigEntry`1
+    name: ConfigEntry
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.IDisposable
+    name: IDisposable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_Changed__1_BepInEx_Configuration_ConfigEntry___0__System_Action___0__
+  name: Changed
+  nameWithType: TimbnPluginSettings.Changed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.Changed
+- uid: System.Action{{T}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSettings_IsEnabled_BepInEx_Configuration_ConfigEntry_System_Boolean__
+  name: IsEnabled
+  nameWithType: TimbnPluginSettings.IsEnabled
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSettings.IsEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

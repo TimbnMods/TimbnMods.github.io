@@ -1,0 +1,3212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  id: TimbnQuestBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnQuestBuilder
+  nameWithType: TimbnQuestBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnQuestBuilder
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Describes a quest for the plugin's Quests.Add, with who gives it, when it is offered, and what the player does. A
+
+    quest is a list of stages. What is written on the builder itself (Description, TalksWith, Needs, Talk and the rest) is
+
+    its first stage, and each <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String%2cSystem.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage%7d)" data-throw-if-not-resolved="false"></xref> adds the next, which Core turns into one game quest per stage, each
+
+    continuing the one before, the way the game builds its own storylines. Every line is the text itself, and Core turns
+
+    it into localization keys named after the quest id. To keep the text only in the plugin's lang files, use the
+
+    Quests.Add that takes no name with Description(), Line, and the Accept and Decline that take no text.
+  example:
+  - >-
+    Larry wants 3 bottles of wine and pays 300 and a silver bottle for them.
+
+
+    <pre><code class="lang-csharp">Quests.Add("my_larry_wine", TimbnGameIds.Npcs.Larry, "Larry's Thirst", quest =&gt; quest
+        .Description("Larry wants 3 bottles of wine.")
+        .Offer(talk =&gt; talk
+            .Say("Could you fetch us 3 bottles of wine?")
+            .Accept("Fine.", then =&gt; then.Say("Cheers!"))
+            .Decline("Not now."))
+        .Cost(cost =&gt; cost.Item("grape_wine:1", 3))
+        .Reward(reward =&gt; reward.Money(300).Item("grape_wine:2"))
+        .Talk(talk =&gt; talk
+            .Accept("Here's your wine.", then =&gt; then.Say("Lovely."))
+            .Decline("Still working on it.")));</code></pre>
+  syntax:
+    content: public sealed class TimbnQuestBuilder
+    content.vb: Public NotInheritable Class TimbnQuestBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  id: Icon(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Icon(string)
+  nameWithType: TimbnQuestBuilder.Icon(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Icon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 138
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The quest's icon in the quest tree and log, such as quest_icon_larry_portal. Left out, a quest that continues
+
+    another uses that quest's icon, and any other quest the game's default.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Icon(string iconId)
+    parameters:
+    - id: iconId
+      type: System.String
+      description: The icon's sprite id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Icon(iconId As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon*
+  nameWithType.vb: TimbnQuestBuilder.Icon(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(String)
+  name.vb: Icon(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  id: Icon(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Icon(Func<TimbnQuestRun, string>)
+  nameWithType: TimbnQuestBuilder.Icon(Func<TimbnQuestRun, string>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, string>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Icon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 155
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The quest's icon read from its run, such as the icon of the item the villager asked for. Any sprite the game
+
+    has works, item icons included. Before the first run it shows the icon from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - <pre><code class="lang-csharp">.Icon(run =&gt; TimbnItems.IconId(run.Item("dish")))</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Icon(Func<TimbnQuestRun, string> iconId)
+    parameters:
+    - id: iconId
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String}
+      description: Picks the icon's sprite id from the run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Icon(iconId As Func(Of TimbnQuestRun, String)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon*
+  nameWithType.vb: TimbnQuestBuilder.Icon(Func(Of TimbnQuestRun, String))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, String))
+  name.vb: Icon(Func(Of TimbnQuestRun, String))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(System.Int32)
+  id: Phase(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Phase(int)
+  nameWithType: TimbnQuestBuilder.Phase(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Phase
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 169
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Which of the game's five rings the quest's node in the quest tree shows while the quest is in progress, the way
+
+    the game sets one for each of its own quests. The green grows further around with each ring, and a completed
+
+    quest always shows the gold laurel. Left out, a step of a ContinuesFrom chain gets a ring by its place in the chain,
+
+    growing as the story goes on like the game's own storylines, and a quest on its own shows the first ring.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Phase(int phase)
+    parameters:
+    - id: phase
+      type: System.Int32
+      description: The ring, 1 to 5.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Phase(phase As Integer) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase*
+  nameWithType.vb: TimbnQuestBuilder.Phase(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(Integer)
+  name.vb: Phase(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description(System.String)
+  id: Description(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Description(string)
+  nameWithType: TimbnQuestBuilder.Description(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Description
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 181
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The quest description while the quest is in progress.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Description(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Description(text As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description*
+  nameWithType.vb: TimbnQuestBuilder.Description(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description(String)
+  name.vb: Description(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+  id: Description
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Description()
+  nameWithType: TimbnQuestBuilder.Description()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Description
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 194
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The quest description with its text only in the plugin's lang files, under quest_open_ plus the quest id plus _d
+
+    while in progress, and quest_closed_ plus the id plus _d once done. Without the closed line it keeps the in
+
+    progress one.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Description()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Description() As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription(System.String)
+  id: DoneDescription(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: DoneDescription(string)
+  nameWithType: TimbnQuestBuilder.DoneDescription(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DoneDescription
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 203
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The quest description once the quest is done. Left out, it keeps the in progress description.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder DoneDescription(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function DoneDescription(text As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription*
+  nameWithType.vb: TimbnQuestBuilder.DoneDescription(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription(String)
+  name.vb: DoneDescription(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  id: OfferAfter(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfferAfter(TimbnQuest)
+  nameWithType: TimbnQuestBuilder.OfferAfter(TimbnQuest)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OfferAfter
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 212
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Offers the quest only once another quest is completed, and draws it below that quest in the tree.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OfferAfter(TimbnQuest quest)
+    parameters:
+    - id: quest
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+      description: The quest returned by an earlier Quests.Add.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OfferAfter(quest As TimbnQuest) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(System.String)
+  id: OfferAfter(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfferAfter(string)
+  nameWithType: TimbnQuestBuilder.OfferAfter(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OfferAfter
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 224
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Offers the quest only once another quest is completed, and draws it below that quest in the tree with a line
+
+    from it. Under a game quest it goes right below it, and when that area is full the quests below move down a
+
+    row to make room.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OfferAfter(string questId)
+    parameters:
+    - id: questId
+      type: System.String
+      description: The id of a mod quest or one of the game's own, such as 58_port_supplies_order.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OfferAfter(questId As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter*
+  nameWithType.vb: TimbnQuestBuilder.OfferAfter(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter(String)
+  name.vb: OfferAfter(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  id: ContinuesFrom(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: ContinuesFrom(TimbnQuest)
+  nameWithType: TimbnQuestBuilder.ContinuesFrom(TimbnQuest)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ContinuesFrom
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 247
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Makes the quest the next step of another of your quests, the way the game chains its own quests. It takes that
+
+    quest's place in the quest tree, sharing its cell, and the tree shows the newest step there. With no Offer or
+
+    StartsOn of its own, it starts within about a second of that quest being completed, once its OfferWhen is true
+
+    too if it has one. Only a mod quest can be continued, since a mod never takes a game quest's place.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var ask = Quests.Add("my_wine_ask", TimbnGameIds.Npcs.Larry, "Larry's Wine", quest =&gt; ...);
+
+    Quests.Add("my_wine_pay", TimbnGameIds.Npcs.Larry, "Paying for the Wine", quest =&gt; quest
+        .ContinuesFrom(ask)
+        .Description("Pay Herm for the wine.")
+        ...);</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder ContinuesFrom(TimbnQuest quest)
+    parameters:
+    - id: quest
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+      description: The quest returned by an earlier Quests.Add. For a quest with stages, this continues its last stage.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function ContinuesFrom(quest As TimbnQuest) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+  id: OfferWhen(System.Func{System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfferWhen(Func<bool>)
+  nameWithType: TimbnQuestBuilder.OfferWhen(Func<bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func<bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OfferWhen
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 268
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    An extra condition for offering or starting the quest, such as a story quest having started. An offer is
+
+    checked about once a second, and a start on a game event is checked when that event happens.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OfferWhen(Func<bool> condition)
+    parameters:
+    - id: condition
+      type: System.Func{System.Boolean}
+      description: True when the quest may be offered.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OfferWhen(condition As Func(Of Boolean)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen*
+  nameWithType.vb: TimbnQuestBuilder.OfferWhen(Func(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func(Of Boolean))
+  name.vb: OfferWhen(Func(Of Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression(System.String)
+  id: OfferWhenExpression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfferWhenExpression(string)
+  nameWithType: TimbnQuestBuilder.OfferWhenExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OfferWhenExpression
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 280
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    An extra condition for offering or starting the quest, written as one of the game's script expressions, such as
+
+    <code>IsTechUnlocked("wood_basic") &amp;&amp; $money &gt;= 500</code>. It is checked like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func%7bSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OfferWhenExpression(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The game expression, true when the quest may be offered.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OfferWhenExpression(expression As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression*
+  nameWithType.vb: TimbnQuestBuilder.OfferWhenExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression(String)
+  name.vb: OfferWhenExpression(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer})
+  id: Offer(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Offer(Action<TimbnQuestOffer>)
+  nameWithType: TimbnQuestBuilder.Offer(Action<TimbnQuestOffer>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Offer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 292
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The conversation where the quest giver offers the quest. While the quest can be taken, the giver shows a speech
+
+    bubble, and talking to them plays this conversation.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Offer(Action<TimbnQuestOffer> talk)
+    parameters:
+    - id: talk
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer}
+      description: Scripts the offer. It needs an Accept answer.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Offer(talk As Action(Of TimbnQuestOffer)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer*
+  nameWithType.vb: TimbnQuestBuilder.Offer(Action(Of TimbnQuestOffer))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer))
+  name.vb: Offer(Action(Of TimbnQuestOffer))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  id: StartsOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: StartsOn(TimbnQuestEvent)
+  nameWithType: TimbnQuestBuilder.StartsOn(TimbnQuestEvent)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StartsOn
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 305
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Starts the quest by itself when the player does something in the game, while OfferAfter and OfferWhen allow it.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder StartsOn(TimbnQuestEvent gameEvent)
+    parameters:
+    - id: gameEvent
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+      description: The event.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function StartsOn(gameEvent As TimbnQuestEvent) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+  id: TalksWith(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: TalksWith(string)
+  nameWithType: TimbnQuestBuilder.TalksWith(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalksWith
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 317
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The NPC the stage's Talk is with, such as TimbnGameIds.Npcs.Herm for a job Larry sends the player on. Left out, it is
+
+    the quest giver.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder TalksWith(string npcId)
+    parameters:
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function TalksWith(npcId As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith*
+  nameWithType.vb: TimbnQuestBuilder.TalksWith(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(String)
+  name.vb: TalksWith(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  id: TalksWith(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: TalksWith(Func<TimbnQuestRun, string>)
+  nameWithType: TimbnQuestBuilder.TalksWith(Func<TimbnQuestRun, string>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, string>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalksWith
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 326
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The NPC the stage's Talk is with, read from the quest's run, such as the villager a delivery goes to.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder TalksWith(Func<TimbnQuestRun, string> npcId)
+    parameters:
+    - id: npcId
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String}
+      description: Picks the NPC from the run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function TalksWith(npcId As Func(Of TimbnQuestRun, String)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith*
+  nameWithType.vb: TimbnQuestBuilder.TalksWith(Func(Of TimbnQuestRun, String))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, String))
+  name.vb: TalksWith(Func(Of TimbnQuestRun, String))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  id: Giver(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Giver(Func<TimbnQuestRun, string>)
+  nameWithType: TimbnQuestBuilder.Giver(Func<TimbnQuestRun, string>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, string>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Giver
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 343
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The NPC who gives the quest, read from the quest's run, for a quest added with no NPC. The offer's speech bubble
+
+    shows over them, and the Talk is with them unless <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)" data-throw-if-not-resolved="false"></xref> names someone else.
+  example:
+  - <pre><code class="lang-csharp">.Giver(run =&gt; run.NpcId("villager"))</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Giver(Func<TimbnQuestRun, string> npcId)
+    parameters:
+    - id: npcId
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String}
+      description: Picks the NPC from the run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Giver(npcId As Func(Of TimbnQuestRun, String)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver*
+  nameWithType.vb: TimbnQuestBuilder.Giver(Func(Of TimbnQuestRun, String))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, String))
+  name.vb: Giver(Func(Of TimbnQuestRun, String))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.String)
+  id: Giver(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Giver(string)
+  nameWithType: TimbnQuestBuilder.Giver(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Giver
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 354
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The NPC who gives the quest, for a quest added with no NPC. Use the Func form when the giver changes by run.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Giver(string npcId)
+    parameters:
+    - id: npcId
+      type: System.String
+      description: The NPC, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Giver(npcId As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver*
+  nameWithType.vb: TimbnQuestBuilder.Giver(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(String)
+  name.vb: Giver(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  id: Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Setup(Func<TimbnQuestRun, bool>)
+  nameWithType: TimbnQuestBuilder.Setup(Func<TimbnQuestRun, bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Setup
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 381
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Fills a new run of the quest when your code calls the quest's NewRun, such as picking a villager and the dish they
+
+    want. Until a run is rolled the quest is never offered or started. Text anywhere in the quest shows a run value
+
+    by its name in braces, such as {dish}, and the overloads of Giver, TalksWith, Needs, Cost and Reward that take a run
+
+    read it. The run is kept with the save and ends when the quest is done or canceled.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.Setup(run =&gt;
+
+    {
+        var villagers = TimbnNpcs.GroupMemberIds(TimbnGameIds.Groups.VillagersDayAll);
+        if (villagers.Count == 0)
+            return false;
+
+        run.Npc("villager", villagers[UnityEngine.Random.Range(0, villagers.Count)]).Item("dish", "cook_muffin");
+        return true;
+    })</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Setup(Func<TimbnQuestRun, bool> setup)
+    parameters:
+    - id: setup
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean}
+      description: Fills the run. Return false when nothing fits right now, and no run starts.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Setup(setup As Func(Of TimbnQuestRun, Boolean)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup*
+  nameWithType.vb: TimbnQuestBuilder.Setup(Func(Of TimbnQuestRun, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, Boolean))
+  name.vb: Setup(Func(Of TimbnQuestRun, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable
+  id: Repeatable
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Repeatable()
+  nameWithType: TimbnQuestBuilder.Repeatable()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Repeatable
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 394
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Plays the quest again and again. Once its last stage is done, Core puts every stage back to not started and drops
+
+    it from the quest tree and log until it starts again, so it only ever takes one entry. With a
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref> the next play waits for the next NewRun. Without one, the quest is offered again the usual way.
+
+    No other quest can use OfferAfter or ContinuesFrom on a repeatable quest.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Repeatable()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Repeatable() As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+  id: ExpiresAfter(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: ExpiresAfter(int)
+  nameWithType: TimbnQuestBuilder.ExpiresAfter(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ExpiresAfter
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 406
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Cancels a run that has gone this many game days without being finished, whether or not the player took the
+
+    quest on. The quest goes back to not started and leaves the log, ready for the next NewRun.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder ExpiresAfter(int days)
+    parameters:
+    - id: days
+      type: System.Int32
+      description: Game days from the NewRun, at least 1.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function ExpiresAfter(days As Integer) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter*
+  nameWithType.vb: TimbnQuestBuilder.ExpiresAfter(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(Integer)
+  name.vb: ExpiresAfter(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  id: OnCancel(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnCancel(Action<TimbnQuestRun?>)
+  nameWithType: TimbnQuestBuilder.OnCancel(Action<TimbnQuestRun?>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun?>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnCancel
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 432
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs your code when a run is canceled, by <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)" data-throw-if-not-resolved="false"></xref>, the quest's Cancel or anything else, before
+
+    the quest goes back to not started, such as taking back something the player was handed. It gets the run, or null
+
+    for a quest without a Setup, and the quest's Status still says whether the player had taken it on. A throw is
+
+    logged.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.OnCancel(run =&gt;
+
+    {
+        if (parcel.Status == QuestStatus.InProgress &amp;&amp; run is not null)
+            TimbnItems.TakeFromPlayer(run.Item("parcel"), 1);
+    })</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder OnCancel(Action<TimbnQuestRun?> action)
+    parameters:
+    - id: action
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+      description: The code to run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnCancel(action As Action(Of TimbnQuestRun)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel*
+  nameWithType.vb: TimbnQuestBuilder.OnCancel(Action(Of TimbnQuestRun))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun))
+  name.vb: OnCancel(Action(Of TimbnQuestRun))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds})
+  id: Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Needs(Action<TimbnNeeds>)
+  nameWithType: TimbnQuestBuilder.Needs(Action<TimbnNeeds>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Needs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 445
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What has to be true before the NPC offers the stage's Talk, checked but never taken, such as reputation with that
+
+    NPC or the day of the week. When the NPC has a menu of its own, the talk's answer shows there with a lock for
+
+    each until they are met.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Needs(Action<TimbnNeeds> needs)
+    parameters:
+    - id: needs
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+      description: Adds the needs.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Needs(needs As Action(Of TimbnNeeds)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs*
+  nameWithType.vb: TimbnQuestBuilder.Needs(Action(Of TimbnNeeds))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds))
+  name.vb: Needs(Action(Of TimbnNeeds))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  id: Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Needs(Action<TimbnNeeds, TimbnQuestRun>)
+  nameWithType: TimbnQuestBuilder.Needs(Action<TimbnNeeds, TimbnQuestRun>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Needs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 455
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Needs read from the quest's run, such as having the item the villager asked for.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Needs(Action<TimbnNeeds, TimbnQuestRun> needs)
+    parameters:
+    - id: needs
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+      description: Adds the needs.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Needs(needs As Action(Of TimbnNeeds, TimbnQuestRun)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs*
+  nameWithType.vb: TimbnQuestBuilder.Needs(Action(Of TimbnNeeds, TimbnQuestRun))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun))
+  name.vb: Needs(Action(Of TimbnNeeds, TimbnQuestRun))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  id: Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Cost(Action<TimbnCost>)
+  nameWithType: TimbnQuestBuilder.Cost(Action<TimbnCost>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Cost
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 468
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What the player pays to finish the stage, taken when they pick the talk's Accept answer, which shows it as the
+
+    game's price and is grayed out until they can pay. The NPC only shows a speech bubble once they can.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Cost(Action<TimbnCost> cost)
+    parameters:
+    - id: cost
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+      description: Adds the cost.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Cost(cost As Action(Of TimbnCost)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost*
+  nameWithType.vb: TimbnQuestBuilder.Cost(Action(Of TimbnCost))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost))
+  name.vb: Cost(Action(Of TimbnCost))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  id: Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Cost(Action<TimbnCost, TimbnQuestRun>)
+  nameWithType: TimbnQuestBuilder.Cost(Action<TimbnCost, TimbnQuestRun>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Cost
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 483
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: A cost read from the quest's run, such as the dish the villager asked for.
+  example:
+  - <pre><code class="lang-csharp">.Cost((cost, run) =&gt; cost.Item(run.Item("dish")))</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Cost(Action<TimbnCost, TimbnQuestRun> cost)
+    parameters:
+    - id: cost
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+      description: Adds the cost.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Cost(cost As Action(Of TimbnCost, TimbnQuestRun)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost*
+  nameWithType.vb: TimbnQuestBuilder.Cost(Action(Of TimbnCost, TimbnQuestRun))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun))
+  name.vb: Cost(Action(Of TimbnCost, TimbnQuestRun))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk})
+  id: Talk(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Talk(Action<TimbnQuestTalk>)
+  nameWithType: TimbnQuestBuilder.Talk(Action<TimbnQuestTalk>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Talk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 507
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The conversation that finishes the stage, with the NPC from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)" data-throw-if-not-resolved="false"></xref> or the quest giver. Its Accept
+
+    answer takes the stage's <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnCost%7d)" data-throw-if-not-resolved="false"></xref>, gives its <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards%7d)" data-throw-if-not-resolved="false"></xref> and completes the stage. Accept with no
+
+    text completes the stage once the lines are done, for something the NPC simply hands over. See
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.Reward(reward =&gt; reward.Item("grape_wine:3"))
+
+    .Talk(talk =&gt; talk
+        .PlayerSay("I'm here for my wine.")
+        .Say("Found it, here you go.")
+        .Accept())</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Talk(Action<TimbnQuestTalk> talk)
+    parameters:
+    - id: talk
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+      description: Scripts the talk. It needs an Accept.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Talk(talk As Action(Of TimbnQuestTalk)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk*
+  nameWithType.vb: TimbnQuestBuilder.Talk(Action(Of TimbnQuestTalk))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk))
+  name.vb: Talk(Action(Of TimbnQuestTalk))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  id: Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Reward(Action<TimbnRewards>)
+  nameWithType: TimbnQuestBuilder.Reward(Action<TimbnRewards>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Reward
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 523
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What the player gets when the stage is done. A Talk's Accept answer shows it, and the game pays it when the
+
+    answer is picked. Otherwise Core pays it when the stage completes.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder Reward(Action<TimbnRewards> rewards)
+    parameters:
+    - id: rewards
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+      description: Adds the rewards.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Reward(rewards As Action(Of TimbnRewards)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward*
+  nameWithType.vb: TimbnQuestBuilder.Reward(Action(Of TimbnRewards))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards))
+  name.vb: Reward(Action(Of TimbnRewards))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  id: Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Reward(Action<TimbnRewards, TimbnQuestRun>)
+  nameWithType: TimbnQuestBuilder.Reward(Action<TimbnRewards, TimbnQuestRun>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Reward
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 538
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: A reward read from the quest's run, such as the sale price of the dish the villager asked for.
+  example:
+  - <pre><code class="lang-csharp">.Reward((reward, run) =&gt; reward.Money(TimbnItems.SalePrice(run.Item("dish"))))</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder Reward(Action<TimbnRewards, TimbnQuestRun> rewards)
+    parameters:
+    - id: rewards
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+      description: Adds the rewards.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Reward(rewards As Action(Of TimbnRewards, TimbnQuestRun)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward*
+  nameWithType.vb: TimbnQuestBuilder.Reward(Action(Of TimbnRewards, TimbnQuestRun))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun))
+  name.vb: Reward(Action(Of TimbnRewards, TimbnQuestRun))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode
+  id: ReadyByCode
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: ReadyByCode()
+  nameWithType: TimbnQuestBuilder.ReadyByCode()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ReadyByCode
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 585
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The quest also waits for your code to call its MarkReady, such as when the player reaches a place.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder ReadyByCode()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function ReadyByCode() As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  id: ReadyOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: ReadyOn(TimbnQuestEvent)
+  nameWithType: TimbnQuestBuilder.ReadyOn(TimbnQuestEvent)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ReadyOn
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 594
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The quest also waits for something the player does in the game, such as sleeping or crafting.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder ReadyOn(TimbnQuestEvent gameEvent)
+    parameters:
+    - id: gameEvent
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+      description: The event.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function ReadyOn(gameEvent As TimbnQuestEvent) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  id: DoneLines(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: DoneLines(Action<TimbnLines>)
+  nameWithType: TimbnQuestBuilder.DoneLines(Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DoneLines
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 613
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lines that play once a stage with no Talk is done, such as the player thinking aloud on arriving somewhere. Use
+
+    PlayerSay for those. A Say line comes from the quest giver wherever they stand. A stage with a Talk puts its lines
+
+    after the Accept answer instead.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.ReadyOn(TimbnQuestEvent.EnteredWorldZone("vineyard_basement"))
+
+    .DoneLines(then =&gt; then.PlayerSay("This would be a good place to make wine."))</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder DoneLines(Action<TimbnLines> lines)
+    parameters:
+    - id: lines
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: Adds the lines.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function DoneLines(lines As Action(Of TimbnLines)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines*
+  nameWithType.vb: TimbnQuestBuilder.DoneLines(Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: DoneLines(Action(Of TimbnLines))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone(System.Action)
+  id: OnDone(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnDone(Action)
+  nameWithType: TimbnQuestBuilder.OnDone(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnDone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 629
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs your code once the stage is done, after the lines that follow the Accept answer, or as soon as they stop if
+
+    they end early. A throw is logged.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OnDone(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+      description: The code to run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnDone(action As Action) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  id: OnStart(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnStart(Action)
+  nameWithType: TimbnQuestBuilder.OnStart(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnStart
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 642
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs your code when the quest starts and again whenever a save loads with it in progress. Use it for effects that
+
+    are not saved, such as a marker or a hold on the player, and undo them in <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)" data-throw-if-not-resolved="false"></xref>. For a change that
+
+    is saved, use <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)" data-throw-if-not-resolved="false"></xref>. A throw is logged.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OnStart(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+      description: The code to run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnStart(action As Action) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  id: OnEnd(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnEnd(Action)
+  nameWithType: TimbnQuestBuilder.OnEnd(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnEnd
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 654
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs your code when the quest stops being in progress, whether it is done, reset, the player leaves the save, or
+
+    the plugin unloads, to undo what <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)" data-throw-if-not-resolved="false"></xref> did. A throw is logged.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OnEnd(Action action)
+    parameters:
+    - id: action
+      type: System.Action
+      description: The code to run.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnEnd(action As Action) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+  id: OnStartExpression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnStartExpression(string)
+  nameWithType: TimbnQuestBuilder.OnStartExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnStartExpression
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 668
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    One of the game's script expressions, run once by the game the moment the quest starts, such as
+
+    <code>AddPerk("perk_x")</code> or <code>$money += 50</code>. Use it for changes that are saved, since the save keeps the
+
+    result. The game also replays a <code>RevealTech("...")</code> here on load. Call it again to add more. A typo fails
+
+    when the quest is added.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OnStartExpression(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The game expression.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnStartExpression(expression As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression*
+  nameWithType.vb: TimbnQuestBuilder.OnStartExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(String)
+  name.vb: OnStartExpression(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression(System.String)
+  id: OnDoneExpression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: OnDoneExpression(string)
+  nameWithType: TimbnQuestBuilder.OnDoneExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnDoneExpression
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 680
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    One of the game's script expressions, run once by the game the moment the quest is completed, such as
+
+    <code>RevealTech("tech_x")</code>. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnQuestBuilder OnDoneExpression(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The game expression.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function OnDoneExpression(expression As String) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression*
+  nameWithType.vb: TimbnQuestBuilder.OnDoneExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression(String)
+  name.vb: OnDoneExpression(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  id: AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddStage(string, string, Action<TimbnQuestStage>)
+  nameWithType: TimbnQuestBuilder.AddStage(string, string, Action<TimbnQuestStage>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddStage
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 718
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds the next stage of the quest, written in the same place. Core makes each stage its own game quest, continuing
+
+    the one before in the same spot in the quest tree, with the game's own start and complete popups, and each starts
+
+    by itself once the stage before is done. When the quest itself has stage parts (a Description, a Talk, a ReadyOn
+
+    and so on), it is the first stage and this one the next. Otherwise the first AddStage is the first stage and keeps
+
+    the quest's id, and the quest's offer, OfferWhen, StartsOn, OfferAfter and Icon belong to it. Every later stage's id is
+
+    the quest id plus the stage name. The quest's DoneDescription describes the end of the last stage.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Quests.Add("my_gold_wine", TimbnGameIds.Npcs.Larry, "Larry's Gold Wine", quest =&gt; quest
+        .Offer(talk =&gt; talk.Say("Could you find me some gold wine?").Accept("Sure."))
+        .AddStage("pay", "Pay Herm for the gold wine.", stage =&gt; stage
+            .TalksWith(TimbnGameIds.Npcs.Herm)
+            .Cost(cost =&gt; cost.Money(200))
+            .Talk(talk =&gt; talk
+                .PlayerSay("Larry wants gold wine.")
+                .Say("That'll be 2 silver.")
+                .Accept("Here's the silver.")
+                .Decline("Not now.")))
+        .AddStage("deliver", "Bring Larry the gold wine.", stage =&gt; stage
+            .Cost(cost =&gt; cost.Item("grape_wine:3"))
+            .Talk(talk =&gt; talk.Accept("Here's your wine.")))
+        .DoneDescription("Larry got his gold wine."));</code></pre>
+  syntax:
+    content: public TimbnQuestBuilder AddStage(string name, string description, Action<TimbnQuestStage> stage)
+    parameters:
+    - id: name
+      type: System.String
+      description: A short name of lowercase letters, digits and underscores. It is part of the stage's id, so keep it stable.
+    - id: description
+      type: System.String
+      description: The quest description during this stage.
+    - id: stage
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage}
+      description: Sets up the stage.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function AddStage(name As String, description As String, stage As Action(Of TimbnQuestStage)) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage*
+  nameWithType.vb: TimbnQuestBuilder.AddStage(String, String, Action(Of TimbnQuestStage))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage))
+  name.vb: AddStage(String, String, Action(Of TimbnQuestStage))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_AddStage_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestStage__
+  name: AddStage(string, string, Action<TimbnQuestStage>)
+  nameWithType: TimbnQuestBuilder.AddStage(string, string, Action<TimbnQuestStage>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage>)
+  nameWithType.vb: TimbnQuestBuilder.AddStage(String, String, Action(Of TimbnQuestStage))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage))
+  name.vb: AddStage(String, String, Action(Of TimbnQuestStage))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+    name: AddStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_AddStage_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestStage__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage
+    name: TimbnQuestStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage(System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage})
+    name: AddStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_AddStage_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestStage__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage
+    name: TimbnQuestStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Icon_System_String_
+  name: Icon
+  nameWithType: TimbnQuestBuilder.Icon
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html
+  name: TimbnQuestBuilder
+  nameWithType: TimbnQuestBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Icon_System_String_
+  name: Icon(string)
+  nameWithType: TimbnQuestBuilder.Icon(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(string)
+  nameWithType.vb: TimbnQuestBuilder.Icon(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(String)
+  name.vb: Icon(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+    name: Icon
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Icon_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+    name: Icon
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Icon_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String}
+  commentId: T:System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TimbnQuestRun, string>
+  nameWithType: Func<TimbnQuestRun, string>
+  fullName: System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, string>
+  nameWithType.vb: Func(Of TimbnQuestRun, String)
+  fullName.vb: System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, String)
+  name.vb: Func(Of TimbnQuestRun, String)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Phase_System_Int32_
+  name: Phase
+  nameWithType: TimbnQuestBuilder.Phase
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Description_System_String_
+  name: Description
+  nameWithType: TimbnQuestBuilder.Description
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_DoneDescription_System_String_
+  name: DoneDescription
+  nameWithType: TimbnQuestBuilder.DoneDescription
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferAfter_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
+  name: OfferAfter
+  nameWithType: TimbnQuestBuilder.OfferAfter
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest.html
+  name: TimbnQuest
+  nameWithType: TimbnQuest
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ContinuesFrom_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
+  name: ContinuesFrom
+  nameWithType: TimbnQuestBuilder.ContinuesFrom
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
+  name: OfferWhen
+  nameWithType: TimbnQuestBuilder.OfferWhen
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
+- uid: System.Func{System.Boolean}
+  commentId: T:System.Func{System.Boolean}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<bool>
+  nameWithType: Func<bool>
+  fullName: System.Func<bool>
+  nameWithType.vb: Func(Of Boolean)
+  fullName.vb: System.Func(Of Boolean)
+  name.vb: Func(Of Boolean)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
+  name: OfferWhen(Func<bool>)
+  nameWithType: TimbnQuestBuilder.OfferWhen(Func<bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func<bool>)
+  nameWithType.vb: TimbnQuestBuilder.OfferWhen(Func(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func(Of Boolean))
+  name.vb: OfferWhen(Func(Of Boolean))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+    name: OfferWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
+    name: OfferWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhenExpression_System_String_
+  name: OfferWhenExpression
+  nameWithType: TimbnQuestBuilder.OfferWhenExpression
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhenExpression
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Offer_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestOffer__
+  name: Offer
+  nameWithType: TimbnQuestBuilder.Offer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnQuestOffer>
+  nameWithType: Action<TimbnQuestOffer>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer>
+  nameWithType.vb: Action(Of TimbnQuestOffer)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer)
+  name.vb: Action(Of TimbnQuestOffer)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer
+    name: TimbnQuestOffer
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer
+    name: TimbnQuestOffer
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_StartsOn_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_
+  name: StartsOn
+  nameWithType: TimbnQuestBuilder.StartsOn
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.StartsOn
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent.html
+  name: TimbnQuestEvent
+  nameWithType: TimbnQuestEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestEvent
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_TalksWith_System_String_
+  name: TalksWith
+  nameWithType: TimbnQuestBuilder.TalksWith
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_TalksWith_System_String_
+  name: TalksWith(string)
+  nameWithType: TimbnQuestBuilder.TalksWith(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(string)
+  nameWithType.vb: TimbnQuestBuilder.TalksWith(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(String)
+  name.vb: TalksWith(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+    name: TalksWith
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_TalksWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.TalksWith(System.String)
+    name: TalksWith
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_TalksWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Giver_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_System_String__
+  name: Giver
+  nameWithType: TimbnQuestBuilder.Giver
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Setup_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_System_Boolean__
+  name: Setup
+  nameWithType: TimbnQuestBuilder.Setup
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup
+- uid: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean}
+  commentId: T:System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TimbnQuestRun, bool>
+  nameWithType: Func<TimbnQuestRun, bool>
+  fullName: System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, bool>
+  nameWithType.vb: Func(Of TimbnQuestRun, Boolean)
+  fullName.vb: System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, Boolean)
+  name.vb: Func(Of TimbnQuestRun, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Setup_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_System_Boolean__
+  name: Setup(Func<TimbnQuestRun, bool>)
+  nameWithType: TimbnQuestBuilder.Setup(Func<TimbnQuestRun, bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, bool>)
+  nameWithType.vb: TimbnQuestBuilder.Setup(Func(Of TimbnQuestRun, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, Boolean))
+  name.vb: Setup(Func(Of TimbnQuestRun, Boolean))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+    name: Setup
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Setup_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Setup(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.Boolean})
+    name: Setup
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Setup_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Repeatable
+  name: Repeatable
+  nameWithType: TimbnQuestBuilder.Repeatable
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Repeatable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ExpiresAfter_System_Int32_
+  name: ExpiresAfter
+  nameWithType: TimbnQuestBuilder.ExpiresAfter
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ExpiresAfter_System_Int32_
+  name: ExpiresAfter(int)
+  nameWithType: TimbnQuestBuilder.ExpiresAfter(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(int)
+  nameWithType.vb: TimbnQuestBuilder.ExpiresAfter(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(Integer)
+  name.vb: ExpiresAfter(Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+    name: ExpiresAfter
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ExpiresAfter_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ExpiresAfter(System.Int32)
+    name: ExpiresAfter
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ExpiresAfter_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnCancel_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestRun__
+  name: OnCancel
+  nameWithType: TimbnQuestBuilder.OnCancel
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnCancel
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnQuestRun>
+  nameWithType: Action<TimbnQuestRun>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>
+  nameWithType.vb: Action(Of TimbnQuestRun)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun)
+  name.vb: Action(Of TimbnQuestRun)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Needs_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNeeds__
+  name: Needs
+  nameWithType: TimbnQuestBuilder.Needs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnNeeds>
+  nameWithType: Action<TimbnNeeds>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds>
+  nameWithType.vb: Action(Of TimbnNeeds)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds)
+  name.vb: Action(Of TimbnNeeds)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<TimbnNeeds, TimbnQuestRun>
+  nameWithType: Action<TimbnNeeds, TimbnQuestRun>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>
+  nameWithType.vb: Action(Of TimbnNeeds, TimbnQuestRun)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun)
+  name.vb: Action(Of TimbnNeeds, TimbnQuestRun)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
+    name: TimbnNeeds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Cost_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__
+  name: Cost
+  nameWithType: TimbnQuestBuilder.Cost
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnCost>
+  nameWithType: Action<TimbnCost>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>
+  nameWithType.vb: Action(Of TimbnCost)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost)
+  name.vb: Action(Of TimbnCost)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<TimbnCost, TimbnQuestRun>
+  nameWithType: Action<TimbnCost, TimbnQuestRun>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>
+  nameWithType.vb: Action(Of TimbnCost, TimbnQuestRun)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun)
+  name.vb: Action(Of TimbnCost, TimbnQuestRun)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Cost_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__
+  name: Cost(Action<TimbnCost>)
+  nameWithType: TimbnQuestBuilder.Cost(Action<TimbnCost>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost>)
+  nameWithType.vb: TimbnQuestBuilder.Cost(Action(Of TimbnCost))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost))
+  name.vb: Cost(Action(Of TimbnCost))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+    name: Cost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Cost_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Cost(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost})
+    name: Cost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Cost_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCost__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost
+    name: TimbnCost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCost.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Reward_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards__
+  name: Reward(Action<TimbnRewards>)
+  nameWithType: TimbnQuestBuilder.Reward(Action<TimbnRewards>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards>)
+  nameWithType.vb: TimbnQuestBuilder.Reward(Action(Of TimbnRewards))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards))
+  name.vb: Reward(Action(Of TimbnRewards))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+    name: Reward
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Reward_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards})
+    name: Reward
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Reward_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  name: TimbnQuestTalk
+  nameWithType: TimbnQuestTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Talk_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestTalk__
+  name: Talk
+  nameWithType: TimbnQuestBuilder.Talk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Talk
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnQuestTalk>
+  nameWithType: Action<TimbnQuestTalk>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>
+  nameWithType.vb: Action(Of TimbnQuestTalk)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk)
+  name.vb: Action(Of TimbnQuestTalk)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+    name: TimbnQuestTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+    name: TimbnQuestTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Reward_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards__
+  name: Reward
+  nameWithType: TimbnQuestBuilder.Reward
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Reward
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnRewards>
+  nameWithType: Action<TimbnRewards>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards>
+  nameWithType.vb: Action(Of TimbnRewards)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards)
+  name.vb: Action(Of TimbnRewards)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: )
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<TimbnRewards, TimbnQuestRun>
+  nameWithType: Action<TimbnRewards, TimbnQuestRun>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun>
+  nameWithType.vb: Action(Of TimbnRewards, TimbnQuestRun)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun)
+  name.vb: Action(Of TimbnRewards, TimbnQuestRun)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+    name: TimbnRewards
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun
+    name: TimbnQuestRun
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ReadyByCode
+  name: ReadyByCode
+  nameWithType: TimbnQuestBuilder.ReadyByCode
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyByCode
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ReadyOn_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestEvent_
+  name: ReadyOn
+  nameWithType: TimbnQuestBuilder.ReadyOn
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ReadyOn
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_DoneLines_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: DoneLines
+  nameWithType: TimbnQuestBuilder.DoneLines
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneLines
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnLines>
+  nameWithType: Action<TimbnLines>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>
+  nameWithType.vb: Action(Of TimbnLines)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines)
+  name.vb: Action(Of TimbnLines)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnDone_System_Action_
+  name: OnDone
+  nameWithType: TimbnQuestBuilder.OnDone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDone
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnEnd_System_Action_
+  name: OnEnd(Action)
+  nameWithType: TimbnQuestBuilder.OnEnd(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+    name: OnEnd
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnEnd_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd(System.Action)
+    name: OnEnd
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnEnd_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStartExpression_System_String_
+  name: OnStartExpression(string)
+  nameWithType: TimbnQuestBuilder.OnStartExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(string)
+  nameWithType.vb: TimbnQuestBuilder.OnStartExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(String)
+  name.vb: OnStartExpression(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+    name: OnStartExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStartExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression(System.String)
+    name: OnStartExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStartExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStart_System_Action_
+  name: OnStart
+  nameWithType: TimbnQuestBuilder.OnStart
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStart_System_Action_
+  name: OnStart(Action)
+  nameWithType: TimbnQuestBuilder.OnStart(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+    name: OnStart
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStart_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStart(System.Action)
+    name: OnStart
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStart_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnEnd_System_Action_
+  name: OnEnd
+  nameWithType: TimbnQuestBuilder.OnEnd
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnEnd
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnStartExpression_System_String_
+  name: OnStartExpression
+  nameWithType: TimbnQuestBuilder.OnStartExpression
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnStartExpression
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OnDoneExpression_System_String_
+  name: OnDoneExpression
+  nameWithType: TimbnQuestBuilder.OnDoneExpression
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OnDoneExpression
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_AddStage_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestStage__
+  name: AddStage
+  nameWithType: TimbnQuestBuilder.AddStage
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.AddStage
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnQuestStage>
+  nameWithType: Action<TimbnQuestStage>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage>
+  nameWithType.vb: Action(Of TimbnQuestStage)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage)
+  name.vb: Action(Of TimbnQuestStage)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage
+    name: TimbnQuestStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage
+    name: TimbnQuestStage
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestStage.html
+  - name: )

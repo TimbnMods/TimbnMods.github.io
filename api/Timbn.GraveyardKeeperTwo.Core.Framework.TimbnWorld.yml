@@ -1,0 +1,1755 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  id: TimbnWorld
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3,System.Single,System.Func{WgoData,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func{WgoData,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph(System.String,Pathfinding.NavGraph@)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf(WgoData)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3,GameSceneData)
+  langs:
+  - csharp
+  - vb
+  name: TimbnWorld
+  nameWithType: TimbnWorld
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnWorld
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Finds things in the loaded world, such as the walkable ground of a scene or the objects near a spot, and reads how
+
+    the world is doing, such as the graveyard, church and town scores, the town's gratitude and the weather. A mod
+
+    that uses the navigation graph needs its own reference to AstarPathfindingProject.dll from the game's Managed
+
+    folder.
+  example: []
+  syntax:
+    content: public static class TimbnWorld
+    content.vb: Public Module TimbnWorld
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+  id: Scenes
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Scenes
+  nameWithType: TimbnWorld.Scenes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Scenes
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 19
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The scenes of the loaded world, each holding its world objects, zones, and the items on its ground. Empty at
+
+    the main menu.
+  example: []
+  syntax:
+    content: public static IReadOnlyList<GameSceneData> Scenes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{GameSceneData}
+    content.vb: Public Shared ReadOnly Property Scenes As IReadOnlyList(Of GameSceneData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func{WgoData,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func{WgoData,System.Boolean})
+  id: Objects(System.Func{WgoData,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Objects(Func<WgoData, bool>?)
+  nameWithType: TimbnWorld.Objects(Func<WgoData, bool>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func<WgoData, bool>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Objects
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 35
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Every world object in the loaded save, in every scene, loaded around the player or not. World objects are
+
+    everything placed in the world, such as chests, stations, graves, NPCs, and zombies. It walks every scene, so
+
+    use <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)" data-throw-if-not-resolved="false"></xref> when the definition id is known.
+  example:
+  - >-
+    <pre><code class="lang-csharp">foreach (var station in TimbnWorld.Objects(wgo =&gt; wgo.CraftComponent != null))
+        station.CraftComponent.ResetCraftsFromBalanceCache();</code></pre>
+  syntax:
+    content: public static IEnumerable<WgoData> Objects(Func<WgoData, bool>? match = null)
+    parameters:
+    - id: match
+      type: System.Func{WgoData,System.Boolean}
+      description: Which objects to keep. Leave it out to keep all of them.
+    return:
+      type: System.Collections.Generic.IEnumerable{WgoData}
+      description: The matching objects, scene by scene. Empty at the main menu.
+    content.vb: Public Shared Function Objects(match As Func(Of WgoData, Boolean) = Nothing) As IEnumerable(Of WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects*
+  nameWithType.vb: TimbnWorld.Objects(Func(Of WgoData, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func(Of WgoData, Boolean))
+  name.vb: Objects(Func(Of WgoData, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+  id: FindAll(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: FindAll(string)
+  nameWithType: TimbnWorld.FindAll(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FindAll
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 58
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Every world object of one definition in the loaded save, such as every sawhorse, in every scene, read from
+
+    the game's own by id cache rather than by walking every scene.
+  example:
+  - <pre><code class="lang-csharp">var hasSawhorse = TimbnWorld.FindAll("sawhorse").Count &gt; 0;</code></pre>
+  syntax:
+    content: public static IReadOnlyList<WgoData> FindAll(string definitionId)
+    parameters:
+    - id: definitionId
+      type: System.String
+      description: The definition's id from the balance, such as sawhorse, or an NPC's id from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.IReadOnlyList{WgoData}
+      description: A copy of the list, so objects can be removed while looping it. Empty when there are none or at the main menu.
+    content.vb: Public Shared Function FindAll(definitionId As String) As IReadOnlyList(Of WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll*
+  nameWithType.vb: TimbnWorld.FindAll(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(String)
+  name.vb: FindAll(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  id: Extensions(WgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Extensions(WgoData)
+  nameWithType: TimbnWorld.Extensions(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Extensions
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 72
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The world objects attached to a station, such as the ones built into its slots or a tool rack built next to it,
+
+    read from the links the game keeps on the station and saves with it.
+  example:
+  - <pre><code class="lang-csharp">var stands = TimbnWorld.Extensions(machine).Where(wgo =&gt; wgo.id == "timbn_infusion_stand").ToList();</code></pre>
+  syntax:
+    content: public static IReadOnlyList<WgoData> Extensions(WgoData station)
+    parameters:
+    - id: station
+      type: WgoData
+      description: The station.
+    return:
+      type: System.Collections.Generic.IReadOnlyList{WgoData}
+      description: A copy of the list. Empty when nothing is attached or at the main menu.
+    content.vb: Public Shared Function Extensions(station As WgoData) As IReadOnlyList(Of WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3,GameSceneData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3,GameSceneData)
+  id: ZonesAt(UnityEngine.Vector3,GameSceneData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: ZonesAt(Vector3, GameSceneData?)
+  nameWithType: TimbnWorld.ZonesAt(Vector3, GameSceneData?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3, GameSceneData?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ZonesAt
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 89
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The zones a spot lies in, smallest first, read from the scene's data so it works for a scene that is not
+
+    loaded around the player. Zones can nest, so a spot in a room is also in the building around it.
+  example:
+  - <pre><code class="lang-csharp">var zone = TimbnWorld.ZonesAt(TimbnPlayer.Position).FirstOrDefault();</code></pre>
+  syntax:
+    content: public static List<WorldZoneData> ZonesAt(Vector3 position, GameSceneData? scene = null)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: The spot to look at.
+    - id: scene
+      type: GameSceneData
+      description: The scene to look in. Leave it out for the scene the player is in.
+    return:
+      type: System.Collections.Generic.List{WorldZoneData}
+      description: The zones containing the spot, smallest first. Empty when it is in none or at the main menu.
+    content.vb: Public Shared Function ZonesAt(position As Vector3, scene As GameSceneData = Nothing) As List(Of WorldZoneData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt*
+  nameWithType.vb: TimbnWorld.ZonesAt(Vector3, GameSceneData)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3, GameSceneData)
+  name.vb: ZonesAt(Vector3, GameSceneData)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph(System.String,Pathfinding.NavGraph@)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph(System.String,Pathfinding.NavGraph@)
+  id: TryGetNavGraph(System.String,Pathfinding.NavGraph@)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: TryGetNavGraph(string?, out NavGraph)
+  nameWithType: TimbnWorld.TryGetNavGraph(string?, out NavGraph)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph(string?, out Pathfinding.NavGraph)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TryGetNavGraph
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 111
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gets the navigation graph of a scene, which holds its walkable ground. The game calculates walking paths
+
+    over it.
+  example: []
+  syntax:
+    content: public static bool TryGetNavGraph(string? sceneId, out NavGraph graph)
+    parameters:
+    - id: sceneId
+      type: System.String
+      description: The scene's id, or null for the scene the player is in.
+    - id: graph
+      type: Pathfinding.NavGraph
+      description: The scene's graph, or null when there is none.
+    return:
+      type: System.Boolean
+      description: True when the scene has a graph.
+    content.vb: Public Shared Function TryGetNavGraph(sceneId As String, graph As NavGraph) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph*
+  nameWithType.vb: TimbnWorld.TryGetNavGraph(String, NavGraph)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph(String, Pathfinding.NavGraph)
+  name.vb: TryGetNavGraph(String, NavGraph)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  id: GraveyardQuality
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: GraveyardQuality
+  nameWithType: TimbnWorld.GraveyardQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GraveyardQuality
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 137
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The graveyard's quality score, the one the save slot and the graveyard's own info show, or 0 at the main menu.
+  example:
+  - <pre><code class="lang-csharp">var visitors = Mathf.RoundToInt(TimbnWorld.GraveyardQuality / 25f);</code></pre>
+  syntax:
+    content: public static float GraveyardQuality { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property GraveyardQuality As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  id: ChurchQuality
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: ChurchQuality
+  nameWithType: TimbnWorld.ChurchQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ChurchQuality
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 149
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The church's quality score, the one the sermon window shows by the cross, or 0 at the main menu. A sermon draws
+
+    no more parishioners than this.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnWorld.ChurchQuality &gt;= 100f)
+        Logger.LogInfo("The church is looking fine.");</code></pre>
+  syntax:
+    content: public static float ChurchQuality { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property ChurchQuality As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+  id: GraveyardBuiltAreas
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: GraveyardBuiltAreas
+  nameWithType: TimbnWorld.GraveyardBuiltAreas
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GraveyardBuiltAreas
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 160
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The graveyard's ground as seen from above, one rectangle of x and z for each graveyard module built, the area
+
+    whose graves count toward <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality" data-throw-if-not-resolved="false"></xref>. It grows as the graveyard does. Empty at the main menu.
+  example:
+  - <pre><code class="lang-csharp">var inGraveyard = TimbnWorld.GraveyardBuiltAreas.Any(area =&gt; area.Contains(new Vector2(spot.x, spot.z)));</code></pre>
+  syntax:
+    content: public static IReadOnlyList<Rect> GraveyardBuiltAreas { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{UnityEngine.Rect}
+    content.vb: Public Shared ReadOnly Property GraveyardBuiltAreas As IReadOnlyList(Of Rect)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+  id: GraveyardBounds
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: GraveyardBounds
+  nameWithType: TimbnWorld.GraveyardBounds
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GraveyardBounds
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 173
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The whole graveyard as seen from above, its paths and grass as well as the ground built on, as one rectangle of
+
+    x and z. It stays the same however much is built. Empty at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var bounds = TimbnWorld.GraveyardBounds;
+
+    var spot = new Vector3(Random.Range(bounds.xMin, bounds.xMax), 0f, Random.Range(bounds.yMin, bounds.yMax));</code></pre>
+  syntax:
+    content: public static Rect GraveyardBounds { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public Shared ReadOnly Property GraveyardBounds As Rect
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  id: TownQuality
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: TownQuality
+  nameWithType: TimbnWorld.TownQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownQuality
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 182
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The town's quality score, the number by the Town label and the most gratitude the town can have, or 0 at the main menu.
+  example:
+  - <pre><code class="lang-csharp">var full = TimbnWorld.TownGratitude &gt;= TimbnWorld.TownQuality;</code></pre>
+  syntax:
+    content: public static int TownQuality { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property TownQuality As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+  id: TownGratitude
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: TownGratitude
+  nameWithType: TimbnWorld.TownGratitude
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TownGratitude
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 194
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The town's gratitude, which selling to town vendors earns, or 0 at the main menu. A sermon draws as
+
+    many parishioners as this or <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality" data-throw-if-not-resolved="false"></xref>, whichever is lower. Gains stop at
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality" data-throw-if-not-resolved="false"></xref>, but it is not lowered when the town's quality drops.
+  example:
+  - <pre><code class="lang-csharp">var visitors = TimbnWorld.TownGratitude / 5;</code></pre>
+  syntax:
+    content: public static int TownGratitude { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property TownGratitude As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+  id: Weather
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Weather
+  nameWithType: TimbnWorld.Weather
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Weather
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 205
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The weather right now, by the game's own name for it, such as CleanWeather, RainDayWeak or RainDayStorm, or empty
+
+    at the main menu.
+  example:
+  - <pre><code class="lang-csharp">var stormy = TimbnWorld.Weather is "RainDayStorm" or "RainDayThunder";</code></pre>
+  syntax:
+    content: public static string Weather { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Weather As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+  id: IsRaining
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: IsRaining
+  nameWithType: TimbnWorld.IsRaining
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsRaining
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 214
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether it is raining, in any of the game's rain weathers from a drizzle to a thunderstorm.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnWorld.IsRaining)
+        Logger.LogInfo("Bring an umbrella.");</code></pre>
+  syntax:
+    content: public static bool IsRaining { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsRaining As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  id: TryFindWalkable(UnityEngine.Vector3,System.Single,UnityEngine.Vector3@)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: TryFindWalkable(Vector3, float, out Vector3)
+  nameWithType: TimbnWorld.TryFindWalkable(Vector3, float, out Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3, float, out UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TryFindWalkable
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 230
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Finds the nearest walkable ground to a spot in the player's scene, measured flat as seen from above, so a
+
+    spot on a roof or under the floor still finds the ground below or above it.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnWorld.TryFindWalkable(TimbnPlayer.Position, 5f, out var ground))
+        TimbnPlayer.TeleportTo(ground);</code></pre>
+  syntax:
+    content: public static bool TryFindWalkable(Vector3 point, float range, out Vector3 ground)
+    parameters:
+    - id: point
+      type: UnityEngine.Vector3
+      description: The spot to search from.
+    - id: range
+      type: System.Single
+      description: How far to look, in world units.
+    - id: ground
+      type: UnityEngine.Vector3
+      description: The nearest walkable point, or <code class="paramref">point</code> when none was found.
+    return:
+      type: System.Boolean
+      description: True when walkable ground was found within <code class="paramref">range</code>.
+    content.vb: Public Shared Function TryFindWalkable(point As Vector3, range As Single, ground As Vector3) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable*
+  nameWithType.vb: TimbnWorld.TryFindWalkable(Vector3, Single, Vector3)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable(UnityEngine.Vector3, Single, UnityEngine.Vector3)
+  name.vb: TryFindWalkable(Vector3, Single, Vector3)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies
+  id: GravesWithBodies
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: GravesWithBodies()
+  nameWithType: TimbnWorld.GravesWithBodies()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GravesWithBodies
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 263
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Every grave in the graveyard with a body buried in it, whether or not it has a stone or a fence. Open graves and
+
+    graves left empty after an exhumation are not counted.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var graves = TimbnWorld.GravesWithBodies().ToList();
+
+    npc.Face(graves[0].Position);</code></pre>
+  syntax:
+    content: public static IEnumerable<WgoData> GravesWithBodies()
+    return:
+      type: System.Collections.Generic.IEnumerable{WgoData}
+      description: The graves. Empty at the main menu or when nobody is buried yet.
+    content.vb: Public Shared Function GravesWithBodies() As IEnumerable(Of WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3,System.Single,System.Func{WgoData,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3,System.Single,System.Func{WgoData,System.Boolean})
+  id: Near(UnityEngine.Vector3,System.Single,System.Func{WgoData,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Near(Vector3, float, Func<WgoData, bool>?)
+  nameWithType: TimbnWorld.Near(Vector3, float, Func<WgoData, bool>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3, float, System.Func<WgoData, bool>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Near
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 279
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lists the world objects in the player's scene within a flat distance of a spot, nearest first. World objects
+
+    are everything placed in the world, such as chests, stations, graves, NPCs, and zombies.
+  example:
+  - <pre><code class="lang-csharp">var chests = TimbnWorld.Near(TimbnPlayer.Position, 5f, wgo =&gt; wgo.Inventory != null);</code></pre>
+  syntax:
+    content: public static List<WgoData> Near(Vector3 position, float radius, Func<WgoData, bool>? match = null)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: The spot to measure from.
+    - id: radius
+      type: System.Single
+      description: How far to look, in world units, measured flat as seen from above.
+    - id: match
+      type: System.Func{WgoData,System.Boolean}
+      description: Which objects to keep. Leave it out to keep all of them.
+    return:
+      type: System.Collections.Generic.List{WgoData}
+      description: The matching objects, nearest first. Empty at the main menu.
+    content.vb: Public Shared Function Near(position As Vector3, radius As Single, match As Func(Of WgoData, Boolean) = Nothing) As List(Of WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near*
+  nameWithType.vb: TimbnWorld.Near(Vector3, Single, Func(Of WgoData, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3, Single, System.Func(Of WgoData, Boolean))
+  name.vb: Near(Vector3, Single, Func(Of WgoData, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf(WgoData)
+  id: ViewOf(WgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: ViewOf(WgoData)
+  nameWithType: TimbnWorld.ViewOf(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf(WgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ViewOf
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 304
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The view of a world object, the GameObject that draws it, or null when its chunk is not loaded around the
+
+    player. The view is what the game's windows and effects work with, such as opening a station's window.
+  example:
+  - >-
+    <pre><code class="lang-csharp">foreach (var zombie in TimbnZombies.All())
+        TimbnWorld.ViewOf(zombie)?.DrawWidgets();</code></pre>
+  syntax:
+    content: public static Wgo? ViewOf(WgoData data)
+    parameters:
+    - id: data
+      type: WgoData
+      description: The world object.
+    return:
+      type: Wgo
+      description: Its view, or null when it has none right now.
+    content.vb: Public Shared Function ViewOf(data As WgoData) As Wgo
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
+  id: FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: FlatDistance(Vector3, Vector3)
+  nameWithType: TimbnWorld.FlatDistance(Vector3, Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FlatDistance
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 314
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The distance between two spots as seen from above, ignoring height.
+  example: []
+  syntax:
+    content: public static float FlatDistance(Vector3 first, Vector3 second)
+    parameters:
+    - id: first
+      type: UnityEngine.Vector3
+      description: One spot.
+    - id: second
+      type: UnityEngine.Vector3
+      description: The other spot.
+    return:
+      type: System.Single
+      description: The flat distance in world units.
+    content.vb: Public Shared Function FlatDistance(first As Vector3, second As Vector3) As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Scenes
+  name: Scenes
+  nameWithType: TimbnWorld.Scenes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
+- uid: System.Collections.Generic.IReadOnlyList{GameSceneData}
+  commentId: T:System.Collections.Generic.IReadOnlyList{GameSceneData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<GameSceneData>
+  nameWithType: IReadOnlyList<GameSceneData>
+  fullName: System.Collections.Generic.IReadOnlyList<GameSceneData>
+  nameWithType.vb: IReadOnlyList(Of GameSceneData)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of GameSceneData)
+  name.vb: IReadOnlyList(Of GameSceneData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: GameSceneData
+    name: GameSceneData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GameSceneData
+    name: GameSceneData
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FindAll_System_String_
+  name: FindAll(string)
+  nameWithType: TimbnWorld.FindAll(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(string)
+  nameWithType.vb: TimbnWorld.FindAll(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(String)
+  name.vb: FindAll(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+    name: FindAll
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FindAll_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
+    name: FindAll
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FindAll_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Objects_System_Func_WgoData_System_Boolean__
+  name: Objects
+  nameWithType: TimbnWorld.Objects
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects
+- uid: System.Func{WgoData,System.Boolean}
+  commentId: T:System.Func{WgoData,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<WgoData, bool>
+  nameWithType: Func<WgoData, bool>
+  fullName: System.Func<WgoData, bool>
+  nameWithType.vb: Func(Of WgoData, Boolean)
+  fullName.vb: System.Func(Of WgoData, Boolean)
+  name.vb: Func(Of WgoData, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{WgoData}
+  commentId: T:System.Collections.Generic.IEnumerable{WgoData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<WgoData>
+  nameWithType: IEnumerable<WgoData>
+  fullName: System.Collections.Generic.IEnumerable<WgoData>
+  nameWithType.vb: IEnumerable(Of WgoData)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of WgoData)
+  name.vb: IEnumerable(Of WgoData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FindAll_System_String_
+  name: FindAll
+  nameWithType: TimbnWorld.FindAll
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.IReadOnlyList{WgoData}
+  commentId: T:System.Collections.Generic.IReadOnlyList{WgoData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<WgoData>
+  nameWithType: IReadOnlyList<WgoData>
+  fullName: System.Collections.Generic.IReadOnlyList<WgoData>
+  nameWithType.vb: IReadOnlyList(Of WgoData)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of WgoData)
+  name.vb: IReadOnlyList(Of WgoData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Extensions_WgoData_
+  name: Extensions
+  nameWithType: TimbnWorld.Extensions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions
+- uid: WgoData
+  commentId: T:WgoData
+  isExternal: true
+  name: WgoData
+  nameWithType: WgoData
+  fullName: WgoData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_ZonesAt_UnityEngine_Vector3_GameSceneData_
+  name: ZonesAt
+  nameWithType: TimbnWorld.ZonesAt
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: GameSceneData
+  commentId: T:GameSceneData
+  isExternal: true
+  name: GameSceneData
+  nameWithType: GameSceneData
+  fullName: GameSceneData
+- uid: System.Collections.Generic.List{WorldZoneData}
+  commentId: T:System.Collections.Generic.List{WorldZoneData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<WorldZoneData>
+  nameWithType: List<WorldZoneData>
+  fullName: System.Collections.Generic.List<WorldZoneData>
+  nameWithType.vb: List(Of WorldZoneData)
+  fullName.vb: System.Collections.Generic.List(Of WorldZoneData)
+  name.vb: List(Of WorldZoneData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: WorldZoneData
+    name: WorldZoneData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WorldZoneData
+    name: WorldZoneData
+    isExternal: true
+  - name: )
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TryGetNavGraph_System_String_Pathfinding_NavGraph__
+  name: TryGetNavGraph
+  nameWithType: TimbnWorld.TryGetNavGraph
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryGetNavGraph
+- uid: Pathfinding.NavGraph
+  commentId: T:Pathfinding.NavGraph
+  parent: Pathfinding
+  isExternal: true
+  name: NavGraph
+  nameWithType: NavGraph
+  fullName: Pathfinding.NavGraph
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Pathfinding
+  commentId: N:Pathfinding
+  isExternal: true
+  name: Pathfinding
+  nameWithType: Pathfinding
+  fullName: Pathfinding
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_GraveyardQuality
+  name: GraveyardQuality
+  nameWithType: TimbnWorld.GraveyardQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_ChurchQuality
+  name: ChurchQuality
+  nameWithType: TimbnWorld.ChurchQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_GraveyardQuality
+  name: GraveyardQuality
+  nameWithType: TimbnWorld.GraveyardQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardQuality
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_GraveyardBuiltAreas
+  name: GraveyardBuiltAreas
+  nameWithType: TimbnWorld.GraveyardBuiltAreas
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBuiltAreas
+- uid: System.Collections.Generic.IReadOnlyList{UnityEngine.Rect}
+  commentId: T:System.Collections.Generic.IReadOnlyList{UnityEngine.Rect}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<Rect>
+  nameWithType: IReadOnlyList<Rect>
+  fullName: System.Collections.Generic.IReadOnlyList<UnityEngine.Rect>
+  nameWithType.vb: IReadOnlyList(Of Rect)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of UnityEngine.Rect)
+  name.vb: IReadOnlyList(Of Rect)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_GraveyardBounds
+  name: GraveyardBounds
+  nameWithType: TimbnWorld.GraveyardBounds
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GraveyardBounds
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TownQuality
+  name: TownQuality
+  nameWithType: TimbnWorld.TownQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_ChurchQuality
+  name: ChurchQuality
+  nameWithType: TimbnWorld.ChurchQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ChurchQuality
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TownQuality
+  name: TownQuality
+  nameWithType: TimbnWorld.TownQuality
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TownGratitude
+  name: TownGratitude
+  nameWithType: TimbnWorld.TownGratitude
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Weather
+  name: Weather
+  nameWithType: TimbnWorld.Weather
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Weather
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_IsRaining
+  name: IsRaining
+  nameWithType: TimbnWorld.IsRaining
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_TryFindWalkable_UnityEngine_Vector3_System_Single_UnityEngine_Vector3__
+  name: TryFindWalkable
+  nameWithType: TimbnWorld.TryFindWalkable
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TryFindWalkable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_GravesWithBodies
+  name: GravesWithBodies
+  nameWithType: TimbnWorld.GravesWithBodies
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.GravesWithBodies
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Near_UnityEngine_Vector3_System_Single_System_Func_WgoData_System_Boolean__
+  name: Near
+  nameWithType: TimbnWorld.Near
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near
+- uid: System.Collections.Generic.List{WgoData}
+  commentId: T:System.Collections.Generic.List{WgoData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<WgoData>
+  nameWithType: List<WgoData>
+  fullName: System.Collections.Generic.List<WgoData>
+  nameWithType.vb: List(Of WgoData)
+  fullName.vb: System.Collections.Generic.List(Of WgoData)
+  name.vb: List(Of WgoData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_ViewOf_WgoData_
+  name: ViewOf
+  nameWithType: TimbnWorld.ViewOf
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf
+- uid: Wgo
+  commentId: T:Wgo
+  isExternal: true
+  name: Wgo
+  nameWithType: Wgo
+  fullName: Wgo
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FlatDistance_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: FlatDistance
+  nameWithType: TimbnWorld.FlatDistance
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance

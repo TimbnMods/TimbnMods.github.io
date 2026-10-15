@@ -1,0 +1,701 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  id: TimbnRewards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource(System.String,System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource(System.String,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: TimbnRewards
+  nameWithType: TimbnRewards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnRewards
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What the player gets for an answer or a quest step. An answer, a step's Accept answer included, shows its rewards
+
+    and the game pays them when it is picked. Any other step pays them when it is done, and a quest's money and
+
+    reputation also show on its reward line in the quest window.
+  example:
+  - <pre><code class="lang-csharp">.Reward(reward =&gt; reward.Money(300).Item("grape_wine:2").Reputation(10))</code></pre>
+  syntax:
+    content: public sealed class TimbnRewards
+    content.vb: Public NotInheritable Class TimbnRewards
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money(System.Int32)
+  id: Money(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: Money(int)
+  nameWithType: TimbnRewards.Money(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Money
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 35
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Money in the game's raw units, where 100 is one silver coin and 10,000 one gold coin.
+  example: []
+  syntax:
+    content: public TimbnRewards Money(int amount)
+    parameters:
+    - id: amount
+      type: System.Int32
+      description: How much.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function Money(amount As Integer) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money*
+  nameWithType.vb: TimbnRewards.Money(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money(Integer)
+  name.vb: Money(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+  id: Item(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: Item(string, int)
+  nameWithType: TimbnRewards.Item(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Item
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 45
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: An item. Rewards that don't fit in the player's inventory drop on the ground by the player.
+  example: []
+  syntax:
+    content: public TimbnRewards Item(string itemId, int count = 1)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item id, with its quality suffix where it has one, such as grape_wine:2.
+    - id: count
+      type: System.Int32
+      description: How many.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function Item(itemId As String, count As Integer = 1) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item*
+  nameWithType.vb: TimbnRewards.Item(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(String, Integer)
+  name.vb: Item(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource(System.String,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource(System.String,System.Single)
+  id: Resource(System.String,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: Resource(string, float)
+  nameWithType: TimbnRewards.Resource(string, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Resource
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 55
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Any other resource the player keeps.
+  example: []
+  syntax:
+    content: public TimbnRewards Resource(string resourceId, float amount)
+    parameters:
+    - id: resourceId
+      type: System.String
+      description: The resource id.
+    - id: amount
+      type: System.Single
+      description: How much.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function Resource(resourceId As String, amount As Single) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource*
+  nameWithType.vb: TimbnRewards.Resource(String, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource(String, Single)
+  name.vb: Resource(String, Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation(System.Int32)
+  id: Reputation(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: Reputation(int)
+  nameWithType: TimbnRewards.Reputation(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Reputation
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 67
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reputation with the NPC the player is talking to, which is the NPC of a quest step's Talk, or the quest giver
+
+    for a step with no Talk.
+  example: []
+  syntax:
+    content: public TimbnRewards Reputation(int amount)
+    parameters:
+    - id: amount
+      type: System.Int32
+      description: How much.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function Reputation(amount As Integer) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation*
+  nameWithType.vb: TimbnRewards.Reputation(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation(Integer)
+  name.vb: Reputation(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+  id: ShowItem(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: ShowItem(string, int)
+  nameWithType: TimbnRewards.ShowItem(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowItem
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 85
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Shows an item on the answer without giving it, for a reward your own code hands out, such as a Give line after
+
+    the answer. It looks the same as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - '<pre><code class="lang-csharp">ask.Answer("Trade a stick for boards.", then =&gt; then.Give("flitch", 2), cost: cost =&gt; cost.Item("stick"), reward: reward =&gt; reward.ShowItem("flitch", 2))</code></pre>'
+  syntax:
+    content: public TimbnRewards ShowItem(string itemId, int count = 1)
+    parameters:
+    - id: itemId
+      type: System.String
+      description: The item id.
+    - id: count
+      type: System.Int32
+      description: How many to show.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function ShowItem(itemId As String, count As Integer = 1) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem*
+  nameWithType.vb: TimbnRewards.ShowItem(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(String, Integer)
+  name.vb: ShowItem(String, Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource(System.String,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource(System.String,System.Single)
+  id: ShowResource(System.String,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  langs:
+  - csharp
+  - vb
+  name: ShowResource(string, float)
+  nameWithType: TimbnRewards.ShowResource(string, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowResource
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnRewards.cs
+    startLine: 95
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Shows a resource, such as money, on the answer without giving it. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnRewards ShowResource(string resourceId, float amount)
+    parameters:
+    - id: resourceId
+      type: System.String
+      description: The resource id.
+    - id: amount
+      type: System.Single
+      description: How much to show.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+      description: These rewards, for chaining.
+    content.vb: Public Function ShowResource(resourceId As String, amount As Single) As TimbnRewards
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource*
+  nameWithType.vb: TimbnRewards.ShowResource(String, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource(String, Single)
+  name.vb: ShowResource(String, Single)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Money_System_Int32_
+  name: Money
+  nameWithType: TimbnRewards.Money
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Money
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html
+  name: TimbnRewards
+  nameWithType: TimbnRewards
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Item_System_String_System_Int32_
+  name: Item
+  nameWithType: TimbnRewards.Item
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Resource_System_String_System_Single_
+  name: Resource
+  nameWithType: TimbnRewards.Resource
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Resource
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Reputation_System_Int32_
+  name: Reputation
+  nameWithType: TimbnRewards.Reputation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Reputation
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Item_System_String_System_Int32_
+  name: Item(string, int)
+  nameWithType: TimbnRewards.Item(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(string, int)
+  nameWithType.vb: TimbnRewards.Item(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(String, Integer)
+  name.vb: Item(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+    name: Item
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Item_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.Item(System.String,System.Int32)
+    name: Item
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_Item_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_ShowItem_System_String_System_Int32_
+  name: ShowItem
+  nameWithType: TimbnRewards.ShowItem
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_ShowItem_System_String_System_Int32_
+  name: ShowItem(string, int)
+  nameWithType: TimbnRewards.ShowItem(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(string, int)
+  nameWithType.vb: TimbnRewards.ShowItem(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(String, Integer)
+  name.vb: ShowItem(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+    name: ShowItem
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_ShowItem_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowItem(System.String,System.Int32)
+    name: ShowItem
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_ShowItem_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnRewards_ShowResource_System_String_System_Single_
+  name: ShowResource
+  nameWithType: TimbnRewards.ShowResource
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnRewards.ShowResource

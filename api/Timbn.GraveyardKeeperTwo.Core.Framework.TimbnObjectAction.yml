@@ -1,0 +1,806 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  id: TimbnObjectAction
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor(System.String,UnityEngine.Vector3,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+  langs:
+  - csharp
+  - vb
+  name: TimbnObjectAction
+  nameWithType: TimbnObjectAction
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnObjectAction
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 17
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Something the player can do beside an object in the world that the game gives no interaction for, such as petting
+
+    a cat on a box. Standing by the object shows a hint, and pressing Interaction walks the player straight to a spot beside it,
+
+    where they face one way and play an animation for a while. Add it with the plugin's UI.AddObjectAction.
+  example:
+  - >-
+    <pre><code class="lang-csharp">UI.AddObjectAction(new TimbnObjectAction("common_box_08", new Vector3(-104.36f, 0f, -338.20f), "my_mod_pet")
+
+    {
+        Facing = Direction.Up,
+        Animation = AnimationState.WorkHands,
+        GameMinutes = 10,
+    });</code></pre>
+  syntax:
+    content: public sealed class TimbnObjectAction
+    content.vb: Public NotInheritable Class TimbnObjectAction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor(System.String,UnityEngine.Vector3,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor(System.String,UnityEngine.Vector3,System.String)
+  id: '#ctor(System.String,UnityEngine.Vector3,System.String)'
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: TimbnObjectAction(string, Vector3, string)
+  nameWithType: TimbnObjectAction.TimbnObjectAction(string, Vector3, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.TimbnObjectAction(string, UnityEngine.Vector3, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: .ctor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Describes the action.
+  example: []
+  syntax:
+    content: public TimbnObjectAction(string objectName, Vector3 stand, string hintKey)
+    parameters:
+    - id: objectName
+      type: System.String
+      description: The name the object's GameObject starts with, such as common_box_08. Its parents count too.
+    - id: stand
+      type: UnityEngine.Vector3
+      description: The spot the player stands at to do it. Its y is ignored, since the player keeps the height they have.
+    - id: hintKey
+      type: System.String
+      description: A text key added with Text.Add, shown as the hint, such as "Pet".
+    content.vb: Public Sub New(objectName As String, stand As Vector3, hintKey As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor*
+  nameWithType.vb: TimbnObjectAction.New(String, Vector3, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.New(String, UnityEngine.Vector3, String)
+  name.vb: New(String, Vector3, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+  id: ObjectName
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: ObjectName
+  nameWithType: TimbnObjectAction.ObjectName
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ObjectName
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 31
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The name the object's GameObject starts with.
+  example: []
+  syntax:
+    content: public string ObjectName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ObjectName As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+  id: Stand
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: Stand
+  nameWithType: TimbnObjectAction.Stand
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Stand
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 34
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The spot the player stands at. Its y is ignored.
+  example: []
+  syntax:
+    content: public Vector3 Stand { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Stand As Vector3
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+  id: HintKey
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: HintKey
+  nameWithType: TimbnObjectAction.HintKey
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HintKey
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 37
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The text key of the hint.
+  example: []
+  syntax:
+    content: public string HintKey { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property HintKey As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+  id: Facing
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: Facing
+  nameWithType: TimbnObjectAction.Facing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Facing
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 40
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The way the player faces while they do it. Up by default.
+  example: []
+  syntax:
+    content: public Direction Facing { get; set; }
+    parameters: []
+    return:
+      type: Direction
+    content.vb: Public Property Facing As Direction
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+  id: Animation
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: Animation
+  nameWithType: TimbnObjectAction.Animation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Animation
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 43
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The animation the player plays while they do it. Working with their hands by default.
+  example: []
+  syntax:
+    content: public AnimationState Animation { get; set; }
+    parameters: []
+    return:
+      type: AnimationState
+    content.vb: Public Property Animation As AnimationState
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+  id: GameMinutes
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: GameMinutes
+  nameWithType: TimbnObjectAction.GameMinutes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameMinutes
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 46
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How many game minutes it lasts. 10 by default.
+  example: []
+  syntax:
+    content: public double GameMinutes { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property GameMinutes As Double
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+  id: CanPerform
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: CanPerform
+  nameWithType: TimbnObjectAction.CanPerform
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CanPerform
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 49
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Asked before the hint shows and the walk starts. Return false to hide the action, such as until a quest is done.
+  example: []
+  syntax:
+    content: public Func<bool>? CanPerform { get; set; }
+    parameters: []
+    return:
+      type: System.Func{System.Boolean}
+    content.vb: Public Property CanPerform As Func(Of Boolean)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+  id: OnStarted
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: OnStarted
+  nameWithType: TimbnObjectAction.OnStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 52
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Called when the player reaches the spot and starts the animation.
+  example: []
+  syntax:
+    content: public Action? OnStarted { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnStarted As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished
+  id: OnFinished
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
+  langs:
+  - csharp
+  - vb
+  name: OnFinished
+  nameWithType: TimbnObjectAction.OnFinished
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnFinished
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
+    startLine: 55
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Called when the animation runs its full minutes. It is not called when the game takes the controls back first.
+  example: []
+  syntax:
+    content: public Action? OnFinished { get; set; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public Property OnFinished As Action
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.#ctor
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction__ctor_System_String_UnityEngine_Vector3_System_String_
+  name: TimbnObjectAction
+  nameWithType: TimbnObjectAction.TimbnObjectAction
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.TimbnObjectAction
+  nameWithType.vb: TimbnObjectAction.New
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_ObjectName
+  name: ObjectName
+  nameWithType: TimbnObjectAction.ObjectName
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.ObjectName
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_Stand
+  name: Stand
+  nameWithType: TimbnObjectAction.Stand
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Stand
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_HintKey
+  name: HintKey
+  nameWithType: TimbnObjectAction.HintKey
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.HintKey
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_Facing
+  name: Facing
+  nameWithType: TimbnObjectAction.Facing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Facing
+- uid: Direction
+  commentId: T:Direction
+  isExternal: true
+  name: Direction
+  nameWithType: Direction
+  fullName: Direction
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_Animation
+  name: Animation
+  nameWithType: TimbnObjectAction.Animation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.Animation
+- uid: AnimationState
+  commentId: T:AnimationState
+  isExternal: true
+  name: AnimationState
+  nameWithType: AnimationState
+  fullName: AnimationState
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_GameMinutes
+  name: GameMinutes
+  nameWithType: TimbnObjectAction.GameMinutes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.GameMinutes
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_CanPerform
+  name: CanPerform
+  nameWithType: TimbnObjectAction.CanPerform
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.CanPerform
+- uid: System.Func{System.Boolean}
+  commentId: T:System.Func{System.Boolean}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<bool>
+  nameWithType: Func<bool>
+  fullName: System.Func<bool>
+  nameWithType.vb: Func(Of Boolean)
+  fullName.vb: System.Func(Of Boolean)
+  name.vb: Func(Of Boolean)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_OnStarted
+  name: OnStarted
+  nameWithType: TimbnObjectAction.OnStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnStarted
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnObjectAction_OnFinished
+  name: OnFinished
+  nameWithType: TimbnObjectAction.OnFinished
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction.OnFinished

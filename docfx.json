@@ -1,0 +1,27 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core",
+          "files": [ "Timbn.GraveyardKeeperTwo.Core.csproj" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "api/**.yml", "api/index.md" ] },
+      { "files": [ "articles/**.md", "articles/**/toc.yml", "toc.yml", "index.md" ] }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appName": "Timbn Core",
+      "_appTitle": "Timbn Core",
+      "_enableSearch": true,
+      "pdf": false
+    },
+    "template": [ "default", "modern", "template" ]
+  }
+}

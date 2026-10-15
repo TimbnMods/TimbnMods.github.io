@@ -1,0 +1,1992 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  id: TimbnQuestTalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnQuestTalk
+  nameWithType: TimbnQuestTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnQuestTalk
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 113
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The conversation that finishes a quest or a stage, at the NPC from its TalksWith call or the quest giver. The lines play,
+
+    then the player picks Accept, which takes the stage's cost, gives its reward and completes the stage, or Decline to
+
+    come back later. Accept with no text completes the stage as soon as the lines are done, for something the NPC
+
+    simply hands over. When the NPC has a menu of its own, as Herm and Larry do, the talk joins it as one answer. Its
+
+    text is the talk's first line when that is a PlayerSay, or the quest's name otherwise, and the rest plays once it
+
+    is picked. A talk that is only an Accept answer puts that answer straight into the menu, with its price and reward.
+
+    The NPC shows a speech bubble for the talk only once the stage's needs are met and the player can pay its cost,
+
+    while the answer in an NPC's own menu is there all along, so the player can still ask and decline.
+  example:
+  - >-
+    <pre><code class="lang-csharp">.Talk(talk =&gt; talk
+        .PlayerSay("Larry wants a bottle of quality wine.")
+        .Say("I can get you one, but it will cost you 2 silver.")
+        .Accept("A little steep, but ok.", then =&gt; then.Say("Come back on Pride."))
+        .Decline("I don't have the money right now.")
+        .Resume("Here to pay the 2 silver?"))</code></pre>
+  syntax:
+    content: 'public sealed class TimbnQuestTalk : TimbnTalk<TimbnQuestTalk>'
+    content.vb: Public NotInheritable Class TimbnQuestTalk Inherits TimbnTalk(Of TimbnQuestTalk)
+  inheritance:
+  - System.Object
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  inheritedMembers:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Say(System.String,System.Object[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Line(System.String,System.Object[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.SayAs(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.PlayerSay(System.String,System.Object[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Named(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunCode(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunExpression(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Give(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Take(System.String,System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.WaitRealSeconds(System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Cinematic
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  id: Accept(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Accept(string, Action<TimbnLines>?)
+  nameWithType: TimbnQuestTalk.Accept(string, Action<TimbnLines>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Accept
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 144
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The player's answer that finishes the stage. It shows the stage's cost and reward, is grayed out with the game's
+
+    price until the player can pay, and takes the cost and gives the reward when it is picked.
+  example: []
+  syntax:
+    content: public TimbnQuestTalk Accept(string text, Action<TimbnLines>? then = null)
+    parameters:
+    - id: text
+      type: System.String
+      description: The answer.
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What follows it, such as the NPC's thanks or what to do next.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function Accept(text As String, [then] As Action(Of TimbnLines) = Nothing) As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept*
+  nameWithType.vb: TimbnQuestTalk.Accept(String, Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: Accept(String, Action(Of TimbnLines))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  id: Accept(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Accept(Action<TimbnLines>)
+  nameWithType: TimbnQuestTalk.Accept(Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Accept
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 157
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The Accept answer with its text only in the plugin's lang files, under the quest id plus _talk_accept, such as
+
+    my_craving_talk_accept, or the stage's id in place of the quest id. Its lines follow from then.
+  example:
+  - <pre><code class="lang-csharp">.Accept(then =&gt; then.Line("thanks"))</code></pre>
+  syntax:
+    content: public TimbnQuestTalk Accept(Action<TimbnLines> then)
+    parameters:
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What follows it, such as the NPC's thanks or what to do next.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function Accept([then] As Action(Of TimbnLines)) As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept*
+  nameWithType.vb: TimbnQuestTalk.Accept(Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: Accept(Action(Of TimbnLines))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept
+  id: Accept
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Accept()
+  nameWithType: TimbnQuestTalk.Accept()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Accept
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 165
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Completes the stage as soon as the lines before it are done, with no answer to pick, giving the stage's reward,
+
+    such as when the NPC simply hands something over. A stage with a cost needs the player to pick an Accept answer
+
+    instead, and there is nothing to Decline or Resume.
+  example: []
+  syntax:
+    content: public TimbnQuestTalk Accept()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function Accept() As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  id: Decline(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Decline(string, Action<TimbnLines>?)
+  nameWithType: TimbnQuestTalk.Decline(string, Action<TimbnLines>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Decline
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 195
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The player's answer that leaves without finishing, to come back later. Without it, Core adds the game's leave
+
+    answer when the stage has a cost or a reward, and an NPC with a menu of its own already has one.
+  example: []
+  syntax:
+    content: public TimbnQuestTalk Decline(string text, Action<TimbnLines>? then = null)
+    parameters:
+    - id: text
+      type: System.String
+      description: The answer.
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What the NPC says after it. Leave it out to say nothing.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function Decline(text As String, [then] As Action(Of TimbnLines) = Nothing) As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline*
+  nameWithType.vb: TimbnQuestTalk.Decline(String, Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: Decline(String, Action(Of TimbnLines))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  id: Decline(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Decline(Action<TimbnLines>?)
+  nameWithType: TimbnQuestTalk.Decline(Action<TimbnLines>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Decline
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 200
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The Decline answer with its text only in the plugin's lang files, under the quest id plus _talk_decline.
+  example: []
+  syntax:
+    content: public TimbnQuestTalk Decline(Action<TimbnLines>? then = null)
+    parameters:
+    - id: then
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+      description: What the NPC says after it. Leave it out to say nothing.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function Decline([then] As Action(Of TimbnLines) = Nothing) As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline*
+  nameWithType.vb: TimbnQuestTalk.Decline(Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: Decline(Action(Of TimbnLines))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume(System.String)
+  id: Resume(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  langs:
+  - csharp
+  - vb
+  name: Resume(string)
+  nameWithType: TimbnQuestTalk.Resume(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Resume
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestTalk.cs
+    startLine: 219
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What the NPC says in place of the lines before the answers when the player comes back after hearing them once,
+
+    such as after declining. The talk's opening PlayerSay still plays first.
+  example: []
+  syntax:
+    content: public TimbnQuestTalk Resume(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The NPC's line.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+      description: This conversation, for chaining.
+    content.vb: Public Function [Resume](text As String) As TimbnQuestTalk
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume*
+  nameWithType.vb: TimbnQuestTalk.Resume(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume(String)
+  name.vb: Resume(String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  name: TimbnTalk<TimbnQuestTalk>
+  nameWithType: TimbnTalk<TimbnQuestTalk>
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk)
+  name.vb: TimbnTalk(Of TimbnQuestTalk)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+    name: TimbnTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+    name: TimbnQuestTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  - name: '>'
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+    name: TimbnTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+    name: TimbnQuestTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Say(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Say(System.String,System.Object[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Say(System.String,System.Object[])
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  name: Say(string, params object[])
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Say(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Say(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Say(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Say(String, ParamArray Object())
+  name.vb: Say(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Say(System.String,System.Object[])
+    name: Say
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Say(System.String,System.Object[])
+    name: Say
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Line(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Line(System.String,System.Object[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Line(System.String,System.Object[])
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  name: Line(string, params object[])
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Line(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Line(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Line(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Line(String, ParamArray Object())
+  name.vb: Line(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Line(System.String,System.Object[])
+    name: Line
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Line(System.String,System.Object[])
+    name: Line
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.SayAs(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.SayAs(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.SayAs(System.String,System.String)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  name: SayAs(string, string)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.SayAs(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.SayAs(string, string)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).SayAs(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).SayAs(String, String)
+  name.vb: SayAs(String, String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.SayAs(System.String,System.String)
+    name: SayAs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.SayAs(System.String,System.String)
+    name: SayAs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.PlayerSay(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.PlayerSay(System.String,System.Object[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.PlayerSay(System.String,System.Object[])
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  name: PlayerSay(string, params object[])
+  nameWithType: TimbnTalk<TimbnQuestTalk>.PlayerSay(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.PlayerSay(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).PlayerSay(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).PlayerSay(String, ParamArray Object())
+  name.vb: PlayerSay(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.PlayerSay(System.String,System.Object[])
+    name: PlayerSay
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.PlayerSay(System.String,System.Object[])
+    name: PlayerSay
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Named(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Named(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  name: Named(string)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Named(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Named(string)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Named(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunCode(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunCode(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunCode(System.Action)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  name: RunCode(Action)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.RunCode(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.RunCode(System.Action)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).RunCode(Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).RunCode(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunCode(System.Action)
+    name: RunCode
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunCode(System.Action)
+    name: RunCode
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunExpression(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunExpression(System.String)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  name: RunExpression(string)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.RunExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.RunExpression(string)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).RunExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).RunExpression(String)
+  name.vb: RunExpression(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunExpression(System.String)
+    name: RunExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.RunExpression(System.String)
+    name: RunExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: When(string, Action<TimbnLines>, Action<TimbnLines>)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.When(string, Action<TimbnLines>, Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.When(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).When(String, Action(Of TimbnLines), Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).When(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: When(String, Action(Of TimbnLines), Action(Of TimbnLines))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Give(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Give(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Give(System.String,System.Int32)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  name: Give(string, int)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Give(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Give(string, int)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Give(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Give(String, Integer)
+  name.vb: Give(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Give(System.String,System.Int32)
+    name: Give
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Give(System.String,System.Int32)
+    name: Give
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Take(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Take(System.String,System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Take(System.String,System.Int32)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  name: Take(string, int)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Take(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Take(string, int)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Take(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Take(String, Integer)
+  name.vb: Take(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Take(System.String,System.Int32)
+    name: Take
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Take(System.String,System.Int32)
+    name: Take
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.WaitRealSeconds(System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.WaitRealSeconds(System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.WaitRealSeconds(System.Single)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  name: WaitRealSeconds(float)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.WaitRealSeconds(float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.WaitRealSeconds(float)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).WaitRealSeconds(Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).WaitRealSeconds(Single)
+  name.vb: WaitRealSeconds(Single)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.WaitRealSeconds(System.Single)
+    name: WaitRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.WaitRealSeconds(System.Single)
+    name: WaitRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Cinematic
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Cinematic
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Cinematic
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  name: Cinematic()
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Cinematic()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Cinematic()
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Cinematic()
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Cinematic()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Cinematic
+    name: Cinematic
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Cinematic
+    name: Cinematic
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: When(Func<bool>, Action<TimbnLines>, Action<TimbnLines>)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.When(Func<bool>, Action<TimbnLines>, Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.When(System.Func<bool>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).When(Func(Of Boolean), Action(Of TimbnLines), Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).When(System.Func(Of Boolean), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: When(Func(Of Boolean), Action(Of TimbnLines), Action(Of TimbnLines))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  name: Ask(Action<TimbnAsk>)
+  nameWithType: TimbnTalk<TimbnQuestTalk>.Ask(Action<TimbnAsk>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk>.Ask(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk>)
+  nameWithType.vb: TimbnTalk(Of TimbnQuestTalk).Ask(Action(Of TimbnAsk))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk).Ask(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk))
+  name.vb: Ask(Action(Of TimbnAsk))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+    name: Ask
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+    name: TimbnAsk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk}.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+    name: Ask
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+    name: TimbnAsk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  name: TimbnTalk<TSelf>
+  nameWithType: TimbnTalk<TSelf>
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>
+  nameWithType.vb: TimbnTalk(Of TSelf)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf)
+  name.vb: TimbnTalk(Of TSelf)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+    name: TimbnTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1
+    name: TimbnTalk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Say(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Say(System.String,System.Object[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  name: Say(string, params object[])
+  nameWithType: TimbnTalk<TSelf>.Say(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Say(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TSelf).Say(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Say(String, ParamArray Object())
+  name.vb: Say(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Say(System.String,System.Object[])
+    name: Say
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Say(System.String,System.Object[])
+    name: Say
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Say_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Line(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Line(System.String,System.Object[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  name: Line(string, params object[])
+  nameWithType: TimbnTalk<TSelf>.Line(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Line(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TSelf).Line(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Line(String, ParamArray Object())
+  name.vb: Line(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Line(System.String,System.Object[])
+    name: Line
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Line(System.String,System.Object[])
+    name: Line
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Line_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.SayAs(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.SayAs(System.String,System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  name: SayAs(string, string)
+  nameWithType: TimbnTalk<TSelf>.SayAs(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.SayAs(string, string)
+  nameWithType.vb: TimbnTalk(Of TSelf).SayAs(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).SayAs(String, String)
+  name.vb: SayAs(String, String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.SayAs(System.String,System.String)
+    name: SayAs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.SayAs(System.String,System.String)
+    name: SayAs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_SayAs_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.PlayerSay(System.String,System.Object[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.PlayerSay(System.String,System.Object[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  name: PlayerSay(string, params object[])
+  nameWithType: TimbnTalk<TSelf>.PlayerSay(string, params object[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.PlayerSay(string, params object[])
+  nameWithType.vb: TimbnTalk(Of TSelf).PlayerSay(String, ParamArray Object())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).PlayerSay(String, ParamArray Object())
+  name.vb: PlayerSay(String, ParamArray Object())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.PlayerSay(System.String,System.Object[])
+    name: PlayerSay
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.PlayerSay(System.String,System.Object[])
+    name: PlayerSay
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_PlayerSay_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  name: Named(string)
+  nameWithType: TimbnTalk<TSelf>.Named(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Named(string)
+  nameWithType.vb: TimbnTalk(Of TSelf).Named(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Named(System.String)
+    name: Named
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunCode(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunCode(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  name: RunCode(Action)
+  nameWithType: TimbnTalk<TSelf>.RunCode(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.RunCode(System.Action)
+  nameWithType.vb: TimbnTalk(Of TSelf).RunCode(Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).RunCode(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunCode(System.Action)
+    name: RunCode
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunCode(System.Action)
+    name: RunCode
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunCode_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunExpression(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunExpression(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  name: RunExpression(string)
+  nameWithType: TimbnTalk<TSelf>.RunExpression(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.RunExpression(string)
+  nameWithType.vb: TimbnTalk(Of TSelf).RunExpression(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).RunExpression(String)
+  name.vb: RunExpression(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunExpression(System.String)
+    name: RunExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.RunExpression(System.String)
+    name: RunExpression
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_RunExpression_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: When(string, Action<TimbnLines>, Action<TimbnLines>)
+  nameWithType: TimbnTalk<TSelf>.When(string, Action<TimbnLines>, Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.When(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  nameWithType.vb: TimbnTalk(Of TSelf).When(String, Action(Of TimbnLines), Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).When(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: When(String, Action(Of TimbnLines), Action(Of TimbnLines))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Give(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Give(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  name: Give(string, int)
+  nameWithType: TimbnTalk<TSelf>.Give(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Give(string, int)
+  nameWithType.vb: TimbnTalk(Of TSelf).Give(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Give(String, Integer)
+  name.vb: Give(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Give(System.String,System.Int32)
+    name: Give
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Give(System.String,System.Int32)
+    name: Give
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Give_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Take(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Take(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  name: Take(string, int)
+  nameWithType: TimbnTalk<TSelf>.Take(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Take(string, int)
+  nameWithType.vb: TimbnTalk(Of TSelf).Take(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Take(String, Integer)
+  name.vb: Take(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Take(System.String,System.Int32)
+    name: Take
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Take(System.String,System.Int32)
+    name: Take
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Take_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.WaitRealSeconds(System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.WaitRealSeconds(System.Single)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  name: WaitRealSeconds(float)
+  nameWithType: TimbnTalk<TSelf>.WaitRealSeconds(float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.WaitRealSeconds(float)
+  nameWithType.vb: TimbnTalk(Of TSelf).WaitRealSeconds(Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).WaitRealSeconds(Single)
+  name.vb: WaitRealSeconds(Single)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.WaitRealSeconds(System.Single)
+    name: WaitRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.WaitRealSeconds(System.Single)
+    name: WaitRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_WaitRealSeconds_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Cinematic
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Cinematic
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  name: Cinematic()
+  nameWithType: TimbnTalk<TSelf>.Cinematic()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Cinematic()
+  nameWithType.vb: TimbnTalk(Of TSelf).Cinematic()
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Cinematic()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Cinematic
+    name: Cinematic
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Cinematic
+    name: Cinematic
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Cinematic
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: When(Func<bool>, Action<TimbnLines>, Action<TimbnLines>)
+  nameWithType: TimbnTalk<TSelf>.When(Func<bool>, Action<TimbnLines>, Action<TimbnLines>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.When(System.Func<bool>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>)
+  nameWithType.vb: TimbnTalk(Of TSelf).When(Func(Of Boolean), Action(Of TimbnLines), Action(Of TimbnLines))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).When(System.Func(Of Boolean), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines), System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines))
+  name.vb: When(Func(Of Boolean), Action(Of TimbnLines), Action(Of TimbnLines))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.When(System.Func{System.Boolean},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines},System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines})
+    name: When
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_When_System_Func_System_Boolean__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  name: Ask(Action<TimbnAsk>)
+  nameWithType: TimbnTalk<TSelf>.Ask(Action<TimbnAsk>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk<TSelf>.Ask(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk>)
+  nameWithType.vb: TimbnTalk(Of TSelf).Ask(Action(Of TimbnAsk))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk(Of TSelf).Ask(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk))
+  name.vb: Ask(Action(Of TimbnAsk))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+    name: Ask
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+    name: TimbnAsk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk`1.Ask(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk})
+    name: Ask
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnTalk-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnTalk_1_Ask_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnAsk__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk
+    name: TimbnAsk
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnAsk.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestTalk_Accept_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: Accept
+  nameWithType: TimbnQuestTalk.Accept
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Accept
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnLines>
+  nameWithType: Action<TimbnLines>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines>
+  nameWithType.vb: Action(Of TimbnLines)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines)
+  name.vb: Action(Of TimbnLines)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines
+    name: TimbnLines
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLines.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html
+  name: TimbnQuestTalk
+  nameWithType: TimbnQuestTalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestTalk_Decline_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLines__
+  name: Decline
+  nameWithType: TimbnQuestTalk.Decline
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Decline
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestTalk_Resume_System_String_
+  name: Resume
+  nameWithType: TimbnQuestTalk.Resume
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestTalk.Resume

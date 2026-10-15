@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  id: TimbnGuiWindow
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+  langs:
+  - csharp
+  - vb
+  name: TimbnGuiWindow
+  nameWithType: TimbnGuiWindow
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnGuiWindow
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+    startLine: 13
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    An IMGUI box for a plugin's debug or cheat menu, opened and closed with a key from the plugin's config. Core
+
+    draws the box, a title line that names the key to close it, and a "load a save" note while no save is loaded,
+
+    so the plugin only draws what goes inside. Get one from the plugin's UI.DebugWindow.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var menu = UI.CreateDebugWindow("Timbn Cheats", DrawCheats, PluginConfig.ToggleMenu);
+
+    menu.Area = new Rect(20, 20, 420, 640);</code></pre>
+  syntax:
+    content: public sealed class TimbnGuiWindow
+    content.vb: Public NotInheritable Class TimbnGuiWindow
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+  id: IsVisible
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  langs:
+  - csharp
+  - vb
+  name: IsVisible
+  nameWithType: TimbnGuiWindow.IsVisible
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsVisible
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+    startLine: 27
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the window is on screen. The toggle key flips it, and the plugin can set it too.
+  example: []
+  syntax:
+    content: public bool IsVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsVisible As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+  id: Area
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: TimbnGuiWindow.Area
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Area
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+    startLine: 33
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Where the box is drawn and how big it is, in screen pixels. With <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight" data-throw-if-not-resolved="false"></xref> the x is measured
+
+    from the right edge instead of the left.
+  example: []
+  syntax:
+    content: public Rect Area { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Rect
+    content.vb: Public Property Area As Rect
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  id: AnchorRight
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  langs:
+  - csharp
+  - vb
+  name: AnchorRight
+  nameWithType: TimbnGuiWindow.AnchorRight
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AnchorRight
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Measures the box's x from the right edge of the screen, for a window that sits on the right.
+  example: []
+  syntax:
+    content: public bool AnchorRight { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AnchorRight As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly
+  id: InGameOnly
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow
+  langs:
+  - csharp
+  - vb
+  name: InGameOnly
+  nameWithType: TimbnGuiWindow.InGameOnly
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: InGameOnly
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
+    startLine: 42
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the contents need a loaded save. While on, the box shows only its title and a note asking the player
+
+    to load a save until one is loaded. Turn it off for a window that also works on the main menu.
+  example: []
+  syntax:
+    content: public bool InGameOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property InGameOnly As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGuiWindow_IsVisible
+  name: IsVisible
+  nameWithType: TimbnGuiWindow.IsVisible
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.IsVisible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGuiWindow_AnchorRight
+  name: AnchorRight
+  nameWithType: TimbnGuiWindow.AnchorRight
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGuiWindow_Area
+  name: Area
+  nameWithType: TimbnGuiWindow.Area
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.Area
+- uid: UnityEngine.Rect
+  commentId: T:UnityEngine.Rect
+  parent: UnityEngine
+  isExternal: true
+  name: Rect
+  nameWithType: Rect
+  fullName: UnityEngine.Rect
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGuiWindow_AnchorRight
+  name: AnchorRight
+  nameWithType: TimbnGuiWindow.AnchorRight
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.AnchorRight
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGuiWindow_InGameOnly
+  name: InGameOnly
+  nameWithType: TimbnGuiWindow.InGameOnly
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGuiWindow.InGameOnly

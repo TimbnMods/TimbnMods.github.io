@@ -1,0 +1,807 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  id: TimbnClock
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween(System.Single,System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime(System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+  langs:
+  - csharp
+  - vb
+  name: TimbnClock
+  nameWithType: TimbnClock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnClock
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Reads the game's calendar and clock for the loaded save, so a mod can ask what day or time it is without
+
+    digging through EnvironmentEngine and the save, and sets the time of day as a one shot change that needs no
+
+    undo. Every member reads as zero or empty at the main menu. See the plugin's Clock property for holds on the
+
+    clock that are undone, such as freezing it or running it faster.
+  example: []
+  syntax:
+    content: public static class TimbnClock
+    content.vb: Public Module TimbnClock
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  id: Day
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: Day
+  nameWithType: TimbnClock.Day
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Day
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 25
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The day of the save, counting up from 1, the same number NewDayStarted hands its handlers.
+  example: []
+  syntax:
+    content: public static int Day { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Day As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+  id: WeekdayNumber
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: WeekdayNumber
+  nameWithType: TimbnClock.WeekdayNumber
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WeekdayNumber
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 30
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The day's place in the game's six day week, from 1 to 6. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday" data-throw-if-not-resolved="false"></xref> for its name.
+  example: []
+  syntax:
+    content: public static int WeekdayNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property WeekdayNumber As Integer
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  id: Weekday
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: Weekday
+  nameWithType: TimbnClock.Weekday
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Weekday
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 39
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Today's name in the game's six day week, such as Gluttony, or null at the main menu.
+  example:
+  - >-
+    <pre><code class="lang-csharp">if (TimbnClock.Weekday == TimbnWeekday.Pride)
+        Logger.LogInfo("Town orders can be accepted today.");</code></pre>
+  syntax:
+    content: public static TimbnWeekday? Weekday { get; }
+    parameters: []
+    return:
+      type: System.Nullable{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+    content.vb: Public Shared ReadOnly Property Weekday As TimbnWeekday?
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+  id: TimeOfDay
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: TimeOfDay
+  nameWithType: TimbnClock.TimeOfDay
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimeOfDay
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 60
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The time of day, running from 0 at midnight through 0.25 at dawn, 0.5 at noon and 0.75 at dusk, back to 1
+
+    at the next midnight.
+  example: []
+  syntax:
+    content: public static float TimeOfDay { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property TimeOfDay As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+  id: Minutes
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: Minutes
+  nameWithType: TimbnClock.Minutes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Minutes
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 74
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game clock in minutes since the save began, counting whole days and the part of today. Use it for waits
+
+    that follow game time, so they stop while the game is paused and speed up with it, and are never real seconds.
+  example:
+  - >-
+    <pre><code class="lang-csharp">_leaveAt = TimbnClock.Minutes + 30;
+
+    // later
+
+    if (TimbnClock.Minutes &gt;= _leaveAt)
+        herm.WalkTo("npc_sim_village_right_side_road_34");</code></pre>
+  syntax:
+    content: public static double Minutes { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Shared ReadOnly Property Minutes As Double
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+  id: TimeText
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: TimeText
+  nameWithType: TimbnClock.TimeText
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimeText
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 77
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The time of day as a 24 hour clock, such as 06:30.
+  example: []
+  syntax:
+    content: public static string TimeText { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property TimeText As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+  id: IsPaused
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: IsPaused
+  nameWithType: TimbnClock.IsPaused
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsPaused
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 87
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the game's clock is stopped, as it is during some cutscenes or while a plugin holds Clock.Freeze.
+  example: []
+  syntax:
+    content: public static bool IsPaused { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsPaused As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween(System.Single,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween(System.Single,System.Single)
+  id: DayFractionBetween(System.Single,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: DayFractionBetween(float, float)
+  nameWithType: TimbnClock.DayFractionBetween(float, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween(float, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DayFractionBetween
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 97
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How far the clock moved from <code class="paramref">from</code> to <code class="paramref">to</code>, as a fraction of a day. It
+
+    counts across midnight, so 0.9 to 0.1 is 0.2. Useful with TimeOfDayChanged to work out how much game time
+
+    passed since the last tick.
+  example: []
+  syntax:
+    content: public static float DayFractionBetween(float from, float to)
+    parameters:
+    - id: from
+      type: System.Single
+      description: The earlier time of day.
+    - id: to
+      type: System.Single
+      description: The later time of day.
+    return:
+      type: System.Single
+      description: The part of a day between the two, from 0 up to but not including 1.
+    content.vb: Public Shared Function DayFractionBetween(from As Single, [to] As Single) As Single
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween*
+  nameWithType.vb: TimbnClock.DayFractionBetween(Single, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween(Single, Single)
+  name.vb: DayFractionBetween(Single, Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime(System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime(System.Single)
+  id: SetTime(System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock
+  langs:
+  - csharp
+  - vb
+  name: SetTime(float)
+  nameWithType: TimbnClock.SetTime(float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime(float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SetTime
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Clock/TimbnClock.cs
+    startLine: 111
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Sets the time of day, the way the game does when a cutscene jumps the clock. The lighting and everything
+
+    that follows the clock update at once. The day does not change, so setting a time earlier than now turns the
+
+    clock back within the same day.
+  example:
+  - <pre><code class="lang-csharp">TimbnClock.SetTime(0.25f);</code></pre>
+  syntax:
+    content: public static bool SetTime(float timeOfDay)
+    parameters:
+    - id: timeOfDay
+      type: System.Single
+      description: The new time, from 0 at midnight to 1 at the next midnight. Values outside wrap around.
+    return:
+      type: System.Boolean
+      description: False at the main menu, when there is no clock to set.
+    content.vb: Public Shared Function SetTime(timeOfDay As Single) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime*
+  nameWithType.vb: TimbnClock.SetTime(Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime(Single)
+  name.vb: SetTime(Single)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_Day
+  name: Day
+  nameWithType: TimbnClock.Day
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Day
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_Weekday
+  name: Weekday
+  nameWithType: TimbnClock.Weekday
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_WeekdayNumber
+  name: WeekdayNumber
+  nameWithType: TimbnClock.WeekdayNumber
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.WeekdayNumber
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_Weekday
+  name: Weekday
+  nameWithType: TimbnClock.Weekday
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Weekday
+- uid: System.Nullable{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+  commentId: T:System.Nullable{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+  parent: System
+  definition: System.Nullable`1
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  name: TimbnWeekday?
+  nameWithType: TimbnWeekday?
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday?
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+    name: TimbnWeekday
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  - name: '?'
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+    name: TimbnWeekday
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_TimeOfDay
+  name: TimeOfDay
+  nameWithType: TimbnClock.TimeOfDay
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeOfDay
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_Minutes
+  name: Minutes
+  nameWithType: TimbnClock.Minutes
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.Minutes
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_TimeText
+  name: TimeText
+  nameWithType: TimbnClock.TimeText
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.TimeText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_IsPaused
+  name: IsPaused
+  nameWithType: TimbnClock.IsPaused
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.IsPaused
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_DayFractionBetween_System_Single_System_Single_
+  name: DayFractionBetween
+  nameWithType: TimbnClock.DayFractionBetween
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.DayFractionBetween
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnClock_SetTime_System_Single_
+  name: SetTime
+  nameWithType: TimbnClock.SetTime
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnClock.SetTime

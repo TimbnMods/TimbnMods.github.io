@@ -1,0 +1,480 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1
+  id: TimbnGlobalData`1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  langs:
+  - csharp
+  - vb
+  name: TimbnGlobalData<T>
+  nameWithType: TimbnGlobalData<T>
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnGlobalData
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+    startLine: 74
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Holds a plugin's own data that belongs to no save. Core fills <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData%601.Current" data-throw-if-not-resolved="false"></xref> when the plugin
+
+    starts and writes it to disk when the game saves, when the player returns to the main menu, when the game quits,
+
+    when the plugin unloads, and whenever <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData%601.Save" data-throw-if-not-resolved="false"></xref> is called. Get one from Saves.RegisterGlobal.
+  example: []
+  syntax:
+    content: 'public sealed class TimbnGlobalData<T> : TimbnData<T> where T : class, new()'
+    typeParameters:
+    - id: T
+      description: The plugin's global data type.
+    content.vb: Public NotInheritable Class TimbnGlobalData(Of T As {Class, New}) Inherits TimbnData(Of T)
+  inheritance:
+  - System.Object
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{{T}}
+  inheritedMembers:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{{T}}.Current
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: TimbnGlobalData(Of T)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T)
+  name.vb: TimbnGlobalData(Of T)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath
+  id: FilePath
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1
+  langs:
+  - csharp
+  - vb
+  name: FilePath
+  nameWithType: TimbnGlobalData<T>.FilePath
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>.FilePath
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FilePath
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The file the data is kept in, in the game's save folder. Every Timbn plugin shares it.
+  example: []
+  syntax:
+    content: public string FilePath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FilePath As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath*
+  nameWithType.vb: TimbnGlobalData(Of T).FilePath
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T).FilePath
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  id: Save
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1
+  langs:
+  - csharp
+  - vb
+  name: Save()
+  nameWithType: TimbnGlobalData<T>.Save()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>.Save()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Save
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Saves/TimbnData.cs
+    startLine: 88
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Writes the data to disk now, unless nothing in the file has changed. Core already writes on the events
+
+    listed on this type, so call this only right after a change that must not be lost to a crash.
+  example: []
+  syntax:
+    content: public void Save()
+    content.vb: Public Sub Save()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save*
+  nameWithType.vb: TimbnGlobalData(Of T).Save()
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T).Save()
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1.Current
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1.Current
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnData_1_Current
+  name: Current
+  nameWithType: TimbnData<T>.Current
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData<T>.Current
+  nameWithType.vb: TimbnData(Of T).Current
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData(Of T).Current
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGlobalData_1_Save
+  name: Save()
+  nameWithType: TimbnGlobalData<T>.Save()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>.Save()
+  nameWithType.vb: TimbnGlobalData(Of T).Save()
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T).Save()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+    name: Save
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGlobalData_1_Save
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+    name: Save
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGlobalData_1_Save
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{{T}}
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{`0}
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  name: TimbnData<T>
+  nameWithType: TimbnData<T>
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData<T>
+  nameWithType.vb: TimbnData(Of T)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData(Of T)
+  name.vb: TimbnData(Of T)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+    name: TimbnData
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+    name: TimbnData
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{{T}}.Current
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{`0}.Current
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData{{T}}
+  definition: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1.Current
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnData_1_Current
+  name: Current
+  nameWithType: TimbnData<T>.Current
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData<T>.Current
+  nameWithType.vb: TimbnData(Of T).Current
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData(Of T).Current
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  name: TimbnData<T>
+  nameWithType: TimbnData<T>
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData<T>
+  nameWithType.vb: TimbnData(Of T)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData(Of T)
+  name.vb: TimbnData(Of T)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+    name: TimbnData
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData`1
+    name: TimbnData
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnData-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.FilePath
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGlobalData_1_FilePath
+  name: FilePath
+  nameWithType: TimbnGlobalData<T>.FilePath
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>.FilePath
+  nameWithType.vb: TimbnGlobalData(Of T).FilePath
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T).FilePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData`1.Save
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData-1.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGlobalData_1_Save
+  name: Save
+  nameWithType: TimbnGlobalData<T>.Save
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData<T>.Save
+  nameWithType.vb: TimbnGlobalData(Of T).Save
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGlobalData(Of T).Save

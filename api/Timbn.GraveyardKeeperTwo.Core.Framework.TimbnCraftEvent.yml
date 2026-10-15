@@ -1,0 +1,459 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+  id: TimbnCraftEvent
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+  langs:
+  - csharp
+  - vb
+  name: TimbnCraftEvent
+  nameWithType: TimbnCraftEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnCraftEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+    startLine: 3
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: What a craft's <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent%7d)" data-throw-if-not-resolved="false"></xref> handlers are told.
+  example: []
+  syntax:
+    content: public sealed class TimbnCraftEvent
+    content.vb: Public NotInheritable Class TimbnCraftEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+  id: Station
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+  langs:
+  - csharp
+  - vb
+  name: Station
+  nameWithType: TimbnCraftEvent.Station
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Station
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The station the craft runs at, for reading its worker, its position or anything else about it.
+  example: []
+  syntax:
+    content: public WgoData Station { get; }
+    parameters: []
+    return:
+      type: WgoData
+    content.vb: Public ReadOnly Property Station As WgoData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+  id: CraftId
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+  langs:
+  - csharp
+  - vb
+  name: CraftId
+  nameWithType: TimbnCraftEvent.CraftId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CraftId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnCraftEvent.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The craft's id, as it was given to Crafts.Add.
+  example: []
+  syntax:
+    content: public string CraftId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property CraftId As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnStarted_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  name: OnStarted(Action<TimbnCraftEvent>)
+  nameWithType: TimbnCraftBuilder.OnStarted(Action<TimbnCraftEvent>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent>)
+  nameWithType.vb: TimbnCraftBuilder.OnStarted(Action(Of TimbnCraftEvent))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent))
+  name.vb: OnStarted(Action(Of TimbnCraftEvent))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+    name: OnStarted
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnStarted_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+    name: OnStarted
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnStarted_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnFinished_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  name: OnFinished(Action<TimbnCraftEvent>)
+  nameWithType: TimbnCraftBuilder.OnFinished(Action<TimbnCraftEvent>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent>)
+  nameWithType.vb: TimbnCraftBuilder.OnFinished(Action(Of TimbnCraftEvent))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent))
+  name.vb: OnFinished(Action(Of TimbnCraftEvent))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+    name: OnFinished
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnFinished_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.OnFinished(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent})
+    name: OnFinished
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_OnFinished_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent
+    name: TimbnCraftEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent_Station
+  name: Station
+  nameWithType: TimbnCraftEvent.Station
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.Station
+- uid: WgoData
+  commentId: T:WgoData
+  isExternal: true
+  name: WgoData
+  nameWithType: WgoData
+  fullName: WgoData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftEvent_CraftId
+  name: CraftId
+  nameWithType: TimbnCraftEvent.CraftId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftEvent.CraftId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

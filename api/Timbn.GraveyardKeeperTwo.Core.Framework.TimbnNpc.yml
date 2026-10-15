@@ -1,0 +1,1664 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  id: TimbnNpc
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(Direction)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.Double@,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say(System.String,System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo(System.String,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk,System.Action,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: TimbnNpc
+  nameWithType: TimbnNpc
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnNpc
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    A person in the loaded save that a plugin moves, from the plugin's Npcs.Find or Npcs.Spawn. Every method does
+
+    nothing and returns false once the person is gone. When the handle is disposed, the plugin unloads or the player
+
+    returns to the main menu, a walk it started is stopped, its claim is let go, and a person Npcs.Spawn added is removed.
+  example: []
+  syntax:
+    content: 'public sealed class TimbnNpc : IDisposable'
+    content.vb: Public NotInheritable Class TimbnNpc Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+  id: Data
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: TimbnNpc.Data
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Data
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 58
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The person's world object.
+  example: []
+  syntax:
+    content: public WgoData Data { get; }
+    parameters: []
+    return:
+      type: WgoData
+    content.vb: Public Property Data As WgoData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+  id: CollidesWithPlayer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: CollidesWithPlayer
+  nameWithType: TimbnNpc.CollidesWithPlayer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CollidesWithPlayer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 71
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether the person blocks the keeper like a wall. Set it to false for a crowd the keeper should be able to walk
+
+    through, such as visitors who stand about the graveyard. It only changes the person's solid parts toward the
+
+    keeper's body, so they are still talked to, hit and walked around by everyone else, and it carries over when the
+
+    person streams out and back in. Leave it alone for someone the keeper has to be able to push against.
+  example:
+  - <pre><code class="lang-csharp">visitor.CollidesWithPlayer = false;</code></pre>
+  syntax:
+    content: public bool CollidesWithPlayer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CollidesWithPlayer As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+  id: Id
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: TimbnNpc.Id
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Id
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The person's definition id, such as npc_larry, the one <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref> lists. Handy for a log line.
+  example: []
+  syntax:
+    content: public string Id { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Id As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+  id: ReputationId
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: ReputationId
+  nameWithType: TimbnNpc.ReputationId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ReputationId
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 85
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The id of the player resource that holds the player's reputation with this NPC, or null for an NPC without one.
+  example: []
+  syntax:
+    content: public string? ReputationId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ReputationId As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+  id: Position
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: TimbnNpc.Position
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Position
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 88
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Where the person stands.
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+  id: IsGone
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: IsGone
+  nameWithType: TimbnNpc.IsGone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsGone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 91
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the person is no longer in the loaded world, after a dispose, a removal or the save closing.
+  example: []
+  syntax:
+    content: public bool IsGone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGone As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+  id: IsWalking
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: IsWalking
+  nameWithType: TimbnNpc.IsWalking
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsWalking
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 94
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the person is on a walk.
+  example: []
+  syntax:
+    content: public bool IsWalking { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWalking As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+  id: IsRunning
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: IsRunning
+  nameWithType: TimbnNpc.IsRunning
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsRunning
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 101
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Whether a run started with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps%2cSystem.Action)" data-throw-if-not-resolved="false"></xref> on this person, by any plugin, is still playing. A run the game
+
+    takes over, by firing one of the person's events or moving them in a story scene, ends without its done callback,
+
+    so a plugin that keeps a list of the people it spawned checks this to notice one the game left standing.
+  example: []
+  syntax:
+    content: public bool IsRunning { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRunning As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+  id: MinutesLeftInBlock
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: MinutesLeftInBlock
+  nameWithType: TimbnNpc.MinutesLeftInBlock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MinutesLeftInBlock
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 108
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How many game minutes are left before the next block of their schedule starts, or 24 hours when the day has
+
+    one block. It is 0 for a person no schedule drives. Use it to leave a long trip alone when the block is about
+
+    to change.
+  example: []
+  syntax:
+    content: public double MinutesLeftInBlock { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property MinutesLeftInBlock As Double
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo(System.String,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk,System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo(System.String,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk,System.Action,System.Action)
+  id: WalkTo(System.String,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk,System.Action,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: WalkTo(string, TimbnWalk, Action?, Action?)
+  nameWithType: TimbnNpc.WalkTo(string, TimbnWalk, Action?, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo(string, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk, System.Action?, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WalkTo
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 144
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Walks the person to a point and turns them the way it faces. A walk along the paths the paths do not reach is
+
+    skipped, or tried again from the day's origin when the person has a schedule.
+  example:
+  - <pre><code class="lang-csharp">herm.WalkTo("npc_sim_village_right_side_road_34", TimbnWalk.Navmesh, () =&gt; herm.WalkTo("npc_sim_village_right_side_03"));</code></pre>
+  syntax:
+    content: public bool WalkTo(string pointId, TimbnWalk walk = TimbnWalk.Paths, Action? arrived = null, Action? failed = null)
+    parameters:
+    - id: pointId
+      type: System.String
+      description: The id of the point to walk to, such as npc_sim_village_right_side_03.
+    - id: walk
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+      description: Along the game's paths, or over the navmesh.
+    - id: arrived
+      type: System.Action
+      description: Runs once on arrival. It does not run when the walk is stopped or replaced, or cannot reach the point.
+    - id: failed
+      type: System.Action
+      description: Runs once when the walk started but could not reach the point, so a chain of walks can go on or give up. It does not run when the walk is stopped or replaced.
+    return:
+      type: System.Boolean
+      description: False when the point is missing, the paths do not reach it, or the person is gone.
+    content.vb: Public Function WalkTo(pointId As String, walk As TimbnWalk = TimbnWalk.Paths, arrived As Action = Nothing, failed As Action = Nothing) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo*
+  nameWithType.vb: TimbnNpc.WalkTo(String, TimbnWalk, Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo(String, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk, System.Action, System.Action)
+  name.vb: WalkTo(String, TimbnWalk, Action, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking
+  id: StopWalking
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: StopWalking()
+  nameWithType: TimbnNpc.StopWalking()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StopWalking
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 183
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Ends the walk the person is on, whoever started it, and leaves them standing where they are.
+  example: []
+  syntax:
+    content: public void StopWalking()
+    content.vb: Public Sub StopWalking()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(System.String)
+  id: Teleport(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Teleport(string)
+  nameWithType: TimbnNpc.Teleport(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Teleport
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 208
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Puts the person on a point at once, facing the way it faces, and ends any walk.
+  example: []
+  syntax:
+    content: public bool Teleport(string pointId)
+    parameters:
+    - id: pointId
+      type: System.String
+      description: The id of the point, such as npc_sim_village_right_side_03.
+    return:
+      type: System.Boolean
+      description: False when the point is missing or the person is gone.
+    content.vb: Public Function Teleport(pointId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport*
+  nameWithType.vb: TimbnNpc.Teleport(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(String)
+  name.vb: Teleport(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(UnityEngine.Vector3)
+  id: Teleport(UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Teleport(Vector3)
+  nameWithType: TimbnNpc.Teleport(Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Teleport
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 235
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Puts the person on a spot at once, keeping the way they face, and ends any walk. It takes a person through a door
+
+    only the keeper can use, such as from the church's outside landing tp_RT_church_enter to its inside one
+
+    tp_RT_church_exit, which are world objects and not points.
+  example:
+  - <pre><code class="lang-csharp">npc.Teleport(TimbnWorld.FindAll("tp_RT_church_exit")[0].Position);</code></pre>
+  syntax:
+    content: public bool Teleport(Vector3 position)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where to put them, height included.
+    return:
+      type: System.Boolean
+      description: False when the person is gone.
+    content.vb: Public Function Teleport(position As Vector3) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+  id: RollChance(System.Single,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: RollChance(float, string)
+  nameWithType: TimbnNpc.RollChance(float, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(float, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RollChance
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 260
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Rolls the person's dice for this game minute against a chance, such as whether to set off on a trip. The same
+
+    minute rolls the same on a reload, and each person added with Npcs.Spawn rolls apart from the others of their
+
+    kind. A miss is written to the log with the roll, so a skipped trip explains itself.
+  example:
+  - '<pre><code class="lang-csharp">.Decide(npc =&gt; npc.RollChance(0.75f) is { } random ? Trips[random.Next(Trips.Length)] : null)</code></pre>'
+  syntax:
+    content: public Random? RollChance(float chance, string what = "a trip")
+    parameters:
+    - id: chance
+      type: System.Single
+      description: The roll passes when it is this or lower, from 0 to 1.
+    - id: what
+      type: System.String
+      description: What the roll is for, named in the log, such as "a trip".
+    return:
+      type: System.Random
+      description: The dice to keep choosing with, or null on a miss.
+    content.vb: Public Function RollChance(chance As Single, what As String = "a trip") As Random
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance*
+  nameWithType.vb: TimbnNpc.RollChance(Single, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(Single, String)
+  name.vb: RollChance(Single, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.Double@,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.Double@,System.String)
+  id: RollChance(System.Single,System.Double@,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: RollChance(float, out double, string)
+  nameWithType: TimbnNpc.RollChance(float, out double, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(float, out double, string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RollChance
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 267
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The same roll as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single%2cSystem.String)" data-throw-if-not-resolved="false"></xref>, also handing back what was rolled for a log line of your own.
+  example: []
+  syntax:
+    content: public Random? RollChance(float chance, out double rolled, string what = "a trip")
+    parameters:
+    - id: chance
+      type: System.Single
+      description: The roll passes when it is this or lower, from 0 to 1.
+    - id: rolled
+      type: System.Double
+      description: What was rolled.
+    - id: what
+      type: System.String
+      description: What the roll is for, named in the log, such as "a trip".
+    return:
+      type: System.Random
+      description: The dice to keep choosing with, or null on a miss.
+    content.vb: Public Function RollChance(chance As Single, rolled As Double, what As String = "a trip") As Random
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance*
+  nameWithType.vb: TimbnNpc.RollChance(Single, Double, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(Single, Double, String)
+  name.vb: RollChance(Single, Double, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(Direction)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(Direction)
+  id: Face(Direction)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Face(Direction)
+  nameWithType: TimbnNpc.Face(Direction)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(Direction)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Face
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 279
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Turns the person to face a direction.
+  example: []
+  syntax:
+    content: public void Face(Direction direction)
+    parameters:
+    - id: direction
+      type: Direction
+    content.vb: Public Sub Face(direction As Direction)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(UnityEngine.Vector3)
+  id: Face(UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Face(Vector3)
+  nameWithType: TimbnNpc.Face(Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Face
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 298
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Turns the person toward a spot, such as a grave or another person, at whatever angle it lies. Does nothing when
+
+    they already stand on it.
+  example:
+  - <pre><code class="lang-csharp">npc.Face(grave.Position);</code></pre>
+  syntax:
+    content: public void Face(Vector3 point)
+    parameters:
+    - id: point
+      type: UnityEngine.Vector3
+      description: The point to look at. Its height is ignored.
+    content.vb: Public Sub Face(point As Vector3)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say(System.String,System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say(System.String,System.Single)
+  id: Say(System.String,System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Say(string, float)
+  nameWithType: TimbnNpc.Say(string, float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say(string, float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Say
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 320
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Says a line in the game's own speech bubble over the person, the one they talk in, which follows them as they
+
+    walk and fades by itself after a few seconds while they mumble in their voice. It takes no control and the
+
+    player cannot skip it, so it never eats a key press. A new line replaces the one they are saying.
+  example:
+  - <pre><code class="lang-csharp">customer.Npc.Say("my_mod_complaint");</code></pre>
+  syntax:
+    content: public void Say(string text, float seconds = 0)
+    parameters:
+    - id: text
+      type: System.String
+      description: A text key added with Text.Add or a lang file, or the text itself. Square brackets are the game's color markup.
+    - id: seconds
+      type: System.Single
+      description: How long the line stays once written out. Leave it at 0 for the game's time for its length.
+    content.vb: Public Sub Say(text As String, seconds As Single = 0)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say*
+  nameWithType.vb: TimbnNpc.Say(String, Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say(String, Single)
+  name.vb: Say(String, Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent(System.String)
+  id: FireEvent(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: FireEvent(string)
+  nameWithType: TimbnNpc.FireEvent(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FireEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 338
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Fires an event of the person's own game script, such as Herm's go_home. Story events start real story and
+
+    trade, so only fire ones known to move or animate. The game's graphs only act while the person's busy and
+
+    on_spot resources are 0, which a stopped walk or a teleport leaves wrong, so both are set to 0 first.
+  example: []
+  syntax:
+    content: public void FireEvent(string eventName)
+    parameters:
+    - id: eventName
+      type: System.String
+      description: The event, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub FireEvent(eventName As String)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent*
+  nameWithType.vb: TimbnNpc.FireEvent(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent(String)
+  name.vb: FireEvent(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate(System.String)
+  id: Animate(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Animate(string)
+  nameWithType: TimbnNpc.Animate(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Animate
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 358
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Plays an animation trigger, but only one the person has a clip of their own for, since any other makes them
+
+    vanish. It keeps playing until their next walk. While they are far from the player the game unloads their
+
+    animations, so the trigger waits and plays once they load, unless they walk on first.
+  example: []
+  syntax:
+    content: public bool Animate(string trigger)
+    parameters:
+    - id: trigger
+      type: System.String
+      description: The animation, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations" data-throw-if-not-resolved="false"></xref> such as <code>TimbnGameIds.NpcAnimations.Herm.AdjustingJabbot</code>.
+    return:
+      type: System.Boolean
+      description: False when the person has no clip for it and nothing was played.
+    content.vb: Public Function Animate(trigger As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate*
+  nameWithType.vb: TimbnNpc.Animate(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate(String)
+  name.vb: Animate(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  id: RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: RunSteps(TimbnNpcSteps, Action?)
+  nameWithType: TimbnNpc.RunSteps(TimbnNpcSteps, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RunSteps
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 402
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Plays a list of steps on command, such as for a quest or a cutscene, and calls back when the last one is done.
+
+    A new run on the same person replaces the one before. It starts at once, even in the middle of a conversation
+
+    with them. The person still stops when the player starts talking to them later in the run, but not for a story
+
+    scene, since a cutscene is when you want them moving. When the game itself moves them, through a story walk, a
+
+    teleport or a script event, the run ends and leaves them to it. A schedule of theirs steps aside while it plays
+
+    and takes them back as soon as it ends.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Npcs.Find(TimbnGameIds.Npcs.Larry)?.RunSteps(new TimbnNpcSteps()
+        .Walk("RT_larry_spawn")
+        .WaitRealSeconds(3)
+        .WalkNavmesh("npc_sim_village_right_side_road_34")
+        .Face(Direction.Down), done: OnLarryArrived);</code></pre>
+  syntax:
+    content: public IDisposable? RunSteps(TimbnNpcSteps steps, Action? done = null)
+    parameters:
+    - id: steps
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+      description: What to do, in order.
+    - id: done
+      type: System.Action
+      description: Runs once after the last step. It does not run when the run is stopped or replaced, the game takes the person, the save closes or the plugin unloads.
+    return:
+      type: System.IDisposable
+      description: The run, which stops it when disposed, or null when the person is gone.
+    content.vb: Public Function RunSteps(steps As TimbnNpcSteps, done As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps*
+  nameWithType.vb: TimbnNpc.RunSteps(TimbnNpcSteps, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, System.Action)
+  name.vb: RunSteps(TimbnNpcSteps, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree(System.String)
+  id: IsFree(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: IsFree(string)
+  nameWithType: TimbnNpc.IsFree(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: IsFree
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 413
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether a point is free for this person, meaning it exists, is switched on, nobody else claimed it and nobody stands on it.
+  example: []
+  syntax:
+    content: public bool IsFree(string pointId)
+    parameters:
+    - id: pointId
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsFree(pointId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree*
+  nameWithType.vb: TimbnNpc.IsFree(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree(String)
+  name.vb: IsFree(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason(System.String)
+  id: BlockedReason(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: BlockedReason(string)
+  nameWithType: TimbnNpc.BlockedReason(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BlockedReason
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 416
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Why a point cannot be used by this person, such as "occupied by the player", or null when it is free.
+  example: []
+  syntax:
+    content: public string? BlockedReason(string pointId)
+    parameters:
+    - id: pointId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function BlockedReason(pointId As String) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason*
+  nameWithType.vb: TimbnNpc.BlockedReason(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason(String)
+  name.vb: BlockedReason(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim(System.String)
+  id: Claim(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Claim(string)
+  nameWithType: TimbnNpc.Claim(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Claim
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 425
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Claims a point so no other schedule, and none of the game's villagers, are sent to it, letting go of the point
+
+    claimed before. A schedule lets go of it when the trip that claimed it ends, and a run lets go of a point claimed
+
+    during it when it ends. A point claimed before a run, such as a seat the person walks to, stays claimed after it
+
+    until they claim another, the handle is disposed or they are gone.
+  example: []
+  syntax:
+    content: public bool Claim(string pointId)
+    parameters:
+    - id: pointId
+      type: System.String
+    return:
+      type: System.Boolean
+      description: False when someone else holds a claim on it, or one of the game's villagers is at it or on the way there.
+    content.vb: Public Function Claim(pointId As String) As Boolean
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim*
+  nameWithType.vb: TimbnNpc.Claim(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim(String)
+  name.vb: Claim(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose
+  id: Dispose
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: TimbnNpc.Dispose()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Dispose
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpc.cs
+    startLine: 443
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Stops what this handle started and lets go of its claim, and removes a person Npcs.Spawn added.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Data
+  name: Data
+  nameWithType: TimbnNpc.Data
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Data
+- uid: WgoData
+  commentId: T:WgoData
+  isExternal: true
+  name: WgoData
+  nameWithType: WgoData
+  fullName: WgoData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_CollidesWithPlayer
+  name: CollidesWithPlayer
+  nameWithType: TimbnNpc.CollidesWithPlayer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.CollidesWithPlayer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.Npcs
+  nameWithType: TimbnGameIds.Npcs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs
+    name: Npcs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Id
+  name: Id
+  nameWithType: TimbnNpc.Id
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_ReputationId
+  name: ReputationId
+  nameWithType: TimbnNpc.ReputationId
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.ReputationId
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Position
+  name: Position
+  nameWithType: TimbnNpc.Position
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_IsGone
+  name: IsGone
+  nameWithType: TimbnNpc.IsGone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsGone
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_IsWalking
+  name: IsWalking
+  nameWithType: TimbnNpc.IsWalking
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsWalking
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RunSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_System_Action_
+  name: RunSteps(TimbnNpcSteps, Action)
+  nameWithType: TimbnNpc.RunSteps(TimbnNpcSteps, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+    name: RunSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RunSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_System_Action_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,System.Action)
+    name: RunSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RunSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_System_Action_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_IsRunning
+  name: IsRunning
+  nameWithType: TimbnNpc.IsRunning
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsRunning
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_MinutesLeftInBlock
+  name: MinutesLeftInBlock
+  nameWithType: TimbnNpc.MinutesLeftInBlock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.MinutesLeftInBlock
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_WalkTo_System_String_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWalk_System_Action_System_Action_
+  name: WalkTo
+  nameWithType: TimbnNpc.WalkTo
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.WalkTo
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk.html
+  name: TimbnWalk
+  nameWithType: TimbnWalk
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWalk
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_StopWalking
+  name: StopWalking
+  nameWithType: TimbnNpc.StopWalking
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.StopWalking
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Teleport_System_String_
+  name: Teleport
+  nameWithType: TimbnNpc.Teleport
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Teleport
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RollChance_System_Single_System_String_
+  name: RollChance
+  nameWithType: TimbnNpc.RollChance
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RollChance_System_Single_System_String_
+  name: RollChance(float, string)
+  nameWithType: TimbnNpc.RollChance(float, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(float, string)
+  nameWithType.vb: TimbnNpc.RollChance(Single, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(Single, String)
+  name.vb: RollChance(Single, String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+    name: RollChance
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RollChance_System_Single_System_String_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RollChance(System.Single,System.String)
+    name: RollChance
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RollChance_System_Single_System_String_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Face_Direction_
+  name: Face
+  nameWithType: TimbnNpc.Face
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Face
+- uid: Direction
+  commentId: T:Direction
+  isExternal: true
+  name: Direction
+  nameWithType: Direction
+  fullName: Direction
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Say_System_String_System_Single_
+  name: Say
+  nameWithType: TimbnNpc.Say
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Say
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.NpcEvents
+  nameWithType: TimbnGameIds.NpcEvents
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents
+    name: NpcEvents
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents
+    name: NpcEvents
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcEvents.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_FireEvent_System_String_
+  name: FireEvent
+  nameWithType: TimbnNpc.FireEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.FireEvent
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.NpcAnimations
+  nameWithType: TimbnGameIds.NpcAnimations
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations
+    name: NpcAnimations
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations
+    name: NpcAnimations
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.NpcAnimations.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Animate_System_String_
+  name: Animate
+  nameWithType: TimbnNpc.Animate
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Animate
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_RunSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_System_Action_
+  name: RunSteps
+  nameWithType: TimbnNpc.RunSteps
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.RunSteps
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  name: TimbnNpcSteps
+  nameWithType: TimbnNpcSteps
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_IsFree_System_String_
+  name: IsFree
+  nameWithType: TimbnNpc.IsFree
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.IsFree
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_BlockedReason_System_String_
+  name: BlockedReason
+  nameWithType: TimbnNpc.BlockedReason
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.BlockedReason
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Claim_System_String_
+  name: Claim
+  nameWithType: TimbnNpc.Claim
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Claim
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpc_Dispose
+  name: Dispose
+  nameWithType: TimbnNpc.Dispose
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

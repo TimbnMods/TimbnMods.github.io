@@ -1,0 +1,798 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  id: TimbnGameIds.Workstations.Placed
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.ConveyorWoodworkbench
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOvenT2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTable
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTableT2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine4
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine5
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource2
+  langs:
+  - csharp
+  - vb
+  name: TimbnGameIds.Workstations.Placed
+  nameWithType: TimbnGameIds.Workstations.Placed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Placed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 248
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The stations and bench extensions no build desk builds, such as <code>KitchenOven</code> for kitchen_oven.
+  example: []
+  syntax:
+    content: public static class TimbnGameIds.Workstations.Placed
+    content.vb: Public Module TimbnGameIds.Workstations.Placed
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile1
+  id: CompostPile1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: CompostPile1
+  nameWithType: TimbnGameIds.Workstations.Placed.CompostPile1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CompostPile1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 251
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Compost Pile
+  example: []
+  syntax:
+    content: public const string CompostPile1 = "compost_pile_1"
+    return:
+      type: System.String
+    content.vb: Public Const CompostPile1 As String = "compost_pile_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile2
+  id: CompostPile2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: CompostPile2
+  nameWithType: TimbnGameIds.Workstations.Placed.CompostPile2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.CompostPile2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CompostPile2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 253
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Compost Pile II
+  example: []
+  syntax:
+    content: public const string CompostPile2 = "compost_pile_2"
+    return:
+      type: System.String
+    content.vb: Public Const CompostPile2 As String = "compost_pile_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.ConveyorWoodworkbench
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.ConveyorWoodworkbench
+  id: ConveyorWoodworkbench
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: ConveyorWoodworkbench
+  nameWithType: TimbnGameIds.Workstations.Placed.ConveyorWoodworkbench
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.ConveyorWoodworkbench
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorWoodworkbench
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 255
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Assembly bench
+  example: []
+  syntax:
+    content: public const string ConveyorWoodworkbench = "conveyor_woodworkbench"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorWoodworkbench As String = "conveyor_woodworkbench"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  id: KitchenOven
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: KitchenOven
+  nameWithType: TimbnGameIds.Workstations.Placed.KitchenOven
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: KitchenOven
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 257
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen Oven. Select an object to craft
+  example: []
+  syntax:
+    content: public const string KitchenOven = "kitchen_oven"
+    return:
+      type: System.String
+    content.vb: Public Const KitchenOven As String = "kitchen_oven"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOvenT2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOvenT2
+  id: KitchenOvenT2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: KitchenOvenT2
+  nameWithType: TimbnGameIds.Workstations.Placed.KitchenOvenT2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOvenT2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: KitchenOvenT2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 259
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen Oven II
+  example: []
+  syntax:
+    content: public const string KitchenOvenT2 = "kitchen_oven_t2"
+    return:
+      type: System.String
+    content.vb: Public Const KitchenOvenT2 As String = "kitchen_oven_t2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTable
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTable
+  id: KitchenTable
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: KitchenTable
+  nameWithType: TimbnGameIds.Workstations.Placed.KitchenTable
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTable
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: KitchenTable
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 261
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen Table. Select an object to craft
+  example: []
+  syntax:
+    content: public const string KitchenTable = "kitchen_table"
+    return:
+      type: System.String
+    content.vb: Public Const KitchenTable As String = "kitchen_table"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTableT2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTableT2
+  id: KitchenTableT2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: KitchenTableT2
+  nameWithType: TimbnGameIds.Workstations.Placed.KitchenTableT2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenTableT2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: KitchenTableT2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 263
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen Table II
+  example: []
+  syntax:
+    content: public const string KitchenTableT2 = "kitchen_table_t2"
+    return:
+      type: System.String
+    content.vb: Public Const KitchenTableT2 As String = "kitchen_table_t2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource1
+  id: MarbleZombieSource1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: MarbleZombieSource1
+  nameWithType: TimbnGameIds.Workstations.Placed.MarbleZombieSource1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MarbleZombieSource1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 265
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Marble Quarry
+  example: []
+  syntax:
+    content: public const string MarbleZombieSource1 = "marble_zombie_source_1"
+    return:
+      type: System.String
+    content.vb: Public Const MarbleZombieSource1 As String = "marble_zombie_source_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource2
+  id: MarbleZombieSource2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: MarbleZombieSource2
+  nameWithType: TimbnGameIds.Workstations.Placed.MarbleZombieSource2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.MarbleZombieSource2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MarbleZombieSource2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 267
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Marble Quarry
+  example: []
+  syntax:
+    content: public const string MarbleZombieSource2 = "marble_zombie_source_2"
+    return:
+      type: System.String
+    content.vb: Public Const MarbleZombieSource2 As String = "marble_zombie_source_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine1
+  id: PanicReductionMachine1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: PanicReductionMachine1
+  nameWithType: TimbnGameIds.Workstations.Placed.PanicReductionMachine1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PanicReductionMachine1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 269
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: PR Machine I
+  example: []
+  syntax:
+    content: public const string PanicReductionMachine1 = "panic_reduction_machine_1"
+    return:
+      type: System.String
+    content.vb: Public Const PanicReductionMachine1 As String = "panic_reduction_machine_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine2
+  id: PanicReductionMachine2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: PanicReductionMachine2
+  nameWithType: TimbnGameIds.Workstations.Placed.PanicReductionMachine2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PanicReductionMachine2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 271
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: PR Machine II
+  example: []
+  syntax:
+    content: public const string PanicReductionMachine2 = "panic_reduction_machine_2"
+    return:
+      type: System.String
+    content.vb: Public Const PanicReductionMachine2 As String = "panic_reduction_machine_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine3
+  id: PanicReductionMachine3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: PanicReductionMachine3
+  nameWithType: TimbnGameIds.Workstations.Placed.PanicReductionMachine3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PanicReductionMachine3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 273
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: PR Machine III
+  example: []
+  syntax:
+    content: public const string PanicReductionMachine3 = "panic_reduction_machine_3"
+    return:
+      type: System.String
+    content.vb: Public Const PanicReductionMachine3 As String = "panic_reduction_machine_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine4
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine4
+  id: PanicReductionMachine4
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: PanicReductionMachine4
+  nameWithType: TimbnGameIds.Workstations.Placed.PanicReductionMachine4
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine4
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PanicReductionMachine4
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 275
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: PR Machine IV
+  example: []
+  syntax:
+    content: public const string PanicReductionMachine4 = "panic_reduction_machine_4"
+    return:
+      type: System.String
+    content.vb: Public Const PanicReductionMachine4 As String = "panic_reduction_machine_4"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine5
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine5
+  id: PanicReductionMachine5
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: PanicReductionMachine5
+  nameWithType: TimbnGameIds.Workstations.Placed.PanicReductionMachine5
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.PanicReductionMachine5
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PanicReductionMachine5
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 277
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: PR Machine V
+  example: []
+  syntax:
+    content: public const string PanicReductionMachine5 = "panic_reduction_machine_5"
+    return:
+      type: System.String
+    content.vb: Public Const PanicReductionMachine5 As String = "panic_reduction_machine_5"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource1
+  id: StoneZombieSource1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: StoneZombieSource1
+  nameWithType: TimbnGameIds.Workstations.Placed.StoneZombieSource1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StoneZombieSource1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 279
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Stone Quarry
+  example: []
+  syntax:
+    content: public const string StoneZombieSource1 = "stone_zombie_source_1"
+    return:
+      type: System.String
+    content.vb: Public Const StoneZombieSource1 As String = "stone_zombie_source_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource2
+  id: StoneZombieSource2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed
+  langs:
+  - csharp
+  - vb
+  name: StoneZombieSource2
+  nameWithType: TimbnGameIds.Workstations.Placed.StoneZombieSource2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.StoneZombieSource2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StoneZombieSource2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 281
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Stone Quarry
+  example: []
+  syntax:
+    content: public const string StoneZombieSource2 = "stone_zombie_source_2"
+    return:
+      type: System.String
+    content.vb: Public Const StoneZombieSource2 As String = "stone_zombie_source_2"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

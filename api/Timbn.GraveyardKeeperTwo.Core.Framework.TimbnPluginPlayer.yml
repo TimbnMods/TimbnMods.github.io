@@ -1,0 +1,799 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  id: TimbnPluginPlayer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry(Item,System.Action,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed(System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo(UnityEngine.Vector3,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo(UnityEngine.Vector3,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginPlayer
+  nameWithType: TimbnPluginPlayer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginPlayer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Acts on the player character, with every change undone when the plugin unloads or the player returns to the
+
+    main menu. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer" data-throw-if-not-resolved="false"></xref> to read where the player is. Reach it through the plugin's Player
+
+    property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginPlayer
+    content.vb: Public NotInheritable Class TimbnPluginPlayer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl
+  id: TakeControl
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  langs:
+  - csharp
+  - vb
+  name: TakeControl()
+  nameWithType: TimbnPluginPlayer.TakeControl()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TakeControl
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 34
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Takes the player's control away, the way the game does during its own cutscenes and conversations. They
+
+    cannot walk, interact, attack, use the hotbar, or open the game's menus with their keys, nothing can push
+
+    them, and hotkeys checked with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)" data-throw-if-not-resolved="false"></xref> stay quiet. Each call adds its own
+
+    reason to the game's list of reasons the player is held, and the game only gives control back once every
+
+    reason has let go, so several plugins can take control at once and a game cutscene ending meanwhile never
+
+    frees the player. Read your own keys with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)" data-throw-if-not-resolved="false"></xref> or
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)" data-throw-if-not-resolved="false"></xref> while it is held, and see <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType%5b%5d)" data-throw-if-not-resolved="false"></xref> to
+
+    notice the game stepping in.
+  example:
+  - >-
+    <pre><code class="lang-csharp">_control = Player.TakeControl();
+
+    // later
+
+    _control?.Dispose();</code></pre>
+  syntax:
+    content: public IDisposable TakeControl()
+    return:
+      type: System.IDisposable
+      description: A handle that gives control back when disposed. It is also released when the plugin unloads and on the way to the main menu.
+    content.vb: Public Function TakeControl() As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed(System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed(System.Single)
+  id: MultiplyWalkSpeed(System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  langs:
+  - csharp
+  - vb
+  name: MultiplyWalkSpeed(float)
+  nameWithType: TimbnPluginPlayer.MultiplyWalkSpeed(float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed(float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MultiplyWalkSpeed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 53
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Makes the player walk faster or slower until the returned handle is disposed. It multiplies the game's own
+
+    speed without changing it, so the game's slowdowns, such as aiming a bow, still apply on top and cannot
+
+    cancel it. Several plugins can hold a speed at once, and the newest one wins. When the last is released,
+
+    the player walks at the game's speed again.
+  example:
+  - >-
+    <pre><code class="lang-csharp">Buff = new TimbnPotionBuff
+
+    {
+        OnStart = () =&gt; _swift = Player.MultiplyWalkSpeed(1.5f),
+        OnEnd = () =&gt; _swift?.Dispose(),
+    };</code></pre>
+  syntax:
+    content: public IDisposable MultiplyWalkSpeed(float multiplier)
+    parameters:
+    - id: multiplier
+      type: System.Single
+      description: How many times the normal walking speed. 1 is normal.
+    return:
+      type: System.IDisposable
+      description: A handle that ends the change when disposed. It is also released when the plugin unloads and on the way to the main menu.
+    content.vb: Public Function MultiplyWalkSpeed(multiplier As Single) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed*
+  nameWithType.vb: TimbnPluginPlayer.MultiplyWalkSpeed(Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed(Single)
+  name.vb: MultiplyWalkSpeed(Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo(UnityEngine.Vector3,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo(UnityEngine.Vector3,System.Action)
+  id: WalkTo(UnityEngine.Vector3,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  langs:
+  - csharp
+  - vb
+  name: WalkTo(Vector3, Action?)
+  nameWithType: TimbnPluginPlayer.WalkTo(Vector3, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo(UnityEngine.Vector3, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WalkTo
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 78
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Walks the player to a spot along the navmesh as if they held the movement keys, and calls back when they get
+
+    there. They move at their own speed and only go where they could by hand, so walls, fences and ledges stop them.
+
+    Without a hold, any movement input from the player ends the walk, as suits a walk they asked for, such as clicking
+
+    where to go. Take control first for a walk a scene needs, and then the player cannot stop it. Control the game
+
+    takes, such as a talk, ends the walk either way. A newer walk, from any plugin, takes over once its route is
+
+    found, so the player keeps moving meanwhile and carries on when the newer one has no way. A spot the player does
+
+    not fit, such as against a wall, is walked to as close as they fit.
+  example:
+  - >-
+    <pre><code class="lang-csharp">_control = Player.TakeControl();
+
+    _walk = Player.WalkTo(bench, SitDown);
+
+    // later, to call it off
+
+    _walk?.Dispose();</code></pre>
+  syntax:
+    content: public IDisposable WalkTo(Vector3 position, Action? arrived = null)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where to walk to.
+    - id: arrived
+      type: System.Action
+      description: >-
+        Runs once on arrival. It never runs after the handle is disposed, when the walk is ended or taken over, or when
+
+        the player has no way to within half a unit of the spot or gets blocked on the way, each of which is logged.
+    return:
+      type: System.IDisposable
+      description: A handle that stops the walk when disposed. It is also stopped when the plugin unloads and on the way to the main menu.
+    content.vb: Public Function WalkTo(position As Vector3, arrived As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo*
+  nameWithType.vb: TimbnPluginPlayer.WalkTo(Vector3, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo(UnityEngine.Vector3, System.Action)
+  name.vb: WalkTo(Vector3, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry(Item,System.Action,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry(Item,System.Action,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  id: Carry(Item,System.Action,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  langs:
+  - csharp
+  - vb
+  name: Carry(Item, Action?, TimbnCarryRule)
+  nameWithType: TimbnPluginPlayer.Carry(Item, Action?, TimbnCarryRule)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry(Item, System.Action?, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Carry
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 116
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Puts an item in the player's hands, held over their head the way they carry a log. A player with a free carry
+
+    slot keeps what they carried and holds the new item on top, otherwise what was on top is dropped, so check
+
+    TimbnPlayer.HandsFree first when the item should be the only thing carried. A small item, such as a mug, shows
+
+    its icon there. Pressing the interaction key with nothing in reach puts it down on the ground the way the game
+
+    drops anything carried, and the game does the same when the player starts work or a fight. The item is kept
+
+    out of every save the game writes, so a save never holds it. An item that is already carried is not handed
+
+    over again, and the handle comes back already ended. The rule says how it sits in and leaves their hands. With
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive" data-throw-if-not-resolved="false"></xref> it is the only thing they hold, what they held before drops at their
+
+    feet and nothing else can be picked up or handed to them meanwhile, and with
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode" data-throw-if-not-resolved="false"></xref> nothing but disposing the handle takes it either, for an item the
+
+    player may only hand over at a spot the plugin handles itself.
+  example:
+  - >-
+    <pre><code class="lang-csharp">_mug = Player.Carry(new Item("my_mod_mug"), () =&gt; TimbnItems.RemoveDrops(TimbnItems.FindDrops(drop =&gt; drop.Id == "my_mod_mug")));
+
+    // once it is handed over
+
+    _mug.Dispose();</code></pre>
+  syntax:
+    content: public IDisposable Carry(Item item, Action? putDown = null, TimbnCarryRule rule = TimbnCarryRule.Vanilla)
+    parameters:
+    - id: item
+      type: Item
+      description: The item to carry, such as one of the plugin's own added with Balance.Add.
+    - id: putDown
+      type: System.Action
+      description: >-
+        Runs once the player has put it down or the game took it, a frame later, so a dropped item is already on the
+
+        ground. It does not run when the handle is disposed.
+    - id: rule
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+      description: How the item sits in and leaves the player's hands. By default as the game carries a log.
+    return:
+      type: System.IDisposable
+      description: A handle that takes the item out of the player's hands when disposed, if they still carry it. It is also taken when the plugin unloads and on the way to the main menu.
+    content.vb: Public Function Carry(item As Item, putDown As Action = Nothing, rule As TimbnCarryRule = TimbnCarryRule.Vanilla) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry*
+  nameWithType.vb: TimbnPluginPlayer.Carry(Item, Action, TimbnCarryRule)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry(Item, System.Action, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule)
+  name.vb: Carry(Item, Action, TimbnCarryRule)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo(UnityEngine.Vector3,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo(UnityEngine.Vector3,System.Action)
+  id: SlideTo(UnityEngine.Vector3,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer
+  langs:
+  - csharp
+  - vb
+  name: SlideTo(Vector3, Action?)
+  nameWithType: TimbnPluginPlayer.SlideTo(Vector3, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo(UnityEngine.Vector3, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SlideTo
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPluginPlayer.cs
+    startLine: 147
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Moves the player to a spot along the NPC navmesh with the game's own walker, the way a story scene walks them,
+
+    and calls back when they get there. Their physics is off on the way, so they never get stuck, but they pass
+
+    through gaps and over ledges they could not walk by hand. Movement keys do not stop it, so dispose the handle
+
+    to call it off. A newer slide, from any plugin, replaces this one, and then this one never calls back.
+  example:
+  - >-
+    <pre><code class="lang-csharp">_slide?.Dispose();
+
+    _slide = Player.SlideTo(hit.point);</code></pre>
+  syntax:
+    content: public IDisposable SlideTo(Vector3 position, Action? arrived = null)
+    parameters:
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where to go.
+    - id: arrived
+      type: System.Action
+      description: Runs once on arrival. It never runs after the handle is disposed or when the navmesh has no way there, which is logged.
+    return:
+      type: System.IDisposable
+      description: A handle that stops the slide when disposed. It is also stopped when the plugin unloads and on the way to the main menu.
+    content.vb: Public Function SlideTo(position As Vector3, arrived As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo*
+  nameWithType.vb: TimbnPluginPlayer.SlideTo(Vector3, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo(UnityEngine.Vector3, System.Action)
+  name.vb: SlideTo(Vector3, Action)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html
+  name: TimbnPlayer
+  nameWithType: TimbnPlayer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownWithControl_BepInEx_Configuration_KeyboardShortcut_
+  name: IsDownWithControl(KeyboardShortcut)
+  nameWithType: TimbnInput.IsDownWithControl(KeyboardShortcut)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)
+    name: IsDownWithControl
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownWithControl_BepInEx_Configuration_KeyboardShortcut_
+  - name: (
+  - uid: BepInEx.Configuration.KeyboardShortcut
+    name: KeyboardShortcut
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownWithControl(BepInEx.Configuration.KeyboardShortcut)
+    name: IsDownWithControl
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownWithControl_BepInEx_Configuration_KeyboardShortcut_
+  - name: (
+  - uid: BepInEx.Configuration.KeyboardShortcut
+    name: KeyboardShortcut
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_LazyBearTechnology_GameKey_
+  name: IsDownInGame(GameKey)
+  nameWithType: TimbnInput.IsDownInGame(GameKey)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)
+    name: IsDownInGame
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_LazyBearTechnology_GameKey_
+  - name: (
+  - uid: LazyBearTechnology.GameKey
+    name: GameKey
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(LazyBearTechnology.GameKey)
+    name: IsDownInGame
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_LazyBearTechnology_GameKey_
+  - name: (
+  - uid: LazyBearTechnology.GameKey
+    name: GameKey
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_BepInEx_Configuration_KeyboardShortcut_
+  name: IsDownInGame(KeyboardShortcut)
+  nameWithType: TimbnInput.IsDownInGame(KeyboardShortcut)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)
+    name: IsDownInGame
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_BepInEx_Configuration_KeyboardShortcut_
+  - name: (
+  - uid: BepInEx.Configuration.KeyboardShortcut
+    name: KeyboardShortcut
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.IsDownInGame(BepInEx.Configuration.KeyboardShortcut)
+    name: IsDownInGame
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnInput.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnInput_IsDownInGame_BepInEx_Configuration_KeyboardShortcut_
+  - name: (
+  - uid: BepInEx.Configuration.KeyboardShortcut
+    name: KeyboardShortcut
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GameHasControl_TakenControlType___
+  name: GameHasControl(params TakenControlType[])
+  nameWithType: TimbnPlayer.GameHasControl(params TakenControlType[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(params TakenControlType[])
+  nameWithType.vb: TimbnPlayer.GameHasControl(ParamArray TakenControlType())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(ParamArray TakenControlType())
+  name.vb: GameHasControl(ParamArray TakenControlType())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+    name: GameHasControl
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GameHasControl_TakenControlType___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: TakenControlType
+    name: TakenControlType
+    isExternal: true
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GameHasControl(TakenControlType[])
+    name: GameHasControl
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GameHasControl_TakenControlType___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: TakenControlType
+    name: TakenControlType
+    isExternal: true
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginPlayer_TakeControl
+  name: TakeControl
+  nameWithType: TimbnPluginPlayer.TakeControl
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.TakeControl
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginPlayer_MultiplyWalkSpeed_System_Single_
+  name: MultiplyWalkSpeed
+  nameWithType: TimbnPluginPlayer.MultiplyWalkSpeed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.MultiplyWalkSpeed
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginPlayer_WalkTo_UnityEngine_Vector3_System_Action_
+  name: WalkTo
+  nameWithType: TimbnPluginPlayer.WalkTo
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.WalkTo
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCarryRule_Exclusive
+  name: Exclusive
+  nameWithType: TimbnCarryRule.Exclusive
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCarryRule_OnlyByCode
+  name: OnlyByCode
+  nameWithType: TimbnCarryRule.OnlyByCode
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginPlayer_Carry_Item_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCarryRule_
+  name: Carry
+  nameWithType: TimbnPluginPlayer.Carry
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.Carry
+- uid: Item
+  commentId: T:Item
+  isExternal: true
+  name: Item
+  nameWithType: Item
+  fullName: Item
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.html
+  name: TimbnCarryRule
+  nameWithType: TimbnCarryRule
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginPlayer_SlideTo_UnityEngine_Vector3_System_Action_
+  name: SlideTo
+  nameWithType: TimbnPluginPlayer.SlideTo
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginPlayer.SlideTo

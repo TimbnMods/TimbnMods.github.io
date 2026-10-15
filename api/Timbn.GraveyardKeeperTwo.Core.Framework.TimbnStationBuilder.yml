@@ -1,0 +1,3314 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  id: TimbnStationBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance(System.Single)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit(System.Action{WGODef})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage(System.Int32)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie(System.Boolean)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool(ItemType)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: TimbnStationBuilder
+  nameWithType: TimbnStationBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnStationBuilder
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 22
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Describes a buildable workstation for the plugin's Stations.Add, with its look, which game station it behaves
+
+    like, and what it costs at the build desk. Core turns it into the five definitions the game expects, the station,
+
+    its construction site, the build desk entry and the two removals, with their text, the same way the game's own
+
+    woodworking bench is set up. Only <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref> is required. A station with no <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple%7bSystem.String%2cSystem.Int32%7d%5b%5d)" data-throw-if-not-resolved="false"></xref> is free, and
+
+    one with no <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)" data-throw-if-not-resolved="false"></xref> is on the build desk from the start.
+  example:
+  - >-
+    A smoking rack that works like the kitchen oven, built in the yard for 4 boards.
+
+
+    <pre><code class="lang-csharp">var rack = Stations.Add("timbn_smoking_rack", "Red Workbench", "A plain red bench for smoking fish.", station =&gt; station
+        .Model(bundle.Model("RedWorkbench"), new Vector3(1.5f, 0.8f, 1f))
+        .Site(bundle.Model("RedWorkbenchSite"))
+        .BasedOn("kitchen_oven")
+        .Icon("timbn_red_workbench")
+        .Cost(("flitch", 4))
+        .NoFuel()
+        .NoExtensions());</code></pre>
+  syntax:
+    content: public sealed class TimbnStationBuilder
+    content.vb: Public NotInheritable Class TimbnStationBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Model(TimbnModel)
+  nameWithType: TimbnStationBuilder.Model(TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Model
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 113
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The finished station's look when it faces the camera, which every station has, with a box shaped footprint the
+
+    size of the model, a solid body, an interaction area and a dock spot in front where the player works and finished
+
+    items drop. A station with only this side stays as it is placed. Add <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>, <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref> or
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref> to let the player turn it with R in build mode.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Model(TimbnModel model)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Model(model As TimbnModel) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The model has no size on some axis.
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3)
+  id: Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Model(TimbnModel, Vector3)
+  nameWithType: TimbnStationBuilder.Model(TimbnModel, Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Model
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 122
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The finished station's look when it faces the camera, with a footprint of the given size instead of the model's
+
+    own. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Model(TimbnModel model, Vector3 size)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: size
+      type: UnityEngine.Vector3
+      description: Width, height and depth in world units, for example (1.5, 0.8, 1) for a bench.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Model(model As TimbnModel, size As Vector3) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The size is zero or below on some axis.
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Left(TimbnModel, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Left(TimbnModel, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Left
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 146
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The station's look when it faces left, which the player gets by turning it with R while placing it. It has its
+
+    own footprint from the model, and its dock spot is on the left edge. The station is still one building with one
+
+    id, so crafts and patches never care which way it faces. R turns through the facings a station has in the order
+
+    down, left, up, right.
+  example:
+  - >-
+    A still that is long when it faces the camera and narrow when it faces left, with a flipped copy for right.
+
+
+    <pre><code class="lang-csharp">station
+        .Model(longStill)
+        .Left(narrowStill)
+        .MirrorSides();</code></pre>
+  syntax:
+    content: public TimbnStationBuilder Left(TimbnModel model, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Left(model As TimbnModel, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The model has no size on some axis.
+  nameWithType.vb: TimbnStationBuilder.Left(TimbnModel, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Left(TimbnModel, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Left(TimbnModel, Vector3, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Left(TimbnModel, Vector3, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Left
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 153
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The station's look when it faces left, with a footprint of the given size. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Left(TimbnModel model, Vector3 size, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: size
+      type: UnityEngine.Vector3
+      description: Width, height and depth in world units.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Left(model As TimbnModel, size As Vector3, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The size is zero or below on some axis.
+  nameWithType.vb: TimbnStationBuilder.Left(TimbnModel, Vector3, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Left(TimbnModel, Vector3, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Right(TimbnModel, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Right(TimbnModel, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Right
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 163
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The station's look when it faces right, with its own footprint from the model and its dock spot on the right
+
+    edge. Leave it out and call <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides" data-throw-if-not-resolved="false"></xref> to get it from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>
+
+    flipped.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Right(TimbnModel model, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Right(model As TimbnModel, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The model has no size on some axis.
+  nameWithType.vb: TimbnStationBuilder.Right(TimbnModel, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Right(TimbnModel, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Right(TimbnModel, Vector3, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Right(TimbnModel, Vector3, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Right
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 170
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The station's look when it faces right, with a footprint of the given size. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Right(TimbnModel model, Vector3 size, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: size
+      type: UnityEngine.Vector3
+      description: Width, height and depth in world units.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Right(model As TimbnModel, size As Vector3, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The size is zero or below on some axis.
+  nameWithType.vb: TimbnStationBuilder.Right(TimbnModel, Vector3, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Right(TimbnModel, Vector3, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Up(TimbnModel, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Up(TimbnModel, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Up
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 179
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The station's look when it faces away from the camera, with its own footprint from the model and its dock spot on
+
+    the back edge. It is never mirrored, since it looks the same flipped.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Up(TimbnModel model, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Up(model As TimbnModel, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The model has no size on some axis.
+  nameWithType.vb: TimbnStationBuilder.Up(TimbnModel, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Up(TimbnModel, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,UnityEngine.Vector3,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Up(TimbnModel, Vector3, TimbnModel?)
+  nameWithType: TimbnStationBuilder.Up(TimbnModel, Vector3, TimbnModel?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Up
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 186
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The station's look when it faces away from the camera, with a footprint of the given size. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Up(TimbnModel model, Vector3 size, TimbnModel? site = null)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model, centered on the station with its base at the ground.
+    - id: size
+      type: UnityEngine.Vector3
+      description: Width, height and depth in world units.
+    - id: site
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The construction site's look for this facing, or null for the generated outline.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Up(model As TimbnModel, size As Vector3, site As TimbnModel = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The size is zero or below on some axis.
+  nameWithType.vb: TimbnStationBuilder.Up(TimbnModel, Vector3, TimbnModel)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, UnityEngine.Vector3, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  name.vb: Up(TimbnModel, Vector3, TimbnModel)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  id: MirrorSides
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: MirrorSides()
+  nameWithType: TimbnStationBuilder.MirrorSides()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MirrorSides
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 194
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Fills a missing left or right facing with a left to right flipped copy of the other one, drawn with the same
+
+    model and site, so a mod needs art for one of the two only. A copy is only made when the other facing exists
+
+    and this one wasn't given. Down and up look the same flipped and are never mirrored, and nothing is ever flipped
+
+    top to bottom. The order of this call among the others doesn't matter.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder MirrorSides()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function MirrorSides() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance(System.Single)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance(System.Single)
+  id: DockDistance(System.Single)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: DockDistance(float)
+  nameWithType: TimbnStationBuilder.DockDistance(float)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance(float)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DockDistance
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 208
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How far past the footprint's edge the dock spot is, for every side, where a zombie stands to work it and finished
+
+    items drop. Left alone it is 0.45, which suits a deep bench, and a small station looks better with the zombie closer.
+
+    It only moves the finished station's dock. The construction site keeps at least 0.45, since the keeper has to stand
+
+    at the site's dock to work it and a closer one sits inside the site's solid body.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder DockDistance(float distance)
+    parameters:
+    - id: distance
+      type: System.Single
+      description: World units from the edge of the footprint, for example 0.2 to stand right at it.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function DockDistance(distance As Single) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The distance is below zero.
+  nameWithType.vb: TimbnStationBuilder.DockDistance(Single)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance(Single)
+  name.vb: DockDistance(Single)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  id: Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Site(TimbnModel)
+  nameWithType: TimbnStationBuilder.Site(TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Site
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 224
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The construction site's look when the station faces the camera, the outline that stands there until the player
+
+    works it off with the hammer. It gets the same footprint as the station. Without one the site is a dashed outline
+
+    of the footprint on the ground with the game's own warning sign at the front. The other facings take their site
+
+    as an argument, and a mirrored facing uses the site of the one it flips.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Site(TimbnModel model)
+    parameters:
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The site's model.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Site(model As TimbnModel) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction
+  id: NoConstruction
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: NoConstruction()
+  nameWithType: TimbnStationBuilder.NoConstruction()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NoConstruction
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 243
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Puts the finished station down as soon as it is placed, with no construction site and no hammer work, for a
+
+    station that is more of a placed object than something built. Its cost is still taken when it is placed.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder NoConstruction()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function NoConstruction() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  id: ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  nameWithType: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowWhen
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 268
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a model to the station's front facing that shows while a condition holds and goes away when it doesn't, the
+
+    way the game's autopsy table shows a cloth over a body. The game checks the condition again when the station's
+
+    items, resources, worker or work change, and when the station loads, so it needs nothing from the mod. The model
+
+    lines up with the station's own when both are built from faces, whatever their sizes. It adds no footprint,
+
+    body or dock, so it can't change where the station stands or where a zombie works it.
+  example:
+  - >-
+    A slab that shows a zombie lying on it while one is seated, instead of the empty stone.
+
+
+    <pre><code class="lang-csharp">station
+        .Model(emptySlab)
+        .ShowWhen(TimbnLook.HasWorker(), slabWithZombie, replacesBase: true);</code></pre>
+  syntax:
+    content: public TimbnStationBuilder ShowWhen(TimbnLookCondition condition, TimbnModel model, bool replacesBase = false)
+    parameters:
+    - id: condition
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+      description: When the model shows, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook" data-throw-if-not-resolved="false"></xref>.
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model to show.
+    - id: replacesBase
+      type: System.Boolean
+      description: True to hide the station's own model while this one shows, for a full swap of the look.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function ShowWhen(condition As TimbnLookCondition, model As TimbnModel, replacesBase As Boolean = False) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: The condition or the model is null.
+  nameWithType.vb: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Boolean)
+  name.vb: ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  id: ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: ShowWhen(TimbnFacing, TimbnLookCondition, TimbnModel, bool)
+  nameWithType: TimbnStationBuilder.ShowWhen(TimbnFacing, TimbnLookCondition, TimbnModel, bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowWhen
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 280
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a model to one facing that shows while a condition holds. A mirrored facing shows the models of the facing
+
+    it flips, so give them to that one. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder ShowWhen(TimbnFacing facing, TimbnLookCondition condition, TimbnModel model, bool replacesBase = false)
+    parameters:
+    - id: facing
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+      description: The facing the model belongs to, which has to be a drawn one.
+    - id: condition
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+      description: When the model shows, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook" data-throw-if-not-resolved="false"></xref>.
+    - id: model
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+      description: The model to show.
+    - id: replacesBase
+      type: System.Boolean
+      description: True to hide that facing's own model while this one shows. Only one model per facing may.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function ShowWhen(facing As TimbnFacing, condition As TimbnLookCondition, model As TimbnModel, replacesBase As Boolean = False) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: The condition or the model is null.
+  nameWithType.vb: TimbnStationBuilder.ShowWhen(TimbnFacing, TimbnLookCondition, TimbnModel, Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Boolean)
+  name.vb: ShowWhen(TimbnFacing, TimbnLookCondition, TimbnModel, Boolean)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  id: Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Slot(string, Vector3, Vector3)
+  nameWithType: TimbnStationBuilder.Slot(string, Vector3, Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(string, UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Slot
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 311
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Builds a slot into the station's front facing, a spot where a station or extension that calls BuildsInSlot with
+
+    the same id goes, the way the game's conveyor furnace has spots for its bellows and press. In build mode the game
+
+    marks each free slot in green, places it only there, and links the two, so the station finds
+
+    what sits in its slots with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)" data-throw-if-not-resolved="false"></xref>. Removing the station removes what sits in its
+
+    slots, with their refund and anything they hold dropped on the ground. A slot is the size of what goes in it, so
+
+    pass the same size given to that one's Model. The game snaps both to its build grid, so the size has to be whole
+
+    cells (0.32 across and 0.3 deep) and the slot's corner a whole number of cells from the corner of this station's
+
+    footprint, and Stations.Add says the nearest spot that fits when it isn't. A slot can sit beside the station, the
+
+    way the yard furnace takes its bellows, or inside its footprint, the way the conveyor furnace takes its pieces on top.
+  example:
+  - >-
+    A table with a stand's slot on its left and another on its right.
+
+
+    <pre><code class="lang-csharp">station
+        .Model(table, new Vector3(1.28f, 0.8f, 0.6f))
+        .Slot("timbn_stand_slot", new Vector3(-0.96f, 0f, 0f), new Vector3(0.64f, 1f, 0.6f))
+        .Slot("timbn_stand_slot", new Vector3(0.96f, 0f, 0f), new Vector3(0.64f, 1f, 0.6f));</code></pre>
+  syntax:
+    content: public TimbnStationBuilder Slot(string slotId, Vector3 position, Vector3 size)
+    parameters:
+    - id: slotId
+      type: System.String
+      description: The slot's id, which the station or extension that goes in it names.
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where the center of what goes in the slot sits, from the center of this station on the ground. The height is ignored.
+    - id: size
+      type: UnityEngine.Vector3
+      description: The size of what goes in the slot. The height is ignored.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Slot(slotId As String, position As Vector3, size As Vector3) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The width or depth is zero or below.
+  nameWithType.vb: TimbnStationBuilder.Slot(String, Vector3, Vector3)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(String, UnityEngine.Vector3, UnityEngine.Vector3)
+  name.vb: Slot(String, Vector3, Vector3)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  id: Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing,System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Slot(TimbnFacing, string, Vector3, Vector3)
+  nameWithType: TimbnStationBuilder.Slot(TimbnFacing, string, Vector3, Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing, string, UnityEngine.Vector3, UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Slot
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 323
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Builds a slot into one facing of the station, from the center of that facing's footprint. A mirrored facing gets
+
+    the slots of the facing it flips, flipped, so give them to that one. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String%2cUnityEngine.Vector3%2cUnityEngine.Vector3)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Slot(TimbnFacing facing, string slotId, Vector3 position, Vector3 size)
+    parameters:
+    - id: facing
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+      description: The facing the slot belongs to, which has to be a drawn one.
+    - id: slotId
+      type: System.String
+      description: The slot's id, which the station or extension that goes in it names.
+    - id: position
+      type: UnityEngine.Vector3
+      description: Where the center of what goes in the slot sits, from the center of this facing on the ground. The height is ignored.
+    - id: size
+      type: UnityEngine.Vector3
+      description: The size of what goes in the slot. The height is ignored.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Slot(facing As TimbnFacing, slotId As String, position As Vector3, size As Vector3) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The width or depth is zero or below.
+  nameWithType.vb: TimbnStationBuilder.Slot(TimbnFacing, String, Vector3, Vector3)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing, String, UnityEngine.Vector3, UnityEngine.Vector3)
+  name.vb: Slot(TimbnFacing, String, Vector3, Vector3)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot(System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot(System.Boolean)
+  id: ZombieSpot(System.Boolean)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: ZombieSpot(bool)
+  nameWithType: TimbnStationBuilder.ZombieSpot(bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot(bool)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ZombieSpot
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 339
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Gives the station a spot where the game's own handler seats a zombie, for a station based on the game's zombie
+
+    supplier ("zombie_supplier_station") or another that uses its handler. The player puts a zombie in with E and
+
+    takes it out the usual way, and the zombie is the station's worker. Core bakes the spot at the dock edge of
+
+    every facing, looking back at the station. A seated zombie stays a caretaker, which asks its zone for orders and
+
+    walks off to carry things for zombie crafter benches, so Core keeps it sitting unless the station takes orders.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder ZombieSpot(bool takesOrders = false)
+    parameters:
+    - id: takesOrders
+      type: System.Boolean
+      description: True to leave the zombie to take orders like the game's own supplier does, for a mod that makes a real one.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function ZombieSpot(takesOrders As Boolean = False) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot*
+  nameWithType.vb: TimbnStationBuilder.ZombieSpot(Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot(Boolean)
+  name.vb: ZombieSpot(Boolean)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie
+  id: HoldsZombie
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: HoldsZombie()
+  nameWithType: TimbnStationBuilder.HoldsZombie()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: HoldsZombie
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 355
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lets the player lay a zombie on the station and take it back, the way the game's corpse pallet holds a corpse. E
+
+    with a zombie overhead puts it in the station's one slot, where it stops being drawn, and E with free hands takes
+
+    it back unless a craft is running there, so a craft started on the station holds the zombie until it ends. The
+
+    station can't be dismantled while a zombie lies on it. Show the zombie with
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition%2cTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModel%2cSystem.Boolean)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(System.String%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>("zombie"),
+
+    and start a craft there with the plugin's Crafts.Start. The game's resurrection table ("resurrection_table_1")
+
+    makes a good base.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder HoldsZombie()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function HoldsZombie() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit(System.Int32)
+  id: Limit(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Limit(int)
+  nameWithType: TimbnStationBuilder.Limit(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Limit
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 369
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Caps how many of the station the player can have at once, through the game's own build limit, so the build desk
+
+    shows how many are built out of how many are allowed and refuses to place another at the cap. Core counts the
+
+    stations and construction sites standing in the world each time, so a site counts from the moment it is placed
+
+    and stops counting once it is gone, however it went.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Limit(int max)
+    parameters:
+    - id: max
+      type: System.Int32
+      description: The most the player can have, 1 or more.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Limit(max As Integer) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The limit is below 1.
+  nameWithType.vb: TimbnStationBuilder.Limit(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit(Integer)
+  name.vb: Limit(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn(System.String)
+  id: BasedOn(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: BasedOn(string)
+  nameWithType: TimbnStationBuilder.BasedOn(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BasedOn
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 383
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The game station the new one behaves like, copied field by field. "kitchen_oven" gives a timed station that
+
+    cooks on its own and takes a zombie, "sawhorse" a bench worked by hand. The woodworking bench
+
+    ("woodworking_workbench_1") by default. Its site, build desk entry and removals are copied from the same
+
+    station when the game builds it from a build desk, otherwise from the woodworking bench's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder BasedOn(string stationId)
+    parameters:
+    - id: stationId
+      type: System.String
+      description: The game station's world object id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function BasedOn(stationId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn*
+  nameWithType.vb: TimbnStationBuilder.BasedOn(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn(String)
+  name.vb: BasedOn(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent(System.String)
+  id: Talent(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Talent(string)
+  nameWithType: TimbnStationBuilder.Talent(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Talent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 395
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The talent the station is worked under, which is the skill its crafts and its dismantling use. The game's
+
+    kitchen oven uses "talent_green" and its woodworking bench and circular saw "talent_orange". Left alone it is the
+
+    base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Talent(string talentId)
+    parameters:
+    - id: talentId
+      type: System.String
+      description: The talent's id, for example "talent_orange".
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Talent(talentId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent*
+  nameWithType.vb: TimbnStationBuilder.Talent(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent(String)
+  name.vb: Talent(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool(ItemType)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool(ItemType)
+  id: Tool(ItemType)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Tool(ItemType)
+  nameWithType: TimbnStationBuilder.Tool(ItemType)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool(ItemType)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Tool
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 407
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The tool the player or a zombie needs to work the station, which also picks the zombie's work animation. A
+
+    craft's own tool, when it has one, wins over this. The kitchen oven's is none, so a station based on it needs no
+
+    tool, and a hammer here makes it a bench worked with the hammer. Left alone it is the base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Tool(ItemType tool)
+    parameters:
+    - id: tool
+      type: ItemType
+      description: The item type, such as ItemType.Hammer, or ItemType.None for no tool.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Tool(tool As ItemType) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots(System.Int32)
+  id: CraftSlots(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: CraftSlots(int)
+  nameWithType: TimbnStationBuilder.CraftSlots(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: CraftSlots
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 419
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How many ingredient slots the station's craft window has, which caps how many different items one craft can
+
+    take at once. The woodworking bench has 50. Left alone it is the base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder CraftSlots(int slots)
+    parameters:
+    - id: slots
+      type: System.Int32
+      description: The slot count, 0 or more.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function CraftSlots(slots As Integer) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The count is below zero.
+  nameWithType.vb: TimbnStationBuilder.CraftSlots(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots(Integer)
+  name.vb: CraftSlots(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage(System.Int32)
+  id: Storage(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Storage(int)
+  nameWithType: TimbnStationBuilder.Storage(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Storage
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 432
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How many slots the station's own inventory has, where fuel and anything a craft leaves in the station goes. Zero
+
+    gives it none. Left alone it is the base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Storage(int slots)
+    parameters:
+    - id: slots
+      type: System.Int32
+      description: The slot count, 0 or more.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Storage(slots As Integer) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: The count is below zero.
+  nameWithType.vb: TimbnStationBuilder.Storage(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage(Integer)
+  name.vb: Storage(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie(System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie(System.Boolean)
+  id: TakesZombie(System.Boolean)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: TakesZombie(bool)
+  nameWithType: TimbnStationBuilder.TakesZombie(bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie(bool)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TakesZombie
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 447
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Whether the player can put a zombie to work at the station. Left alone it is the base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder TakesZombie(bool takes = true)
+    parameters:
+    - id: takes
+      type: System.Boolean
+      description: True to take a zombie, false to leave the station to the player.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function TakesZombie(takes As Boolean = True) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie*
+  nameWithType.vb: TimbnStationBuilder.TakesZombie(Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie(Boolean)
+  name.vb: TakesZombie(Boolean)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic(System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic(System.Int32)
+  id: Automatic(System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Automatic(int)
+  nameWithType: TimbnStationBuilder.Automatic(int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic(int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Automatic
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 458
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Makes the station run its crafts by itself over time, the way the kitchen oven cooks while the player is away,
+
+    whose tick duration is 10. Use <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual" data-throw-if-not-resolved="false"></xref> for one that only progresses while someone works it.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Automatic(int tickDuration)
+    parameters:
+    - id: tickDuration
+      type: System.Int32
+      description: The game's autocraft tick duration, for example 10.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Automatic(tickDuration As Integer) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic*
+  nameWithType.vb: TimbnStationBuilder.Automatic(Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic(Integer)
+  name.vb: Automatic(Integer)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  id: Manual
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Manual()
+  nameWithType: TimbnStationBuilder.Manual()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Manual
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 466
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Makes the station progress its crafts only while the player or a zombie works it, like the circular saw.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Manual()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Manual() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound(System.String)
+  id: WorkSound(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: WorkSound(string)
+  nameWithType: TimbnStationBuilder.WorkSound(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WorkSound
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 478
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The sound the station makes each time its work ticks, for example "woodworking_workbench_tick" for the
+
+    woodworking bench. Any sound id the game has. Left alone it is the base station's.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder WorkSound(string soundId)
+    parameters:
+    - id: soundId
+      type: System.String
+      description: The sound's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function WorkSound(soundId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound*
+  nameWithType.vb: TimbnStationBuilder.WorkSound(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound(String)
+  name.vb: WorkSound(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab(System.String)
+  id: BuildTab(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: BuildTab(string)
+  nameWithType: TimbnStationBuilder.BuildTab(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BuildTab
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 492
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Which tab of the build desk's menu lists the station. An empty string is the first tab, and a station based on a
+
+    bench keeps the bench's, which is the second tab at the morgue and the "tab_building_extension" tab at the yard.
+
+    Use a tab id the build desk already has, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs" data-throw-if-not-resolved="false"></xref>, such as
+
+    <code>BuildTabs.MetallurgyExtension</code> or <code>BuildTabs.SewingExtension</code> at the yard or
+
+    <code>BuildTabs.GraveyardModule</code> at the graveyard, since a tab nothing else uses has no icon.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder BuildTab(string tabId)
+    parameters:
+    - id: tabId
+      type: System.String
+      description: The tab's id, or <code>BuildTabs.First</code> (an empty string) for the first tab.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function BuildTab(tabId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab*
+  nameWithType.vb: TimbnStationBuilder.BuildTab(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab(String)
+  name.vb: BuildTab(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon(System.String)
+  id: Icon(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Icon(string)
+  nameWithType: TimbnStationBuilder.Icon(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Icon
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 503
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The icon shown over the station and in the build desk. Any sprite the game has, or one added with the plugin's
+
+    Sprites.AddEmbeddedPng. Without one the template's icons stay.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Icon(string spriteId)
+    parameters:
+    - id: spriteId
+      type: System.String
+      description: The sprite name, for example "timbn_red_workbench".
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Icon(spriteId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon*
+  nameWithType.vb: TimbnStationBuilder.Icon(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon(String)
+  name.vb: Icon(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+  id: Cost(System.ValueTuple{System.String,System.Int32}[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Cost(params (string Item, int Count)[])
+  nameWithType: TimbnStationBuilder.Cost(params (string Item, int Count)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(params (string Item, int Count)[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Cost
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 515
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    What the build desk charges to place the station, for example ("flitch", 4). A second call adds to the first, and
+
+    a station with no cost is free. Half of it comes back when the station is dismantled unless <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple%7bSystem.String%2cSystem.Int32%7d%2cSystem.ValueTuple%7bSystem.String%2cSystem.Int32%7d%5b%5d)" data-throw-if-not-resolved="false"></xref>
+
+    or <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund" data-throw-if-not-resolved="false"></xref> says otherwise, and all of it when an unbuilt site is removed.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Cost(params (string Item, int Count)[] items)
+    parameters:
+    - id: items
+      type: System.ValueTuple{System.String,System.Int32}[]
+      description: Item ids with counts.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Cost(ParamArray items As (Item As String, Count As Integer)()) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost*
+  nameWithType.vb: TimbnStationBuilder.Cost(ParamArray (Item As String, Count As Integer)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(ParamArray (Item As String, Count As Integer)())
+  name.vb: Cost(ParamArray (Item As String, Count As Integer)())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  id: Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Refund((string Item, int Count), params (string Item, int Count)[])
+  nameWithType: TimbnStationBuilder.Refund((string Item, int Count), params (string Item, int Count)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund((string Item, int Count), params (string Item, int Count)[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Refund
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 524
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: What dismantling the finished station gives back, instead of half the cost. A second call adds to the first.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Refund((string Item, int Count) item, params (string Item, int Count)[] more)
+    parameters:
+    - id: item
+      type: System.ValueTuple{System.String,System.Int32}
+      description: An item id with its count.
+    - id: more
+      type: System.ValueTuple{System.String,System.Int32}[]
+      description: More item ids with counts.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Refund(item As (Item As String, Count As Integer), ParamArray more As (Item As String, Count As Integer)()) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund*
+  nameWithType.vb: TimbnStationBuilder.Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+  name.vb: Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  id: NoRefund
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: NoRefund()
+  nameWithType: TimbnStationBuilder.NoRefund()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NoRefund
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 533
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Gives nothing back when the finished station is dismantled, instead of half the cost.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder NoRefund()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function NoRefund() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+  id: BuiltAt(System.String,System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: BuiltAt(string, string?)
+  nameWithType: TimbnStationBuilder.BuiltAt(string, string?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(string, string?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BuiltAt
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 547
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Which build desk offers the station, the yard's ("builder_yard") by default. Each build desk builds in its own zone,
+
+    for example "builder_graveyard" or "builder_garden". The station can be limited to one build area in that zone,
+
+    such as "yard_place". Without an area it goes anywhere in the zone, except that the template's own area is kept
+
+    on a build desk the template also uses.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder BuiltAt(string buildDeskId, string? areaId = null)
+    parameters:
+    - id: buildDeskId
+      type: System.String
+      description: The build desk's world object id.
+    - id: areaId
+      type: System.String
+      description: A build area id in the build desk's zone, or null for the default.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function BuiltAt(buildDeskId As String, areaId As String = Nothing) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt*
+  nameWithType.vb: TimbnStationBuilder.BuiltAt(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(String, String)
+  name.vb: BuiltAt(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot(System.String)
+  id: BuildsInSlot(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: BuildsInSlot(string)
+  nameWithType: TimbnStationBuilder.BuildsInSlot(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BuildsInSlot
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 563
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Lets the player build the station only into a slot of another station, one that has a <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String%2cUnityEngine.Vector3%2cUnityEngine.Vector3)" data-throw-if-not-resolved="false"></xref>
+
+    with this id, through the game's own slot check, the one the conveyor furnace's bellows use. It goes down
+
+    finished with no construction site like the game's own slot pieces, and it is still a normal station the player
+
+    works. Its footprint should match the slot, and it is still offered by the build desk from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref>,
+
+    which has to be the one whose zone the slotted station stands in.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder BuildsInSlot(string slotId)
+    parameters:
+    - id: slotId
+      type: System.String
+      description: The slot's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function BuildsInSlot(slotId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  nameWithType.vb: TimbnStationBuilder.BuildsInSlot(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot(String)
+  name.vb: BuildsInSlot(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel
+  id: NoFuel
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: NoFuel()
+  nameWithType: TimbnStationBuilder.NoFuel()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NoFuel
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 571
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Takes away the fuel the template burns, so a station copied from the kitchen oven runs without fire.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder NoFuel()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function NoFuel() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+  id: Extensions(System.String,System.String[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Extensions(string, params string[])
+  nameWithType: TimbnStationBuilder.Extensions(string, params string[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(string, params string[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Extensions
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 584
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Which bench extensions attach to the station when built next to it, the game's "tool_rack" or one added with
+
+    Stations.AddExtension. The first call replaces the template's list and a second call adds to it. A craft that
+
+    calls NeedsExtension with one of these ids only runs while that extension is attached.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Extensions(string extensionId, params string[] more)
+    parameters:
+    - id: extensionId
+      type: System.String
+      description: An extension's world object id.
+    - id: more
+      type: System.String[]
+      description: More extensions' world object ids.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Extensions(extensionId As String, ParamArray more As String()) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions*
+  nameWithType.vb: TimbnStationBuilder.Extensions(String, ParamArray String())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(String, ParamArray String())
+  name.vb: Extensions(String, ParamArray String())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions
+  id: NoExtensions
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: NoExtensions()
+  nameWithType: TimbnStationBuilder.NoExtensions()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions()
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NoExtensions
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 593
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Takes away the template's bench extensions, so none attaches to the station.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder NoExtensions()
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function NoExtensions() As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  id: UnlockedBy(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: UnlockedBy(string)
+  nameWithType: TimbnStationBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: UnlockedBy
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 606
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Has a technology put the station on the build desk, the way "work_with_wood_1" opens the woodworking bench. The
+
+    tech's tooltip lists the station, researching the tech unlocks it, and a save that already has the tech gets it
+
+    as soon as it loads. The station is missing from the build desk until then. The tech is put back when the plugin
+
+    unloads, and a tech the game doesn't have is logged.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder UnlockedBy(string techId)
+    parameters:
+    - id: techId
+      type: System.String
+      description: The technology's id.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function UnlockedBy(techId As String) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy*
+  nameWithType.vb: TimbnStationBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit(System.Action{WGODef})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit(System.Action{WGODef})
+  id: Edit(System.Action{WGODef})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  langs:
+  - csharp
+  - vb
+  name: Edit(Action<WGODef>)
+  nameWithType: TimbnStationBuilder.Edit(Action<WGODef>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit(System.Action<WGODef>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Edit
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnStationBuilder.cs
+    startLine: 614
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Changes anything else on the station's definition after Core has filled it in, for example its craftInventorySize.
+  example: []
+  syntax:
+    content: public TimbnStationBuilder Edit(Action<WGODef> edit)
+    parameters:
+    - id: edit
+      type: System.Action{WGODef}
+      description: Runs on the copy each time the balance loads.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    content.vb: Public Function Edit(edit As Action(Of WGODef)) As TimbnStationBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit*
+  nameWithType.vb: TimbnStationBuilder.Edit(Action(Of WGODef))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit(System.Action(Of WGODef))
+  name.vb: Edit(Action(Of WGODef))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Model_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Model(TimbnModel)
+  nameWithType: TimbnStationBuilder.Model(TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Model
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Model_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Model
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Model_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Cost_System_ValueTuple_System_String_System_Int32____
+  name: Cost(params (string Item, int Count)[])
+  nameWithType: TimbnStationBuilder.Cost(params (string Item, int Count)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(params (string Item, int Count)[])
+  nameWithType.vb: TimbnStationBuilder.Cost(ParamArray (Item As String, Count As Integer)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(ParamArray (Item As String, Count As Integer)())
+  name.vb: Cost(ParamArray (Item As String, Count As Integer)())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+    name: Cost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Cost_System_ValueTuple_System_String_System_Int32____
+  - name: (
+  - name: params
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost(System.ValueTuple{System.String,System.Int32}[])
+    name: Cost
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Cost_System_ValueTuple_System_String_System_Int32____
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  name: UnlockedBy(string)
+  nameWithType: TimbnStationBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(string)
+  nameWithType.vb: TimbnStationBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Left_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Left(TimbnModel, TimbnModel)
+  nameWithType: TimbnStationBuilder.Left(TimbnModel, TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Left
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Left_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Left
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Left_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Right_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Right(TimbnModel, TimbnModel)
+  nameWithType: TimbnStationBuilder.Right(TimbnModel, TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Right
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Right_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Right
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Right_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Up_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Up(TimbnModel, TimbnModel)
+  nameWithType: TimbnStationBuilder.Up(TimbnModel, TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Up
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Up_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Up
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Up_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Model_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Model
+  nameWithType: TimbnStationBuilder.Model
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Model
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  name: TimbnModel
+  nameWithType: TimbnModel
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  name: TimbnStationBuilder
+  nameWithType: TimbnStationBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Site_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Site(TimbnModel)
+  nameWithType: TimbnStationBuilder.Site(TimbnModel)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Site
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Site_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel)
+    name: Site
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Site_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Left_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Left
+  nameWithType: TimbnStationBuilder.Left
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Left
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_MirrorSides
+  name: MirrorSides()
+  nameWithType: TimbnStationBuilder.MirrorSides()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+    name: MirrorSides
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_MirrorSides
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+    name: MirrorSides
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_MirrorSides
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Right_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Right
+  nameWithType: TimbnStationBuilder.Right
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Right
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Up_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Up
+  nameWithType: TimbnStationBuilder.Up
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Up
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_MirrorSides
+  name: MirrorSides
+  nameWithType: TimbnStationBuilder.MirrorSides
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.MirrorSides
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_DockDistance_System_Single_
+  name: DockDistance
+  nameWithType: TimbnStationBuilder.DockDistance
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.DockDistance
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Site_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_
+  name: Site
+  nameWithType: TimbnStationBuilder.Site
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Site
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoConstruction
+  name: NoConstruction
+  nameWithType: TimbnStationBuilder.NoConstruction
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoConstruction
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.html
+  name: TimbnLook
+  nameWithType: TimbnLook
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  name: ShowWhen
+  nameWithType: TimbnStationBuilder.ShowWhen
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  name: TimbnLookCondition
+  nameWithType: TimbnLookCondition
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  name: ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  nameWithType: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, bool)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, bool)
+  nameWithType.vb: TimbnStationBuilder.ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel, Boolean)
+  name.vb: ShowWhen(TimbnLookCondition, TimbnModel, Boolean)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+    name: ShowWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+    name: TimbnLookCondition
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ShowWhen(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel,System.Boolean)
+    name: ShowWhen
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ShowWhen_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLookCondition_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_System_Boolean_
+  - name: (
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
+    name: TimbnLookCondition
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+    name: TimbnModel
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing.html
+  name: TimbnFacing
+  nameWithType: TimbnFacing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnFacing
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Extensions_WgoData_
+  name: Extensions(WgoData)
+  nameWithType: TimbnWorld.Extensions(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+    name: Extensions
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Extensions_WgoData_
+  - name: (
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions(WgoData)
+    name: Extensions
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Extensions_WgoData_
+  - name: (
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Slot_System_String_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: Slot
+  nameWithType: TimbnStationBuilder.Slot
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Slot_System_String_UnityEngine_Vector3_UnityEngine_Vector3_
+  name: Slot(string, Vector3, Vector3)
+  nameWithType: TimbnStationBuilder.Slot(string, Vector3, Vector3)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(string, UnityEngine.Vector3, UnityEngine.Vector3)
+  nameWithType.vb: TimbnStationBuilder.Slot(String, Vector3, Vector3)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(String, UnityEngine.Vector3, UnityEngine.Vector3)
+  name.vb: Slot(String, Vector3, Vector3)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+    name: Slot
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Slot_System_String_UnityEngine_Vector3_UnityEngine_Vector3_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Slot(System.String,UnityEngine.Vector3,UnityEngine.Vector3)
+    name: Slot
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Slot_System_String_UnityEngine_Vector3_UnityEngine_Vector3_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Vector3
+    name: Vector3
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_ZombieSpot_System_Boolean_
+  name: ZombieSpot
+  nameWithType: TimbnStationBuilder.ZombieSpot
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.ZombieSpot
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(System.String,System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(System.String,System.Int32)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLook_HoldsGroup_System_String_System_Int32_
+  name: HoldsGroup(string, int)
+  nameWithType: TimbnLook.HoldsGroup(string, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(string, int)
+  nameWithType.vb: TimbnLook.HoldsGroup(String, Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(String, Integer)
+  name.vb: HoldsGroup(String, Integer)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(System.String,System.Int32)
+    name: HoldsGroup
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLook_HoldsGroup_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.HoldsGroup(System.String,System.Int32)
+    name: HoldsGroup
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLook.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnLook_HoldsGroup_System_String_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_HoldsZombie
+  name: HoldsZombie
+  nameWithType: TimbnStationBuilder.HoldsZombie
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.HoldsZombie
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Limit_System_Int32_
+  name: Limit
+  nameWithType: TimbnStationBuilder.Limit
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Limit
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BasedOn_System_String_
+  name: BasedOn
+  nameWithType: TimbnStationBuilder.BasedOn
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BasedOn
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Talent_System_String_
+  name: Talent
+  nameWithType: TimbnStationBuilder.Talent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Talent
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Tool_ItemType_
+  name: Tool
+  nameWithType: TimbnStationBuilder.Tool
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Tool
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_CraftSlots_System_Int32_
+  name: CraftSlots
+  nameWithType: TimbnStationBuilder.CraftSlots
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.CraftSlots
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Storage_System_Int32_
+  name: Storage
+  nameWithType: TimbnStationBuilder.Storage
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Storage
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_TakesZombie_System_Boolean_
+  name: TakesZombie
+  nameWithType: TimbnStationBuilder.TakesZombie
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.TakesZombie
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Manual
+  name: Manual()
+  nameWithType: TimbnStationBuilder.Manual()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+    name: Manual
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Manual
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+    name: Manual
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Manual
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Automatic_System_Int32_
+  name: Automatic
+  nameWithType: TimbnStationBuilder.Automatic
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Automatic
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Manual
+  name: Manual
+  nameWithType: TimbnStationBuilder.Manual
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Manual
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_WorkSound_System_String_
+  name: WorkSound
+  nameWithType: TimbnStationBuilder.WorkSound
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.WorkSound
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  name: TimbnGameIds.BuildTabs
+  nameWithType: TimbnGameIds.BuildTabs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs
+    name: BuildTabs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs.html
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds
+    name: TimbnGameIds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.html
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs
+    name: BuildTabs
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.BuildTabs.html
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuildTab_System_String_
+  name: BuildTab
+  nameWithType: TimbnStationBuilder.BuildTab
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildTab
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Icon_System_String_
+  name: Icon
+  nameWithType: TimbnStationBuilder.Icon
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Icon
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Refund_System_ValueTuple_System_String_System_Int32__System_ValueTuple_System_String_System_Int32____
+  name: Refund((string Item, int Count), params (string Item, int Count)[])
+  nameWithType: TimbnStationBuilder.Refund((string Item, int Count), params (string Item, int Count)[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund((string Item, int Count), params (string Item, int Count)[])
+  nameWithType.vb: TimbnStationBuilder.Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+  name.vb: Refund((Item As String, Count As Integer), ParamArray (Item As String, Count As Integer)())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+    name: Refund
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Refund_System_ValueTuple_System_String_System_Int32__System_ValueTuple_System_String_System_Int32____
+  - name: (
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund(System.ValueTuple{System.String,System.Int32},System.ValueTuple{System.String,System.Int32}[])
+    name: Refund
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Refund_System_ValueTuple_System_String_System_Int32__System_ValueTuple_System_String_System_Int32____
+  - name: (
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoRefund
+  name: NoRefund()
+  nameWithType: TimbnStationBuilder.NoRefund()
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund()
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+    name: NoRefund
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoRefund
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+    name: NoRefund
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoRefund
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Cost_System_ValueTuple_System_String_System_Int32____
+  name: Cost
+  nameWithType: TimbnStationBuilder.Cost
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Cost
+- uid: System.ValueTuple{System.String,System.Int32}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string Item, int Count)[]
+  nameWithType: (string Item, int Count)[]
+  fullName: (string Item, int Count)[]
+  nameWithType.vb: (Item As String, Count As Integer)()
+  fullName.vb: (Item As String, Count As Integer)()
+  name.vb: (Item As String, Count As Integer)()
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Refund_System_ValueTuple_System_String_System_Int32__System_ValueTuple_System_String_System_Int32____
+  name: Refund
+  nameWithType: TimbnStationBuilder.Refund
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Refund
+- uid: System.ValueTuple{System.String,System.Int32}
+  commentId: T:System.ValueTuple{System.String,System.Int32}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string Item, int Count)
+  nameWithType: (string Item, int Count)
+  fullName: (string Item, int Count)
+  nameWithType.vb: (Item As String, Count As Integer)
+  fullName.vb: (Item As String, Count As Integer)
+  name.vb: (Item As String, Count As Integer)
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.Int32}.Item
+    name: Item
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.item
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.Int32}.Count
+    name: Count
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.int32-.count
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoRefund
+  name: NoRefund
+  nameWithType: TimbnStationBuilder.NoRefund
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoRefund
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuiltAt_System_String_System_String_
+  name: BuiltAt
+  nameWithType: TimbnStationBuilder.BuiltAt
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuiltAt_System_String_System_String_
+  name: BuiltAt(string, string)
+  nameWithType: TimbnStationBuilder.BuiltAt(string, string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(string, string)
+  nameWithType.vb: TimbnStationBuilder.BuiltAt(String, String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(String, String)
+  name.vb: BuiltAt(String, String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+    name: BuiltAt
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuiltAt_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuiltAt(System.String,System.String)
+    name: BuiltAt
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuiltAt_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_BuildsInSlot_System_String_
+  name: BuildsInSlot
+  nameWithType: TimbnStationBuilder.BuildsInSlot
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.BuildsInSlot
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoFuel
+  name: NoFuel
+  nameWithType: TimbnStationBuilder.NoFuel
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoFuel
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Extensions_System_String_System_String___
+  name: Extensions
+  nameWithType: TimbnStationBuilder.Extensions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_NoExtensions
+  name: NoExtensions
+  nameWithType: TimbnStationBuilder.NoExtensions
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.NoExtensions
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  name: UnlockedBy
+  nameWithType: TimbnStationBuilder.UnlockedBy
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Edit_System_Action_WGODef__
+  name: Edit
+  nameWithType: TimbnStationBuilder.Edit
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Edit
+- uid: System.Action{WGODef}
+  commentId: T:System.Action{WGODef}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<WGODef>
+  nameWithType: Action<WGODef>
+  fullName: System.Action<WGODef>
+  nameWithType.vb: Action(Of WGODef)
+  fullName.vb: System.Action(Of WGODef)
+  name.vb: Action(Of WGODef)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: WGODef
+    name: WGODef
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WGODef
+    name: WGODef
+    isExternal: true
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

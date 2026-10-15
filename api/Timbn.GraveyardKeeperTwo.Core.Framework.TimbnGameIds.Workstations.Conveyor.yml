@@ -1,0 +1,918 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  id: TimbnGameIds.Workstations.Conveyor
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchHammer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchMachine
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchPress
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchTurning
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchWheel
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorBioreactor
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceBellows
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceHammer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnacePress
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceStone
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenConservat
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenMillstone
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenStove
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT2
+  langs:
+  - csharp
+  - vb
+  name: TimbnGameIds.Workstations.Conveyor
+  nameWithType: TimbnGameIds.Workstations.Conveyor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Conveyor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 46
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The stations and bench extensions built at the Conveyor build desk.
+  example: []
+  syntax:
+    content: public static class TimbnGameIds.Workstations.Conveyor
+    content.vb: Public Module TimbnGameIds.Workstations.Conveyor
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchHammer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchHammer
+  id: ConveyorAssemblybenchHammer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchHammer
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchHammer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchHammer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchHammer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 49
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Assembly bench: Auto-hammer'
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchHammer = "conveyor_assemblybench_hammer"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchHammer As String = "conveyor_assemblybench_hammer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchMachine
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchMachine
+  id: ConveyorAssemblybenchMachine
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchMachine
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchMachine
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchMachine
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchMachine
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 51
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Assembly bench: Sewing machine'
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchMachine = "conveyor_assemblybench_machine"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchMachine As String = "conveyor_assemblybench_machine"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchPress
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchPress
+  id: ConveyorAssemblybenchPress
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchPress
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchPress
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchPress
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchPress
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 53
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Assembly bench: Drill press'
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchPress = "conveyor_assemblybench_press"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchPress As String = "conveyor_assemblybench_press"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT1
+  id: ConveyorAssemblybenchT1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchT1
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchT1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 55
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Assembly bench I
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchT1 = "conveyor_assemblybench_t1"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchT1 As String = "conveyor_assemblybench_t1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT2
+  id: ConveyorAssemblybenchT2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchT2
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchT2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 57
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Assembly bench II
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchT2 = "conveyor_assemblybench_t2"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchT2 As String = "conveyor_assemblybench_t2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT3
+  id: ConveyorAssemblybenchT3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchT3
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchT3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchT3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 59
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Assembly bench III
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchT3 = "conveyor_assemblybench_t3"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchT3 As String = "conveyor_assemblybench_t3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchTurning
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchTurning
+  id: ConveyorAssemblybenchTurning
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchTurning
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchTurning
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchTurning
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchTurning
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 61
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Assembly bench: Lathe'
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchTurning = "conveyor_assemblybench_turning"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchTurning As String = "conveyor_assemblybench_turning"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchWheel
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchWheel
+  id: ConveyorAssemblybenchWheel
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorAssemblybenchWheel
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchWheel
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorAssemblybenchWheel
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorAssemblybenchWheel
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 63
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Assembly bench: Spinning wheel'
+  example: []
+  syntax:
+    content: public const string ConveyorAssemblybenchWheel = "conveyor_assemblybench_wheel"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorAssemblybenchWheel As String = "conveyor_assemblybench_wheel"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorBioreactor
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorBioreactor
+  id: ConveyorBioreactor
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorBioreactor
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorBioreactor
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorBioreactor
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorBioreactor
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 65
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Bioreactor
+  example: []
+  syntax:
+    content: public const string ConveyorBioreactor = "conveyor_bioreactor"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorBioreactor As String = "conveyor_bioreactor"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceBellows
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceBellows
+  id: ConveyorFurnaceBellows
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnaceBellows
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceBellows
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceBellows
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnaceBellows
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 67
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Smithy: Bellows'
+  example: []
+  syntax:
+    content: public const string ConveyorFurnaceBellows = "conveyor_furnace_bellows"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnaceBellows As String = "conveyor_furnace_bellows"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceHammer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceHammer
+  id: ConveyorFurnaceHammer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnaceHammer
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceHammer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceHammer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnaceHammer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 69
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Smithy: Hammer'
+  example: []
+  syntax:
+    content: public const string ConveyorFurnaceHammer = "conveyor_furnace_hammer"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnaceHammer As String = "conveyor_furnace_hammer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnacePress
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnacePress
+  id: ConveyorFurnacePress
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnacePress
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnacePress
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnacePress
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnacePress
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 71
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Smithy: Press'
+  example: []
+  syntax:
+    content: public const string ConveyorFurnacePress = "conveyor_furnace_press"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnacePress As String = "conveyor_furnace_press"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceStone
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceStone
+  id: ConveyorFurnaceStone
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnaceStone
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceStone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceStone
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnaceStone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 73
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Smithy: Grindstone'
+  example: []
+  syntax:
+    content: public const string ConveyorFurnaceStone = "conveyor_furnace_stone"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnaceStone As String = "conveyor_furnace_stone"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT1
+  id: ConveyorFurnaceT1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnaceT1
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnaceT1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 75
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Smithy I
+  example: []
+  syntax:
+    content: public const string ConveyorFurnaceT1 = "conveyor_furnace_t1"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnaceT1 As String = "conveyor_furnace_t1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT2
+  id: ConveyorFurnaceT2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorFurnaceT2
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorFurnaceT2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorFurnaceT2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 77
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Smithy II
+  example: []
+  syntax:
+    content: public const string ConveyorFurnaceT2 = "conveyor_furnace_t2"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorFurnaceT2 As String = "conveyor_furnace_t2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenConservat
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenConservat
+  id: ConveyorKitchenConservat
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorKitchenConservat
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorKitchenConservat
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenConservat
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorKitchenConservat
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 79
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Kitchen: Sealing Machine'
+  example: []
+  syntax:
+    content: public const string ConveyorKitchenConservat = "conveyor_kitchen_conservat"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorKitchenConservat As String = "conveyor_kitchen_conservat"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenMillstone
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenMillstone
+  id: ConveyorKitchenMillstone
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorKitchenMillstone
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorKitchenMillstone
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenMillstone
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorKitchenMillstone
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 81
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Kitchen: Millstone'
+  example: []
+  syntax:
+    content: public const string ConveyorKitchenMillstone = "conveyor_kitchen_millstone"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorKitchenMillstone As String = "conveyor_kitchen_millstone"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenStove
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenStove
+  id: ConveyorKitchenStove
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorKitchenStove
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorKitchenStove
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenStove
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorKitchenStove
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 83
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Kitchen: Stove'
+  example: []
+  syntax:
+    content: public const string ConveyorKitchenStove = "conveyor_kitchen_stove"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorKitchenStove As String = "conveyor_kitchen_stove"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT1
+  id: ConveyorKitchenT1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorKitchenT1
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorKitchenT1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 85
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen I
+  example: []
+  syntax:
+    content: public const string ConveyorKitchenT1 = "conveyor_kitchen_t1"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorKitchenT1 As String = "conveyor_kitchen_t1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT2
+  id: ConveyorKitchenT2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor
+  langs:
+  - csharp
+  - vb
+  name: ConveyorKitchenT2
+  nameWithType: TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Conveyor.ConveyorKitchenT2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ConveyorKitchenT2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
+    startLine: 87
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Kitchen II
+  example: []
+  syntax:
+    content: public const string ConveyorKitchenT2 = "conveyor_kitchen_t2"
+    return:
+      type: System.String
+    content.vb: Public Const ConveyorKitchenT2 As String = "conveyor_kitchen_t2"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

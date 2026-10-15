@@ -1,0 +1,485 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites
+  id: TimbnPluginSprites
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginSprites
+  nameWithType: TimbnPluginSprites
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginSprites
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds custom sprites on behalf of a plugin, such as icons for its items and buffs. The game finds sprites
+
+    by name, so a sprite added here shows anywhere its name is used as an icon id. Sprites are removed and
+
+    their textures freed when the plugin unloads. Reach it through the plugin's Sprites property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginSprites
+    content.vb: Public NotInheritable Class TimbnPluginSprites
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+  id: AddPng(System.String,System.Byte[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites
+  langs:
+  - csharp
+  - vb
+  name: AddPng(string, byte[])
+  nameWithType: TimbnPluginSprites.AddPng(string, byte[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(string, byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddPng
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a PNG under a sprite name. An image smaller than 48 pixels (the size of the game's icons) is centered
+
+    on a 48 pixel canvas. Sprites use point filtering and 50 pixels per unit, like the game's own art.
+  example: []
+  syntax:
+    content: public IDisposable AddPng(string name, byte[] png)
+    parameters:
+    - id: name
+      type: System.String
+      description: The sprite name, used as an item's or buff's IconId.
+    - id: png
+      type: System.Byte[]
+      description: The PNG file's bytes, usually read from a resource embedded in the plugin's DLL.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the sprite early when disposed. You don't need to keep it.
+    content.vb: Public Function AddPng(name As String, png As Byte()) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng*
+  nameWithType.vb: TimbnPluginSprites.AddPng(String, Byte())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(String, Byte())
+  name.vb: AddPng(String, Byte())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng(System.String)
+  id: AddEmbeddedPng(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites
+  langs:
+  - csharp
+  - vb
+  name: AddEmbeddedPng(string)
+  nameWithType: TimbnPluginSprites.AddEmbeddedPng(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddEmbeddedPng
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Sprites/TimbnPluginSprites.cs
+    startLine: 32
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a PNG embedded in the plugin's DLL, like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String%2cSystem.Byte%5b%5d)" data-throw-if-not-resolved="false"></xref>. The resource is found by the sprite name
+
+    plus ".png", so embed icons with <code>LogicalName="%(Filename)%(Extension)"</code>.
+  example: []
+  syntax:
+    content: public IDisposable AddEmbeddedPng(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The sprite name and the resource's name without ".png", for example "timbn_smoked_fish".
+    return:
+      type: System.IDisposable
+      description: A handle that removes the sprite early when disposed. You don't need to keep it.
+    content.vb: Public Function AddEmbeddedPng(name As String) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: The plugin has no such embedded resource.
+  nameWithType.vb: TimbnPluginSprites.AddEmbeddedPng(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng(String)
+  name.vb: AddEmbeddedPng(String)
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSprites_AddPng_System_String_System_Byte___
+  name: AddPng
+  nameWithType: TimbnPluginSprites.AddPng
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSprites_AddPng_System_String_System_Byte___
+  name: AddPng(string, byte[])
+  nameWithType: TimbnPluginSprites.AddPng(string, byte[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(string, byte[])
+  nameWithType.vb: TimbnPluginSprites.AddPng(String, Byte())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(String, Byte())
+  name.vb: AddPng(String, Byte())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+    name: AddPng
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSprites_AddPng_System_String_System_Byte___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddPng(System.String,System.Byte[])
+    name: AddPng
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSprites_AddPng_System_String_System_Byte___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginSprites_AddEmbeddedPng_System_String_
+  name: AddEmbeddedPng
+  nameWithType: TimbnPluginSprites.AddEmbeddedPng
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginSprites.AddEmbeddedPng

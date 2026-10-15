@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  id: TimbnWeekday
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Envy
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Gluttony
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Lust
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Pride
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Sloth
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Wrath
+  langs:
+  - csharp
+  - vb
+  name: TimbnWeekday
+  nameWithType: TimbnWeekday
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  type: Enum
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnWeekday
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 3
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The six days of the game's week, named the way the game names them.
+  example: []
+  syntax:
+    content: public enum TimbnWeekday
+    content.vb: Public Enum TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Gluttony
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Gluttony
+  id: Gluttony
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Gluttony
+  nameWithType: TimbnWeekday.Gluttony
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Gluttony
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Gluttony
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Gluttony.
+  example: []
+  syntax:
+    content: Gluttony = 0
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Sloth
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Sloth
+  id: Sloth
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Sloth
+  nameWithType: TimbnWeekday.Sloth
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Sloth
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Sloth
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Sloth.
+  example: []
+  syntax:
+    content: Sloth = 1
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Lust
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Lust
+  id: Lust
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Lust
+  nameWithType: TimbnWeekday.Lust
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Lust
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Lust
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Lust.
+  example: []
+  syntax:
+    content: Lust = 2
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Envy
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Envy
+  id: Envy
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Envy
+  nameWithType: TimbnWeekday.Envy
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Envy
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Envy
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Envy.
+  example: []
+  syntax:
+    content: Envy = 3
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Pride
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Pride
+  id: Pride
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Pride
+  nameWithType: TimbnWeekday.Pride
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Pride
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Pride
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 18
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Pride.
+  example: []
+  syntax:
+    content: Pride = 4
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Wrath
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Wrath
+  id: Wrath
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  langs:
+  - csharp
+  - vb
+  name: Wrath
+  nameWithType: TimbnWeekday.Wrath
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.Wrath
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Wrath
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Dialog/TimbnWeekday.cs
+    startLine: 21
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Wrath.
+  example: []
+  syntax:
+    content: Wrath = 5
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  name: TimbnWeekday
+  nameWithType: TimbnWeekday
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday

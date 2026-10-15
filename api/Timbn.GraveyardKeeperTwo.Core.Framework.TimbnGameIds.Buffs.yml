@@ -1,0 +1,2864 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  id: TimbnGameIds.Buffs
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Alchomaster
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Beer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Cleancut
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DebuffExcessiveZombie
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DiscoSuperStar
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fermentation
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hardwork
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.LackOfSleepDebuff
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Longtimer
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Plant
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sauna
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sins
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sleep
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Speed
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Storm
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Survay
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow1
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow2
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow3
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThirdEyeSalt
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThriftyFarmer
+  langs:
+  - csharp
+  - vb
+  name: TimbnGameIds.Buffs
+  nameWithType: TimbnGameIds.Buffs
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Buffs
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 7
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The temporary buffs and debuffs, including the talent buffs a talent potion grants.
+  example: []
+  syntax:
+    content: public static class TimbnGameIds.Buffs
+    content.vb: Public Module TimbnGameIds.Buffs
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Alchomaster
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Alchomaster
+  id: Alchomaster
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Alchomaster
+  nameWithType: TimbnGameIds.Buffs.Alchomaster
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Alchomaster
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Alchomaster
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 10
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Alchomaster
+  example: []
+  syntax:
+    content: public const string Alchomaster = "buff_alchomaster"
+    return:
+      type: System.String
+    content.vb: Public Const Alchomaster As String = "buff_alchomaster"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Beer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Beer
+  id: Beer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Beer
+  nameWithType: TimbnGameIds.Buffs.Beer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Beer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Beer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Beer thirst. Beer tastes much better now!
+  example: []
+  syntax:
+    content: public const string Beer = "buff_beer"
+    return:
+      type: System.String
+    content.vb: Public Const Beer As String = "buff_beer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk1
+  id: Berserk1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Berserk1
+  nameWithType: TimbnGameIds.Buffs.Berserk1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Berserk1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Berserk. Your attacks no longer consume stamina.
+  example: []
+  syntax:
+    content: public const string Berserk1 = "buff_berserk_1"
+    return:
+      type: System.String
+    content.vb: Public Const Berserk1 As String = "buff_berserk_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk2
+  id: Berserk2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Berserk2
+  nameWithType: TimbnGameIds.Buffs.Berserk2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Berserk2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 16
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Berserk II. Your attacks no longer consume stamina.
+  example: []
+  syntax:
+    content: public const string Berserk2 = "buff_berserk_2"
+    return:
+      type: System.String
+    content.vb: Public Const Berserk2 As String = "buff_berserk_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk3
+  id: Berserk3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Berserk3
+  nameWithType: TimbnGameIds.Buffs.Berserk3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Berserk3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Berserk3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 18
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Berserk III. Your attacks no longer consume stamina.
+  example: []
+  syntax:
+    content: public const string Berserk3 = "buff_berserk_3"
+    return:
+      type: System.String
+    content.vb: Public Const Berserk3 As String = "buff_berserk_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Cleancut
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Cleancut
+  id: Cleancut
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Cleancut
+  nameWithType: TimbnGameIds.Buffs.Cleancut
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Cleancut
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Cleancut
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 20
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Steady hand. Autopsy is easier.
+  example: []
+  syntax:
+    content: public const string Cleancut = "buff_cleancut"
+    return:
+      type: System.String
+    content.vb: Public Const Cleancut As String = "buff_cleancut"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat
+  id: Combat
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Combat
+  nameWithType: TimbnGameIds.Buffs.Combat
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Combat
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 22
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's fury. You combatants inflict more damage during battles.
+  example: []
+  syntax:
+    content: public const string Combat = "buff_combat"
+    return:
+      type: System.String
+    content.vb: Public Const Combat As String = "buff_combat"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat1
+  id: Combat1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Combat1
+  nameWithType: TimbnGameIds.Buffs.Combat1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Combat1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 24
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's fury. You combatants inflict more damage during battles.
+  example: []
+  syntax:
+    content: public const string Combat1 = "buff_combat_1"
+    return:
+      type: System.String
+    content.vb: Public Const Combat1 As String = "buff_combat_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat2
+  id: Combat2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Combat2
+  nameWithType: TimbnGameIds.Buffs.Combat2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Combat2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 26
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's fury. You combatants inflict more damage during battles.
+  example: []
+  syntax:
+    content: public const string Combat2 = "buff_combat_2"
+    return:
+      type: System.String
+    content.vb: Public Const Combat2 As String = "buff_combat_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat3
+  id: Combat3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Combat3
+  nameWithType: TimbnGameIds.Buffs.Combat3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Combat3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Combat3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 28
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's fury. You combatants inflict more damage during battles.
+  example: []
+  syntax:
+    content: public const string Combat3 = "buff_combat_3"
+    return:
+      type: System.String
+    content.vb: Public Const Combat3 As String = "buff_combat_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption1
+  id: Consumption1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Consumption1
+  nameWithType: TimbnGameIds.Buffs.Consumption1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Consumption1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 30
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of offer. You get more and from town orders.
+  example: []
+  syntax:
+    content: public const string Consumption1 = "buff_consumption_1"
+    return:
+      type: System.String
+    content.vb: Public Const Consumption1 As String = "buff_consumption_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption2
+  id: Consumption2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Consumption2
+  nameWithType: TimbnGameIds.Buffs.Consumption2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Consumption2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 32
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of offer. You get more and from town orders.
+  example: []
+  syntax:
+    content: public const string Consumption2 = "buff_consumption_2"
+    return:
+      type: System.String
+    content.vb: Public Const Consumption2 As String = "buff_consumption_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption3
+  id: Consumption3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Consumption3
+  nameWithType: TimbnGameIds.Buffs.Consumption3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Consumption3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Consumption3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 34
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of offer. You get more and from town orders.
+  example: []
+  syntax:
+    content: public const string Consumption3 = "buff_consumption_3"
+    return:
+      type: System.String
+    content.vb: Public Const Consumption3 As String = "buff_consumption_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses1
+  id: Corpses1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Corpses1
+  nameWithType: TimbnGameIds.Buffs.Corpses1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Corpses1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 36
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of dead. You get better corpses.
+  example: []
+  syntax:
+    content: public const string Corpses1 = "buff_corpses_1"
+    return:
+      type: System.String
+    content.vb: Public Const Corpses1 As String = "buff_corpses_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses2
+  id: Corpses2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Corpses2
+  nameWithType: TimbnGameIds.Buffs.Corpses2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Corpses2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 38
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of dead. You get better corpses.
+  example: []
+  syntax:
+    content: public const string Corpses2 = "buff_corpses_2"
+    return:
+      type: System.String
+    content.vb: Public Const Corpses2 As String = "buff_corpses_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses3
+  id: Corpses3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Corpses3
+  nameWithType: TimbnGameIds.Buffs.Corpses3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Corpses3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Corpses3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 40
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of dead. You get better corpses.
+  example: []
+  syntax:
+    content: public const string Corpses3 = "buff_corpses_3"
+    return:
+      type: System.String
+    content.vb: Public Const Corpses3 As String = "buff_corpses_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage1
+  id: Damage1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Damage1
+  nameWithType: TimbnGameIds.Buffs.Damage1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Damage1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 42
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fighter. Your damage is slightly increased.
+  example: []
+  syntax:
+    content: public const string Damage1 = "buff_damage_1"
+    return:
+      type: System.String
+    content.vb: Public Const Damage1 As String = "buff_damage_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage2
+  id: Damage2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Damage2
+  nameWithType: TimbnGameIds.Buffs.Damage2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Damage2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 44
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fighter II. Your damage is increased.
+  example: []
+  syntax:
+    content: public const string Damage2 = "buff_damage_2"
+    return:
+      type: System.String
+    content.vb: Public Const Damage2 As String = "buff_damage_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage3
+  id: Damage3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Damage3
+  nameWithType: TimbnGameIds.Buffs.Damage3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Damage3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Damage3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 46
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fighter III. Your damage is greatly increased.
+  example: []
+  syntax:
+    content: public const string Damage3 = "buff_damage_3"
+    return:
+      type: System.String
+    content.vb: Public Const Damage3 As String = "buff_damage_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand1
+  id: Demand1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Demand1
+  nameWithType: TimbnGameIds.Buffs.Demand1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Demand1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 48
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of demand. You urgent town orders are not so urgent.
+  example: []
+  syntax:
+    content: public const string Demand1 = "buff_demand_1"
+    return:
+      type: System.String
+    content.vb: Public Const Demand1 As String = "buff_demand_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand2
+  id: Demand2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Demand2
+  nameWithType: TimbnGameIds.Buffs.Demand2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Demand2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 50
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of demand. You urgent town orders are not so urgent.
+  example: []
+  syntax:
+    content: public const string Demand2 = "buff_demand_2"
+    return:
+      type: System.String
+    content.vb: Public Const Demand2 As String = "buff_demand_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand3
+  id: Demand3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Demand3
+  nameWithType: TimbnGameIds.Buffs.Demand3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Demand3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Demand3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 52
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of demand. You urgent town orders are not so urgent.
+  example: []
+  syntax:
+    content: public const string Demand3 = "buff_demand_3"
+    return:
+      type: System.String
+    content.vb: Public Const Demand3 As String = "buff_demand_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DiscoSuperStar
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DiscoSuperStar
+  id: DiscoSuperStar
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: DiscoSuperStar
+  nameWithType: TimbnGameIds.Buffs.DiscoSuperStar
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DiscoSuperStar
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DiscoSuperStar
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 54
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Disco Super Star
+  example: []
+  syntax:
+    content: public const string DiscoSuperStar = "buff_disco_super_star"
+    return:
+      type: System.String
+    content.vb: Public Const DiscoSuperStar As String = "buff_disco_super_star"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence1
+  id: Excellence1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Excellence1
+  nameWithType: TimbnGameIds.Buffs.Excellence1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Excellence1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 56
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of craftsmen. You receive bonus talents////.
+  example: []
+  syntax:
+    content: public const string Excellence1 = "buff_excellence_1"
+    return:
+      type: System.String
+    content.vb: Public Const Excellence1 As String = "buff_excellence_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence2
+  id: Excellence2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Excellence2
+  nameWithType: TimbnGameIds.Buffs.Excellence2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Excellence2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 58
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of craftsmen. You receive bonus talents////.
+  example: []
+  syntax:
+    content: public const string Excellence2 = "buff_excellence_2"
+    return:
+      type: System.String
+    content.vb: Public Const Excellence2 As String = "buff_excellence_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence3
+  id: Excellence3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Excellence3
+  nameWithType: TimbnGameIds.Buffs.Excellence3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Excellence3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Excellence3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 60
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of craftsmen. You receive bonus talents////.
+  example: []
+  syntax:
+    content: public const string Excellence3 = "buff_excellence_3"
+    return:
+      type: System.String
+    content.vb: Public Const Excellence3 As String = "buff_excellence_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm
+  id: Farm
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Farm
+  nameWithType: TimbnGameIds.Buffs.Farm
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Farm
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 62
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of nature. Your farms work faster.
+  example: []
+  syntax:
+    content: public const string Farm = "buff_farm"
+    return:
+      type: System.String
+    content.vb: Public Const Farm As String = "buff_farm"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm1
+  id: Farm1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Farm1
+  nameWithType: TimbnGameIds.Buffs.Farm1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Farm1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 64
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of nature. Your farms work faster.
+  example: []
+  syntax:
+    content: public const string Farm1 = "buff_farm_1"
+    return:
+      type: System.String
+    content.vb: Public Const Farm1 As String = "buff_farm_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm2
+  id: Farm2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Farm2
+  nameWithType: TimbnGameIds.Buffs.Farm2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Farm2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 66
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of nature. Your farms work faster.
+  example: []
+  syntax:
+    content: public const string Farm2 = "buff_farm_2"
+    return:
+      type: System.String
+    content.vb: Public Const Farm2 As String = "buff_farm_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm3
+  id: Farm3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Farm3
+  nameWithType: TimbnGameIds.Buffs.Farm3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Farm3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Farm3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 68
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of nature. Your farms work faster.
+  example: []
+  syntax:
+    content: public const string Farm3 = "buff_farm_3"
+    return:
+      type: System.String
+    content.vb: Public Const Farm3 As String = "buff_farm_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fermentation
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fermentation
+  id: Fermentation
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Fermentation
+  nameWithType: TimbnGameIds.Buffs.Fermentation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fermentation
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Fermentation
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 70
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fermentation
+  example: []
+  syntax:
+    content: public const string Fermentation = "buff_fermentation"
+    return:
+      type: System.String
+    content.vb: Public Const Fermentation As String = "buff_fermentation"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing
+  id: Fishing
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Fishing
+  nameWithType: TimbnGameIds.Buffs.Fishing
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Fishing
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 72
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fast reflexes. You have additional time to hook a fish.
+  example: []
+  syntax:
+    content: public const string Fishing = "buff_fishing"
+    return:
+      type: System.String
+    content.vb: Public Const Fishing As String = "buff_fishing"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing2
+  id: Fishing2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Fishing2
+  nameWithType: TimbnGameIds.Buffs.Fishing2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Fishing2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Fishing2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 74
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Good fisherman. You don't let fish off the hook easily.
+  example: []
+  syntax:
+    content: public const string Fishing2 = "buff_fishing2"
+    return:
+      type: System.String
+    content.vb: Public Const Fishing2 As String = "buff_fishing2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hardwork
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hardwork
+  id: Hardwork
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Hardwork
+  nameWithType: TimbnGameIds.Buffs.Hardwork
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hardwork
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Hardwork
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 76
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Hard worker. You spend less energy working with axes and pickaxes.
+  example: []
+  syntax:
+    content: public const string Hardwork = "buff_hardwork"
+    return:
+      type: System.String
+    content.vb: Public Const Hardwork As String = "buff_hardwork"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno1
+  id: Hypno1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Hypno1
+  nameWithType: TimbnGameIds.Buffs.Hypno1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Hypno1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 78
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of delusions. Your debuff for excessive zombies does not work anymore.
+  example: []
+  syntax:
+    content: public const string Hypno1 = "buff_hypno_1"
+    return:
+      type: System.String
+    content.vb: Public Const Hypno1 As String = "buff_hypno_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno2
+  id: Hypno2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Hypno2
+  nameWithType: TimbnGameIds.Buffs.Hypno2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Hypno2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 80
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of delusions. Your debuff for excessive zombies does not work anymore.
+  example: []
+  syntax:
+    content: public const string Hypno2 = "buff_hypno_2"
+    return:
+      type: System.String
+    content.vb: Public Const Hypno2 As String = "buff_hypno_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno3
+  id: Hypno3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Hypno3
+  nameWithType: TimbnGameIds.Buffs.Hypno3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Hypno3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Hypno3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of delusions. Your debuff for excessive zombies does not work anymore.
+  example: []
+  syntax:
+    content: public const string Hypno3 = "buff_hypno_3"
+    return:
+      type: System.String
+    content.vb: Public Const Hypno3 As String = "buff_hypno_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination1
+  id: Imagination1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Imagination1
+  nameWithType: TimbnGameIds.Buffs.Imagination1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Imagination1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 84
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Creative God. You have a chance to get stories while working.
+  example: []
+  syntax:
+    content: public const string Imagination1 = "buff_imagination_1"
+    return:
+      type: System.String
+    content.vb: Public Const Imagination1 As String = "buff_imagination_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination2
+  id: Imagination2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Imagination2
+  nameWithType: TimbnGameIds.Buffs.Imagination2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Imagination2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 86
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Creative God. You have a chance to get stories while working.
+  example: []
+  syntax:
+    content: public const string Imagination2 = "buff_imagination_2"
+    return:
+      type: System.String
+    content.vb: Public Const Imagination2 As String = "buff_imagination_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination3
+  id: Imagination3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Imagination3
+  nameWithType: TimbnGameIds.Buffs.Imagination3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Imagination3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Imagination3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 88
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Creative God. You have a chance to get stories while working.
+  example: []
+  syntax:
+    content: public const string Imagination3 = "buff_imagination_3"
+    return:
+      type: System.String
+    content.vb: Public Const Imagination3 As String = "buff_imagination_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity1
+  id: Insanity1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Insanity1
+  nameWithType: TimbnGameIds.Buffs.Insanity1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Insanity1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 90
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of insane. You get more.
+  example: []
+  syntax:
+    content: public const string Insanity1 = "buff_insanity_1"
+    return:
+      type: System.String
+    content.vb: Public Const Insanity1 As String = "buff_insanity_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity2
+  id: Insanity2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Insanity2
+  nameWithType: TimbnGameIds.Buffs.Insanity2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Insanity2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 91
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Insanity2 = "buff_insanity_2"
+    return:
+      type: System.String
+    content.vb: Public Const Insanity2 As String = "buff_insanity_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity3
+  id: Insanity3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Insanity3
+  nameWithType: TimbnGameIds.Buffs.Insanity3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Insanity3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Insanity3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 92
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  syntax:
+    content: public const string Insanity3 = "buff_insanity_3"
+    return:
+      type: System.String
+    content.vb: Public Const Insanity3 As String = "buff_insanity_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes1
+  id: Likes1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Likes1
+  nameWithType: TimbnGameIds.Buffs.Likes1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Likes1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 94
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of love. Your maximum is unlimited.
+  example: []
+  syntax:
+    content: public const string Likes1 = "buff_likes_1"
+    return:
+      type: System.String
+    content.vb: Public Const Likes1 As String = "buff_likes_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes2
+  id: Likes2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Likes2
+  nameWithType: TimbnGameIds.Buffs.Likes2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Likes2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 96
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of love. Your maximum is unlimited.
+  example: []
+  syntax:
+    content: public const string Likes2 = "buff_likes_2"
+    return:
+      type: System.String
+    content.vb: Public Const Likes2 As String = "buff_likes_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes3
+  id: Likes3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Likes3
+  nameWithType: TimbnGameIds.Buffs.Likes3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Likes3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Likes3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 98
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of love. Your maximum is unlimited.
+  example: []
+  syntax:
+    content: public const string Likes3 = "buff_likes_3"
+    return:
+      type: System.String
+    content.vb: Public Const Likes3 As String = "buff_likes_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Longtimer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Longtimer
+  id: Longtimer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Longtimer
+  nameWithType: TimbnGameIds.Buffs.Longtimer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Longtimer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Longtimer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 100
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Slow metabolism. All buffs last longer.
+  example: []
+  syntax:
+    content: public const string Longtimer = "buff_longtimer"
+    return:
+      type: System.String
+    content.vb: Public Const Longtimer As String = "buff_longtimer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator1
+  id: Motivator1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Motivator1
+  nameWithType: TimbnGameIds.Buffs.Motivator1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Motivator1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 102
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Motivation. Allied fighters' attack speed is increased.
+  example: []
+  syntax:
+    content: public const string Motivator1 = "buff_motivator_1"
+    return:
+      type: System.String
+    content.vb: Public Const Motivator1 As String = "buff_motivator_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator2
+  id: Motivator2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Motivator2
+  nameWithType: TimbnGameIds.Buffs.Motivator2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Motivator2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 104
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Motivation II. Allied fighters' attack speed is increased.
+  example: []
+  syntax:
+    content: public const string Motivator2 = "buff_motivator_2"
+    return:
+      type: System.String
+    content.vb: Public Const Motivator2 As String = "buff_motivator_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator3
+  id: Motivator3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Motivator3
+  nameWithType: TimbnGameIds.Buffs.Motivator3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Motivator3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Motivator3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 106
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Zombie Motivation III. Allied fighters' attack speed is increased.
+  example: []
+  syntax:
+    content: public const string Motivator3 = "buff_motivator_3"
+    return:
+      type: System.String
+    content.vb: Public Const Motivator3 As String = "buff_motivator_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience1
+  id: Obedience1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Obedience1
+  nameWithType: TimbnGameIds.Buffs.Obedience1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Obedience1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 108
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of the zombies. You zombies work faster and you con use worse collars to create them.
+  example: []
+  syntax:
+    content: public const string Obedience1 = "buff_obedience_1"
+    return:
+      type: System.String
+    content.vb: Public Const Obedience1 As String = "buff_obedience_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience2
+  id: Obedience2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Obedience2
+  nameWithType: TimbnGameIds.Buffs.Obedience2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Obedience2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 110
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of the zombies. You zombies work faster and you con use worse collars to create them.
+  example: []
+  syntax:
+    content: public const string Obedience2 = "buff_obedience_2"
+    return:
+      type: System.String
+    content.vb: Public Const Obedience2 As String = "buff_obedience_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience3
+  id: Obedience3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Obedience3
+  nameWithType: TimbnGameIds.Buffs.Obedience3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Obedience3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Obedience3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 112
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of the zombies. You zombies work faster and you con use worse collars to create them.
+  example: []
+  syntax:
+    content: public const string Obedience3 = "buff_obedience_3"
+    return:
+      type: System.String
+    content.vb: Public Const Obedience3 As String = "buff_obedience_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Plant
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Plant
+  id: Plant
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Plant
+  nameWithType: TimbnGameIds.Buffs.Plant
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Plant
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Plant
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 114
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Fertility. Vegetables grow faster.
+  example: []
+  syntax:
+    content: public const string Plant = "buff_plant"
+    return:
+      type: System.String
+    content.vb: Public Const Plant As String = "buff_plant"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection1
+  id: Protection1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Protection1
+  nameWithType: TimbnGameIds.Buffs.Protection1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Protection1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 116
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's protection. Your combatants receive less damage during battles.
+  example: []
+  syntax:
+    content: public const string Protection1 = "buff_protection_1"
+    return:
+      type: System.String
+    content.vb: Public Const Protection1 As String = "buff_protection_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection2
+  id: Protection2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Protection2
+  nameWithType: TimbnGameIds.Buffs.Protection2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Protection2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 118
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's protection. Your combatants receive less damage during battles.
+  example: []
+  syntax:
+    content: public const string Protection2 = "buff_protection_2"
+    return:
+      type: System.String
+    content.vb: Public Const Protection2 As String = "buff_protection_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection3
+  id: Protection3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Protection3
+  nameWithType: TimbnGameIds.Buffs.Protection3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Protection3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Protection3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 120
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God's protection. Your combatants receive less damage during battles.
+  example: []
+  syntax:
+    content: public const string Protection3 = "buff_protection_3"
+    return:
+      type: System.String
+    content.vb: Public Const Protection3 As String = "buff_protection_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity1
+  id: Purity1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Purity1
+  nameWithType: TimbnGameIds.Buffs.Purity1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Purity1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 122
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of sane. You do not get at all.
+  example: []
+  syntax:
+    content: public const string Purity1 = "buff_purity_1"
+    return:
+      type: System.String
+    content.vb: Public Const Purity1 As String = "buff_purity_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity2
+  id: Purity2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Purity2
+  nameWithType: TimbnGameIds.Buffs.Purity2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Purity2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 124
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of sane. You do not get at all.
+  example: []
+  syntax:
+    content: public const string Purity2 = "buff_purity_2"
+    return:
+      type: System.String
+    content.vb: Public Const Purity2 As String = "buff_purity_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity3
+  id: Purity3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Purity3
+  nameWithType: TimbnGameIds.Buffs.Purity3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Purity3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Purity3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 126
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of sane. You do not get at all.
+  example: []
+  syntax:
+    content: public const string Purity3 = "buff_purity_3"
+    return:
+      type: System.String
+    content.vb: Public Const Purity3 As String = "buff_purity_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sauna
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sauna
+  id: Sauna
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Sauna
+  nameWithType: TimbnGameIds.Buffs.Sauna
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sauna
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Sauna
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 128
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: 'Steamed Up. You feel refreshed after your sauna: food gives +10%.'
+  example: []
+  syntax:
+    content: public const string Sauna = "buff_sauna"
+    return:
+      type: System.String
+    content.vb: Public Const Sauna As String = "buff_sauna"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sins
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sins
+  id: Sins
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Sins
+  nameWithType: TimbnGameIds.Buffs.Sins
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sins
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Sins
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 130
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Repentance. More people come during the week to confess their sins.
+  example: []
+  syntax:
+    content: public const string Sins = "buff_sins"
+    return:
+      type: System.String
+    content.vb: Public Const Sins As String = "buff_sins"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sleep
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sleep
+  id: Sleep
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Sleep
+  nameWithType: TimbnGameIds.Buffs.Sleep
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Sleep
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Sleep
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 132
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Deep sleep. Energy regeneration during sleeping is increased.
+  example: []
+  syntax:
+    content: public const string Sleep = "buff_sleep"
+    return:
+      type: System.String
+    content.vb: Public Const Sleep As String = "buff_sleep"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Speed
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Speed
+  id: Speed
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Speed
+  nameWithType: TimbnGameIds.Buffs.Speed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Speed
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Speed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 134
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Running God. You and you zombies move faster.
+  example: []
+  syntax:
+    content: public const string Speed = "buff_speed"
+    return:
+      type: System.String
+    content.vb: Public Const Speed As String = "buff_speed"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Storm
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Storm
+  id: Storm
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Storm
+  nameWithType: TimbnGameIds.Buffs.Storm
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Storm
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Storm
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 136
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: God of the storms. You can resurrect zombies every time you need it.
+  example: []
+  syntax:
+    content: public const string Storm = "buff_storm"
+    return:
+      type: System.String
+    content.vb: Public Const Storm As String = "buff_storm"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Survay
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Survay
+  id: Survay
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: Survay
+  nameWithType: TimbnGameIds.Buffs.Survay
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.Survay
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Survay
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 138
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Circumspect. You get extra points when studying new items.
+  example: []
+  syntax:
+    content: public const string Survay = "buff_survay"
+    return:
+      type: System.String
+    content.vb: Public Const Survay As String = "buff_survay"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue1
+  id: TalentBlue1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentBlue1
+  nameWithType: TimbnGameIds.Buffs.TalentBlue1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentBlue1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 140
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Anatomy spirit I. You temporarily have +1.
+  example: []
+  syntax:
+    content: public const string TalentBlue1 = "buff_talent_blue_1"
+    return:
+      type: System.String
+    content.vb: Public Const TalentBlue1 As String = "buff_talent_blue_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue2
+  id: TalentBlue2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentBlue2
+  nameWithType: TimbnGameIds.Buffs.TalentBlue2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentBlue2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 142
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Anatomy spirit II. You temporarily have +2.
+  example: []
+  syntax:
+    content: public const string TalentBlue2 = "buff_talent_blue_2"
+    return:
+      type: System.String
+    content.vb: Public Const TalentBlue2 As String = "buff_talent_blue_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue3
+  id: TalentBlue3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentBlue3
+  nameWithType: TimbnGameIds.Buffs.TalentBlue3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentBlue3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentBlue3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 144
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Anatomy spirit III. You temporarily have +3.
+  example: []
+  syntax:
+    content: public const string TalentBlue3 = "buff_talent_blue_3"
+    return:
+      type: System.String
+    content.vb: Public Const TalentBlue3 As String = "buff_talent_blue_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen1
+  id: TalentGreen1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentGreen1
+  nameWithType: TimbnGameIds.Buffs.TalentGreen1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentGreen1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 146
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Farming spirit I. You temporarily have +1.
+  example: []
+  syntax:
+    content: public const string TalentGreen1 = "buff_talent_green_1"
+    return:
+      type: System.String
+    content.vb: Public Const TalentGreen1 As String = "buff_talent_green_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen2
+  id: TalentGreen2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentGreen2
+  nameWithType: TimbnGameIds.Buffs.TalentGreen2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentGreen2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 148
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Farming spirit II. You temporarily have +2.
+  example: []
+  syntax:
+    content: public const string TalentGreen2 = "buff_talent_green_2"
+    return:
+      type: System.String
+    content.vb: Public Const TalentGreen2 As String = "buff_talent_green_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen3
+  id: TalentGreen3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentGreen3
+  nameWithType: TimbnGameIds.Buffs.TalentGreen3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentGreen3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentGreen3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 150
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Farming spirit III. You temporarily have +3.
+  example: []
+  syntax:
+    content: public const string TalentGreen3 = "buff_talent_green_3"
+    return:
+      type: System.String
+    content.vb: Public Const TalentGreen3 As String = "buff_talent_green_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange1
+  id: TalentOrange1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentOrange1
+  nameWithType: TimbnGameIds.Buffs.TalentOrange1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentOrange1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 152
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Building spirit I. You temporarily have +1.
+  example: []
+  syntax:
+    content: public const string TalentOrange1 = "buff_talent_orange_1"
+    return:
+      type: System.String
+    content.vb: Public Const TalentOrange1 As String = "buff_talent_orange_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange2
+  id: TalentOrange2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentOrange2
+  nameWithType: TimbnGameIds.Buffs.TalentOrange2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentOrange2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 154
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Building spirit II. You temporarily have +2.
+  example: []
+  syntax:
+    content: public const string TalentOrange2 = "buff_talent_orange_2"
+    return:
+      type: System.String
+    content.vb: Public Const TalentOrange2 As String = "buff_talent_orange_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange3
+  id: TalentOrange3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentOrange3
+  nameWithType: TimbnGameIds.Buffs.TalentOrange3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentOrange3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentOrange3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 156
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Building spirit III. You temporarily have +3.
+  example: []
+  syntax:
+    content: public const string TalentOrange3 = "buff_talent_orange_3"
+    return:
+      type: System.String
+    content.vb: Public Const TalentOrange3 As String = "buff_talent_orange_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed1
+  id: TalentRed1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentRed1
+  nameWithType: TimbnGameIds.Buffs.TalentRed1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentRed1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 158
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Smithing spirit I. You temporarily have +1.
+  example: []
+  syntax:
+    content: public const string TalentRed1 = "buff_talent_red_1"
+    return:
+      type: System.String
+    content.vb: Public Const TalentRed1 As String = "buff_talent_red_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed2
+  id: TalentRed2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentRed2
+  nameWithType: TimbnGameIds.Buffs.TalentRed2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentRed2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 160
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Smithing spirit II. You temporarily have +2.
+  example: []
+  syntax:
+    content: public const string TalentRed2 = "buff_talent_red_2"
+    return:
+      type: System.String
+    content.vb: Public Const TalentRed2 As String = "buff_talent_red_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed3
+  id: TalentRed3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentRed3
+  nameWithType: TimbnGameIds.Buffs.TalentRed3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentRed3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentRed3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 162
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Smithing spirit III. You temporarily have +3.
+  example: []
+  syntax:
+    content: public const string TalentRed3 = "buff_talent_red_3"
+    return:
+      type: System.String
+    content.vb: Public Const TalentRed3 As String = "buff_talent_red_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow1
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow1
+  id: TalentYellow1
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentYellow1
+  nameWithType: TimbnGameIds.Buffs.TalentYellow1
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow1
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentYellow1
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 164
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Book writing spirit I. You temporarily have +1.
+  example: []
+  syntax:
+    content: public const string TalentYellow1 = "buff_talent_yellow_1"
+    return:
+      type: System.String
+    content.vb: Public Const TalentYellow1 As String = "buff_talent_yellow_1"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow2
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow2
+  id: TalentYellow2
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentYellow2
+  nameWithType: TimbnGameIds.Buffs.TalentYellow2
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow2
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentYellow2
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 166
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Book writing spirit II. You temporarily have +2.
+  example: []
+  syntax:
+    content: public const string TalentYellow2 = "buff_talent_yellow_2"
+    return:
+      type: System.String
+    content.vb: Public Const TalentYellow2 As String = "buff_talent_yellow_2"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow3
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow3
+  id: TalentYellow3
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: TalentYellow3
+  nameWithType: TimbnGameIds.Buffs.TalentYellow3
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.TalentYellow3
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TalentYellow3
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 168
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Book writing spirit III. You temporarily have +3.
+  example: []
+  syntax:
+    content: public const string TalentYellow3 = "buff_talent_yellow_3"
+    return:
+      type: System.String
+    content.vb: Public Const TalentYellow3 As String = "buff_talent_yellow_3"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThirdEyeSalt
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThirdEyeSalt
+  id: ThirdEyeSalt
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: ThirdEyeSalt
+  nameWithType: TimbnGameIds.Buffs.ThirdEyeSalt
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThirdEyeSalt
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ThirdEyeSalt
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 170
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Third Eye Salt. You receive bonus talents////.
+  example: []
+  syntax:
+    content: public const string ThirdEyeSalt = "buff_third_eye_salt"
+    return:
+      type: System.String
+    content.vb: Public Const ThirdEyeSalt As String = "buff_third_eye_salt"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThriftyFarmer
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThriftyFarmer
+  id: ThriftyFarmer
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: ThriftyFarmer
+  nameWithType: TimbnGameIds.Buffs.ThriftyFarmer
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.ThriftyFarmer
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ThriftyFarmer
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 172
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Thrifty farmer. Use fewer seeds when planting crops.
+  example: []
+  syntax:
+    content: public const string ThriftyFarmer = "buff_thrifty_farmer"
+    return:
+      type: System.String
+    content.vb: Public Const ThriftyFarmer As String = "buff_thrifty_farmer"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DebuffExcessiveZombie
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DebuffExcessiveZombie
+  id: DebuffExcessiveZombie
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: DebuffExcessiveZombie
+  nameWithType: TimbnGameIds.Buffs.DebuffExcessiveZombie
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.DebuffExcessiveZombie
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: DebuffExcessiveZombie
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 174
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Excessive zombies. You have too many zombies, and it's creeping people out. Your sermons are less effective.
+  example: []
+  syntax:
+    content: public const string DebuffExcessiveZombie = "debuff_excessive_zombie"
+    return:
+      type: System.String
+    content.vb: Public Const DebuffExcessiveZombie As String = "debuff_excessive_zombie"
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.LackOfSleepDebuff
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.LackOfSleepDebuff
+  id: LackOfSleepDebuff
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs
+  langs:
+  - csharp
+  - vb
+  name: LackOfSleepDebuff
+  nameWithType: TimbnGameIds.Buffs.LackOfSleepDebuff
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Buffs.LackOfSleepDebuff
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LackOfSleepDebuff
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Buffs.cs
+    startLine: 176
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Lack of sleep
+  example: []
+  syntax:
+    content: public const string LackOfSleepDebuff = "lack_of_sleep_debuff"
+    return:
+      type: System.String
+    content.vb: Public Const LackOfSleepDebuff As String = "lack_of_sleep_debuff"
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

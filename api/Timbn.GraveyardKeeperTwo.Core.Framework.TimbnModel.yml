@@ -1,0 +1,472 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  id: TimbnModel
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+  langs:
+  - csharp
+  - vb
+  name: TimbnModel
+  nameWithType: TimbnModel
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnModel
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    A 3D model from a plugin's asset bundle, drawn with the game's own prop shader so it takes the game's lighting,
+
+    fog and dithering. Get one from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class TimbnModel
+    content.vb: Public NotInheritable Class TimbnModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+  id: Name
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TimbnModel.Name
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Name
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+    startLine: 16
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The prefab's name in the bundle.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+  id: Size
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: TimbnModel.Size
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+  type: Property
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Size
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Models/TimbnModel.cs
+    startLine: 22
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The model's width, height and depth in world units, for example to hand a station the same footprint as the
+
+    drawing. A model made with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces%7d)" data-throw-if-not-resolved="false"></xref> is its pixel size divided by 50, 30 and 40.
+  example: []
+  syntax:
+    content: public Vector3 Size { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Size As Vector3
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size*
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelBundle_Model_System_String_
+  name: Model(string)
+  nameWithType: TimbnModelBundle.Model(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(string)
+  nameWithType.vb: TimbnModelBundle.Model(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(String)
+  name.vb: Model(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(System.String)
+    name: Model
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelBundle_Model_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.Model(System.String)
+    name: Model
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelBundle_Model_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Name
+  name: Name
+  nameWithType: TimbnModel.Name
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  name: Build(string, Action<TimbnModelFaces>)
+  nameWithType: TimbnPluginModels.Build(string, Action<TimbnModelFaces>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces>)
+  nameWithType.vb: TimbnPluginModels.Build(String, Action(Of TimbnModelFaces))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces))
+  name.vb: Build(String, Action(Of TimbnModelFaces))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+    name: Build
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    name: TimbnModelFaces
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces})
+    name: Build
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginModels_Build_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModelFaces__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
+    name: TimbnModelFaces
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnModel_Size
+  name: Size
+  nameWithType: TimbnModel.Size
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel.Size
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

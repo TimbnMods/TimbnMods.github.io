@@ -1,0 +1,559 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  id: TimbnNpcBlock
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TimbnNpcBlock
+  nameWithType: TimbnNpcBlock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnNpcBlock
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+    startLine: 132
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: One block of a <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class TimbnNpcBlock
+    content.vb: Public NotInheritable Class TimbnNpcBlock
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin(System.String)
+  id: Origin(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  langs:
+  - csharp
+  - vb
+  name: Origin(string)
+  nameWithType: TimbnNpcBlock.Origin(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Origin
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+    startLine: 156
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The point the person is put back at during this block when a walk along the paths finds no route, such as a
+
+    vendor's stall, and the walk is tried once more from there. Without it the walk is skipped.
+  example: []
+  syntax:
+    content: public TimbnNpcBlock Origin(string pointId)
+    parameters:
+    - id: pointId
+      type: System.String
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+    content.vb: Public Function Origin(pointId As String) As TimbnNpcBlock
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin*
+  nameWithType.vb: TimbnNpcBlock.Origin(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin(String)
+  name.vb: Origin(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  id: Intro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  langs:
+  - csharp
+  - vb
+  name: Intro(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  nameWithType: TimbnNpcBlock.Intro(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Intro
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+    startLine: 163
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The steps run once when the block starts on time.
+  example: []
+  syntax:
+    content: public TimbnNpcBlock Intro(Func<TimbnNpcSteps, TimbnNpcSteps> build)
+    parameters:
+    - id: build
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps}
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+    content.vb: Public Function Intro(build As Func(Of TimbnNpcSteps, TimbnNpcSteps)) As TimbnNpcBlock
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro*
+  nameWithType.vb: TimbnNpcBlock.Intro(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps))
+  name.vb: Intro(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  id: LateIntro(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  langs:
+  - csharp
+  - vb
+  name: LateIntro(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  nameWithType: TimbnNpcBlock.LateIntro(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LateIntro
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+    startLine: 170
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The steps run in place of the intro when the block is joined late, usually putting the person where the block expects them.
+  example: []
+  syntax:
+    content: public TimbnNpcBlock LateIntro(Func<TimbnNpcSteps, TimbnNpcSteps> build)
+    parameters:
+    - id: build
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps}
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+    content.vb: Public Function LateIntro(build As Func(Of TimbnNpcSteps, TimbnNpcSteps)) As TimbnNpcBlock
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro*
+  nameWithType.vb: TimbnNpcBlock.LateIntro(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps))
+  name.vb: LateIntro(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  id: Loop(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  langs:
+  - csharp
+  - vb
+  name: Loop(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  nameWithType: TimbnNpcBlock.Loop(Func<TimbnNpcSteps, TimbnNpcSteps>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop(System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Loop
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcDay.cs
+    startLine: 177
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: The steps repeated until the next block starts.
+  example: []
+  syntax:
+    content: public TimbnNpcBlock Loop(Func<TimbnNpcSteps, TimbnNpcSteps> build)
+    parameters:
+    - id: build
+      type: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps}
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+    content.vb: Public Function [Loop](build As Func(Of TimbnNpcSteps, TimbnNpcSteps)) As TimbnNpcBlock
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop*
+  nameWithType.vb: TimbnNpcBlock.Loop(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps))
+  name.vb: Loop(Func(Of TimbnNpcSteps, TimbnNpcSteps))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay.html
+  name: TimbnNpcDay
+  nameWithType: TimbnNpcDay
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcBlock_Origin_System_String_
+  name: Origin
+  nameWithType: TimbnNpcBlock.Origin
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Origin
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.html
+  name: TimbnNpcBlock
+  nameWithType: TimbnNpcBlock
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcBlock_Intro_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps__
+  name: Intro
+  nameWithType: TimbnNpcBlock.Intro
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Intro
+- uid: System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps}
+  commentId: T:System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<TimbnNpcSteps, TimbnNpcSteps>
+  nameWithType: Func<TimbnNpcSteps, TimbnNpcSteps>
+  fullName: System.Func<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps>
+  nameWithType.vb: Func(Of TimbnNpcSteps, TimbnNpcSteps)
+  fullName.vb: System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps, Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps)
+  name.vb: Func(Of TimbnNpcSteps, TimbnNpcSteps)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: ','
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps
+    name: TimbnNpcSteps
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcSteps.html
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcBlock_LateIntro_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps__
+  name: LateIntro
+  nameWithType: TimbnNpcBlock.LateIntro
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.LateIntro
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcBlock_Loop_System_Func_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnNpcSteps__
+  name: Loop
+  nameWithType: TimbnNpcBlock.Loop
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcBlock.Loop

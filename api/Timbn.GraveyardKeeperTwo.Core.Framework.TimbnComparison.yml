@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  id: TimbnComparison
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Equal
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Greater
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.GreaterOrEqual
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Less
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.LessOrEqual
+  langs:
+  - csharp
+  - vb
+  name: TimbnComparison
+  nameWithType: TimbnComparison
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  type: Enum
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnComparison
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 3
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: How a station's value is compared with the number a look condition names.
+  example: []
+  syntax:
+    content: public enum TimbnComparison
+    content.vb: Public Enum TimbnComparison
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Less
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Less
+  id: Less
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  langs:
+  - csharp
+  - vb
+  name: Less
+  nameWithType: TimbnComparison.Less
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Less
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Less
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Below the number.
+  example: []
+  syntax:
+    content: Less = 0
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.LessOrEqual
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.LessOrEqual
+  id: LessOrEqual
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  langs:
+  - csharp
+  - vb
+  name: LessOrEqual
+  nameWithType: TimbnComparison.LessOrEqual
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.LessOrEqual
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LessOrEqual
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 9
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: At or below the number.
+  example: []
+  syntax:
+    content: LessOrEqual = 1
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Equal
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Equal
+  id: Equal
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  langs:
+  - csharp
+  - vb
+  name: Equal
+  nameWithType: TimbnComparison.Equal
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Equal
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Equal
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Exactly the number.
+  example: []
+  syntax:
+    content: Equal = 2
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.GreaterOrEqual
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.GreaterOrEqual
+  id: GreaterOrEqual
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  langs:
+  - csharp
+  - vb
+  name: GreaterOrEqual
+  nameWithType: TimbnComparison.GreaterOrEqual
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.GreaterOrEqual
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GreaterOrEqual
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 15
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: At or above the number.
+  example: []
+  syntax:
+    content: GreaterOrEqual = 3
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Greater
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Greater
+  id: Greater
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  langs:
+  - csharp
+  - vb
+  name: Greater
+  nameWithType: TimbnComparison.Greater
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.Greater
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Greater
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnLook.cs
+    startLine: 18
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Above the number.
+  example: []
+  syntax:
+    content: Greater = 4
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison.html
+  name: TimbnComparison
+  nameWithType: TimbnComparison
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnComparison

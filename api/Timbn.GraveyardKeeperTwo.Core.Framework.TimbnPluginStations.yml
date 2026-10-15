@@ -1,0 +1,910 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  id: TimbnPluginStations
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginStations
+  nameWithType: TimbnPluginStations
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginStations
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+    startLine: 8
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds buildable workstations and bench extensions on behalf of a plugin, each offered at a build desk and built,
+
+    worked and dismantled like the game's own. Core makes every definition the game expects from a few lines, keeps a
+
+    built one out of the game's save so the save still loads once the plugin is gone, and removes everything when the
+
+    plugin unloads. Reach it through the plugin's Stations property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginStations
+    content.vb: Public NotInheritable Class TimbnPluginStations
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  id: Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  langs:
+  - csharp
+  - vb
+  name: Add(string, string, string, Action<TimbnStationBuilder>)
+  nameWithType: TimbnPluginStations.Add(string, string, string, Action<TimbnStationBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(string, string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Add
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+    startLine: 45
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a workstation the player builds from a build desk. Placing it puts down a construction site that the player works
+
+    off with the hammer, then the station appears in its place, and the build desk's remove tool dismantles it for a
+
+    refund. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder" data-throw-if-not-resolved="false"></xref> for what a station can hold. Call it in OnAwake, before the crafts
+
+    that run at it.
+  example:
+  - >-
+    A box that splits boards into sticks, worked like the sawhorse and taking a tool rack.
+
+
+    <pre><code class="lang-csharp">var box = Stations.Add("timbn_stick_box", "Stick Box", "A red box for splitting boards into sticks.", station =&gt; station
+        .Model(bundle.Model("RedBox"), new Vector3(1f, 0.6f, 1f))
+        .Site(bundle.Model("RedBoxSite"))
+        .BasedOn("sawhorse")
+        .Icon("timbn_stick_box")
+        .Cost(("flitch", 2))
+        .Extensions("tool_rack"));</code></pre>
+  syntax:
+    content: public TimbnStation Add(string id, string name, string description, Action<TimbnStationBuilder> station)
+    parameters:
+    - id: id
+      type: System.String
+      description: The station's world object id, for example "timbn_stick_box". Keep it stable, since saves name a built station by it.
+    - id: name
+      type: System.String
+      description: The name shown in the build desk and over the station. Empty leaves the text to the plugin's lang files.
+    - id: description
+      type: System.String
+      description: The description shown in the build desk. Empty leaves it to the lang files.
+    - id: station
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder}
+      description: Describes the station.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+      description: >-
+        The station, for naming it in a craft's In. It lives until the plugin unloads, so unlike an extension or a craft
+
+        there is no handle to remove it early.
+    content.vb: Public Function Add(id As String, name As String, description As String, station As Action(Of TimbnStationBuilder)) As TimbnStation
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: No model was given.
+  nameWithType.vb: TimbnPluginStations.Add(String, String, String, Action(Of TimbnStationBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(String, String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder))
+  name.vb: Add(String, String, String, Action(Of TimbnStationBuilder))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  id: Add(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  langs:
+  - csharp
+  - vb
+  name: Add(string, Action<TimbnStationBuilder>)
+  nameWithType: TimbnPluginStations.Add(string, Action<TimbnStationBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Add
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+    startLine: 76
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a workstation whose name and build desk description come from the plugin's lang files. The station and its
+
+    construction site are named under the station's id, and the build desk entry under its BuildingId with the
+
+    description under BuildingId_d. See <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String%2cSystem.String%2cSystem.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder%7d)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var box = Stations.Add("timbn_stick_box", station =&gt; station
+        .Model(bundle.Model("RedBox"), new Vector3(1f, 0.6f, 1f))
+        .BasedOn("sawhorse")
+        .Cost(("flitch", 2)));</code></pre>
+
+    with lang/en.txt holding timbn_stick_box, timbn_stick_box_place, timbn_stick_box_place_p and
+
+    timbn_stick_box_place_p_d.
+  syntax:
+    content: public TimbnStation Add(string id, Action<TimbnStationBuilder> station)
+    parameters:
+    - id: id
+      type: System.String
+      description: The station's world object id, for example "timbn_stick_box". Keep it stable, since saves name a built station by it.
+    - id: station
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder}
+      description: Describes the station.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+      description: The station, for naming it in a craft's In. It lives until the plugin unloads.
+    content.vb: Public Function Add(id As String, station As Action(Of TimbnStationBuilder)) As TimbnStation
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: No model was given.
+  nameWithType.vb: TimbnPluginStations.Add(String, Action(Of TimbnStationBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder))
+  name.vb: Add(String, Action(Of TimbnStationBuilder))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  id: AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  langs:
+  - csharp
+  - vb
+  name: AddExtension(string, string, string, Action<TimbnExtensionBuilder>)
+  nameWithType: TimbnPluginStations.AddExtension(string, string, string, Action<TimbnExtensionBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(string, string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddExtension
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+    startLine: 91
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a bench extension like the game's tool rack, placed straight from a build desk with no construction site. It
+
+    attaches to a station that lists it in <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String%2cSystem.String%5b%5d)" data-throw-if-not-resolved="false"></xref> when the two stand next to
+
+    each other, and crafts that call NeedsExtension with its id open at that station while it is attached. See
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder" data-throw-if-not-resolved="false"></xref> for what an extension can hold. Call it in OnAwake.
+  example: []
+  syntax:
+    content: public IDisposable AddExtension(string id, string name, string description, Action<TimbnExtensionBuilder> extension)
+    parameters:
+    - id: id
+      type: System.String
+      description: The extension's world object id, for example "timbn_red_magic". Keep it stable, since saves name a built extension by it.
+    - id: name
+      type: System.String
+      description: The name shown in the build desk. Empty leaves the text to the plugin's lang files.
+    - id: description
+      type: System.String
+      description: The description shown in the build desk. Empty leaves it to the lang files.
+    - id: extension
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder}
+      description: Describes the extension.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the extension early when disposed. You don't need to keep it.
+    content.vb: Public Function AddExtension(id As String, name As String, description As String, extension As Action(Of TimbnExtensionBuilder)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: No model was given.
+  nameWithType.vb: TimbnPluginStations.AddExtension(String, String, String, Action(Of TimbnExtensionBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(String, String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder))
+  name.vb: AddExtension(String, String, String, Action(Of TimbnExtensionBuilder))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  id: AddExtension(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations
+  langs:
+  - csharp
+  - vb
+  name: AddExtension(string, Action<TimbnExtensionBuilder>)
+  nameWithType: TimbnPluginStations.AddExtension(string, Action<TimbnExtensionBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AddExtension
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnPluginStations.cs
+    startLine: 111
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Adds a bench extension whose name and build desk description come from the plugin's lang files, under the
+
+    extension's id, its build desk entry id_p and the description id_p_d. See
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String%2cSystem.String%2cSystem.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IDisposable AddExtension(string id, Action<TimbnExtensionBuilder> extension)
+    parameters:
+    - id: id
+      type: System.String
+      description: The extension's world object id, for example "timbn_red_magic". Keep it stable, since saves name a built extension by it.
+    - id: extension
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder}
+      description: Describes the extension.
+    return:
+      type: System.IDisposable
+      description: A handle that removes the extension early when disposed. You don't need to keep it.
+    content.vb: Public Function AddExtension(id As String, extension As Action(Of TimbnExtensionBuilder)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The id is empty.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: No model was given.
+  nameWithType.vb: TimbnPluginStations.AddExtension(String, Action(Of TimbnExtensionBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder))
+  name.vb: AddExtension(String, Action(Of TimbnExtensionBuilder))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  name: TimbnStationBuilder
+  nameWithType: TimbnStationBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_Add_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder__
+  name: Add
+  nameWithType: TimbnPluginStations.Add
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnStationBuilder>
+  nameWithType: Action<TimbnStationBuilder>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder>
+  nameWithType.vb: Action(Of TimbnStationBuilder)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder)
+  name.vb: Action(Of TimbnStationBuilder)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    name: TimbnStationBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    name: TimbnStationBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation.html
+  name: TimbnStation
+  nameWithType: TimbnStation
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStation
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_Add_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder__
+  name: Add(string, string, string, Action<TimbnStationBuilder>)
+  nameWithType: TimbnPluginStations.Add(string, string, string, Action<TimbnStationBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(string, string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder>)
+  nameWithType.vb: TimbnPluginStations.Add(String, String, String, Action(Of TimbnStationBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(String, String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder))
+  name.vb: Add(String, String, String, Action(Of TimbnStationBuilder))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+    name: Add
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_Add_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    name: TimbnStationBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder})
+    name: Add
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_Add_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder
+    name: TimbnStationBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Extensions_System_String_System_String___
+  name: Extensions(string, params string[])
+  nameWithType: TimbnStationBuilder.Extensions(string, params string[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(string, params string[])
+  nameWithType.vb: TimbnStationBuilder.Extensions(String, ParamArray String())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(String, ParamArray String())
+  name.vb: Extensions(String, ParamArray String())
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+    name: Extensions
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Extensions_System_String_System_String___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.Extensions(System.String,System.String[])
+    name: Extensions
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_Extensions_System_String_System_String___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder.html
+  name: TimbnExtensionBuilder
+  nameWithType: TimbnExtensionBuilder
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_AddExtension_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnExtensionBuilder__
+  name: AddExtension
+  nameWithType: TimbnPluginStations.AddExtension
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnExtensionBuilder>
+  nameWithType: Action<TimbnExtensionBuilder>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder>
+  nameWithType.vb: Action(Of TimbnExtensionBuilder)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder)
+  name.vb: Action(Of TimbnExtensionBuilder)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+    name: TimbnExtensionBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+    name: TimbnExtensionBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder.html
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_AddExtension_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnExtensionBuilder__
+  name: AddExtension(string, string, string, Action<TimbnExtensionBuilder>)
+  nameWithType: TimbnPluginStations.AddExtension(string, string, string, Action<TimbnExtensionBuilder>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(string, string, string, System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder>)
+  nameWithType.vb: TimbnPluginStations.AddExtension(String, String, String, Action(Of TimbnExtensionBuilder))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(String, String, String, System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder))
+  name.vb: AddExtension(String, String, String, Action(Of TimbnExtensionBuilder))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+    name: AddExtension
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_AddExtension_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnExtensionBuilder__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+    name: TimbnExtensionBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.AddExtension(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder})
+    name: AddExtension
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginStations.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginStations_AddExtension_System_String_System_String_System_String_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnExtensionBuilder__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder
+    name: TimbnExtensionBuilder
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnExtensionBuilder.html
+  - name: )
+  - name: )

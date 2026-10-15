@@ -1,0 +1,167 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  id: TimbnCarryRule
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Vanilla
+  langs:
+  - csharp
+  - vb
+  name: TimbnCarryRule
+  nameWithType: TimbnCarryRule
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  type: Enum
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnCarryRule
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+    startLine: 6
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    How an item handed to the player with Player.Carry sits in and leaves their hands. Each rule adds one restriction
+
+    to the one before it.
+  example: []
+  syntax:
+    content: public enum TimbnCarryRule
+    content.vb: Public Enum TimbnCarryRule
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Vanilla
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Vanilla
+  id: Vanilla
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  langs:
+  - csharp
+  - vb
+  name: Vanilla
+  nameWithType: TimbnCarryRule.Vanilla
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Vanilla
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Vanilla
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+    startLine: 12
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    As the game carries a log. The interaction key puts it down, the game's own drops, such as starting work or a
+
+    fight, take it, and other things stack on top of it while the player has carry slots to spare.
+  example: []
+  syntax:
+    content: Vanilla = 0
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  id: Exclusive
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  langs:
+  - csharp
+  - vb
+  name: Exclusive
+  nameWithType: TimbnCarryRule.Exclusive
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.Exclusive
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Exclusive
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+    startLine: 20
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The only thing in their hands. The key still puts it down and the game's drops still take it, but nothing else
+
+    can be picked up while they hold it, so the pickup hint stays off and anything the game would have put in
+
+    their hands lands on the ground at their feet instead. Whatever they held before is dropped at their feet when
+
+    it is handed over, and no other Carry is accepted until it is gone.
+  example: []
+  syntax:
+    content: Exclusive = 1
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  id: OnlyByCode
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  langs:
+  - csharp
+  - vb
+  name: OnlyByCode
+  nameWithType: TimbnCarryRule.OnlyByCode
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.OnlyByCode
+  type: Field
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: OnlyByCode
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnCarryRule.cs
+    startLine: 23
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Exclusive, and nothing but the plugin takes it out of their hands, by disposing the handle.
+  example: []
+  syntax:
+    content: OnlyByCode = 2
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule.html
+  name: TimbnCarryRule
+  nameWithType: TimbnCarryRule
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCarryRule

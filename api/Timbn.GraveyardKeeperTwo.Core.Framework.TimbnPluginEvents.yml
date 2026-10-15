@@ -1,0 +1,3995 @@
+### YamlMime:ManagedReference
+items:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  id: TimbnPluginEvents
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  children:
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded(System.Action{GameBalance})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Type,System.String,System.Action{``0})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Type,System.String,System.Action{``0,``1})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted(System.Action{System.Int32})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected(System.Action{System.Collections.Generic.List{Item}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed(System.Action{Item})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded(System.Action{System.Collections.Generic.List{Item}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved(System.Action{System.Collections.Generic.List{Item}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled(System.Action{QuestData})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted(System.Action{QuestData})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted(System.Action{QuestData})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Func{``0},System.String,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Func{``0},System.String,System.Action{``1})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``3(System.Func{``0},System.String,System.Action{``1,``2})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type,System.Action{System.String})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked(System.Action{System.String,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged(System.Action{System.Single,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened(System.Action{LazyBearTechnology.LazyWidgetBase})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed(System.Action{Wgo})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned(System.Action{Wgo})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady(System.Action{WgoPart,ZombieWgoData})
+  langs:
+  - csharp
+  - vb
+  name: TimbnPluginEvents
+  nameWithType: TimbnPluginEvents
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  type: Class
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimbnPluginEvents
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 14
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes a plugin to the game's events without any cleanup code. Every subscription is owned by the
+
+    plugin and removed when it unloads, so an F6 hot reload never leaves an old handler firing. The named events
+
+    are the ones Core adds something to and the ones mods commonly need, such as a new day or the player using an
+
+    item, and those that belong to a save follow every save the player loads. Any other game event is one line of
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>,
+
+    or of <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref> for an event on an object that belongs to
+
+    the loaded save. Each handler is wrapped so a throw is logged instead of reaching the game. Reach it through the
+
+    plugin's Events property.
+  example: []
+  syntax:
+    content: public sealed class TimbnPluginEvents
+    content.vb: Public NotInheritable Class TimbnPluginEvents
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady(System.Action)
+  id: SaveReady(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveReady(Action)
+  nameWithType: TimbnPluginEvents.SaveReady(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveReady
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 44
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs for every save the player plays, once the scene is loaded and MainGame.Instance, PlayerData and
+
+    WorldData are live. It runs straight away when a save is already loaded, which covers a plugin started by a
+
+    hot reload mid game, and then each time a save finishes loading.
+  example:
+  - '<pre><code class="lang-csharp">Events.SaveReady(() =&gt; ZombieTint.PaintAll(reset: false));</code></pre>'
+  syntax:
+    content: public IDisposable SaveReady(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveReady(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed(System.Action)
+  id: SaveClosed(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveClosed(Action)
+  nameWithType: TimbnPluginEvents.SaveClosed(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveClosed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 65
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the player stops playing a save, whether they return to the main menu or the plugin unloads mid
+
+    game, such as on a hot reload. It is the one place to put back what the plugin changed in the world for
+
+    that save. On unload it runs after OnUnload and before Core removes the plugin's other registrations.
+  example:
+  - <pre><code class="lang-csharp">Events.SaveClosed(meditation.Stop);</code></pre>
+  syntax:
+    content: public IDisposable SaveClosed(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed, without running the handler. You don't need to keep it.
+    content.vb: Public Function SaveClosed(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  id: BeforeSave(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: BeforeSave(Action)
+  nameWithType: TimbnPluginEvents.BeforeSave(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BeforeSave
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 90
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs just before the game writes the save you are playing, ahead of Core taking out the mod content it keeps
+
+    out of the file. Use it to put back what a mod changed in the world that the save would otherwise keep, such as
+
+    a visitor standing in the graveyard, and bring it back in <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)" data-throw-if-not-resolved="false"></xref>. Core strips its own content
+
+    after every plugin's handler has run, so nothing a handler leaves behind reaches the file. It runs for every
+
+    write of the live save.
+  example:
+  - <pre><code class="lang-csharp">Events.BeforeSave(visits.SendAway);</code></pre>
+  syntax:
+    content: public IDisposable BeforeSave(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function BeforeSave(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  id: AfterSave(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: AfterSave(Action)
+  nameWithType: TimbnPluginEvents.AfterSave(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: AfterSave
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 105
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs once the save has been written, or has failed to write, after Core has put its own content back. Use it
+
+    to redo what you undid in <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)" data-throw-if-not-resolved="false"></xref>. It runs for every write the handlers of
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)" data-throw-if-not-resolved="false"></xref> ran for.
+  example:
+  - <pre><code class="lang-csharp">Events.AfterSave(visits.Return);</code></pre>
+  syntax:
+    content: public IDisposable AfterSave(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function AfterSave(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady(System.Action{WgoPart,ZombieWgoData})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady(System.Action{WgoPart,ZombieWgoData})
+  id: ZombieViewReady(System.Action{WgoPart,ZombieWgoData})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: ZombieViewReady(Action<WgoPart, ZombieWgoData>)
+  nameWithType: TimbnPluginEvents.ZombieViewReady(Action<WgoPart, ZombieWgoData>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady(System.Action<WgoPart, ZombieWgoData>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ZombieViewReady
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 120
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when a zombie's view has been given its body, head, and skin, right after the view spawns and again
+
+    whenever the zombie is restyled. Use it to change how a zombie looks, since the game redraws the view from
+
+    its data and would undo a change made at any other time.
+  example:
+  - <pre><code class="lang-csharp">Events.ZombieViewReady((part, zombie) =&gt; ZombieTint.Paint(part, ZombieTint.Read(zombie)));</code></pre>
+  syntax:
+    content: public IDisposable ZombieViewReady(Action<WgoPart, ZombieWgoData> handler)
+    parameters:
+    - id: handler
+      type: System.Action{WgoPart,ZombieWgoData}
+      description: Gets the part of the view that draws the zombie, whose Wgo is the view, and the zombie.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function ZombieViewReady(handler As Action(Of WgoPart, ZombieWgoData)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady*
+  nameWithType.vb: TimbnPluginEvents.ZombieViewReady(Action(Of WgoPart, ZombieWgoData))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady(System.Action(Of WgoPart, ZombieWgoData))
+  name.vb: ZombieViewReady(Action(Of WgoPart, ZombieWgoData))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted(System.Action)
+  id: SleepStarted(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SleepStarted(Action)
+  nameWithType: TimbnPluginEvents.SleepStarted(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SleepStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 130
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the player falls asleep, right after the game has gathered the loose resources around them and
+
+    as the sleep fade begins. It does not run when the bed turns the player away for being rested, see
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action%7bSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IDisposable SleepStarted(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SleepStarted(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+  id: SleepRefused(System.Action{System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SleepRefused(Action<bool>)
+  nameWithType: TimbnPluginEvents.SleepRefused(Action<bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action<bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SleepRefused
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 144
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the player tries to sleep with full energy and the bed turns them away, just before the game's own
+
+    refusal handling runs.
+  example:
+  - <pre><code class="lang-csharp">Events.SleepRefused(wouldSave =&gt; { if (wouldSave) TimbnGame.SaveNow(); });</code></pre>
+  syntax:
+    content: public IDisposable SleepRefused(Action<bool> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Boolean}
+      description: Gets whether the game would have saved when this sleep ended, which it does unless the sleep was started with its skip save flag.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SleepRefused(handler As Action(Of Boolean)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused*
+  nameWithType.vb: TimbnPluginEvents.SleepRefused(Action(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action(Of Boolean))
+  name.vb: SleepRefused(Action(Of Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded(System.Action)
+  id: SleepEnded(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SleepEnded(Action)
+  nameWithType: TimbnPluginEvents.SleepEnded(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SleepEnded
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 150
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the player wakes up, as the screen starts to fade back in and right after the game writes its wake up save.
+  example: []
+  syntax:
+    content: public IDisposable SleepEnded(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SleepEnded(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type,System.Action{System.String})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type,System.Action{System.String})
+  id: StoryTrigger(GlobalEventsSystem.Event.Type,System.Action{System.String})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: StoryTrigger(Type, Action<string>)
+  nameWithType: TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type, Action<string>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type, System.Action<string>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: StoryTrigger
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 166
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the game fires one of its story triggers, the signals its quests and cutscenes wait on, such as a
+
+    building being built, an answer being picked, or a fight being won. The game has no event of its own for these,
+
+    so Core raises it.
+  example:
+  - <pre><code class="lang-csharp">Events.StoryTrigger(GlobalEventsSystem.Event.Type.BuildBuilding, building =&gt; Logger.LogInfo($"Built {building}"));</code></pre>
+  syntax:
+    content: public IDisposable StoryTrigger(GlobalEventsSystem.Event.Type type, Action<string> handler)
+    parameters:
+    - id: type
+      type: GlobalEventsSystem.Event.Type
+      description: The kind of trigger to listen for.
+    - id: handler
+      type: System.Action{System.String}
+      description: Gets the trigger's id, such as the building or the answer, empty for triggers that have none.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function StoryTrigger(type As GlobalEventsSystem.Event.Type, handler As Action(Of String)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger*
+  nameWithType.vb: TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type, Action(Of String))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger(GlobalEventsSystem.Event.Type, System.Action(Of String))
+  name.vb: StoryTrigger(Type, Action(Of String))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused(System.Action)
+  id: GamePaused(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GamePaused(Action)
+  nameWithType: TimbnPluginEvents.GamePaused(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GamePaused
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 179
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the game pauses, such as when the pause menu opens.
+  example: []
+  syntax:
+    content: public IDisposable GamePaused(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GamePaused(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused(System.Action)
+  id: GameUnpaused(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameUnpaused(Action)
+  nameWithType: TimbnPluginEvents.GameUnpaused(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameUnpaused
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 185
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the game unpauses.
+  example: []
+  syntax:
+    content: public IDisposable GameUnpaused(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameUnpaused(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday})
+  id: NewWeekdayStarted(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: NewWeekdayStarted(Action<TimbnWeekday>)
+  nameWithType: TimbnPluginEvents.NewWeekdayStarted(Action<TimbnWeekday>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted(System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NewWeekdayStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 191
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs at the same moment as NewDayStarted, with the day's place in the week instead.
+  example: []
+  syntax:
+    content: public IDisposable NewWeekdayStarted(Action<TimbnWeekday> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+      description: Gets the day's place in the six day week.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function NewWeekdayStarted(handler As Action(Of TimbnWeekday)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted*
+  nameWithType.vb: TimbnPluginEvents.NewWeekdayStarted(Action(Of TimbnWeekday))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted(System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday))
+  name.vb: NewWeekdayStarted(Action(Of TimbnWeekday))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged(System.Action{System.Single,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged(System.Action{System.Single,System.Boolean})
+  id: TimeOfDayChanged(System.Action{System.Single,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: TimeOfDayChanged(Action<float, bool>)
+  nameWithType: TimbnPluginEvents.TimeOfDayChanged(Action<float, bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged(System.Action<float, bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TimeOfDayChanged
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 204
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs on every clock tick.
+  example: []
+  syntax:
+    content: public IDisposable TimeOfDayChanged(Action<float, bool> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Single,System.Boolean}
+      description: Gets the time of day, running from 0 to 1 over a day, and whether it is a preview time that is not saved.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function TimeOfDayChanged(handler As Action(Of Single, Boolean)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged*
+  nameWithType.vb: TimbnPluginEvents.TimeOfDayChanged(Action(Of Single, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged(System.Action(Of Single, Boolean))
+  name.vb: TimeOfDayChanged(Action(Of Single, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported(System.Action)
+  id: PlayerTeleported(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerTeleported(Action)
+  nameWithType: TimbnPluginEvents.PlayerTeleported(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerTeleported
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 210
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the player is moved by a teleport, which is also how every scene change happens.
+  example: []
+  syntax:
+    content: public IDisposable PlayerTeleported(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerTeleported(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned(System.Action{Wgo})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned(System.Action{Wgo})
+  id: WorldObjectSpawned(System.Action{Wgo})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: WorldObjectSpawned(Action<Wgo>)
+  nameWithType: TimbnPluginEvents.WorldObjectSpawned(Action<Wgo>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned(System.Action<Wgo>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WorldObjectSpawned
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 216
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when a world object's view is created, for every object of a scene as it loads and for any object added to the scene later.
+  example: []
+  syntax:
+    content: public IDisposable WorldObjectSpawned(Action<Wgo> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Wgo}
+      description: Gets the spawned object's view. Its Data property is the world object.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function WorldObjectSpawned(handler As Action(Of Wgo)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned*
+  nameWithType.vb: TimbnPluginEvents.WorldObjectSpawned(Action(Of Wgo))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned(System.Action(Of Wgo))
+  name.vb: WorldObjectSpawned(Action(Of Wgo))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed(System.Action{Wgo})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed(System.Action{Wgo})
+  id: WorldObjectDestroyed(System.Action{Wgo})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: WorldObjectDestroyed(Action<Wgo>)
+  nameWithType: TimbnPluginEvents.WorldObjectDestroyed(Action<Wgo>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed(System.Action<Wgo>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WorldObjectDestroyed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 222
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when a world object's view is destroyed.
+  example: []
+  syntax:
+    content: public IDisposable WorldObjectDestroyed(Action<Wgo> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Wgo}
+      description: Gets the view that is going away.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function WorldObjectDestroyed(handler As Action(Of Wgo)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed*
+  nameWithType.vb: TimbnPluginEvents.WorldObjectDestroyed(Action(Of Wgo))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed(System.Action(Of Wgo))
+  name.vb: WorldObjectDestroyed(Action(Of Wgo))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened(System.Action{LazyBearTechnology.LazyWidgetBase})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened(System.Action{LazyBearTechnology.LazyWidgetBase})
+  id: WindowOpened(System.Action{LazyBearTechnology.LazyWidgetBase})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: WindowOpened(Action<LazyWidgetBase>)
+  nameWithType: TimbnPluginEvents.WindowOpened(Action<LazyWidgetBase>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened(System.Action<LazyBearTechnology.LazyWidgetBase>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: WindowOpened
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 233
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when any of the game's windows opens, such as the inventory, a vendor or the main menu.
+  example:
+  - <pre><code class="lang-csharp">Events.WindowOpened(window =&gt; Logger.LogInfo($"{window.GetType().Name} opened"));</code></pre>
+  syntax:
+    content: public IDisposable WindowOpened(Action<LazyWidgetBase> handler)
+    parameters:
+    - id: handler
+      type: System.Action{LazyBearTechnology.LazyWidgetBase}
+      description: Gets the window that opened.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function WindowOpened(handler As Action(Of LazyWidgetBase)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened*
+  nameWithType.vb: TimbnPluginEvents.WindowOpened(Action(Of LazyWidgetBase))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened(System.Action(Of LazyBearTechnology.LazyWidgetBase))
+  name.vb: WindowOpened(Action(Of LazyWidgetBase))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened(System.Action)
+  id: MainMenuOpened(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: MainMenuOpened(Action)
+  nameWithType: TimbnPluginEvents.MainMenuOpened(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: MainMenuOpened
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 244
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the main menu opens, both when the game starts and each time the player leaves a save.
+  example:
+  - <pre><code class="lang-csharp">Events.MainMenuOpened(ReloadMyFiles);</code></pre>
+  syntax:
+    content: public IDisposable MainMenuOpened(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function MainMenuOpened(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged(System.Action)
+  id: LanguageChanged(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: LanguageChanged(Action)
+  nameWithType: TimbnPluginEvents.LanguageChanged(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LanguageChanged
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 259
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the player changes the game's language, so a plugin can drop text it looked up earlier.
+  example:
+  - <pre><code class="lang-csharp">Events.LanguageChanged(_itemNames.Clear);</code></pre>
+  syntax:
+    content: public IDisposable LanguageChanged(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function LanguageChanged(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded(System.Action{GameBalance})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded(System.Action{GameBalance})
+  id: BalanceLoaded(System.Action{GameBalance})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: BalanceLoaded(Action<GameBalance>)
+  nameWithType: TimbnPluginEvents.BalanceLoaded(Action<GameBalance>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded(System.Action<GameBalance>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: BalanceLoaded
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 275
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs with the game's balance, where it keeps every item, craft, perk, and tech, each time it loads. It runs
+
+    straight away when the balance is already loaded, then after every later load, once Core has put in the
+
+    definitions plugins added. Use it to read the game's definitions. To change one, Balance.Edit also puts it
+
+    back when the plugin unloads.
+  example:
+  - <pre><code class="lang-csharp">Events.BalanceLoaded(balance =&gt; Logger.LogInfo($"{balance.itemDefs.Count} items"));</code></pre>
+  syntax:
+    content: public IDisposable BalanceLoaded(Action<GameBalance> handler)
+    parameters:
+    - id: handler
+      type: System.Action{GameBalance}
+      description: Gets the loaded balance.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function BalanceLoaded(handler As Action(Of GameBalance)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded*
+  nameWithType.vb: TimbnPluginEvents.BalanceLoaded(Action(Of GameBalance))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded(System.Action(Of GameBalance))
+  name.vb: BalanceLoaded(Action(Of GameBalance))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted(System.Action{QuestData})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted(System.Action{QuestData})
+  id: QuestStarted(System.Action{QuestData})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: QuestStarted(Action<QuestData>)
+  nameWithType: TimbnPluginEvents.QuestStarted(Action<QuestData>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted(System.Action<QuestData>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: QuestStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 287
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when a quest starts in the loaded save. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable QuestStarted(Action<QuestData> handler)
+    parameters:
+    - id: handler
+      type: System.Action{QuestData}
+      description: Gets the quest's save data. Its id is the quest id.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function QuestStarted(handler As Action(Of QuestData)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted*
+  nameWithType.vb: TimbnPluginEvents.QuestStarted(Action(Of QuestData))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted(System.Action(Of QuestData))
+  name.vb: QuestStarted(Action(Of QuestData))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted(System.Action{QuestData})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted(System.Action{QuestData})
+  id: QuestCompleted(System.Action{QuestData})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: QuestCompleted(Action<QuestData>)
+  nameWithType: TimbnPluginEvents.QuestCompleted(Action<QuestData>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted(System.Action<QuestData>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: QuestCompleted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 292
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when a quest completes in the loaded save. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable QuestCompleted(Action<QuestData> handler)
+    parameters:
+    - id: handler
+      type: System.Action{QuestData}
+      description: Gets the quest's save data. Its id is the quest id.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function QuestCompleted(handler As Action(Of QuestData)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted*
+  nameWithType.vb: TimbnPluginEvents.QuestCompleted(Action(Of QuestData))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted(System.Action(Of QuestData))
+  name.vb: QuestCompleted(Action(Of QuestData))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted(System.Action{System.Int32})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted(System.Action{System.Int32})
+  id: NewDayStarted(System.Action{System.Int32})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: NewDayStarted(Action<int>)
+  nameWithType: TimbnPluginEvents.NewDayStarted(Action<int>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted(System.Action<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: NewDayStarted
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 303
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the clock wraps into a new day.
+  example:
+  - <pre><code class="lang-csharp">Events.NewDayStarted(_ =&gt; tally.Current.DaysPassed++);</code></pre>
+  syntax:
+    content: public IDisposable NewDayStarted(Action<int> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Int32}
+      description: Gets the day number, counting up from 1 for the whole save.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function NewDayStarted(handler As Action(Of Integer)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted*
+  nameWithType.vb: TimbnPluginEvents.NewDayStarted(Action(Of Integer))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted(System.Action(Of Integer))
+  name.vb: NewDayStarted(Action(Of Integer))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged(System.Action)
+  id: PlayerResourceChanged(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerResourceChanged(Action)
+  nameWithType: TimbnPluginEvents.PlayerResourceChanged(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerResourceChanged
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 312
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when any of the player's resources changes, money, energy, sanity and reputation included. Subscribe once,
+
+    and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable PlayerResourceChanged(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler. Read the values you care about with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)" data-throw-if-not-resolved="false"></xref> or <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerResourceChanged(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked(System.Action{System.String,System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked(System.Action{System.String,System.Boolean})
+  id: TechUnlocked(System.Action{System.String,System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: TechUnlocked(Action<string, bool>)
+  nameWithType: TimbnPluginEvents.TechUnlocked(Action<string, bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked(System.Action<string, bool>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: TechUnlocked
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 331
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs when the player researches a technology, or the game unlocks one for them, such as the ones every save
+
+    starts with. A mod's own craft or station needs no handler, since <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)" data-throw-if-not-resolved="false"></xref> and
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)" data-throw-if-not-resolved="false"></xref> put it on the tech, which also covers a save that had the tech
+
+    already.
+  example:
+  - <pre><code class="lang-csharp">Events.TechUnlocked((techId, silent) =&gt; { if (!silent) Logger.LogInfo($"The player researched {techId}."); });</code></pre>
+  syntax:
+    content: public IDisposable TechUnlocked(Action<string, bool> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.String,System.Boolean}
+      description: >-
+        Gets the technology's id and whether the game unlocked it silently, with no popup, which it does for the ones a
+
+        save starts with and for ones it puts back on load.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function TechUnlocked(handler As Action(Of String, Boolean)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked*
+  nameWithType.vb: TimbnPluginEvents.TechUnlocked(Action(Of String, Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked(System.Action(Of String, Boolean))
+  name.vb: TechUnlocked(Action(Of String, Boolean))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed(System.Action{Item})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed(System.Action{Item})
+  id: PlayerItemUsed(System.Action{Item})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerItemUsed(Action<Item>)
+  nameWithType: TimbnPluginEvents.PlayerItemUsed(Action<Item>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed(System.Action<Item>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerItemUsed
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 337
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the player uses an item, such as drinking a potion. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable PlayerItemUsed(Action<Item> handler)
+    parameters:
+    - id: handler
+      type: System.Action{Item}
+      description: Gets the item used.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerItemUsed(handler As Action(Of Item)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed*
+  nameWithType.vb: TimbnPluginEvents.PlayerItemUsed(Action(Of Item))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed(System.Action(Of Item))
+  name.vb: PlayerItemUsed(Action(Of Item))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded(System.Action{System.Collections.Generic.List{Item}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded(System.Action{System.Collections.Generic.List{Item}})
+  id: PlayerItemsAdded(System.Action{System.Collections.Generic.List{Item}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerItemsAdded(Action<List<Item>>)
+  nameWithType: TimbnPluginEvents.PlayerItemsAdded(Action<List<Item>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded(System.Action<System.Collections.Generic.List<Item>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerItemsAdded
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 343
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when items go into the player's inventory. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable PlayerItemsAdded(Action<List<Item>> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Collections.Generic.List{Item}}
+      description: Gets the items added.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerItemsAdded(handler As Action(Of List(Of Item))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded*
+  nameWithType.vb: TimbnPluginEvents.PlayerItemsAdded(Action(Of List(Of Item)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded(System.Action(Of System.Collections.Generic.List(Of Item)))
+  name.vb: PlayerItemsAdded(Action(Of List(Of Item)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved(System.Action{System.Collections.Generic.List{Item}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved(System.Action{System.Collections.Generic.List{Item}})
+  id: PlayerItemsRemoved(System.Action{System.Collections.Generic.List{Item}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerItemsRemoved(Action<List<Item>>)
+  nameWithType: TimbnPluginEvents.PlayerItemsRemoved(Action<List<Item>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved(System.Action<System.Collections.Generic.List<Item>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerItemsRemoved
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 349
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when items leave the player's inventory. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable PlayerItemsRemoved(Action<List<Item>> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Collections.Generic.List{Item}}
+      description: Gets the items removed.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerItemsRemoved(handler As Action(Of List(Of Item))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved*
+  nameWithType.vb: TimbnPluginEvents.PlayerItemsRemoved(Action(Of List(Of Item)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved(System.Action(Of System.Collections.Generic.List(Of Item)))
+  name.vb: PlayerItemsRemoved(Action(Of List(Of Item)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected(System.Action{System.Collections.Generic.List{Item}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected(System.Action{System.Collections.Generic.List{Item}})
+  id: PlayerDropCollected(System.Action{System.Collections.Generic.List{Item}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: PlayerDropCollected(Action<List<Item>>)
+  nameWithType: TimbnPluginEvents.PlayerDropCollected(Action<List<Item>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected(System.Action<System.Collections.Generic.List<Item>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PlayerDropCollected
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 355
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when the player picks up drops. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable PlayerDropCollected(Action<List<Item>> handler)
+    parameters:
+    - id: handler
+      type: System.Action{System.Collections.Generic.List{Item}}
+      description: Gets the items picked up.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function PlayerDropCollected(handler As Action(Of List(Of Item))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected*
+  nameWithType.vb: TimbnPluginEvents.PlayerDropCollected(Action(Of List(Of Item)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected(System.Action(Of System.Collections.Generic.List(Of Item)))
+  name.vb: PlayerDropCollected(Action(Of List(Of Item)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled(System.Action{QuestData})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled(System.Action{QuestData})
+  id: QuestCanceled(System.Action{QuestData})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: QuestCanceled(Action<QuestData>)
+  nameWithType: TimbnPluginEvents.QuestCanceled(Action<QuestData>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled(System.Action<QuestData>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: QuestCanceled
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 361
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: Runs when a quest is canceled in the loaded save. Subscribe once, and it follows every save the player loads.
+  example: []
+  syntax:
+    content: public IDisposable QuestCanceled(Action<QuestData> handler)
+    parameters:
+    - id: handler
+      type: System.Action{QuestData}
+      description: Gets the quest's save data. Its id is the quest id.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function QuestCanceled(handler As Action(Of QuestData)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled*
+  nameWithType.vb: TimbnPluginEvents.QuestCanceled(Action(Of QuestData))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled(System.Action(Of QuestData))
+  name.vb: QuestCanceled(Action(Of QuestData))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  id: Update(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: Update(Action)
+  nameWithType: TimbnPluginEvents.Update(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Update
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 376
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs on every frame while a save is loaded, paused or not. It never runs on the main menu. Prefer
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single%2cSystem.Action)" data-throw-if-not-resolved="false"></xref> for work that does not need every frame or should stop while the game is paused. If the
+
+    handler throws, the error is logged once and the handler is stopped instead of failing again every frame.
+  example:
+  - <pre><code class="lang-csharp">Events.Update(() =&gt; stuckCarriers.Tick());</code></pre>
+  syntax:
+    content: public IDisposable Update(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function Update(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+  id: EveryRealSeconds(System.Single,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: EveryRealSeconds(float, Action)
+  nameWithType: TimbnPluginEvents.EveryRealSeconds(float, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(float, System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: EveryRealSeconds
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 392
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs at most once every <code class="paramref">seconds</code> while a save is loaded and the game is not paused, and it
+
+    starts on the first frame after it is added. The seconds are real time, so they do not speed up while the
+
+    player sleeps. It never runs on the main menu. If the handler throws, the error is logged once and the
+
+    handler is stopped.
+  example:
+  - <pre><code class="lang-csharp">Events.EveryRealSeconds(0.5f, () =&gt; stuckCarriers.Tick());</code></pre>
+  syntax:
+    content: public IDisposable EveryRealSeconds(float seconds, Action handler)
+    parameters:
+    - id: seconds
+      type: System.Single
+      description: The shortest time between runs. Zero or less runs on every frame.
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function EveryRealSeconds(seconds As Single, handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds*
+  nameWithType.vb: TimbnPluginEvents.EveryRealSeconds(Single, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(Single, System.Action)
+  name.vb: EveryRealSeconds(Single, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate(System.Action)
+  id: LateUpdate(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: LateUpdate(Action)
+  nameWithType: TimbnPluginEvents.LateUpdate(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: LateUpdate
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 401
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs on every frame after the game's own Update code, while a save is loaded, paused or not. Camera work
+
+    belongs here, since the game moves the player during Update and a camera that follows them has to run
+
+    afterwards. Otherwise it works like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IDisposable LateUpdate(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function LateUpdate(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate(System.Action)
+  id: FixedUpdate(System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: FixedUpdate(Action)
+  nameWithType: TimbnPluginEvents.FixedUpdate(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: FixedUpdate
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 409
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Runs on every physics step while a save is loaded, paused or not. Forces and velocities belong here, since
+
+    the physics engine reads them at that moment. Otherwise it works like <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IDisposable FixedUpdate(Action handler)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function FixedUpdate(handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  id: GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent(Action, Action<Action>, Action<Action>)
+  nameWithType: TimbnPluginEvents.GameEvent(Action, Action<Action>, Action<Action>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action, System.Action<System.Action>, System.Action<System.Action>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 432
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event that has no named method here. The handler is wrapped so a throw is
+
+    logged instead of reaching the game, the subscription is owned by the plugin, and it is removed when the
+
+    plugin unloads, so there is nothing to clean up. It hooks the event once, so use it only for static events.
+
+    An event on an object that belongs to a save (quests, the player's data) needs
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>, which hooks it again for each save.
+  example:
+  - >-
+    Log every tech the player unlocks, using the game's static KnowledgeSystem.OnTechUnlocked event, which
+
+    passes the tech id and whether the unlock was silent.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent&lt;string, bool&gt;(
+        (techId, silent) =&gt; Logger.LogInfo($"Unlocked {techId}"),
+        h =&gt; KnowledgeSystem.OnTechUnlocked += h,
+        h =&gt; KnowledgeSystem.OnTechUnlocked -= h);</code></pre>
+  syntax:
+    content: public IDisposable GameEvent(Action handler, Action<Action> add, Action<Action> remove)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action}
+      description: Subscribes a handler to the event, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked += h</code>.
+    - id: remove
+      type: System.Action{System.Action}
+      description: Unsubscribes it again, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked -= h</code>.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(handler As Action, add As Action(Of Action), remove As Action(Of Action)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Action, Action(Of Action), Action(Of Action))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action, System.Action(Of System.Action), System.Action(Of System.Action))
+  name.vb: GameEvent(Action, Action(Of Action), Action(Of Action))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  id: GameEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent<T>(Action<T>, Action<Action<T>>, Action<Action<T>>)
+  nameWithType: TimbnPluginEvents.GameEvent<T>(Action<T>, Action<Action<T>>, Action<Action<T>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent<T>(System.Action<T>, System.Action<System.Action<T>>, System.Action<System.Action<T>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 435
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event that has no named method here. The handler is wrapped so a throw is
+
+    logged instead of reaching the game, the subscription is owned by the plugin, and it is removed when the
+
+    plugin unloads, so there is nothing to clean up. It hooks the event once, so use it only for static events.
+
+    An event on an object that belongs to a save (quests, the player's data) needs
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>, which hooks it again for each save.
+  example:
+  - >-
+    Log every tech the player unlocks, using the game's static KnowledgeSystem.OnTechUnlocked event, which
+
+    passes the tech id and whether the unlock was silent.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent&lt;string, bool&gt;(
+        (techId, silent) =&gt; Logger.LogInfo($"Unlocked {techId}"),
+        h =&gt; KnowledgeSystem.OnTechUnlocked += h,
+        h =&gt; KnowledgeSystem.OnTechUnlocked -= h);</code></pre>
+  syntax:
+    content: public IDisposable GameEvent<T>(Action<T> handler, Action<Action<T>> add, Action<Action<T>> remove)
+    parameters:
+    - id: handler
+      type: System.Action{{T}}
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action{{T}}}
+      description: Subscribes a handler to the event, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked += h</code>.
+    - id: remove
+      type: System.Action{System.Action{{T}}}
+      description: Unsubscribes it again, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked -= h</code>.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(Of T)(handler As Action(Of T), add As Action(Of Action(Of T)), remove As Action(Of Action(Of T))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Of T)(Action(Of T), Action(Of Action(Of T)), Action(Of Action(Of T)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(Of T)(System.Action(Of T), System.Action(Of System.Action(Of T)), System.Action(Of System.Action(Of T)))
+  name.vb: GameEvent(Of T)(Action(Of T), Action(Of Action(Of T)), Action(Of Action(Of T)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  id: GameEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent<T1, T2>(Action<T1, T2>, Action<Action<T1, T2>>, Action<Action<T1, T2>>)
+  nameWithType: TimbnPluginEvents.GameEvent<T1, T2>(Action<T1, T2>, Action<Action<T1, T2>>, Action<Action<T1, T2>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent<T1, T2>(System.Action<T1, T2>, System.Action<System.Action<T1, T2>>, System.Action<System.Action<T1, T2>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 438
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event that has no named method here. The handler is wrapped so a throw is
+
+    logged instead of reaching the game, the subscription is owned by the plugin, and it is removed when the
+
+    plugin unloads, so there is nothing to clean up. It hooks the event once, so use it only for static events.
+
+    An event on an object that belongs to a save (quests, the player's data) needs
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>, which hooks it again for each save.
+  example:
+  - >-
+    Log every tech the player unlocks, using the game's static KnowledgeSystem.OnTechUnlocked event, which
+
+    passes the tech id and whether the unlock was silent.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent&lt;string, bool&gt;(
+        (techId, silent) =&gt; Logger.LogInfo($"Unlocked {techId}"),
+        h =&gt; KnowledgeSystem.OnTechUnlocked += h,
+        h =&gt; KnowledgeSystem.OnTechUnlocked -= h);</code></pre>
+  syntax:
+    content: public IDisposable GameEvent<T1, T2>(Action<T1, T2> handler, Action<Action<T1, T2>> add, Action<Action<T1, T2>> remove)
+    parameters:
+    - id: handler
+      type: System.Action{{T1},{T2}}
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action{{T1},{T2}}}
+      description: Subscribes a handler to the event, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked += h</code>.
+    - id: remove
+      type: System.Action{System.Action{{T1},{T2}}}
+      description: Unsubscribes it again, such as <code>h =&gt; KnowledgeSystem.OnTechUnlocked -= h</code>.
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(Of T1, T2)(handler As Action(Of T1, T2), add As Action(Of Action(Of T1, T2)), remove As Action(Of Action(Of T1, T2))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Of T1, T2)(Action(Of T1, T2), Action(Of Action(Of T1, T2)), Action(Of Action(Of T1, T2)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(Of T1, T2)(System.Action(Of T1, T2), System.Action(Of System.Action(Of T1, T2)), System.Action(Of System.Action(Of T1, T2)))
+  name.vb: GameEvent(Of T1, T2)(Action(Of T1, T2), Action(Of Action(Of T1, T2)), Action(Of Action(Of T1, T2)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+  id: GameEvent(System.Type,System.String,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent(Type, string, Action)
+  nameWithType: TimbnPluginEvents.GameEvent(Type, string, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type, string, System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 458
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event by naming it, so Core does the += and -=. Name the event with nameof, so a
+
+    game update that renames it fails the build. The handler has to take exactly the parameters the event passes,
+
+    which is checked straight away, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every tech the player unlocks.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent(typeof(KnowledgeSystem), nameof(KnowledgeSystem.OnTechUnlocked),
+        (string techId, bool silent) =&gt; Logger.LogInfo($"Unlocked {techId}"));</code></pre>
+  syntax:
+    content: public IDisposable GameEvent(Type type, string eventName, Action handler)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The game type that declares the event, such as typeof(KnowledgeSystem).
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(KnowledgeSystem.OnTechUnlocked).
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(type As Type, eventName As String, handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Type, String, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type, String, System.Action)
+  name.vb: GameEvent(Type, String, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Type,System.String,System.Action{``0})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``1(System.Type,System.String,System.Action{``0})
+  id: GameEvent``1(System.Type,System.String,System.Action{``0})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent<T>(Type, string, Action<T>)
+  nameWithType: TimbnPluginEvents.GameEvent<T>(Type, string, Action<T>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent<T>(System.Type, string, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 465
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event by naming it, so Core does the += and -=. Name the event with nameof, so a
+
+    game update that renames it fails the build. The handler has to take exactly the parameters the event passes,
+
+    which is checked straight away, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every tech the player unlocks.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent(typeof(KnowledgeSystem), nameof(KnowledgeSystem.OnTechUnlocked),
+        (string techId, bool silent) =&gt; Logger.LogInfo($"Unlocked {techId}"));</code></pre>
+  syntax:
+    content: public IDisposable GameEvent<T>(Type type, string eventName, Action<T> handler)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The game type that declares the event, such as typeof(KnowledgeSystem).
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(KnowledgeSystem.OnTechUnlocked).
+    - id: handler
+      type: System.Action{{T}}
+      description: Your handler.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(Of T)(type As Type, eventName As String, handler As Action(Of T)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Of T)(Type, String, Action(Of T))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(Of T)(System.Type, String, System.Action(Of T))
+  name.vb: GameEvent(Of T)(Type, String, Action(Of T))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Type,System.String,System.Action{``0,``1})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent``2(System.Type,System.String,System.Action{``0,``1})
+  id: GameEvent``2(System.Type,System.String,System.Action{``0,``1})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: GameEvent<T1, T2>(Type, string, Action<T1, T2>)
+  nameWithType: TimbnPluginEvents.GameEvent<T1, T2>(Type, string, Action<T1, T2>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent<T1, T2>(System.Type, string, System.Action<T1, T2>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: GameEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 472
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to a static game event by naming it, so Core does the += and -=. Name the event with nameof, so a
+
+    game update that renames it fails the build. The handler has to take exactly the parameters the event passes,
+
+    which is checked straight away, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every tech the player unlocks.
+
+
+    <pre><code class="lang-csharp">Events.GameEvent(typeof(KnowledgeSystem), nameof(KnowledgeSystem.OnTechUnlocked),
+        (string techId, bool silent) =&gt; Logger.LogInfo($"Unlocked {techId}"));</code></pre>
+  syntax:
+    content: public IDisposable GameEvent<T1, T2>(Type type, string eventName, Action<T1, T2> handler)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The game type that declares the event, such as typeof(KnowledgeSystem).
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(KnowledgeSystem.OnTechUnlocked).
+    - id: handler
+      type: System.Action{{T1},{T2}}
+      description: Your handler.
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function GameEvent(Of T1, T2)(type As Type, eventName As String, handler As Action(Of T1, T2)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Of T1, T2)(Type, String, Action(Of T1, T2))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(Of T1, T2)(System.Type, String, System.Action(Of T1, T2))
+  name.vb: GameEvent(Of T1, T2)(Type, String, Action(Of T1, T2))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  id: SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent(Action, Action<Action>, Action<Action>)
+  nameWithType: TimbnPluginEvents.SaveEvent(Action, Action<Action>, Action<Action>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action, System.Action<System.Action>, System.Action<System.Action>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 498
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save, such as the player's data or the save's
+
+    quests. Subscribe once in OnAwake. Core hooks the event on every save the player loads, straight away when a
+
+    save is already loaded, and unhooks it when the player leaves the save. Otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>. Add and remove read the save's object each
+
+    time they run.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent&lt;Item&gt;(
+        item =&gt; Logger.LogInfo($"Used {item.id}"),
+        h =&gt; MainGame.PlayerData.OnItemUsed += h,
+        h =&gt; MainGame.PlayerData.OnItemUsed -= h);</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent(Action handler, Action<Action> add, Action<Action> remove)
+    parameters:
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action}
+      description: Subscribes a handler to the save's event, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed += h</code>.
+    - id: remove
+      type: System.Action{System.Action}
+      description: Unsubscribes it again, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed -= h</code>.
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(handler As Action, add As Action(Of Action), remove As Action(Of Action)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Action, Action(Of Action), Action(Of Action))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action, System.Action(Of System.Action), System.Action(Of System.Action))
+  name.vb: SaveEvent(Action, Action(Of Action), Action(Of Action))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  id: SaveEvent``1(System.Action{``0},System.Action{System.Action{``0}},System.Action{System.Action{``0}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent<T>(Action<T>, Action<Action<T>>, Action<Action<T>>)
+  nameWithType: TimbnPluginEvents.SaveEvent<T>(Action<T>, Action<Action<T>>, Action<Action<T>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent<T>(System.Action<T>, System.Action<System.Action<T>>, System.Action<System.Action<T>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 502
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save, such as the player's data or the save's
+
+    quests. Subscribe once in OnAwake. Core hooks the event on every save the player loads, straight away when a
+
+    save is already loaded, and unhooks it when the player leaves the save. Otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>. Add and remove read the save's object each
+
+    time they run.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent&lt;Item&gt;(
+        item =&gt; Logger.LogInfo($"Used {item.id}"),
+        h =&gt; MainGame.PlayerData.OnItemUsed += h,
+        h =&gt; MainGame.PlayerData.OnItemUsed -= h);</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent<T>(Action<T> handler, Action<Action<T>> add, Action<Action<T>> remove)
+    parameters:
+    - id: handler
+      type: System.Action{{T}}
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action{{T}}}
+      description: Subscribes a handler to the save's event, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed += h</code>.
+    - id: remove
+      type: System.Action{System.Action{{T}}}
+      description: Unsubscribes it again, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed -= h</code>.
+    typeParameters:
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(Of T)(handler As Action(Of T), add As Action(Of Action(Of T)), remove As Action(Of Action(Of T))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Of T)(Action(Of T), Action(Of Action(Of T)), Action(Of Action(Of T)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(Of T)(System.Action(Of T), System.Action(Of System.Action(Of T)), System.Action(Of System.Action(Of T)))
+  name.vb: SaveEvent(Of T)(Action(Of T), Action(Of Action(Of T)), Action(Of Action(Of T)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  id: SaveEvent``2(System.Action{``0,``1},System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent<T1, T2>(Action<T1, T2>, Action<Action<T1, T2>>, Action<Action<T1, T2>>)
+  nameWithType: TimbnPluginEvents.SaveEvent<T1, T2>(Action<T1, T2>, Action<Action<T1, T2>>, Action<Action<T1, T2>>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent<T1, T2>(System.Action<T1, T2>, System.Action<System.Action<T1, T2>>, System.Action<System.Action<T1, T2>>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 506
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save, such as the player's data or the save's
+
+    quests. Subscribe once in OnAwake. Core hooks the event on every save the player loads, straight away when a
+
+    save is already loaded, and unhooks it when the player leaves the save. Otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref>. Add and remove read the save's object each
+
+    time they run.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent&lt;Item&gt;(
+        item =&gt; Logger.LogInfo($"Used {item.id}"),
+        h =&gt; MainGame.PlayerData.OnItemUsed += h,
+        h =&gt; MainGame.PlayerData.OnItemUsed -= h);</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent<T1, T2>(Action<T1, T2> handler, Action<Action<T1, T2>> add, Action<Action<T1, T2>> remove)
+    parameters:
+    - id: handler
+      type: System.Action{{T1},{T2}}
+      description: Your handler.
+    - id: add
+      type: System.Action{System.Action{{T1},{T2}}}
+      description: Subscribes a handler to the save's event, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed += h</code>.
+    - id: remove
+      type: System.Action{System.Action{{T1},{T2}}}
+      description: Unsubscribes it again, such as <code>h =&gt; MainGame.PlayerData.OnItemUsed -= h</code>.
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(Of T1, T2)(handler As Action(Of T1, T2), add As Action(Of Action(Of T1, T2)), remove As Action(Of Action(Of T1, T2))) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Of T1, T2)(Action(Of T1, T2), Action(Of Action(Of T1, T2)), Action(Of Action(Of T1, T2)))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(Of T1, T2)(System.Action(Of T1, T2), System.Action(Of System.Action(Of T1, T2)), System.Action(Of System.Action(Of T1, T2)))
+  name.vb: SaveEvent(Of T1, T2)(Action(Of T1, T2), Action(Of Action(Of T1, T2)), Action(Of Action(Of T1, T2)))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Func{``0},System.String,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``1(System.Func{``0},System.String,System.Action)
+  id: SaveEvent``1(System.Func{``0},System.String,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent<TSource>(Func<TSource>, string, Action)
+  nameWithType: TimbnPluginEvents.SaveEvent<TSource>(Func<TSource>, string, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent<TSource>(System.Func<TSource>, string, System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 525
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save by naming it, so Core does the += and -=.
+
+    The object is read from <code class="paramref">source</code> each time the event is hooked, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type%2cSystem.String%2cSystem.Action)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent(() =&gt; MainGame.PlayerData, nameof(PlayerData.OnItemUsed),
+        (Item item) =&gt; Logger.LogInfo($"Used {item.id}"));</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent<TSource>(Func<TSource> source, string eventName, Action handler)
+    parameters:
+    - id: source
+      type: System.Func{{TSource}}
+      description: Reads the save's object, such as <code>() =&gt; MainGame.PlayerData</code>.
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(PlayerData.OnItemUsed).
+    - id: handler
+      type: System.Action
+      description: Your handler.
+    typeParameters:
+    - id: TSource
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(Of TSource)(source As Func(Of TSource), eventName As String, handler As Action) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Of TSource)(Func(Of TSource), String, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(Of TSource)(System.Func(Of TSource), String, System.Action)
+  name.vb: SaveEvent(Of TSource)(Func(Of TSource), String, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Func{``0},System.String,System.Action{``1})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``2(System.Func{``0},System.String,System.Action{``1})
+  id: SaveEvent``2(System.Func{``0},System.String,System.Action{``1})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent<TSource, T>(Func<TSource>, string, Action<T>)
+  nameWithType: TimbnPluginEvents.SaveEvent<TSource, T>(Func<TSource>, string, Action<T>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent<TSource, T>(System.Func<TSource>, string, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 532
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save by naming it, so Core does the += and -=.
+
+    The object is read from <code class="paramref">source</code> each time the event is hooked, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type%2cSystem.String%2cSystem.Action)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent(() =&gt; MainGame.PlayerData, nameof(PlayerData.OnItemUsed),
+        (Item item) =&gt; Logger.LogInfo($"Used {item.id}"));</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent<TSource, T>(Func<TSource> source, string eventName, Action<T> handler)
+    parameters:
+    - id: source
+      type: System.Func{{TSource}}
+      description: Reads the save's object, such as <code>() =&gt; MainGame.PlayerData</code>.
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(PlayerData.OnItemUsed).
+    - id: handler
+      type: System.Action{{T}}
+      description: Your handler.
+    typeParameters:
+    - id: TSource
+    - id: T
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(Of TSource, T)(source As Func(Of TSource), eventName As String, handler As Action(Of T)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Of TSource, T)(Func(Of TSource), String, Action(Of T))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(Of TSource, T)(System.Func(Of TSource), String, System.Action(Of T))
+  name.vb: SaveEvent(Of TSource, T)(Func(Of TSource), String, Action(Of T))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``3(System.Func{``0},System.String,System.Action{``1,``2})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent``3(System.Func{``0},System.String,System.Action{``1,``2})
+  id: SaveEvent``3(System.Func{``0},System.String,System.Action{``1,``2})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents
+  langs:
+  - csharp
+  - vb
+  name: SaveEvent<TSource, T1, T2>(Func<TSource>, string, Action<T1, T2>)
+  nameWithType: TimbnPluginEvents.SaveEvent<TSource, T1, T2>(Func<TSource>, string, Action<T1, T2>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent<TSource, T1, T2>(System.Func<TSource>, string, System.Action<T1, T2>)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+      branch: core/2/main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: SaveEvent
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Events/TimbnPluginEvents.cs
+    startLine: 539
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Subscribes to an event on an object that belongs to the loaded save by naming it, so Core does the += and -=.
+
+    The object is read from <code class="paramref">source</code> each time the event is hooked, and otherwise it works like
+
+    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action%2cSystem.Action%7bSystem.Action%7d%2cSystem.Action%7bSystem.Action%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type%2cSystem.String%2cSystem.Action)" data-throw-if-not-resolved="false"></xref>.
+  example:
+  - >-
+    Log every item the player uses, in every save.
+
+
+    <pre><code class="lang-csharp">Events.SaveEvent(() =&gt; MainGame.PlayerData, nameof(PlayerData.OnItemUsed),
+        (Item item) =&gt; Logger.LogInfo($"Used {item.id}"));</code></pre>
+  syntax:
+    content: public IDisposable SaveEvent<TSource, T1, T2>(Func<TSource> source, string eventName, Action<T1, T2> handler)
+    parameters:
+    - id: source
+      type: System.Func{{TSource}}
+      description: Reads the save's object, such as <code>() =&gt; MainGame.PlayerData</code>.
+    - id: eventName
+      type: System.String
+      description: The event's name, such as nameof(PlayerData.OnItemUsed).
+    - id: handler
+      type: System.Action{{T1},{T2}}
+      description: Your handler.
+    typeParameters:
+    - id: TSource
+    - id: T1
+    - id: T2
+    return:
+      type: System.IDisposable
+      description: A handle that unsubscribes early when disposed. You don't need to keep it.
+    content.vb: Public Function SaveEvent(Of TSource, T1, T2)(source As Func(Of TSource), eventName As String, handler As Action(Of T1, T2)) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Of TSource, T1, T2)(Func(Of TSource), String, Action(Of T1, T2))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(Of TSource, T1, T2)(System.Func(Of TSource), String, System.Action(Of T1, T2))
+  name.vb: SaveEvent(Of TSource, T1, T2)(Func(Of TSource), String, Action(Of T1, T2))
+references:
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  name: GameEvent(Action, Action<Action>, Action<Action>)
+  nameWithType: TimbnPluginEvents.GameEvent(Action, Action<Action>, Action<Action>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action, System.Action<System.Action>, System.Action<System.Action>)
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Action, Action(Of Action), Action(Of Action))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action, System.Action(Of System.Action), System.Action(Of System.Action))
+  name.vb: GameEvent(Action, Action(Of Action), Action(Of Action))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+    name: GameEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+    name: GameEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  name: SaveEvent(Action, Action<Action>, Action<Action>)
+  nameWithType: TimbnPluginEvents.SaveEvent(Action, Action<Action>, Action<Action>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action, System.Action<System.Action>, System.Action<System.Action>)
+  nameWithType.vb: TimbnPluginEvents.SaveEvent(Action, Action(Of Action), Action(Of Action))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action, System.Action(Of System.Action), System.Action(Of System.Action))
+  name.vb: SaveEvent(Action, Action(Of Action), Action(Of Action))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+    name: SaveEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent(System.Action,System.Action{System.Action},System.Action{System.Action})
+    name: SaveEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework
+  commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
+  name: Timbn.GraveyardKeeperTwo.Core.Framework
+  nameWithType: Timbn.GraveyardKeeperTwo.Core.Framework
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework
+  spec.csharp:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+  spec.vb:
+  - uid: Timbn
+    name: Timbn
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo
+    name: GraveyardKeeperTwo
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core
+    name: Core
+  - name: .
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework
+    name: Framework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveReady_System_Action_
+  name: SaveReady
+  nameWithType: TimbnPluginEvents.SaveReady
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveReady
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveClosed_System_Action_
+  name: SaveClosed
+  nameWithType: TimbnPluginEvents.SaveClosed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveClosed
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_AfterSave_System_Action_
+  name: AfterSave(Action)
+  nameWithType: TimbnPluginEvents.AfterSave(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+    name: AfterSave
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_AfterSave_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave(System.Action)
+    name: AfterSave
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_AfterSave_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_BeforeSave_System_Action_
+  name: BeforeSave
+  nameWithType: TimbnPluginEvents.BeforeSave
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_BeforeSave_System_Action_
+  name: BeforeSave(Action)
+  nameWithType: TimbnPluginEvents.BeforeSave(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+    name: BeforeSave
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_BeforeSave_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BeforeSave(System.Action)
+    name: BeforeSave
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_BeforeSave_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_AfterSave_System_Action_
+  name: AfterSave
+  nameWithType: TimbnPluginEvents.AfterSave
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.AfterSave
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_ZombieViewReady_System_Action_WgoPart_ZombieWgoData__
+  name: ZombieViewReady
+  nameWithType: TimbnPluginEvents.ZombieViewReady
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.ZombieViewReady
+- uid: System.Action{WgoPart,ZombieWgoData}
+  commentId: T:System.Action{WgoPart,ZombieWgoData}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<WgoPart, ZombieWgoData>
+  nameWithType: Action<WgoPart, ZombieWgoData>
+  fullName: System.Action<WgoPart, ZombieWgoData>
+  nameWithType.vb: Action(Of WgoPart, ZombieWgoData)
+  fullName.vb: System.Action(Of WgoPart, ZombieWgoData)
+  name.vb: Action(Of WgoPart, ZombieWgoData)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: WgoPart
+    name: WgoPart
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: ZombieWgoData
+    name: ZombieWgoData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: WgoPart
+    name: WgoPart
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: ZombieWgoData
+    name: ZombieWgoData
+    isExternal: true
+  - name: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepRefused_System_Action_System_Boolean__
+  name: SleepRefused(Action<bool>)
+  nameWithType: TimbnPluginEvents.SleepRefused(Action<bool>)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action<bool>)
+  nameWithType.vb: TimbnPluginEvents.SleepRefused(Action(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action(Of Boolean))
+  name.vb: SleepRefused(Action(Of Boolean))
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+    name: SleepRefused
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepRefused_System_Action_System_Boolean__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused(System.Action{System.Boolean})
+    name: SleepRefused
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepRefused_System_Action_System_Boolean__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepStarted_System_Action_
+  name: SleepStarted
+  nameWithType: TimbnPluginEvents.SleepStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepStarted
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepRefused_System_Action_System_Boolean__
+  name: SleepRefused
+  nameWithType: TimbnPluginEvents.SleepRefused
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepRefused
+- uid: System.Action{System.Boolean}
+  commentId: T:System.Action{System.Boolean}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<bool>
+  nameWithType: Action<bool>
+  fullName: System.Action<bool>
+  nameWithType.vb: Action(Of Boolean)
+  fullName.vb: System.Action(Of Boolean)
+  name.vb: Action(Of Boolean)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SleepEnded_System_Action_
+  name: SleepEnded
+  nameWithType: TimbnPluginEvents.SleepEnded
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SleepEnded
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_StoryTrigger_GlobalEventsSystem_Event_Type_System_Action_System_String__
+  name: StoryTrigger
+  nameWithType: TimbnPluginEvents.StoryTrigger
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.StoryTrigger
+- uid: GlobalEventsSystem.Event.Type
+  commentId: T:GlobalEventsSystem.Event.Type
+  isExternal: true
+  name: GlobalEventsSystem.Event.Type
+  nameWithType: GlobalEventsSystem.Event.Type
+  fullName: GlobalEventsSystem.Event.Type
+  spec.csharp:
+  - uid: GlobalEventsSystem
+    name: GlobalEventsSystem
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event
+    name: Event
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event.Type
+    name: Type
+    isExternal: true
+  spec.vb:
+  - uid: GlobalEventsSystem
+    name: GlobalEventsSystem
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event
+    name: Event
+    isExternal: true
+  - name: .
+  - uid: GlobalEventsSystem.Event.Type
+    name: Type
+    isExternal: true
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GamePaused_System_Action_
+  name: GamePaused
+  nameWithType: TimbnPluginEvents.GamePaused
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GamePaused
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameUnpaused_System_Action_
+  name: GameUnpaused
+  nameWithType: TimbnPluginEvents.GameUnpaused
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameUnpaused
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_NewWeekdayStarted_System_Action_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWeekday__
+  name: NewWeekdayStarted
+  nameWithType: TimbnPluginEvents.NewWeekdayStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewWeekdayStarted
+- uid: System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+  commentId: T:System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TimbnWeekday>
+  nameWithType: Action<TimbnWeekday>
+  fullName: System.Action<Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday>
+  nameWithType.vb: Action(Of TimbnWeekday)
+  fullName.vb: System.Action(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday)
+  name.vb: Action(Of TimbnWeekday)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+    name: TimbnWeekday
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday
+    name: TimbnWeekday
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWeekday.html
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_TimeOfDayChanged_System_Action_System_Single_System_Boolean__
+  name: TimeOfDayChanged
+  nameWithType: TimbnPluginEvents.TimeOfDayChanged
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TimeOfDayChanged
+- uid: System.Action{System.Single,System.Boolean}
+  commentId: T:System.Action{System.Single,System.Boolean}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<float, bool>
+  nameWithType: Action<float, bool>
+  fullName: System.Action<float, bool>
+  nameWithType.vb: Action(Of Single, Boolean)
+  fullName.vb: System.Action(Of Single, Boolean)
+  name.vb: Action(Of Single, Boolean)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerTeleported_System_Action_
+  name: PlayerTeleported
+  nameWithType: TimbnPluginEvents.PlayerTeleported
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerTeleported
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_WorldObjectSpawned_System_Action_Wgo__
+  name: WorldObjectSpawned
+  nameWithType: TimbnPluginEvents.WorldObjectSpawned
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectSpawned
+- uid: System.Action{Wgo}
+  commentId: T:System.Action{Wgo}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Wgo>
+  nameWithType: Action<Wgo>
+  fullName: System.Action<Wgo>
+  nameWithType.vb: Action(Of Wgo)
+  fullName.vb: System.Action(Of Wgo)
+  name.vb: Action(Of Wgo)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Wgo
+    name: Wgo
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Wgo
+    name: Wgo
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_WorldObjectDestroyed_System_Action_Wgo__
+  name: WorldObjectDestroyed
+  nameWithType: TimbnPluginEvents.WorldObjectDestroyed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WorldObjectDestroyed
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_WindowOpened_System_Action_LazyBearTechnology_LazyWidgetBase__
+  name: WindowOpened
+  nameWithType: TimbnPluginEvents.WindowOpened
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.WindowOpened
+- uid: System.Action{LazyBearTechnology.LazyWidgetBase}
+  commentId: T:System.Action{LazyBearTechnology.LazyWidgetBase}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<LazyWidgetBase>
+  nameWithType: Action<LazyWidgetBase>
+  fullName: System.Action<LazyBearTechnology.LazyWidgetBase>
+  nameWithType.vb: Action(Of LazyWidgetBase)
+  fullName.vb: System.Action(Of LazyBearTechnology.LazyWidgetBase)
+  name.vb: Action(Of LazyWidgetBase)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: LazyBearTechnology.LazyWidgetBase
+    name: LazyWidgetBase
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LazyBearTechnology.LazyWidgetBase
+    name: LazyWidgetBase
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_MainMenuOpened_System_Action_
+  name: MainMenuOpened
+  nameWithType: TimbnPluginEvents.MainMenuOpened
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.MainMenuOpened
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_LanguageChanged_System_Action_
+  name: LanguageChanged
+  nameWithType: TimbnPluginEvents.LanguageChanged
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LanguageChanged
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_BalanceLoaded_System_Action_GameBalance__
+  name: BalanceLoaded
+  nameWithType: TimbnPluginEvents.BalanceLoaded
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.BalanceLoaded
+- uid: System.Action{GameBalance}
+  commentId: T:System.Action{GameBalance}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<GameBalance>
+  nameWithType: Action<GameBalance>
+  fullName: System.Action<GameBalance>
+  nameWithType.vb: Action(Of GameBalance)
+  fullName.vb: System.Action(Of GameBalance)
+  name.vb: Action(Of GameBalance)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: GameBalance
+    name: GameBalance
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GameBalance
+    name: GameBalance
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_QuestStarted_System_Action_QuestData__
+  name: QuestStarted
+  nameWithType: TimbnPluginEvents.QuestStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestStarted
+- uid: System.Action{QuestData}
+  commentId: T:System.Action{QuestData}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<QuestData>
+  nameWithType: Action<QuestData>
+  fullName: System.Action<QuestData>
+  nameWithType.vb: Action(Of QuestData)
+  fullName.vb: System.Action(Of QuestData)
+  name.vb: Action(Of QuestData)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: QuestData
+    name: QuestData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: QuestData
+    name: QuestData
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_QuestCompleted_System_Action_QuestData__
+  name: QuestCompleted
+  nameWithType: TimbnPluginEvents.QuestCompleted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCompleted
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_NewDayStarted_System_Action_System_Int32__
+  name: NewDayStarted
+  nameWithType: TimbnPluginEvents.NewDayStarted
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.NewDayStarted
+- uid: System.Action{System.Int32}
+  commentId: T:System.Action{System.Int32}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<int>
+  nameWithType: Action<int>
+  fullName: System.Action<int>
+  nameWithType.vb: Action(Of Integer)
+  fullName.vb: System.Action(Of Integer)
+  name.vb: Action(Of Integer)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GetResource_System_String_
+  name: GetResource(string)
+  nameWithType: TimbnPlayer.GetResource(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(string)
+  nameWithType.vb: TimbnPlayer.GetResource(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(String)
+  name.vb: GetResource(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+    name: GetResource
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GetResource_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.GetResource(System.String)
+    name: GetResource
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_GetResource_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  commentId: P:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_Money
+  name: Money
+  nameWithType: TimbnPlayer.Money
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerResourceChanged_System_Action_
+  name: PlayerResourceChanged
+  nameWithType: TimbnPluginEvents.PlayerResourceChanged
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerResourceChanged
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  name: UnlockedBy(string)
+  nameWithType: TimbnCraftBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(string)
+  nameWithType.vb: TimbnCraftBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnCraftBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  name: UnlockedBy(string)
+  nameWithType: TimbnStationBuilder.UnlockedBy(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(string)
+  nameWithType.vb: TimbnStationBuilder.UnlockedBy(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(String)
+  name.vb: UnlockedBy(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.UnlockedBy(System.String)
+    name: UnlockedBy
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnStationBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnStationBuilder_UnlockedBy_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_TechUnlocked_System_Action_System_String_System_Boolean__
+  name: TechUnlocked
+  nameWithType: TimbnPluginEvents.TechUnlocked
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.TechUnlocked
+- uid: System.Action{System.String,System.Boolean}
+  commentId: T:System.Action{System.String,System.Boolean}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<string, bool>
+  nameWithType: Action<string, bool>
+  fullName: System.Action<string, bool>
+  nameWithType.vb: Action(Of String, Boolean)
+  fullName.vb: System.Action(Of String, Boolean)
+  name.vb: Action(Of String, Boolean)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerItemUsed_System_Action_Item__
+  name: PlayerItemUsed
+  nameWithType: TimbnPluginEvents.PlayerItemUsed
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemUsed
+- uid: System.Action{Item}
+  commentId: T:System.Action{Item}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Item>
+  nameWithType: Action<Item>
+  fullName: System.Action<Item>
+  nameWithType.vb: Action(Of Item)
+  fullName.vb: System.Action(Of Item)
+  name.vb: Action(Of Item)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Item
+    name: Item
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Item
+    name: Item
+    isExternal: true
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerItemsAdded_System_Action_System_Collections_Generic_List_Item___
+  name: PlayerItemsAdded
+  nameWithType: TimbnPluginEvents.PlayerItemsAdded
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsAdded
+- uid: System.Action{System.Collections.Generic.List{Item}}
+  commentId: T:System.Action{System.Collections.Generic.List{Item}}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<List<Item>>
+  nameWithType: Action<List<Item>>
+  fullName: System.Action<System.Collections.Generic.List<Item>>
+  nameWithType.vb: Action(Of List(Of Item))
+  fullName.vb: System.Action(Of System.Collections.Generic.List(Of Item))
+  name.vb: Action(Of List(Of Item))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Item
+    name: Item
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Item
+    name: Item
+    isExternal: true
+  - name: )
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerItemsRemoved_System_Action_System_Collections_Generic_List_Item___
+  name: PlayerItemsRemoved
+  nameWithType: TimbnPluginEvents.PlayerItemsRemoved
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerItemsRemoved
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_PlayerDropCollected_System_Action_System_Collections_Generic_List_Item___
+  name: PlayerDropCollected
+  nameWithType: TimbnPluginEvents.PlayerDropCollected
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.PlayerDropCollected
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_QuestCanceled_System_Action_QuestData__
+  name: QuestCanceled
+  nameWithType: TimbnPluginEvents.QuestCanceled
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.QuestCanceled
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_EveryRealSeconds_System_Single_System_Action_
+  name: EveryRealSeconds(float, Action)
+  nameWithType: TimbnPluginEvents.EveryRealSeconds(float, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(float, System.Action)
+  nameWithType.vb: TimbnPluginEvents.EveryRealSeconds(Single, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(Single, System.Action)
+  name.vb: EveryRealSeconds(Single, Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+    name: EveryRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_EveryRealSeconds_System_Single_System_Action_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds(System.Single,System.Action)
+    name: EveryRealSeconds
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_EveryRealSeconds_System_Single_System_Action_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_Update_System_Action_
+  name: Update
+  nameWithType: TimbnPluginEvents.Update
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_EveryRealSeconds_System_Single_System_Action_
+  name: EveryRealSeconds
+  nameWithType: TimbnPluginEvents.EveryRealSeconds
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.EveryRealSeconds
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_Update_System_Action_
+  name: Update(Action)
+  nameWithType: TimbnPluginEvents.Update(Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+    name: Update
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_Update_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.Update(System.Action)
+    name: Update
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_Update_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_LateUpdate_System_Action_
+  name: LateUpdate
+  nameWithType: TimbnPluginEvents.LateUpdate
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.LateUpdate
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_FixedUpdate_System_Action_
+  name: FixedUpdate
+  nameWithType: TimbnPluginEvents.FixedUpdate
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.FixedUpdate
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  name: GameEvent
+  nameWithType: TimbnPluginEvents.GameEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent
+- uid: System.Action{System.Action}
+  commentId: T:System.Action{System.Action}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Action>
+  nameWithType: Action<Action>
+  fullName: System.Action<System.Action>
+  nameWithType.vb: Action(Of Action)
+  fullName.vb: System.Action(Of System.Action)
+  name.vb: Action(Of Action)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: System.Action{{T}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action{System.Action{{T}}}
+  commentId: T:System.Action{System.Action{``0}}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Action<T>>
+  nameWithType: Action<Action<T>>
+  fullName: System.Action<System.Action<T>>
+  nameWithType.vb: Action(Of Action(Of T))
+  fullName.vb: System.Action(Of System.Action(Of T))
+  name.vb: Action(Of Action(Of T))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Action{{T1},{T2}}
+  commentId: T:System.Action{``0,``1}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: System.Action{System.Action{{T1},{T2}}}
+  commentId: T:System.Action{System.Action{``0,``1}}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Action<T1, T2>>
+  nameWithType: Action<Action<T1, T2>>
+  fullName: System.Action<System.Action<T1, T2>>
+  nameWithType.vb: Action(Of Action(Of T1, T2))
+  fullName.vb: System.Action(Of System.Action(Of T1, T2))
+  name.vb: Action(Of Action(Of T1, T2))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_SaveEvent_System_Action_System_Action_System_Action__System_Action_System_Action__
+  name: SaveEvent
+  nameWithType: TimbnPluginEvents.SaveEvent
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.SaveEvent
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Type_System_String_System_Action_
+  name: GameEvent(Type, string, Action)
+  nameWithType: TimbnPluginEvents.GameEvent(Type, string, Action)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type, string, System.Action)
+  nameWithType.vb: TimbnPluginEvents.GameEvent(Type, String, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type, String, System.Action)
+  name.vb: GameEvent(Type, String, Action)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+    name: GameEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Type_System_String_System_Action_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.GameEvent(System.Type,System.String,System.Action)
+    name: GameEvent
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginEvents.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginEvents_GameEvent_System_Type_System_String_System_Action_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: System.Func{{TSource}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TSource>
+  nameWithType: Func<TSource>
+  fullName: System.Func<TSource>
+  nameWithType.vb: Func(Of TSource)
+  fullName.vb: System.Func(Of TSource)
+  name.vb: Func(Of TSource)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
