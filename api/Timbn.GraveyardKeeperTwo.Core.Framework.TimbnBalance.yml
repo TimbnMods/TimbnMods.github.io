@@ -8,8 +8,6 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon(ItemDef)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Loaded
-  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
-  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.TextExpression(System.String)
   langs:
@@ -66,7 +64,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Loaded
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -97,7 +95,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TextExpression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 136
+    startLine: 146
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -142,7 +140,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Expression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 147
+    startLine: 157
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -173,39 +171,6 @@ items:
   nameWithType.vb: TimbnBalance.Expression(String)
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression(String)
   name.vb: Expression(String)
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
-  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
-  id: RefreshCraftCaches
-  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
-  langs:
-  - csharp
-  - vb
-  name: RefreshCraftCaches()
-  nameWithType: TimbnBalance.RefreshCraftCaches()
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches()
-  type: Method
-  source:
-    remote:
-      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
-      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
-    id: RefreshCraftCaches
-    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 198
-  assemblies:
-  - Timbn.GraveyardKeeperTwo.Core
-  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
-  summary: >-
-    Rebuilds the game's lookups of which station makes what and which items belong to which group, after a mod
-
-    changed crafts or item groups in place, and has every station in the loaded save pick up the new crafts.
-
-    Adding a CraftDef or ItemDef with the plugin's Balance.Add already does this.
-  example: []
-  syntax:
-    content: public static void RefreshCraftCaches()
-    content.vb: Public Shared Sub RefreshCraftCaches()
-  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches*
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon(ItemDef,System.String)
   id: SetIcon(ItemDef,System.String)
@@ -224,7 +189,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SetIcon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 229
+    startLine: 295
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -272,7 +237,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GetIcon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 241
+    startLine: 307
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -292,43 +257,6 @@ items:
       description: The sprite name the item is drawn with.
     content.vb: Public Shared Function GetIcon(item As ItemDef) As String
   overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon*
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
-  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
-  id: RefreshUseEffects(ItemDef)
-  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance
-  langs:
-  - csharp
-  - vb
-  name: RefreshUseEffects(ItemDef)
-  nameWithType: TimbnBalance.RefreshUseEffects(ItemDef)
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects(ItemDef)
-  type: Method
-  source:
-    remote:
-      path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
-      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
-    id: RefreshUseEffects
-    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-    startLine: 249
-  assemblies:
-  - Timbn.GraveyardKeeperTwo.Core
-  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
-  summary: >-
-    Makes the game read an item's use effects again. The game remembers which buffs an item gives the first
-
-    time it looks, so a change to onUseExpressions is not seen until this is called. The plugin's Balance.Edit
-
-    on an ItemDef calls it for you after apply and revert, and Balance.AddCopy and Balance.AddItem after edit.
-  example: []
-  syntax:
-    content: public static void RefreshUseEffects(ItemDef item)
-    parameters:
-    - id: item
-      type: ItemDef
-      description: The item whose use effects changed.
-    content.vb: Public Shared Sub RefreshUseEffects(item As ItemDef)
-  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects*
 references:
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework
   commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
@@ -644,12 +572,6 @@ references:
   name: Expression
   nameWithType: TimbnBalance.Expression
   fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.Expression
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_RefreshCraftCaches
-  name: RefreshCraftCaches
-  nameWithType: TimbnBalance.RefreshCraftCaches
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshCraftCaches
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.SetIcon
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_SetIcon_ItemDef_System_String_
@@ -708,9 +630,3 @@ references:
   name: GetIcon
   nameWithType: TimbnBalance.GetIcon
   fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.GetIcon
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnBalance_RefreshUseEffects_ItemDef_
-  name: RefreshUseEffects
-  nameWithType: TimbnBalance.RefreshUseEffects
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnBalance.RefreshUseEffects

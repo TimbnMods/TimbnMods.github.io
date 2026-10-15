@@ -860,7 +860,7 @@ items:
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
-  summary: Loads 3D models from the plugin's asset bundle and uses them in the world, all unloaded when this plugin unloads.
+  summary: Builds 3D models from the plugin's PNGs and uses them in the world, all freed when this plugin unloads.
   example: []
   syntax:
     content: public TimbnPluginModels Models { get; }

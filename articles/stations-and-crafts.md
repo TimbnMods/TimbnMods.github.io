@@ -5,11 +5,14 @@ Core can add workstations with your own model, bench extensions, recipes, new it
 ```csharp
 protected override void OnAwake()
 {
-    var bundle = Models.LoadEmbeddedBundle("examples.bundle");
+    var boxModel = Models.Build("StickBox", faces => faces
+        .Block("stick_box", x: 0, y: 0, z: 0, depth: 20));
+    var boxSite = Models.Build("StickBoxSite", faces => faces
+        .Top("stick_box_site", x: 0, y: 1, z: 0));
 
     var box = Stations.Add("timbn_stick_box", "Stick Box", "A red box for splitting boards into sticks.", station => station
-        .Model(bundle.Model("RedBox"), new Vector3(1f, 0.6f, 1f))
-        .Site(bundle.Model("RedBoxSite"))
+        .Model(boxModel, new Vector3(1f, 0.6f, 1f))
+        .Site(boxSite)
         .BasedOn("sawhorse")
         .Icon("timbn_stick_box")
         .Cost(("flitch", 2)));
@@ -25,7 +28,7 @@ The yard build desk now offers a Stick Box for 2 boards. Placing it puts down th
 
 ## Models
 
-The `Model` calls below take a [model](models.md), which you build from PNGs with `Models.Build` or load from an asset bundle. [Models](models.md) covers both, along with the pixel scale and the art rules.
+The `Model` calls below take a [model](models.md), which you build from PNGs with `Models.Build`. The samples on this page keep theirs in locals like `boxModel` and `pillarModel`. [Models](models.md) covers building one, along with the pixel scale and the art rules.
 
 ## Adding a Station
 
@@ -35,8 +38,8 @@ Adds a workstation to a build desk. Core makes every definition the game expects
 
 ```csharp
 var rack = Stations.Add("timbn_smoking_rack", "Red Workbench", "A plain red bench for smoking fish.", station => station
-    .Model(bundle.Model("RedWorkbench"), new Vector3(1.5f, 0.8f, 1f))
-    .Site(bundle.Model("RedWorkbenchSite"))
+    .Model(benchModel, new Vector3(1.5f, 0.8f, 1f))
+    .Site(benchSite)
     .BasedOn("kitchen_oven")
     .Icon("timbn_red_workbench")
     .Cost(("flitch", 4))
@@ -179,12 +182,12 @@ Adds an extension like the game's tool rack. It is placed straight from the buil
 
 ```csharp
 Stations.AddExtension("timbn_red_magic", "Red Magic Pillar", "A humming red pillar.", pillar => pillar
-    .Model(bundle.Model("RedPillar"), new Vector3(0.5f, 1f, 0.5f))
+    .Model(pillarModel, new Vector3(0.5f, 1f, 0.5f))
     .Icon("timbn_red_magic")
     .Cost(("flitch", 2)));
 
 var box = Stations.Add("timbn_stick_box", "Stick Box", "A red box for splitting boards into sticks.", station => station
-    .Model(bundle.Model("RedBox"), new Vector3(1f, 0.6f, 1f))
+    .Model(boxModel, new Vector3(1f, 0.6f, 1f))
     .BasedOn("sawhorse")
     .Extensions("tool_rack", "timbn_red_magic"));
 ```
@@ -293,11 +296,11 @@ Pass empty text, or leave the name and description out, and the text comes from 
 
 ```csharp
 var box = Stations.Add("timbn_stick_box", station => station
-    .Model(bundle.Model("RedBox"), new Vector3(1f, 0.6f, 1f))
+    .Model(boxModel, new Vector3(1f, 0.6f, 1f))
     .BasedOn("sawhorse"));
 
 Stations.AddExtension("timbn_red_magic", pillar => pillar
-    .Model(bundle.Model("RedPillar"), new Vector3(0.5f, 1f, 0.5f)));
+    .Model(pillarModel, new Vector3(0.5f, 1f, 0.5f)));
 
 Crafts.Add("timbn_stick_box_sticks", craft => craft
     .In(box)

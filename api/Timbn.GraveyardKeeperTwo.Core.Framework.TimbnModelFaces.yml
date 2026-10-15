@@ -30,7 +30,7 @@ items:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
   summary: >-
-    Describes a model made from pictures instead of an asset bundle, for <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces%7d)" data-throw-if-not-resolved="false"></xref>. Every
+    Describes a model made from pictures, for <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels.Build(System.String%2cSystem.Action%7bTimbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces%7d)" data-throw-if-not-resolved="false"></xref>. Every
 
     picture is exactly what the player sees, so its own size is the size of the face and you only say where it stands.
 

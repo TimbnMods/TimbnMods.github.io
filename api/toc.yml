@@ -404,9 +404,6 @@ items:
   - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
     name: TimbnModel
     type: Class
-  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle
-    name: TimbnModelBundle
-    type: Class
   - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
     name: TimbnModelFaces
     type: Class

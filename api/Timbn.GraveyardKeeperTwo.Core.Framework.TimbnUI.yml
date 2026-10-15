@@ -6,7 +6,6 @@ items:
   parent: Timbn.GraveyardKeeperTwo.Core.Framework
   children:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.ActiveWindow
-  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsScreenFading
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.IsWindowOpen``1
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.Notify(System.String)
@@ -131,7 +130,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsWindowOpen
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-    startLine: 35
+    startLine: 31
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -171,7 +170,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Notify
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-    startLine: 48
+    startLine: 44
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -212,7 +211,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Notify
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-    startLine: 65
+    startLine: 61
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -251,7 +250,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: NotifyOnce
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-    startLine: 84
+    startLine: 80
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -272,46 +271,6 @@ items:
   nameWithType.vb: TimbnUI.NotifyOnce(String)
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce(String)
   name.vb: NotifyOnce(String)
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  id: FadeThrough(System.Action)
-  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI
-  langs:
-  - csharp
-  - vb
-  name: FadeThrough(Action)
-  nameWithType: TimbnUI.FadeThrough(Action)
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  type: Method
-  source:
-    remote:
-      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
-      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
-    id: FadeThrough
-    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-    startLine: 105
-  assemblies:
-  - Timbn.GraveyardKeeperTwo.Core
-  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
-  summary: >-
-    Fades the screen to black, runs your code while it is black, and fades back in, the way the game hides a
-
-    change such as the player sitting down or a teleport. When the game has no fade to show, or one is already
-
-    showing, the code runs straight away. Nothing owns the code, so it still runs after the plugin unloads mid
-
-    fade. Use the plugin's UI.FadeThrough for code that must not outlive the plugin or can be called off.
-  example:
-  - <pre><code class="lang-csharp">TimbnUI.FadeThrough(() =&gt; TimbnPlayer.TeleportTo(campfire));</code></pre>
-  syntax:
-    content: public static void FadeThrough(Action whileBlack)
-    parameters:
-    - id: whileBlack
-      type: System.Action
-      description: The code to run once the screen is black.
-    content.vb: Public Shared Sub FadeThrough(whileBlack As Action)
-  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough*
 references:
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework
   commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
@@ -674,17 +633,3 @@ references:
   name: NotifyOnce
   nameWithType: TimbnUI.NotifyOnce
   fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.NotifyOnce
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_FadeThrough_System_Action_
-  name: FadeThrough
-  nameWithType: TimbnUI.FadeThrough
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough
-- uid: System.Action
-  commentId: T:System.Action
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.action
-  name: Action
-  nameWithType: Action
-  fullName: System.Action

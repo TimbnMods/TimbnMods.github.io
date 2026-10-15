@@ -134,7 +134,6 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnLookCondition
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnMarkup
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
-  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpc
@@ -3290,13 +3289,6 @@ references:
   name: TimbnModel
   nameWithType: TimbnModel
   fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle
-  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle
-  parent: Timbn.GraveyardKeeperTwo.Core.Framework
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle.html
-  name: TimbnModelBundle
-  nameWithType: TimbnModelBundle
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
   commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelFaces
   parent: Timbn.GraveyardKeeperTwo.Core.Framework

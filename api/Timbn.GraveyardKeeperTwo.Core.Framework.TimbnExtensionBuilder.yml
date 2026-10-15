@@ -30,7 +30,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnExtensionBuilder
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -51,8 +51,10 @@ items:
     A pillar that opens a craft at the Stick Box when built next to it.
 
 
-    <pre><code class="lang-csharp">Stations.AddExtension("timbn_red_magic", "Red Magic Pillar", "A humming red pillar.", pillar =&gt; pillar
-        .Model(bundle.Model("RedPillar"), new Vector3(0.5f, 1f, 0.5f))
+    <pre><code class="lang-csharp">var model = Models.Build("RedPillar", faces =&gt; faces.Block("red_pillar", x: 0, y: 0, z: 0, depth: 20));
+
+    Stations.AddExtension("timbn_red_magic", "Red Magic Pillar", "A humming red pillar.", pillar =&gt; pillar
+        .Model(model, model.Size)
         .Icon("timbn_red_magic")
         .Cost(("flitch", 2)));</code></pre>
   syntax:
@@ -85,11 +87,11 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Model
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
-  summary: The extension's look, drawn from the plugin's asset bundle with a box shaped footprint of the given size and a solid body.
+  summary: The extension's look, a model from the plugin's Models with a box shaped footprint of the given size and a solid body.
   example: []
   syntax:
     content: public TimbnExtensionBuilder Model(TimbnModel model, Vector3 size)
@@ -126,7 +128,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Reach
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -163,7 +165,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BasedOn
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -200,7 +202,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Icon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -237,7 +239,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Cost
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 102
+    startLine: 103
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -279,7 +281,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Refund
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 111
+    startLine: 112
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -319,7 +321,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: NoRefund
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 120
+    startLine: 121
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -349,7 +351,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BuiltAt
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 129
+    startLine: 130
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -389,7 +391,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BuildsInSlot
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 144
+    startLine: 145
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -437,7 +439,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: UnlockedBy
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 156
+    startLine: 157
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -477,7 +479,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Edit
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnExtensionBuilder.cs
-    startLine: 164
+    startLine: 165
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework

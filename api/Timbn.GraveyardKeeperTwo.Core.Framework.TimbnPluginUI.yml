@@ -67,16 +67,18 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FadeThrough
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
   summary: >-
-    Fades the screen to black, runs your code while it is black, and fades back in, like
+    Fades the screen to black, runs your code while it is black, and fades back in, the way the game hides a
 
-    <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)" data-throw-if-not-resolved="false"></xref>, but the code can be called off before the screen goes black, such as when
+    change such as the player sitting down or a teleport. The code can be called off before the screen goes black,
 
-    the player changes their mind during the fade.
+    such as when the player changes their mind during the fade. When the game has no fade to show, or one is
+
+    already showing, the code runs straight away.
   example:
   - >-
     <pre><code class="lang-csharp">_fade?.Dispose();
@@ -111,7 +113,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateHint
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -147,7 +149,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateBubble
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 70
+    startLine: 71
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -187,7 +189,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OpenStorage
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 93
+    startLine: 94
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -242,7 +244,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddObjectAction
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -283,7 +285,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: DrawGui
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 137
+    startLine: 138
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -330,7 +332,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateDebugWindow
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 153
+    startLine: 154
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -611,33 +613,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  isExternal: true
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_FadeThrough_System_Action_
-  name: FadeThrough(Action)
-  nameWithType: TimbnUI.FadeThrough(Action)
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-  spec.csharp:
-  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-    name: FadeThrough
-    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_FadeThrough_System_Action_
-  - name: (
-  - uid: System.Action
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action
-  - name: )
-  spec.vb:
-  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.FadeThrough(System.Action)
-    name: FadeThrough
-    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnUI_FadeThrough_System_Action_
-  - name: (
-  - uid: System.Action
-    name: Action
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.action
-  - name: )
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.FadeThrough*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.FadeThrough
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginUI_FadeThrough_System_Action_

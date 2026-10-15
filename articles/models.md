@@ -2,14 +2,7 @@
 
 A model is the look of something Core adds to the world, such as a station, a bench extension or a decoration on a grave. Core draws it with a copy of the game's own prop material, so it takes the game's lighting and fog like any prop. A model does nothing on its own. You make one, then hand it to `Stations.Add`, `Stations.AddExtension` or `Models.AddPart`, and that puts it in the world.
 
-There are two ways to get a model.
-
-| From | Good for |
-| --- | --- |
-| Pictures, with `Models.Build` | Flat pixel art in the game's own look. All you need is PNGs, with no 3D modeling and no Unity. |
-| An asset bundle | Real meshes you modeled or downloaded. The bundle has to be built in Unity 6000.3.9f1. |
-
-Both live on the `Models` property of your mod class ([`TimbnPluginModels`](xref:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels)) and hand back a [`TimbnModel`](xref:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel).
+A model is built from pictures with `Models.Build`, which gives flat pixel art in the game's own look. All you need is PNGs, with no 3D modeling and no Unity. It lives on the `Models` property of your mod class ([`TimbnPluginModels`](xref:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginModels)) and hands back a [`TimbnModel`](xref:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModel).
 
 Here is a small mod that builds a splitting block from three PNGs and turns boards into firewood on it.
 
@@ -36,7 +29,7 @@ protected override void OnAwake()
 The block_shadow picture is 44 by 26 pixels and lies on the ground. The block_stump picture is 40 wide and 38 tall, so its top takes the upper 20 rows and its front the lower 18. The block_axe picture is 6 by 16 and stands on the stump. The rest of this page covers each piece.
 
 > [!NOTE]
-> `Models.Build` and the bundle loaders only make a model. Nothing shows in the world until a station, an extension or a part uses it.
+> `Models.Build` only makes a model. Nothing shows in the world until a station, an extension or a part uses it.
 
 ## Models From Pictures
 
@@ -96,9 +89,7 @@ A point further back therefore sits higher on screen. A round thing lying on the
 var size = block.Size;
 ```
 
-A model from pictures is centered across and deep on the object it stands on, with its floor at the ground. That is why a station can take it without a size, and why a part sits on its world object's origin. The game also snaps buildings to a grid of cells 0.32 across and 0.3 deep, which is 16 by 12 pixels. A slot has to line up with those cells (see [Slots](stations-and-crafts.md#slots)).
-
-For a model from a bundle, `Size` comes from the meshes in the prefab, so a prefab that is centered with its base on the ground gives a footprint that matches the drawing.
+A model is centered across and deep on the object it stands on, with its floor at the ground. That is why a station can take it without a size, and why a part sits on its world object's origin. The game also snaps buildings to a grid of cells 0.32 across and 0.3 deep, which is 16 by 12 pixels. A slot has to line up with those cells (see [Slots](stations-and-crafts.md#slots)).
 
 ## Pixel Art Rules
 
@@ -112,87 +103,33 @@ Core only enforces the overlap rule and warns about semi-transparent pixels. The
 - Avoid a lone light pixel on a dark area, which tends to read as a speck.
 - Draw the pieces of a set from the same front, bottom, left corner, so a station and its looks line up.
 
-## Asset Bundles
-
-A bundle is a Unity asset bundle you build yourself. It is the way to get a real 3D mesh into the game.
-
-- Build the bundle with Unity 6000.3.9f1, the game's own version, or it won't load.
-- Prefabs in a bundle can't carry the game's scripts, so build them from plain meshes and materials.
-- Give each mesh a material with a texture. Core keeps only the texture and draws it with the game's prop material.
-- Turn off Import Cameras and Import Lights on a model you downloaded. Core removes a stray camera, light or audio listener it finds and logs a warning, but it is cleaner not to bring one.
-- Center the model in its prefab, with its base at the ground.
-- Give the bundle a name no other mod is likely to use. Unity can't load two bundles with the same name, and the second load throws.
-
-Set each prefab's AssetBundle label at the bottom of the Inspector, then build the bundle with an editor script in `Assets/Editor`.
-
-```csharp
-public static class BuildBundles
-{
-    [MenuItem("Assets/Build Asset Bundles")]
-    public static void Build()
-    {
-        Directory.CreateDirectory("Build");
-        BuildPipeline.BuildAssetBundles("Build", BuildAssetBundleOptions.ChunkBasedCompression, BuildTarget.StandaloneWindows64);
-    }
-}
-```
-
-### `Models.LoadEmbeddedBundle(resourceName)`
-
-Loads a bundle embedded in the mod's DLL. It is read from memory, which works for a mod in `BepInEx/scripts` and suits a small bundle. It throws an `InvalidOperationException` when the DLL has no such resource or the bundle can't be loaded.
-
-```xml
-<ItemGroup>
-  <EmbeddedResource Include="Bundles\examples.bundle" LogicalName="examples.bundle" />
-</ItemGroup>
-```
-
-### `Models.LoadBundle(fileName)`
-
-Loads a bundle file shipped in the mod's folder, by its path inside that folder. Unity reads models from the file as they are needed instead of keeping a second copy in memory, which suits a large bundle. It throws a `FileNotFoundException` when there is no file at that path and an `InvalidOperationException` when the bundle can't be loaded.
-
-```csharp
-var bundle = Models.LoadBundle("Bundles/furniture.bundle");
-```
-
-```xml
-<ItemGroup>
-  <None Include="Bundles\furniture.bundle" CopyToOutputDirectory="PreserveNewest" />
-</ItemGroup>
-```
-
-### `bundle.Model(prefabName)`
-
-Gets a model from a [`TimbnModelBundle`](xref:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnModelBundle) by its prefab's name. Asking again gives the same model, and a name the bundle doesn't have throws an `InvalidOperationException`. `bundle.Name` is the bundle's own name.
-
-```csharp
-var bundle = Models.LoadEmbeddedBundle("examples.bundle");
-var pillar = bundle.Model("RedPillar");
-```
-
 ## Using a Model
 
 ### For a station
 
-`Stations.Add` takes a model for the finished station, its construction site and each facing. Pass a model from pictures to `Model` with no size and the footprint is the model's own. A bundle model works the same way, or pass a size of your own to make the footprint different from the drawing.
+`Stations.Add` takes a model for the finished station, its construction site and each facing. Pass a model to `Model` with no size and the footprint is the model's own, or pass a size of your own to make the footprint different from the drawing.
 
 ```csharp
-var bundle = Models.LoadEmbeddedBundle("bakery.bundle");
+var oven = Models.Build("ClayOven", faces => faces
+    .Block("oven_body", x: 0, y: 0, z: 0, depth: 24));
+var ovenSite = Models.Build("ClayOvenSite", faces => faces
+    .Top("oven_site", x: 0, y: 1, z: 0));
 
-var oven = Stations.Add("timbn_clay_oven", "Clay Oven", "A squat oven for baking bread.", station => station
-    .Model(bundle.Model("ClayOven"))
-    .Site(bundle.Model("ClayOvenSite"))
+Stations.Add("timbn_clay_oven", "Clay Oven", "A squat oven for baking bread.", station => station
+    .Model(oven)
+    .Site(ovenSite)
     .BasedOn("kitchen_oven"));
 ```
 
-Without a `Site`, a station gets a plain outline of its footprint with the game's warning sign. Extra models that show while a condition holds, and a model for each facing the player can turn the station to, are covered in [Facings](stations-and-crafts.md#facings) and [Looks That Change](stations-and-crafts.md#looks-that-change). A model made from pictures lines up with the station's own model, whatever their sizes. Extra models from a bundle are not shifted, so model them from the same center as the base. The full list of station calls is in [Adding a Station](stations-and-crafts.md#adding-a-station).
+Without a `Site`, a station gets a plain outline of its footprint with the game's warning sign. Extra models that show while a condition holds, and a model for each facing the player can turn the station to, are covered in [Facings](stations-and-crafts.md#facings) and [Looks That Change](stations-and-crafts.md#looks-that-change). Each extra model lines up with the station's own model, whatever their sizes. The full list of station calls is in [Adding a Station](stations-and-crafts.md#adding-a-station).
 
 ### For a bench extension
 
 `Stations.AddExtension` always needs a size, since it has no `Model(model)` on its own. Pass the model's own size to give it the footprint of the drawing.
 
 ```csharp
-var rack = bundle.Model("ChoppingRack");
+var rack = Models.Build("ChoppingRack", faces => faces
+    .Front("rack_tools", x: 0, y: 0, z: 0));
 
 Stations.AddExtension("timbn_chopping_rack", "Chopping Rack", "A rack of sharp tools.", extension => extension
     .Model(rack, rack.Size)
@@ -207,12 +144,15 @@ See [Bench Extensions](stations-and-crafts.md#bench-extensions) for the rest.
 
 Makes a model an extra part that the game hangs on a world object with its `AddWgoPart` expression, the way a headstone or a fence goes on a grave. `partId` is the id that `AddWgoPart` and `RemoveWgoPart` use, so prefix it with your mod, for example `"timbn_grave_bot_1"`. Registering an id twice replaces the first.
 
-The part sits at the world object's origin, and `AddPart` has no offset of its own. The offset goes into the model, for example a headstone 0.3 units toward the back of the grave with its base 0.13 up. A model from pictures is centered on the origin, and a bundle prefab sits wherever it was modeled.
+The part sits at the world object's origin, and `AddPart` has no offset of its own. A model is centered on the origin, so place its faces in the picture to move it, for example a headstone toward the back of the grave.
 
 A part is walked through unless it gets a `solid` box, which is optional. The box is in the world object's space, with a center and a size. A fence needs one, since a grave hides its own mound and collision while a fence is on it and expects the fence to bring both.
 
 ```csharp
-Models.AddPart("timbn_grave_bot_1", bundle.Model("RedSquare"),
+var border = Models.Build("StoneBorder", faces => faces
+    .Top("border_stones", x: 0, y: 1, z: 0));
+
+Models.AddPart("timbn_grave_bot_1", border,
     new Bounds(new Vector3(0f, 0.3f, 0.075f), new Vector3(0.6f, 0.6f, 1f)));
 ```
 
@@ -221,7 +161,10 @@ That box covers a whole grave. `AddPart` returns an `IDisposable` that removes t
 A stone with no solid box is the simpler case.
 
 ```csharp
-Models.AddPart("timbn_grave_top_1", bundle.Model("RedCross"));
+var cross = Models.Build("StoneCross", faces => faces
+    .Front("cross", x: 0, y: 0, z: 0));
+
+Models.AddPart("timbn_grave_top_1", cross);
 ```
 
 > [!NOTE]
@@ -239,8 +182,9 @@ protected override void OnAwake()
     const string remove = "rem_" + id;
     const string scaffolding = "grave_prebuild_top";
 
-    var bundle = Models.LoadEmbeddedBundle("slate.bundle");
-    Models.AddPart(id, bundle.Model("SlateMarker"));
+    var marker = Models.Build("SlateMarker", faces => faces
+        .Front("slate_marker", x: 0, y: 0, z: 0));
+    Models.AddPart(id, marker);
 
     Sprites.AddEmbeddedPng(id);
     Text.Add(new Dictionary<string, string>
@@ -291,8 +235,7 @@ The `AddWgoPart` expression is the game's, so a part can be hung on any world ob
 
 Everything you make through `Models` belongs to your mod and goes away when it unloads.
 
-- A bundle is unloaded along with every model and material made from it.
-- A model from pictures is destroyed, with its textures and meshes.
+- A model is destroyed, with its textures and meshes.
 - A part is unregistered, and the world objects drawing it let go of it.
 
 When the same part comes back after a reload (F6 with the mod in `BepInEx/scripts`), the objects already in the world are drawn again with the new model, so a placed station stays visible. Models do not survive the unload, so keep them in locals or on your mod instance and make them again in `OnAwake`. Don't keep one in a static field, since a reload makes a fresh model.
@@ -304,7 +247,5 @@ When the same part comes back after a reload (F6 with the mod in `BepInEx/script
 - Two fronts at one depth or two tops at one height can't overlap. Move one a pixel, or put it on its own `z` or `y`.
 - A `Block` is both faces, so its PNG has to be taller than its `depth`. The top takes the upper rows and the front needs at least one more.
 - Semi-transparent pixels can cause rendering artifacts and log a warning. Keep every pixel solid or clear.
-- A mesh with no texture keeps its own material instead of the game's prop material. Give each mesh a material with a texture.
-- A bundle built with another Unity version may not load, and then the load throws an `InvalidOperationException` in `OnAwake`.
 - A part with no `solid` box can be walked through. A fence has to bring its own box and its own mound in the model, since the grave hides both.
 - A model is not placed by itself. If nothing appears in the game, check that a station, extension or part actually uses it.
