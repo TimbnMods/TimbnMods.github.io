@@ -2,6 +2,12 @@
 
 Timbn Core is the shared framework behind every Timbn mod for Graveyard Keeper 2, and the recommended foundation for building your own mods. It sits on top of BepInEx and gives your mod a clean way to hook the game, add content and keep its own data, without writing the plumbing every time.
 
+[![NuGet Version](https://img.shields.io/nuget/v/Timbn.GraveyardKeeperTwo.Core)](https://www.nuget.org/packages/Timbn.GraveyardKeeperTwo.Core)
+
+[GitHub](https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo)
+
+[Nexus](https://www.nexusmods.com/graveyardkeeper2/mods/84)
+
 ## What It Gives You
 
 - Events let you react to a new day starting, a save loading, an item being used or a quest finishing, with handlers that remove themselves when your mod unloads.

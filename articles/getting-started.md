@@ -4,7 +4,7 @@
 
 The quickest way to get started is with the project template. Run `dotnet new install Timbn.GraveyardKeeperTwo.Templates` once, then `dotnet new gk2mod -n MyMod`. It creates a project that builds against Core and copies the mod into the game after every build. By default, the mod outputs to `BepInEx/scripts` so you can reload it with F6. Add `--deployTo plugins` to load it at startup instead, and `--gameDir` if the game is not in the default Steam folder.
 
-To set one up by hand, add the `Timbn.GraveyardKeeperTwo.Core` NuGet package. It points at the game's DLLs (set `GameDir` if the game is somewhere else) and never copies Core next to your mod, since players get Core as its own mod. [Your First Mod](first-mod.md) walks through a whole project.
+To set one up by hand, add the [`Timbn.GraveyardKeeperTwo.Core`](https://www.nuget.org/packages/Timbn.GraveyardKeeperTwo.Core) NuGet package. It points at the game's DLLs (set `GameDir` if the game is somewhere else) and never copies Core next to your mod, since players get Core as its own mod. [Your First Mod](first-mod.md) walks through a whole project.
 
 ## Initial Setup
 
