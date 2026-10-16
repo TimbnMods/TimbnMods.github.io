@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BuildTabs
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: First
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AssemblyExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BenchLantern
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: BuildingExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FurnaceExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GardenTablet
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GraveColumbarium
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GraveyardModule
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: KitchenExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: MetallurgyExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -354,7 +354,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: MonumentumFlowerbed
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SewingExtension
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.BuildTabs.cs

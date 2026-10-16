@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnBalance
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Loaded
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TextExpression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Expression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SetIcon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GetIcon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Balance/TimbnBalance.cs

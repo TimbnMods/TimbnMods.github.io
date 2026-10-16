@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Morgue
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AutopsyTable1
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AutopsyTable2
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Crematorium1
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Crematorium2
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: EmbalmTable1
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: EmbalmTable2
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ResurrectionTable1
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.Workstations.cs

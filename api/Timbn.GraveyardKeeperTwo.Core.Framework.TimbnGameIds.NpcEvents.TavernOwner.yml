@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TavernOwner
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SetDirectionDown
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SetDirectionRight
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TpToSpot
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TpToSpotWithoutPuff
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TpToTavern
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TpToTavernEntrance
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Ids/TimbnGameIds.NpcEvents.cs

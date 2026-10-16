@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnZombies
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: All
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AtStation
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Looks
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Redraw
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Stations/TimbnZombies.cs

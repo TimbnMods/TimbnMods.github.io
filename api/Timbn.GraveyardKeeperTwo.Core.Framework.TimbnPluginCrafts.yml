@@ -7,6 +7,7 @@ items:
   children:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Add(System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Add(System.String,System.String,System.String,System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Start(WgoData,System.String)
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnPluginCrafts
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
@@ -61,7 +62,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Add
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
@@ -127,7 +128,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Add
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
@@ -183,11 +184,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Start
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
-    startLine: 78
+    startLine: 77
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -196,9 +197,7 @@ items:
 
     the berries on a bush. The craft goes in the station's queue and runs like one the player started, so a station
 
-    that already runs one starts it after. End it early with the game's
-
-    station.CraftComponent.TryFinishCurCraft(), which finishes it as if its time ran out.
+    that already runs one starts it after. End it early with <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public bool Start(WgoData station, string craftId)
@@ -217,6 +216,41 @@ items:
   nameWithType.vb: TimbnPluginCrafts.Start(WgoData, String)
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Start(WgoData, String)
   name.vb: Start(WgoData, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  id: Finish(WgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts
+  langs:
+  - csharp
+  - vb
+  name: Finish(WgoData)
+  nameWithType: TimbnPluginCrafts.Finish(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Finish
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Crafts/TimbnPluginCrafts.cs
+    startLine: 91
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Finishes the craft at the front of a station's queue now, as if its time ran out, so it pays out and the next
+
+    queued craft starts. Does nothing when the station has no craft.
+  example: []
+  syntax:
+    content: public void Finish(WgoData station)
+    parameters:
+    - id: station
+      type: WgoData
+      description: The station.
+    content.vb: Public Sub Finish(station As WgoData)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish*
 references:
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework
   commentId: N:Timbn.GraveyardKeeperTwo.Core.Framework
@@ -638,6 +672,31 @@ references:
     href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnCraftBuilder.html
   - name: )
   - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginCrafts_Finish_WgoData_
+  name: Finish(WgoData)
+  nameWithType: TimbnPluginCrafts.Finish(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+    name: Finish
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginCrafts_Finish_WgoData_
+  - name: (
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish(WgoData)
+    name: Finish
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginCrafts_Finish_WgoData_
+  - name: (
+  - uid: WgoData
+    name: WgoData
+    isExternal: true
+  - name: )
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FindAll(System.String)
   isExternal: true
@@ -691,3 +750,9 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginCrafts_Finish_WgoData_
+  name: Finish
+  nameWithType: TimbnPluginCrafts.Finish
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginCrafts.Finish

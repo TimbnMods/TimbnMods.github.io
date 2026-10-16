@@ -30,17 +30,3 @@ TimbnConfig.CarryOver(
     (StuckCarriers, "Carriers", "ShowWhenStuck"),
     (UnstuckKey, "Unstuck", "Key"));
 ```
-
-### `TimbnConfig.ReloadAll()`
-
-Rereads the config file of every loaded mod, Timbn or not, and returns how many were reloaded. A failure in one mod is logged and doesn't stop the rest.
-
-### `TimbnConfig.Reload(plugin)`
-
-Rereads the config file of one mod. Returns false when the file doesn't exist yet or could not be read.
-
-Each changed value raises the BepInEx `SettingChanged` event, so settings tied with `Settings.Toggle` apply right away. A key deleted from a file keeps its current value instead of going back to its default.
-
-```csharp
-var reloaded = TimbnConfig.ReloadAll();
-```

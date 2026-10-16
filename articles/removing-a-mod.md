@@ -12,7 +12,7 @@ There is no API for this. It works for every mod that adds content through Core.
 - Buffs you added.
 - Crafts you added, including one queued at a station.
 - Stations you added.
-- Parts you added to a world object, such as a 3D model.
+- Parts you added to a world object, such as a model.
 - Your items set as the filter of a conveyor chest's slot, or pinned to the hotbar.
 - Quests you added, with their progress.
 

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnGuiWindow
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsVisible
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Area
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AnchorRight
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: InGameOnly
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnGuiWindow.cs

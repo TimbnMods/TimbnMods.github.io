@@ -95,6 +95,7 @@ A stage takes the same calls as a quest, such as `Icon`, `Phase`, `TalksWith`, `
 | `Icon(id)`, `Icon(run => id)` | The quest's icon in the tree and log. A quest that continues another uses that quest's icon when left out. |
 | `Phase(1 to 5)` | Which of the game's five rings the quest's node shows while in progress. Left out, a chain grows a ring with each step. |
 | `OnStart(action)`, `OnEnd(action)` | Run when the quest starts (and again when a save loads with it in progress) and when it stops being in progress. Use them for effects the save does not keep, such as a marker. |
+| `Marker(offer, handIn)` | Points the player to the NPC to talk to with the HUD's point of interest marker. Marks the giver while the offer waits, then whoever takes the hand in once ready. Both take an optional `Func<bool>` condition, such as from a setting. |
 | `OnStartExpression(expr)`, `OnDoneExpression(expr)` | One of the game's script expressions, run by the game when the quest starts or is completed, such as `AddPerk("perk_x")` or `RevealTech("tech_x")`. Use them for changes the save keeps. A typo fails when the quest is added. |
 | `OnDone(action)` | Runs once the stage is done, after the lines that follow `Accept`. |
 

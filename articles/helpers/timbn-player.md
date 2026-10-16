@@ -126,6 +126,16 @@ if (!TimbnPlayer.HasCraft("my_mod_fish_pie"))
     TimbnPlayer.UnlockCraft("my_mod_fish_pie");
 ```
 
+### `KnownCrafts(stationIds)`
+
+Every recipe the player can make right now, the ones the game gives from the start and the ones they have unlocked, the same set `HasCraft` says yes to. Pass station ids such as `TimbnGameIds.Workstations.Placed.KitchenOven` to keep only recipes made at any of them, or none for all stations. The result is a snapshot, so call it again after the player learns something. Empty at the main menu.
+
+```csharp
+var dishes = TimbnPlayer.KnownCrafts(
+    TimbnGameIds.Workstations.Placed.KitchenOven,
+    TimbnGameIds.Workstations.Placed.KitchenTable);
+```
+
 ### `HasBuilt(buildingId)`
 
 Whether the player has built one of the buildings the game only allows once, such as the choir or the organ. The game marks such a building as locked to prevent rebuilding once it is built, which this method inspects.

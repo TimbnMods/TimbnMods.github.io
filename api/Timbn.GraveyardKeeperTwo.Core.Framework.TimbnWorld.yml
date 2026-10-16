@@ -16,6 +16,9 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.IsRaining
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Near(UnityEngine.Vector3,System.Single,System.Func{WgoData,System.Boolean})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Objects(System.Func{WgoData,System.Boolean})
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft(WgoData)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Scenes
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownGratitude
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.TownQuality
@@ -34,7 +37,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnWorld
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
@@ -78,7 +81,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Scenes
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
@@ -112,7 +115,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Objects
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
@@ -158,7 +161,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FindAll
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
@@ -200,7 +203,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Extensions
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
@@ -225,6 +228,43 @@ items:
       description: A copy of the list. Empty when nothing is attached or at the main menu.
     content.vb: Public Shared Function Extensions(station As WgoData) As IReadOnlyList(Of WgoData)
   overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Extensions*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft(WgoData)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft(WgoData)
+  id: RunningCraft(WgoData)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: RunningCraft(WgoData)
+  nameWithType: TimbnWorld.RunningCraft(WgoData)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft(WgoData)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: RunningCraft
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 82
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    The id of the craft at the front of a station's queue, running or waiting to start, or null when it has none,
+
+    for example to check whether a stand started with Crafts.Start is still on "timbn_infusion_stand_infusion".
+  example: []
+  syntax:
+    content: public static string? RunningCraft(WgoData station)
+    parameters:
+    - id: station
+      type: WgoData
+      description: The station.
+    return:
+      type: System.String
+    content.vb: Public Shared Function RunningCraft(station As WgoData) As String
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft*
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3,GameSceneData)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt(UnityEngine.Vector3,GameSceneData)
   id: ZonesAt(UnityEngine.Vector3,GameSceneData)
@@ -239,11 +279,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ZonesAt
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 89
+    startLine: 96
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -284,11 +324,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TryGetNavGraph
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 111
+    startLine: 118
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -328,11 +368,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GraveyardQuality
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 137
+    startLine: 144
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -360,11 +400,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ChurchQuality
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 149
+    startLine: 156
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -397,11 +437,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GraveyardBuiltAreas
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 160
+    startLine: 167
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -432,11 +472,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GraveyardBounds
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 173
+    startLine: 180
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -470,11 +510,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TownQuality
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 182
+    startLine: 189
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -502,11 +542,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TownGratitude
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 194
+    startLine: 201
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -539,11 +579,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Weather
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 205
+    startLine: 212
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -574,11 +614,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsRaining
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 214
+    startLine: 221
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -608,11 +648,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TryFindWalkable
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 230
+    startLine: 237
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -658,11 +698,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GravesWithBodies
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 263
+    startLine: 270
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -696,11 +736,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Near
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 279
+    startLine: 286
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -744,11 +784,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ViewOf
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 304
+    startLine: 311
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -771,6 +811,94 @@ items:
       description: Its view, or null when it has none right now.
     content.vb: Public Shared Function ViewOf(data As WgoData) As Wgo
   overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ViewOf*
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point(System.String)
+  id: Point(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: Point(string)
+  nameWithType: TimbnWorld.Point(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Point
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 329
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    A point the game placed in a scene, the spots its people walk to and stand at, such as donkey_04 on the road by
+
+    the graveyard. A point has a position, a facing and an enabled flag, and its id is the same string the Npcs
+
+    module takes. The ids are listed in info_dump's points catalog.
+  example:
+  - <pre><code class="lang-csharp">var road = TimbnWorld.Point("donkey_04")?.Position;</code></pre>
+  syntax:
+    content: public static GDPointData? Point(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The point's id.
+    return:
+      type: GDPointData
+      description: The point, or null when no point has that id or at the main menu.
+    content.vb: Public Shared Function Point(id As String) As GDPointData
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point*
+  nameWithType.vb: TimbnWorld.Point(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point(String)
+  name.vb: Point(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag(System.String)
+  id: PointsWithTag(System.String)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld
+  langs:
+  - csharp
+  - vb
+  name: PointsWithTag(string)
+  nameWithType: TimbnWorld.PointsWithTag(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag(string)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: PointsWithTag
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
+    startLine: 344
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Every point carrying a custom tag, for a set of spots the game marks the same way, such as the two seats each
+
+    church pew adds with the tag parishioner_bench_point. Disabled points are included, so check Enabled when that
+
+    matters.
+  example:
+  - <pre><code class="lang-csharp">var seats = TimbnWorld.PointsWithTag("parishioner_bench_point").Where(seat =&gt; seat.Enabled);</code></pre>
+  syntax:
+    content: public static GDPointData[] PointsWithTag(string customTag)
+    parameters:
+    - id: customTag
+      type: System.String
+      description: The tag, as the game spells it.
+    return:
+      type: GDPointData[]
+      description: The points, empty when none carry the tag or at the main menu.
+    content.vb: Public Shared Function PointsWithTag(customTag As String) As GDPointData()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag*
+  nameWithType.vb: TimbnWorld.PointsWithTag(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag(String)
+  name.vb: PointsWithTag(String)
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
   id: FlatDistance(UnityEngine.Vector3,UnityEngine.Vector3)
@@ -785,11 +913,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FlatDistance
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/World/TimbnWorld.cs
-    startLine: 314
+    startLine: 351
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1440,6 +1568,12 @@ references:
   name: WgoData
   nameWithType: WgoData
   fullName: WgoData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_RunningCraft_WgoData_
+  name: RunningCraft
+  nameWithType: TimbnWorld.RunningCraft
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.RunningCraft
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.ZonesAt
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_ZonesAt_UnityEngine_Vector3_GameSceneData_
@@ -1747,6 +1881,44 @@ references:
   name: Wgo
   nameWithType: Wgo
   fullName: Wgo
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_Point_System_String_
+  name: Point
+  nameWithType: TimbnWorld.Point
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.Point
+- uid: GDPointData
+  commentId: T:GDPointData
+  isExternal: true
+  name: GDPointData
+  nameWithType: GDPointData
+  fullName: GDPointData
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_PointsWithTag_System_String_
+  name: PointsWithTag
+  nameWithType: TimbnWorld.PointsWithTag
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.PointsWithTag
+- uid: GDPointData[]
+  isExternal: true
+  name: GDPointData[]
+  nameWithType: GDPointData[]
+  fullName: GDPointData[]
+  nameWithType.vb: GDPointData()
+  fullName.vb: GDPointData()
+  name.vb: GDPointData()
+  spec.csharp:
+  - uid: GDPointData
+    name: GDPointData
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: GDPointData
+    name: GDPointData
+    isExternal: true
+  - name: (
+  - name: )
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.FlatDistance
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnWorld.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnWorld_FlatDistance_UnityEngine_Vector3_UnityEngine_Vector3_

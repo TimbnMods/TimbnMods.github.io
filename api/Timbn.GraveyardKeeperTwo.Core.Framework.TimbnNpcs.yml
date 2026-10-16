@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnNpcs
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GroupPoints
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -105,11 +105,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GroupMemberIds
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 62
+    startLine: 65
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -149,11 +149,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FacingAt
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 87
+    startLine: 89
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -193,11 +193,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsFree
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 95
+    startLine: 97
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -234,11 +234,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ReputationOf
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnNpcs.cs
-    startLine: 109
+    startLine: 111
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnPluginUI
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: FadeThrough
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateHint
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateBubble
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OpenStorage
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddObjectAction
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: DrawGui
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateDebugWindow
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs

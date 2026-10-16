@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnPluginMainMenu
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddLine
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddPopup
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginMainMenu.cs

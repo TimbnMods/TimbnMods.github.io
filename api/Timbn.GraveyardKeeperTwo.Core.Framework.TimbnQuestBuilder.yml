@@ -18,6 +18,7 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Giver(System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun,System.String})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker(System.Func{System.Boolean},System.Func{System.Boolean})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Needs(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNeeds})
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Offer(System.Action{Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestOffer})
@@ -52,7 +53,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnQuestBuilder
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
@@ -114,11 +115,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Icon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 138
+    startLine: 142
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -155,11 +156,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Icon
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 155
+    startLine: 159
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -183,6 +184,59 @@ items:
   nameWithType.vb: TimbnQuestBuilder.Icon(Func(Of TimbnQuestRun, String))
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Icon(System.Func(Of Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestRun, String))
   name.vb: Icon(Func(Of TimbnQuestRun, String))
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker(System.Func{System.Boolean},System.Func{System.Boolean})
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker(System.Func{System.Boolean},System.Func{System.Boolean})
+  id: Marker(System.Func{System.Boolean},System.Func{System.Boolean})
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+  langs:
+  - csharp
+  - vb
+  name: Marker(Func<bool>?, Func<bool>?)
+  nameWithType: TimbnQuestBuilder.Marker(Func<bool>?, Func<bool>?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker(System.Func<bool>?, System.Func<bool>?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Marker
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
+    startLine: 181
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Points the player to the NPC to talk to with the HUD's point of interest marker, the one the game uses for work
+
+    spots. It marks the giver while the offer waits, then whoever takes the hand in once the player can finish, such
+
+    as the villager waiting on a dish once it is in the bag. While the NPC is off screen the marker sits at the screen
+
+    edge pointing the way, or on the door that leads to them, and once they are on screen their talk bubble shows
+
+    instead. Each half can be switched on its own, such as from a setting, and both are read every time the marker
+
+    updates, so a change applies straight away.
+  example:
+  - '<pre><code class="lang-csharp">.Marker(offer: () =&gt; Settings.IsEnabled(PluginConfig.OfferMarkers), handIn: () =&gt; Settings.IsEnabled(PluginConfig.HandInMarkers))</code></pre>'
+  syntax:
+    content: public TimbnQuestBuilder Marker(Func<bool>? offer = null, Func<bool>? handIn = null)
+    parameters:
+    - id: offer
+      type: System.Func{System.Boolean}
+      description: Whether the giver is marked while the offer waits, always when left out.
+    - id: handIn
+      type: System.Func{System.Boolean}
+      description: Whether the NPC taking the hand in is marked once the player can finish, always when left out.
+    return:
+      type: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder
+      description: This builder, for chaining.
+    content.vb: Public Function Marker(offer As Func(Of Boolean) = Nothing, handIn As Func(Of Boolean) = Nothing) As TimbnQuestBuilder
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker*
+  nameWithType.vb: TimbnQuestBuilder.Marker(Func(Of Boolean), Func(Of Boolean))
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker(System.Func(Of Boolean), System.Func(Of Boolean))
+  name.vb: Marker(Func(Of Boolean), Func(Of Boolean))
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(System.Int32)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase(System.Int32)
   id: Phase(System.Int32)
@@ -197,11 +251,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Phase
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 169
+    startLine: 196
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -242,11 +296,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Description
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 181
+    startLine: 208
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -280,11 +334,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Description
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 194
+    startLine: 221
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -316,11 +370,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: DoneDescription
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 203
+    startLine: 230
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -354,11 +408,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OfferAfter
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 212
+    startLine: 239
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -389,11 +443,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OfferAfter
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 224
+    startLine: 251
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -432,11 +486,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ContinuesFrom
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 247
+    startLine: 274
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -481,11 +535,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OfferWhen
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 268
+    startLine: 295
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -522,11 +576,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OfferWhenExpression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 280
+    startLine: 307
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -563,11 +617,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Offer
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 292
+    startLine: 319
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -604,11 +658,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: StartsOn
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 305
+    startLine: 332
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -639,11 +693,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TalksWith
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 317
+    startLine: 344
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -680,11 +734,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TalksWith
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 326
+    startLine: 353
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -718,11 +772,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Giver
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 343
+    startLine: 370
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -760,11 +814,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Giver
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 354
+    startLine: 381
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -798,11 +852,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Setup
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 381
+    startLine: 408
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -854,11 +908,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Repeatable
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 394
+    startLine: 421
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -892,11 +946,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ExpiresAfter
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 406
+    startLine: 433
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -933,11 +987,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnCancel
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 432
+    startLine: 459
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -985,11 +1039,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Needs
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 445
+    startLine: 472
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1028,11 +1082,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Needs
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 455
+    startLine: 482
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1066,11 +1120,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Cost
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 468
+    startLine: 495
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1107,11 +1161,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Cost
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 483
+    startLine: 510
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1146,11 +1200,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Talk
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 507
+    startLine: 534
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1198,11 +1252,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Reward
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 523
+    startLine: 550
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1239,11 +1293,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Reward
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 538
+    startLine: 565
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1278,11 +1332,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ReadyByCode
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 585
+    startLine: 612
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1309,11 +1363,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ReadyOn
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 594
+    startLine: 621
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1344,11 +1398,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: DoneLines
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 613
+    startLine: 640
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1391,11 +1445,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnDone
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 629
+    startLine: 656
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1429,11 +1483,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnStart
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 642
+    startLine: 669
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1469,11 +1523,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnEnd
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 654
+    startLine: 681
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1507,11 +1561,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnStartExpression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 668
+    startLine: 695
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1552,11 +1606,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnDoneExpression
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 680
+    startLine: 707
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1593,11 +1647,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddStage
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Quests/TimbnQuestBuilder.cs
-    startLine: 718
+    startLine: 745
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -2091,60 +2145,12 @@ references:
   - name: " "
   - name: TResult
   - name: )
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Phase_System_Int32_
-  name: Phase
-  nameWithType: TimbnQuestBuilder.Phase
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Description_System_String_
-  name: Description
-  nameWithType: TimbnQuestBuilder.Description
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_DoneDescription_System_String_
-  name: DoneDescription
-  nameWithType: TimbnQuestBuilder.DoneDescription
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferAfter_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
-  name: OfferAfter
-  nameWithType: TimbnQuestBuilder.OfferAfter
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
-  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
-  parent: Timbn.GraveyardKeeperTwo.Core.Framework
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest.html
-  name: TimbnQuest
-  nameWithType: TimbnQuest
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ContinuesFrom_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
-  name: ContinuesFrom
-  nameWithType: TimbnQuestBuilder.ContinuesFrom
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
-- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen*
-  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
-  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
-  name: OfferWhen
-  nameWithType: TimbnQuestBuilder.OfferWhen
-  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Marker_System_Func_System_Boolean__System_Func_System_Boolean__
+  name: Marker
+  nameWithType: TimbnQuestBuilder.Marker
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Marker
 - uid: System.Func{System.Boolean}
   commentId: T:System.Func{System.Boolean}
   parent: System
@@ -2208,6 +2214,60 @@ references:
   - name: " "
   - name: TResult
   - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Phase_System_Int32_
+  name: Phase
+  nameWithType: TimbnQuestBuilder.Phase
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Phase
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_Description_System_String_
+  name: Description
+  nameWithType: TimbnQuestBuilder.Description
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.Description
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_DoneDescription_System_String_
+  name: DoneDescription
+  nameWithType: TimbnQuestBuilder.DoneDescription
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.DoneDescription
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferAfter_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
+  name: OfferAfter
+  nameWithType: TimbnQuestBuilder.OfferAfter
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferAfter
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+  commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest.html
+  name: TimbnQuest
+  nameWithType: TimbnQuest
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuest
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_ContinuesFrom_Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuest_
+  name: ContinuesFrom
+  nameWithType: TimbnQuestBuilder.ContinuesFrom
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.ContinuesFrom
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnQuestBuilder_OfferWhen_System_Func_System_Boolean__
+  name: OfferWhen
+  nameWithType: TimbnQuestBuilder.OfferWhen
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnQuestBuilder.OfferWhen(System.Func{System.Boolean})
   isExternal: true

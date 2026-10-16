@@ -21,14 +21,6 @@ if (TimbnUI.IsWindowOpen<UIBuildingWindow>())
     BuildPins.Draw();
 ```
 
-### `FadeThrough(action)`
-
-Fades the screen to black, runs your code while it is black, and fades back in, the way the game hides a change such as the player sitting down or a teleport. When the game has no fade to show, or one is already showing, the code runs right away. Nothing owns the code, so it still runs if the mod unloads during the fade. Use `UI.FadeThrough` below for code that must not outlive the mod.
-
-```csharp
-TimbnUI.FadeThrough(() => TimbnPlayer.TeleportTo(campfire));
-```
-
 ### `TimbnUI.Notify(key)`, `TimbnUI.Notify(key, iconId)`
 
 Shows a line of text in the game's own notification popup, the one it uses for things like a closed shop, with an icon beside it if you pass one. The text is looked up by its localization key, so add it with `Text.Add` or a lang file. It can name an item or an NPC with the game's `#(id)` markup. Does nothing at the main menu.
@@ -45,7 +37,7 @@ The remaining helpers live on the mod's `UI` property, and everything created th
 
 ### `UI.FadeThrough(action)`
 
-Works like `TimbnUI.FadeThrough`, but returns a handle that can cancel the action before the screen fades to black, such as when the player interrupts the action.
+Fades the screen to black, runs your code while it is black, and fades back in, the way the game hides a change such as the player sitting down or a teleport. Returns a handle that can cancel the action before the screen fades to black, such as when the player interrupts the action. When the game has no fade to show, or one is already showing, the code runs right away.
 
 ```csharp
 _fade?.Dispose();

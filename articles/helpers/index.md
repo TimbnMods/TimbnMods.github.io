@@ -21,7 +21,7 @@ Timbn Core includes several helper methods to make modding easier.
   The calendar and the time of day.
 
 - [TimbnWorld](timbn-world.md)
-  Finding world objects and ground, and reading the graveyard, town and weather.
+  Finding scene points, world objects and ground, and reading the graveyard, town and weather.
 
 - [TimbnZombies](timbn-zombies.md)
   Finding zombies and changing how they look.

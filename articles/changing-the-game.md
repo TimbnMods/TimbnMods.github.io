@@ -32,10 +32,6 @@ Balance.AddCopy<ItemDef>("cook_baked_fish", "timbn_smoked_fish", fish => TimbnBa
 
 The loaded `GameBalance`, or null if the game hasn't loaded it yet. Unlike `GameBalance.Me` it never forces a load.
 
-### `TimbnBalance.RefreshCraftCaches()`
-
-Rebuilds the game's lookups of which station makes what and which items belong to which group, after a mod changed crafts or item groups in place. Every station in the loaded save picks up the new crafts. `Balance.Add` already does this for a `CraftDef` or `ItemDef`.
-
 ### `TimbnBalance.SetIcon(item, iconId)`
 
 Changes an item's icon in both places the game keeps it.
@@ -43,10 +39,6 @@ Changes an item's icon in both places the game keeps it.
 ### `TimbnBalance.GetIcon(item)`
 
 Reads the icon id an item shows, which is the one `SetIcon` set if there is one.
-
-### `TimbnBalance.RefreshUseEffects(item)`
-
-Makes the game read an item's use effects again after a change to them. `Balance.Edit`, `Balance.AddCopy` and `Balance.AddItem` on an `ItemDef` do this for you.
 
 ### `TimbnBalance.Expression(formula)`
 

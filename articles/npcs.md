@@ -112,6 +112,14 @@ Adds an NPC to the loaded save at a point, such as one more villager. The game's
 Npcs.Spawn(TimbnGameIds.Npcs.Villager03, "npc_sim_village_left_side_road_01")?.WalkTo("npc_sim_village_tavern_03");
 ```
 
+### `Npcs.Preload(npcIds, copies)`
+
+Loads the look of some kinds of people in the background, so the first `Spawn` of each kind in a session doesn't stall a frame while the game loads it. Call it when a save is ready, with every kind the mod may spawn. `copies` defaults to 1 and counts the ones the game already shows, so a kind out in the village with `copies` at 1 gets nothing ready, and a second one spawned then still stalls. Ask for 2 when the game's own may be about.
+
+```csharp
+Events.SaveReady(() => Npcs.Preload(TimbnNpcs.GroupMemberIds(TimbnGameIds.Groups.VillagersDayAll), copies: 2));
+```
+
 ### `Npcs.AddVillager(npcId)`
 
 Adds another villager of the specified type who follows native life-simulation behavior, joining the same group, going out by day and returning home at night. They start at home and go straight out when the rest of the group is out. Removal works the same as for `Spawn`. Returns null when the type has no group or home, or the group has no point left for another villager.

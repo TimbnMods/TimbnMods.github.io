@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnObjectAction
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: .ctor
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ObjectName
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Stand
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HintKey
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Facing
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Animation
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GameMinutes
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CanPerform
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -332,7 +332,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnStarted
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
@@ -363,7 +363,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnFinished
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnObjectAction.cs

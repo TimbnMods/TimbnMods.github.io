@@ -6,7 +6,7 @@ Timbn Core is the shared framework behind every Timbn mod for Graveyard Keeper 2
 
 - Events let you react to a new day starting, a save loading, an item being used or a quest finishing, with handlers that remove themselves when your mod unloads.
 - Settings tie a config entry to a change in the game, so a setting switched in a config manager applies right away.
-- Content you can add includes potions, quests, talks, NPC days, stations, crafts, techs and 3D models.
+- Content you can add includes potions, quests, talks, NPC days, stations, crafts, techs and models.
 - Save data stays in its own file next to the save, so removing your mod never breaks a save.
 - Helpers read the player, the clock, the world, items, zombies and input without digging through the game's code.
 - Hot reload works with BepInEx's ScriptEngine, so you rebuild and press F6 to try a change without restarting the game.
@@ -65,7 +65,7 @@ One thing Core can't track is a change you write straight into the game's own da
 | Add potions | [Potions](articles/potions.md) |
 | Add stations and crafts | [Stations and Crafts](articles/stations-and-crafts.md) |
 | Add techs to the tech tree | [Techs](articles/techs.md) |
-| Build 3D models for stations and parts | [Models](articles/models.md) |
+| Build models for stations and parts | [Models](articles/models.md) |
 | Add sprites, text and audio | [Sprites, Text, and Audio](articles/sprites-text-audio.md) |
 | Handle a game update | [Game Versions](articles/game-versions.md) |
 | Look up an item, NPC or sound id | [Game Ids](articles/game-ids.md) |

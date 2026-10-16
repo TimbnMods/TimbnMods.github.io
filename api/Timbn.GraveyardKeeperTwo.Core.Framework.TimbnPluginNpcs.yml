@@ -8,6 +8,7 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.AddVillager(System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.CloseTradeWhen(System.String,System.Func{System.Boolean},System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Find(System.String)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload(System.Collections.Generic.IEnumerable{System.String},System.Int32)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Schedule(System.String,Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcDay)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Spawn(System.String,System.String)
   langs:
@@ -20,7 +21,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnPluginNpcs
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
@@ -65,7 +66,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Schedule
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
@@ -107,7 +108,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Find
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
@@ -149,7 +150,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Spawn
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
@@ -182,6 +183,52 @@ items:
   nameWithType.vb: TimbnPluginNpcs.Spawn(String, String)
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Spawn(String, String)
   name.vb: Spawn(String, String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload(System.Collections.Generic.IEnumerable{System.String},System.Int32)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload(System.Collections.Generic.IEnumerable{System.String},System.Int32)
+  id: Preload(System.Collections.Generic.IEnumerable{System.String},System.Int32)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs
+  langs:
+  - csharp
+  - vb
+  name: Preload(IEnumerable<string>, int)
+  nameWithType: TimbnPluginNpcs.Preload(IEnumerable<string>, int)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload(System.Collections.Generic.IEnumerable<string>, int)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: Preload
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
+    startLine: 99
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Loads the look of some kinds of people in the background, so the first Spawn of each kind in a session doesn't
+
+    stall a frame for 10 to 30 ms while the game loads it. Call it when a save is ready, with every kind the mod
+
+    may spawn. Copies count the ones the game already shows, so a kind out in the village with copies at 1 gets
+
+    nothing ready, and a second one spawned then still stalls. Ask for 2 when the game's own may be about.
+  example:
+  - '<pre><code class="lang-csharp">Events.SaveReady(() =&gt; Npcs.Preload(TimbnNpcs.GroupMemberIds(TimbnGameIds.Groups.VillagersDayAll), copies: 2));</code></pre>'
+  syntax:
+    content: public void Preload(IEnumerable<string> npcIds, int copies = 1)
+    parameters:
+    - id: npcIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The kinds of people, from <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Npcs" data-throw-if-not-resolved="false"></xref> or <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnNpcs.GroupMemberIds(System.String)" data-throw-if-not-resolved="false"></xref>.
+    - id: copies
+      type: System.Int32
+      description: How many of each kind to have ready, counting the ones already shown.
+    content.vb: Public Sub Preload(npcIds As IEnumerable(Of String), copies As Integer = 1)
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload*
+  nameWithType.vb: TimbnPluginNpcs.Preload(IEnumerable(Of String), Integer)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload(System.Collections.Generic.IEnumerable(Of String), Integer)
+  name.vb: Preload(IEnumerable(Of String), Integer)
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.AddVillager(System.String)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.AddVillager(System.String)
   id: AddVillager(System.String)
@@ -196,11 +243,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddVillager
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-    startLine: 99
+    startLine: 114
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -242,11 +289,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CloseTradeWhen
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Npcs/TimbnPluginNpcs.cs
-    startLine: 137
+    startLine: 152
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -687,6 +734,123 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginNpcs_Preload_System_Collections_Generic_IEnumerable_System_String__System_Int32_
+  name: Preload
+  nameWithType: TimbnPluginNpcs.Preload
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.Preload
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.AddVillager*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.AddVillager
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginNpcs.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginNpcs_AddVillager_System_String_

@@ -128,7 +128,7 @@ Gives the station a spot where a zombie sits as its worker, for a station based 
 
 ### `HoldsZombie()`
 
-Lets the player lay a zombie on the station and take it back, the way the game's corpse pallet holds a corpse. E with a zombie overhead puts it in, and E with free hands takes it back unless a craft is running there, so a craft started on the station holds the zombie until it ends. The station can't be dismantled while a zombie lies on it. Show the zombie with `ShowWhen(TimbnLook.HoldsGroup("zombie"), ...)`.
+Lets the player lay a zombie on the station and take it back, the way the game's corpse pallet holds a corpse. While no craft runs on the station, E with a zombie overhead puts it in and E with free hands takes it back, so a running craft holds the zombie and keeps another out until it ends. The station can't be dismantled while a zombie lies on it. Show the zombie with `ShowWhen(TimbnLook.HoldsGroup("zombie"), ...)`.
 
 ```csharp
 var stand = Stations.Add("timbn_infusion_stand", "Infusion Stand", "A zombie rests in this box.", station => station
@@ -205,7 +205,7 @@ Only a station you add with `Stations.Add` has `Extensions`, so an extension can
 
 ### `Crafts.Add(id, name, description, craft)`
 
-Adds a recipe at any station, yours or the game's. The craft starts as a copy of one of the game's, the wooden plank unless `BasedOn` names another, so it has everything the game expects and you only set what differs. Unspecified properties retain the template's values, except that a craft is available from the start unless you call `NeedsUnlock` or `UnlockedBy`. It returns a handle that removes the craft early when disposed, which you don't need to keep.
+Adds a recipe at any station, yours or the game's. The craft starts as a copy of one of the game's, the wooden plank unless `BasedOn` names another, so it has everything the game expects and you only set what differs. Unspecified properties retain the template's values, except for the unlock and the template's rewards. A craft is available from the start unless you call `NeedsUnlock` or `UnlockedBy`, gives no tech points unless `TechPoints` sets them, and leaves out the template's linked perks and finish expressions. It returns a handle that removes the craft early when disposed, which you don't need to keep.
 
 ```csharp
 Crafts.Add("timbn_smoke_fillet_fish_river", "Smoked Fish", "A fish fillet and a log of firewood make one smoked fish.", craft => craft
@@ -233,7 +233,9 @@ Crafts.Add("timbn_stick_box_magic_plank", "Plank from Sticks", "The red pillar b
 | `Mastery(level)` | The tool level the player or zombie needs. `Mastery(1)` lets any tool work it. |
 | `DurationTicks(ticks)` | How long it takes in work ticks, such as a tool swing at a bench or a progress tick at an automated station. |
 | `EnergyPerTick(energy)` | The energy each tick costs the player. |
+| `TechPoints(red, green, blue)` | The tech points the craft pays when it finishes, none otherwise whatever the template paid. |
 | `AutoFinish()` | At a station that runs itself, drops each result in front of it and starts the next craft in the queue, instead of waiting for the player to take it. |
+| `Hidden()` | Leaves the craft out of the station's craft window and draws no progress over the station while it runs, for a craft only code starts with `Crafts.Start`. |
 | `OnStarted(handler)` | Runs your code each time the craft starts at a station, which is when its ingredients are taken. A craft with a count above one starts once per unit. |
 | `OnFinished(handler)` | Runs your code each time the craft finishes at a station, once per unit. A craft that fails while finishing doesn't raise it. |
 | `NeedsUnlock()` | Hidden until a tech or `TimbnPlayer.UnlockCraft` unlocks it. |
@@ -265,12 +267,20 @@ For any other expression field you set by hand in `Edit`, build it with `TimbnBa
 
 ### `Crafts.Start(station, craftId)`
 
-Starts a craft at a station (a `WgoData`, such as one from `TimbnWorld.Extensions`) from code, with no craft window, the way the game's own expressions do. It goes in the station's queue and runs like one the player started. End one early with the game's `station.CraftComponent.TryFinishCurCraft()`, which finishes it as if its time ran out. Returns false when the game has no such craft.
+Starts a craft at a station (a `WgoData`, such as one from `TimbnWorld.Extensions`) from code, with no craft window, the way the game's own expressions do. It goes in the station's queue and runs like one the player started. [`TimbnWorld.RunningCraft(station)`](helpers/timbn-world.md) reads the id of the craft at the front of the queue, and `Crafts.Finish` ends it early. Returns false when the game has no such craft.
 
 ```csharp
 foreach (var built in TimbnWorld.FindAll(machine.Id))
     foreach (var stand in TimbnWorld.Extensions(built))
         Crafts.Start(stand, "timbn_infusion_stand_infusion");
+```
+
+### `Crafts.Finish(station)`
+
+Finishes the craft at the front of a station's queue now, as if its time ran out, so it pays out and the next queued craft starts. Does nothing when the station has no craft.
+
+```csharp
+Crafts.Finish(stand);
 ```
 
 ## Items

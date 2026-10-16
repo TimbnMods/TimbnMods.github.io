@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnUI
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ActiveWindow
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsScreenFading
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsWindowOpen
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Notify
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Notify
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
@@ -246,7 +246,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: NotifyOnce
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnUI.cs

@@ -36,6 +36,14 @@ The world objects attached to a station, such as the ones built into its [slots]
 var stands = TimbnWorld.FindAll(machine.Id).SelectMany(TimbnWorld.Extensions).Where(wgo => wgo.id == "timbn_infusion_stand").ToList();
 ```
 
+### `RunningCraft(station)`
+
+The id of the craft at the front of a station's queue, running or waiting to start, or null when it has none, such as to check whether a stand started with [`Crafts.Start`](../stations-and-crafts.md#craftsstartstation-craftid) is still on its craft.
+
+```csharp
+var busy = TimbnWorld.RunningCraft(stand) == "timbn_infusion_stand_infusion";
+```
+
 ### `Near(position, radius, match)`
 
 The world objects in the player's scene within a flat distance of a spot, nearest first.
@@ -47,6 +55,22 @@ var chests = TimbnWorld.Near(TimbnPlayer.Position, 5f, wgo => wgo.Inventory != n
 ### `ViewOf(data)`
 
 The `Wgo` view that draws a world object, or null when its chunk is not loaded around the player. The view is what the game's windows and effects work with.
+
+### `Point(id)`
+
+A point the game placed in a scene, the spots its people walk to and stand at, such as `donkey_04` on the road by the graveyard. A point has a position, a facing and an enabled flag, and its id is the same string the Npcs module takes. The ids are listed in `info_dump`'s points catalog. Null when no point has that id or at the main menu.
+
+```csharp
+var road = TimbnWorld.Point("donkey_04")?.Position;
+```
+
+### `PointsWithTag(customTag)`
+
+Every point carrying a custom tag, for a set of spots the game marks the same way, such as the two seats each church pew adds with the tag `parishioner_bench_point`. Disabled points are included, so check `Enabled` when that matters. Empty when none carry the tag or at the main menu.
+
+```csharp
+var seats = TimbnWorld.PointsWithTag("parishioner_bench_point").Where(seat => seat.Enabled);
+```
 
 ### `FlatDistance(first, second)`
 

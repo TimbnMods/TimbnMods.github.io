@@ -50,18 +50,4 @@ if (Plugin.Instance?.Settings.IsEnabled(PluginConfig.StuckCarriers) != true)
     return;
 ```
 
-## Reloading Settings
-
-BepInEx only reads a config file at startup, so a setting edited by hand is not seen until something reloads it.
-
-### `TimbnConfig.ReloadAll()`
-
-Rereads the file of every loaded mod, Timbn or not.
-
-### `TimbnConfig.Reload(plugin)`
-
-Rereads the file of one mod.
-
-Each changed value raises the BepInEx `SettingChanged` event, so settings tied with `Settings.Toggle` apply right away. Call these on the main thread. A key deleted from a file keeps its current value instead of going back to its default.
-
-To bind a setting with a slider range or move a renamed one into its new entry, see [TimbnConfig](helpers/timbn-config.md).
+To bind a setting with a slider range, hide a developer switch, or move a renamed setting into its new entry, see [TimbnConfig](helpers/timbn-config.md).

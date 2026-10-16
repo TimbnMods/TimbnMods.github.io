@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnCorePlugin
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Guid
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Version
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -399,7 +399,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TestedGameVersion
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -428,7 +428,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TestedGameBuild
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -460,7 +460,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GameBuild
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnAwake
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
@@ -523,11 +523,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnUpdate
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-    startLine: 87
+    startLine: 89
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core
@@ -552,11 +552,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: OnUnload
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/TimbnCorePlugin.cs
-    startLine: 102
+    startLine: 104
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core

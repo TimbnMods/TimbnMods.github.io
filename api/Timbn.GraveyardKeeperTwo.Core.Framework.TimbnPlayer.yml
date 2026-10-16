@@ -22,6 +22,7 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasPerk(System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasTech(System.String)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.IsTired
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts(System.String[])
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Money
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.Position
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.RemovePerk(System.String)
@@ -44,7 +45,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TimbnPlayer
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -86,7 +87,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GameHasControl
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -135,7 +136,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Money
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -169,7 +170,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TakeMoney
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -211,7 +212,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GiveMoney
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -250,7 +251,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Carried
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -289,7 +290,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HandsFree
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -326,7 +327,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GetResource
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -370,7 +371,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddResource
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -417,7 +418,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SetResource
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -459,7 +460,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Energy
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -493,7 +494,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CountItem
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -530,7 +531,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasItem
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -570,7 +571,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: GiveItem
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -605,7 +606,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TakeItem
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -646,7 +647,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: IsTired
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -680,7 +681,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasInspiration
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -721,7 +722,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasPerk
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -760,7 +761,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddPerk
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -804,7 +805,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: RemovePerk
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -846,7 +847,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasTech
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -887,7 +888,7 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasCraft
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
@@ -919,6 +920,53 @@ items:
   nameWithType.vb: TimbnPlayer.HasCraft(String)
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(String)
   name.vb: HasCraft(String)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts(System.String[])
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts(System.String[])
+  id: KnownCrafts(System.String[])
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer
+  langs:
+  - csharp
+  - vb
+  name: KnownCrafts(params string[])
+  nameWithType: TimbnPlayer.KnownCrafts(params string[])
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts(params string[])
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: KnownCrafts
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
+    startLine: 327
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Every recipe the player can make right now, the ones the game gives from the start and the ones they have
+
+    unlocked, the same set <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)" data-throw-if-not-resolved="false"></xref> says yes to. Pass station ids to keep only recipes made at any of
+
+    them, or none for every station. The result is a snapshot, so call it again after the player learns something.
+  example:
+  - >-
+    <pre><code class="lang-csharp">var dishes = TimbnPlayer.KnownCrafts(
+        TimbnGameIds.Workstations.Placed.KitchenOven,
+        TimbnGameIds.Workstations.Placed.KitchenTable);</code></pre>
+  syntax:
+    content: public static CraftDef[] KnownCrafts(params string[] stationIds)
+    parameters:
+    - id: stationIds
+      type: System.String[]
+      description: Station ids such as <xref href="Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven" data-throw-if-not-resolved="false"></xref>, or none for all.
+    return:
+      type: CraftDef[]
+      description: The recipes themselves, empty at the main menu.
+    content.vb: Public Shared Function KnownCrafts(ParamArray stationIds As String()) As CraftDef()
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts*
+  nameWithType.vb: TimbnPlayer.KnownCrafts(ParamArray String())
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts(ParamArray String())
+  name.vb: KnownCrafts(ParamArray String())
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(System.String)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft(System.String)
   id: UnlockCraft(System.String)
@@ -933,11 +981,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: UnlockCraft
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 324
+    startLine: 349
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -975,11 +1023,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: HasBuilt
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 345
+    startLine: 370
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1019,11 +1067,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Position
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 349
+    startLine: 374
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1050,11 +1098,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: SceneId
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 352
+    startLine: 377
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1081,11 +1129,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Scene
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 358
+    startLine: 383
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1115,11 +1163,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: Zone
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 365
+    startLine: 390
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1149,11 +1197,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: ZoneId
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 373
+    startLine: 398
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1181,11 +1229,11 @@ items:
   source:
     remote:
       path: src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-      branch: core/2/main
+      branch: main
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: TeleportTo
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/Player/TimbnPlayer.cs
-    startLine: 387
+    startLine: 412
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -1761,6 +1809,91 @@ references:
   name: HasCraft
   nameWithType: TimbnPlayer.HasCraft
   fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+  isExternal: true
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasCraft_System_String_
+  name: HasCraft(string)
+  nameWithType: TimbnPlayer.HasCraft(string)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(string)
+  nameWithType.vb: TimbnPlayer.HasCraft(String)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(String)
+  name.vb: HasCraft(String)
+  spec.csharp:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+    name: HasCraft
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasCraft_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.HasCraft(System.String)
+    name: HasCraft
+    href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_HasCraft_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  commentId: F:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnGameIds_Workstations_Placed_KitchenOven
+  name: KitchenOven
+  nameWithType: TimbnGameIds.Workstations.Placed.KitchenOven
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnGameIds.Workstations.Placed.KitchenOven
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_KnownCrafts_System_String___
+  name: KnownCrafts
+  nameWithType: TimbnPlayer.KnownCrafts
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.KnownCrafts
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: CraftDef[]
+  isExternal: true
+  name: CraftDef[]
+  nameWithType: CraftDef[]
+  fullName: CraftDef[]
+  nameWithType.vb: CraftDef()
+  fullName.vb: CraftDef()
+  name.vb: CraftDef()
+  spec.csharp:
+  - uid: CraftDef
+    name: CraftDef
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: CraftDef
+    name: CraftDef
+    isExternal: true
+  - name: (
+  - name: )
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft*
   commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.UnlockCraft
   href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPlayer.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPlayer_UnlockCraft_System_String_
