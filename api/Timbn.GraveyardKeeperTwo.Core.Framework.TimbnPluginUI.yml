@@ -12,6 +12,9 @@ items:
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.DrawGui(System.Action)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.FadeThrough(System.Action)
   - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.OpenStorage(System.Collections.Generic.IDictionary{System.String,System.Int32},System.String,System.Int32,System.String[])
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm(System.String,System.String,System.Action,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage(System.String,System.String,System.Action)
+  - Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt(System.String,System.String,System.Action{System.String},System.String,System.Action)
   langs:
   - csharp
   - vb
@@ -226,6 +229,171 @@ items:
   nameWithType.vb: TimbnPluginUI.OpenStorage(IDictionary(Of String, Integer), String, Integer, ParamArray String())
   fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.OpenStorage(System.Collections.Generic.IDictionary(Of String, Integer), String, Integer, ParamArray String())
   name.vb: OpenStorage(IDictionary(Of String, Integer), String, Integer, ParamArray String())
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt(System.String,System.String,System.Action{System.String},System.String,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt(System.String,System.String,System.Action{System.String},System.String,System.Action)
+  id: ShowPrompt(System.String,System.String,System.Action{System.String},System.String,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI
+  langs:
+  - csharp
+  - vb
+  name: ShowPrompt(string, string, Action<string>, string, Action?)
+  nameWithType: TimbnPluginUI.ShowPrompt(string, string, Action<string>, string, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt(string, string, System.Action<string>, string, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowPrompt
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+    startLine: 115
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Asks the player for one line of text in the game's own dialog window, with the text field under the header and
+
+    OK and Cancel buttons, such as to name a chest. Typing never sets off the game's hotkeys, the keeper is held and
+
+    the game pauses the way it does for any dialog. Saving with empty text still calls the handler, so a plugin can
+
+    treat it as a removal. Only one plugin dialog is open at a time, and opening another closes the first without
+
+    calling any handler. Nothing opens while another of the game's dialogs is showing.
+  example:
+  - <pre><code class="lang-csharp">UI.ShowPrompt("Chest Label", Data.Current.Labels[id], text =&gt; Data.Current.Labels[id] = text, "Type a name");</code></pre>
+  syntax:
+    content: public IDisposable ShowPrompt(string title, string current, Action<string> onSave, string placeholder = "", Action? onCancel = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The window's header, already in the player's language.
+    - id: current
+      type: System.String
+      description: The text the field starts with.
+    - id: onSave
+      type: System.Action{System.String}
+      description: Gets the typed text when the player presses OK or Enter.
+    - id: placeholder
+      type: System.String
+      description: The hint shown in the empty field.
+    - id: onCancel
+      type: System.Action
+      description: Runs when the player backs out with Cancel, the close button or Esc.
+    return:
+      type: System.IDisposable
+      description: A handle that closes the window without calling any handler when disposed. It is also closed when the plugin unloads and on the way to the main menu. You don't need to keep it.
+    content.vb: Public Function ShowPrompt(title As String, current As String, onSave As Action(Of String), placeholder As String = "", onCancel As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt*
+  nameWithType.vb: TimbnPluginUI.ShowPrompt(String, String, Action(Of String), String, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt(String, String, System.Action(Of String), String, System.Action)
+  name.vb: ShowPrompt(String, String, Action(Of String), String, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm(System.String,System.String,System.Action,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm(System.String,System.String,System.Action,System.Action)
+  id: ShowConfirm(System.String,System.String,System.Action,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI
+  langs:
+  - csharp
+  - vb
+  name: ShowConfirm(string, string, Action, Action?)
+  nameWithType: TimbnPluginUI.ShowConfirm(string, string, Action, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm(string, string, System.Action, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowConfirm
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+    startLine: 134
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Asks the player a yes or no question in the game's own dialog window, such as before something that cannot be
+
+    undone. The keeper is held and the game pauses the way it does for any dialog. Only one plugin dialog is open at
+
+    a time, and opening another closes the first without calling any handler. Nothing opens while another of the
+
+    game's dialogs is showing.
+  example:
+  - <pre><code class="lang-csharp">UI.ShowConfirm("Empty the keg?", "The beer inside is lost.", EmptyKeg);</code></pre>
+  syntax:
+    content: public IDisposable ShowConfirm(string title, string message, Action onYes, Action? onNo = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The window's header, already in the player's language.
+    - id: message
+      type: System.String
+      description: The question, already in the player's language.
+    - id: onYes
+      type: System.Action
+      description: Runs when the player answers Yes.
+    - id: onNo
+      type: System.Action
+      description: Runs when the player answers No, uses the close button or presses Esc.
+    return:
+      type: System.IDisposable
+      description: A handle that closes the window without calling any handler when disposed. It is also closed when the plugin unloads and on the way to the main menu. You don't need to keep it.
+    content.vb: Public Function ShowConfirm(title As String, message As String, onYes As Action, onNo As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm*
+  nameWithType.vb: TimbnPluginUI.ShowConfirm(String, String, Action, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm(String, String, System.Action, System.Action)
+  name.vb: ShowConfirm(String, String, Action, Action)
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage(System.String,System.String,System.Action)
+  commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage(System.String,System.String,System.Action)
+  id: ShowMessage(System.String,System.String,System.Action)
+  parent: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI
+  langs:
+  - csharp
+  - vb
+  name: ShowMessage(string, string, Action?)
+  nameWithType: TimbnPluginUI.ShowMessage(string, string, Action?)
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage(string, string, System.Action?)
+  type: Method
+  source:
+    remote:
+      path: src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+      branch: main
+      repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
+    id: ShowMessage
+    path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
+    startLine: 151
+  assemblies:
+  - Timbn.GraveyardKeeperTwo.Core
+  namespace: Timbn.GraveyardKeeperTwo.Core.Framework
+  summary: >-
+    Tells the player something in the game's own dialog window, with one OK button. The keeper is held and the game
+
+    pauses the way it does for any dialog. Only one plugin dialog is open at a time, and opening another closes the
+
+    first without calling any handler. Nothing opens while another of the game's dialogs is showing.
+  example:
+  - <pre><code class="lang-csharp">UI.ShowMessage("Closing time", "The tavern is shut for the night.");</code></pre>
+  syntax:
+    content: public IDisposable ShowMessage(string title, string message, Action? onOk = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The window's header, already in the player's language.
+    - id: message
+      type: System.String
+      description: The text, already in the player's language.
+    - id: onOk
+      type: System.Action
+      description: Runs when the player presses OK, uses the close button or presses Esc.
+    return:
+      type: System.IDisposable
+      description: A handle that closes the window without calling any handler when disposed. It is also closed when the plugin unloads and on the way to the main menu. You don't need to keep it.
+    content.vb: Public Function ShowMessage(title As String, message As String, onOk As Action = Nothing) As IDisposable
+  overload: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage*
+  nameWithType.vb: TimbnPluginUI.ShowMessage(String, String, Action)
+  fullName.vb: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage(String, String, System.Action)
+  name.vb: ShowMessage(String, String, Action)
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.AddObjectAction(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction)
   commentId: M:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.AddObjectAction(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction)
   id: AddObjectAction(Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction)
@@ -244,7 +412,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: AddObjectAction
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 109
+    startLine: 166
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -285,7 +453,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: DrawGui
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 138
+    startLine: 195
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -332,7 +500,7 @@ items:
       repo: https://github.com/TimbnMods/Timbn.GraveyardKeeperTwo.git
     id: CreateDebugWindow
     path: ../Timbn.GraveyardKeeperTwo/src/Timbn.GraveyardKeeperTwo.Core/UI/TimbnPluginUI.cs
-    startLine: 154
+    startLine: 211
   assemblies:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core.Framework
@@ -830,6 +998,87 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginUI_ShowPrompt_System_String_System_String_System_Action_System_String__System_String_System_Action_
+  name: ShowPrompt
+  nameWithType: TimbnPluginUI.ShowPrompt
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowPrompt
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginUI_ShowConfirm_System_String_System_String_System_Action_System_Action_
+  name: ShowConfirm
+  nameWithType: TimbnPluginUI.ShowConfirm
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowConfirm
+- uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage*
+  commentId: Overload:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage
+  href: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.html#Timbn_GraveyardKeeperTwo_Core_Framework_TimbnPluginUI_ShowMessage_System_String_System_String_System_Action_
+  name: ShowMessage
+  nameWithType: TimbnPluginUI.ShowMessage
+  fullName: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnPluginUI.ShowMessage
 - uid: Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
   commentId: T:Timbn.GraveyardKeeperTwo.Core.Framework.TimbnObjectAction
   parent: Timbn.GraveyardKeeperTwo.Core.Framework

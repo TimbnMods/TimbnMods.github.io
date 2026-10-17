@@ -77,6 +77,35 @@ Opens the game's chest window on a storage only your mod knows about, such as a 
 UI.OpenStorage(Data.Current.Keg, "my_mod_keg", 10, "beer");
 ```
 
+### `UI.ShowPrompt(title, current, onSave, placeholder, onCancel)`
+
+Asks the player for one line of text in the game's own dialog window, such as a name for a chest. `current` is the text the field starts with and `placeholder` is the hint shown when it's empty. `onSave` gets the text when the player presses OK or Enter, even when it's empty, so you can treat empty as a removal. `onCancel` runs when they back out instead. Typing never sets off the game's hotkeys, and the game pauses the way it does for any dialog. The title is shown as is, so pass it in the player's language.
+
+```csharp
+UI.ShowPrompt("Chest Label", Data.Current.Labels[id], text => Data.Current.Labels[id] = text, "Type a name");
+```
+
+### `UI.ShowConfirm(title, message, onYes, onNo)`
+
+Asks a yes or no question in the same window, such as before something that can't be undone. `onNo` also runs when the player closes the window or presses Esc.
+
+```csharp
+UI.ShowConfirm("Empty the keg?", "The beer inside is lost.", EmptyKeg);
+```
+
+### `UI.ShowMessage(title, message, onOk)`
+
+Tells the player something in the same window, with one OK button.
+
+```csharp
+UI.ShowMessage("Closing time", "The tavern is shut for the night.");
+```
+
+Only one of these dialogs is open at a time, and opening another closes the first without calling its handlers. Nothing opens while one of the game's own dialogs is showing. Each returns a handle that closes the window without calling a handler, and the window also closes when the mod unloads or the player leaves the save, so you don't need to keep it.
+
+> [!NOTE]
+> These dialogs need Timbn Core 2.1.0, so set your `BepInDependency` to `"2.1.0"` when you use them.
+
 ### `UI.AddObjectAction(action)`
 
 Adds an interaction to an object that lacks native game interactions, such as petting a cat on a box. Standing by the object shows a hint, and pressing Interaction walks the player to a spot beside it where they face one way and play an animation for a while. Describe it with a `TimbnObjectAction`, which takes the name the object's GameObject starts with, the spot the player stands at (its height is ignored) and a text key for the hint. Set `Facing` (up by default), `Animation` (working with their hands by default) and `GameMinutes` (10 by default) to change how it plays out. Three optional callbacks hook it up to your mod. `CanPerform` is asked before the hint shows, so returning false hides the action until a condition is met. `OnStarted` runs when the player reaches the spot and the animation begins. `OnFinished` runs only when the full minutes pass, not when the game takes the controls back first.

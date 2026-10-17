@@ -38,11 +38,11 @@ items:
   example: []
   syntax:
     content: >-
-      [BepInPlugin("Timbn.GraveyardKeeperTwo.Core", "Timbn Core", "2.0.0")]
+      [BepInPlugin("Timbn.GraveyardKeeperTwo.Core", "Timbn Core", "2.1.0")]
 
       public sealed class TimbnCorePlugin : TimbnFrameworkPlugin<TimbnCorePlugin>
     content.vb: >-
-      <BepInPlugin("Timbn.GraveyardKeeperTwo.Core", "Timbn Core", "2.0.0")>
+      <BepInPlugin("Timbn.GraveyardKeeperTwo.Core", "Timbn Core", "2.1.0")>
 
       Public NotInheritable Class TimbnCorePlugin Inherits TimbnFrameworkPlugin(Of TimbnCorePlugin)
   inheritance:
@@ -326,7 +326,7 @@ items:
     - type: System.String
       value: Timbn Core
     - type: System.String
-      value: 2.0.0
+      value: 2.1.0
 - uid: Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin.Guid
   commentId: F:Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin.Guid
   id: Guid
@@ -381,10 +381,10 @@ items:
   summary: Core's own plugin version.
   example: []
   syntax:
-    content: public const string Version = "2.0.0"
+    content: public const string Version = "2.1.0"
     return:
       type: System.String
-    content.vb: Public Const Version As String = "2.0.0"
+    content.vb: Public Const Version As String = "2.1.0"
 - uid: Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin.TestedGameVersion
   commentId: F:Timbn.GraveyardKeeperTwo.Core.TimbnCorePlugin.TestedGameVersion
   id: TestedGameVersion

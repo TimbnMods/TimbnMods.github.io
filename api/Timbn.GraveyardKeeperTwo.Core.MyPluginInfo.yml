@@ -100,10 +100,10 @@ items:
   - Timbn.GraveyardKeeperTwo.Core
   namespace: Timbn.GraveyardKeeperTwo.Core
   syntax:
-    content: public const string PLUGIN_VERSION = "2.0.0"
+    content: public const string PLUGIN_VERSION = "2.1.0"
     return:
       type: System.String
-    content.vb: Public Const PLUGIN_VERSION As String = "2.0.0"
+    content.vb: Public Const PLUGIN_VERSION As String = "2.1.0"
 references:
 - uid: Timbn.GraveyardKeeperTwo.Core
   commentId: N:Timbn.GraveyardKeeperTwo.Core
